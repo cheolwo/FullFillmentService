@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderServer\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-05-29T10:44:32.0233472Z;True|2023-05-29T19:07:22.0813115+09:00;True|2023-05-29T18:37:45.2019108+09:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

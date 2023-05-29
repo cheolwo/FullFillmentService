@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mj9tYSlUHZgUKfDaJllDSjhLfK5PSRIrK9yN9CjXAvU=",
+  "Source": "OrderServer",
+  "BasePath": "_content/OrderServer",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

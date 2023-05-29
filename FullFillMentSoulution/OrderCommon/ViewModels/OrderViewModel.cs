@@ -1,12 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using OrderCommon;
 using OrderCommon.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVVMToolkit.Blazor.SampleApp.ViewModels
 {
@@ -42,6 +36,7 @@ namespace MVVMToolkit.Blazor.SampleApp.ViewModels
 
 
         public IAsyncRelayCommand PlaceOrderCommand => new AsyncRelayCommand(PlaceOrderAsync);
+        public IAsyncRelayCommand RandomOrderCommnad => new AsyncRelayCommand(RandomOrderAsync);
 
         private async Task PlaceOrderAsync()
         {
@@ -59,10 +54,9 @@ namespace MVVMToolkit.Blazor.SampleApp.ViewModels
             // 주문 완료 여부 속성 업데이트
             OrderPlaced = true;
         }
-    }
-    public class OrderRequestModel
-    {
-        public string OrderName { get; set; }
-        public int OrderQuantity { get; set; }
+        private async Task RandomOrderAsync()
+        {
+            await _orderService.RandomPlaceOrder();
+        }
     }
 }
