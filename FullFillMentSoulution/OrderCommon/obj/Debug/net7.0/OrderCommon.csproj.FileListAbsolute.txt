@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\bin\Debug\net7.0\OrderCommon.deps.json
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\bin\Debug\net7.0\OrderCommon.dll
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\bin\Debug\net7.0\OrderCommon.pdb
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.dll
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\refint\OrderCommon.dll
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.pdb
+C:\Users\user\Desktop\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\ref\OrderCommon.dll

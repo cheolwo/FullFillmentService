@@ -1,0 +1,27 @@
+﻿@page "/order"
+@using MVVMToolkit.Blazor.SampleApp.ViewModels
+@using Microsoft.AspNetCore.Components
+@using MudBlazor
+
+<h3>Order Form</h3>
+
+<MudForm>
+    <MudTextField Label="Order Name" @bind-Value="@ViewModel.OrderName" />
+
+    <MudTextField Label="Order Quantity" @bind-Value="@ViewModel.OrderQuantity" />
+
+    <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="ViewModel.PlaceOrderCommand.ExecuteAsync">
+        Place Order
+    </MudButton>
+</MudForm>
+
+@if (ViewModel.OrderPlaced)
+{
+    <p>Order placed successfully!</p>
+}
+
+
+@code {
+    [Inject]
+    public OrderViewModel ViewModel { get; set; }
+}
