@@ -16,52 +16,68 @@ namespace OrderCommon.Services
     }
 
     public class EventQueue : IEventQueue
+{
+    private readonly Queue<IEvent> _eventQueue;
+    private readonly object _lock;
+
+    public EventQueue()
     {
-        private readonly Queue<IEvent> _eventQueue;
+        _eventQueue = new Queue<IEvent>();
+        _lock = new object();
+    }
 
-        public EventQueue()
-        {
-            _eventQueue = new Queue<IEvent>();
-        }
-
-        public Task EnqueueEventAsync(IEvent @event)
+    public Task EnqueueEventAsync(IEvent @event)
+    {
+        lock (_lock)
         {
             _eventQueue.Enqueue(@event);
-            foreach(var value in _eventQueue)
-            {
                 if (@event is CreateOrderCommand createOrderCommand)
                 {
                     Console.WriteLine(createOrderCommand.Name);
                 }
             }
-            return Task.CompletedTask;
-        }
 
-        public Task<IEvent> DequeueEventAsync()
+        return Task.CompletedTask;
+    }
+
+    public Task<IEvent> DequeueEventAsync()
+    {
+        lock (_lock)
         {
             if (_eventQueue.Count > 0)
             {
                 return Task.FromResult(_eventQueue.Dequeue());
             }
-
-            return Task.FromResult<IEvent>(null);
         }
 
-        public async Task ProcessEventsAsync()
+        return Task.FromResult<IEvent>(null);
+    }
+
+    public async Task ProcessEventsAsync()
+    {
+        while (true)
         {
-            while (_eventQueue.Count > 0)
+            IEvent @event;
+            lock (_lock)
             {
-                var @event = await DequeueEventAsync();
-                await ProcessEventAsync(@event);
+                if (_eventQueue.Count == 0)
+                {
+                    break; // No events to process, exit the loop
+                }
+
+                @event = _eventQueue.Dequeue();
             }
-        }
 
-        private Task ProcessEventAsync(IEvent @event)
-        {
-            // 이벤트 처리 로직
-            Console.WriteLine("Processing event: " + @event);
-
-            return Task.CompletedTask;
+            await ProcessEventAsync(@event);
         }
     }
+
+    private Task ProcessEventAsync(IEvent @event)
+    {
+        // 이벤트 처리 로직
+        Console.WriteLine("Processing event: " + @event);
+
+        return Task.CompletedTask;
+    }
+}
 }

@@ -36,7 +36,6 @@ namespace OrderCommon.Services.Command
             //await _context.SaveChangesAsync();
             Console.WriteLine("스케줄러에 의해 처리되었습니다.");
             Console.WriteLine(command.Name);
-            Console.WriteLine(command.Quantity);
 
             return 1;
         }
