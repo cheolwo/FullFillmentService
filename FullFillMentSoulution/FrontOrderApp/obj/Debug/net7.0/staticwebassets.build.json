@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VXqv5g/yyqMDRHHBDm7vYVZ0CKI5a/R5XEPm6CZRZ2E=",
+  "Hash": "oXxaMoQbR8CRfCcwp3do1s+PYvk7ME2Je+jlN1mCGBE=",
   "Source": "FrontOrderApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.5\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.5\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.5\\staticwebassets\\AuthenticationService.js"
+    },
     {
       "Identity": "C:\\Users\\user\\.nuget\\packages\\mudblazor.thememanager\\1.0.8\\staticwebassets\\MudBlazorThemeManager.css",
       "SourceId": "MudBlazor.ThemeManager",
@@ -116,7 +133,7 @@
       "AssetTraitValue": "boot",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.1\\build\\net7.0\\blazor.webassembly.js"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.5\\build\\net7.0\\blazor.webassembly.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\BouncyCastle.Crypto.dll",
@@ -425,6 +442,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.Authorization.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -476,6 +510,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.Web.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -490,7 +541,58 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.1\\lib\\net7.0\\Microsoft.AspNetCore.Components.WebAssembly.dll"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Components.WebAssembly.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.dll",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.Internal.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Cryptography.Internal.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.5\\lib\\net7.0\\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
@@ -575,7 +677,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.2\\lib\\net6.0\\Microsoft.EntityFrameworkCore.Relational.dll"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.5\\lib\\net6.0\\Microsoft.EntityFrameworkCore.Relational.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll",
@@ -643,7 +745,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.1\\lib\\net7.0\\Microsoft.Extensions.Configuration.Binder.dll"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.4\\lib\\net7.0\\Microsoft.Extensions.Configuration.Binder.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.dll",
@@ -833,6 +935,40 @@
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Hosting.Abstractions.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Core.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.5\\lib\\net7.0\\Microsoft.Extensions.Identity.Core.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Stores.dll",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Stores.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.5\\lib\\net7.0\\Microsoft.Extensions.Identity.Stores.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -932,7 +1068,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.1\\lib\\net7.0\\Microsoft.JSInterop.WebAssembly.dll"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.5\\lib\\net7.0\\Microsoft.JSInterop.WebAssembly.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.dll",
@@ -4369,23 +4505,6 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Linq.Expressions.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\1nd6B8mQ.gz",
-      "SourceId": "FrontOrderApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.JSInterop.WebAssembly.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll"
-    },
-    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\1NRI1ZU5.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -4486,6 +4605,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.WebSockets.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\3UFrqmyA.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.JSInterop.WebAssembly.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\3vksO4Ld.gz",
@@ -4760,6 +4896,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Threading.Thread.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\8L+YCcOQ.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\98gtqFBD.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -4809,23 +4962,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\aELjDgqt.gz",
-      "SourceId": "FrontOrderApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\af5rLs5Q.gz",
@@ -5185,6 +5321,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.FileSystem.AccessControl.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\dI1Xt4Dd.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Core.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\dIKBZ4We.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -5353,6 +5506,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.Tools.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\ezjcXlON.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Configuration.Binder.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Binder.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Binder.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\f84RYZMC.gz",
@@ -5984,6 +6154,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Compression.FileSystem.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\jAwiK2+U.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\jHipfWmF.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -6169,23 +6356,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Drawing.Primitives.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\KKmsS+ve.gz",
-      "SourceId": "FrontOrderApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Configuration.Binder.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Binder.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Binder.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\kPj+h6X0.gz",
@@ -6477,6 +6647,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Web.HttpUtility.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\N+wf6plR.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\Nc6ZEtkd.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -6494,21 +6681,21 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Dynamic.Runtime.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\NHIyRsSK.gz",
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\NI3wymJT.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/blazor.webassembly.js.gz",
-      "AssetKind": "All",
+      "RelativePath": "_framework/Microsoft.Extensions.Identity.Stores.dll.gz",
+      "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Stores.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js"
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Stores.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\Nk4phn9g.gz",
@@ -6851,6 +7038,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.CSharp.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\QFdtb2AN.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\QGmDbQ0P.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -6883,6 +7087,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Principal.Windows.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\QOoGhJa3.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\QpD+MAdt.gz",
@@ -7276,6 +7497,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\Tcgi9Wkr.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Cryptography.Internal.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\th37YBwM.gz",
       "SourceId": "FrontOrderApp",
       "SourceType": "Computed",
@@ -7393,23 +7631,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Data.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\UlPhZ8EB.gz",
-      "SourceId": "FrontOrderApp",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.EntityFrameworkCore.Relational.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Relational.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Relational.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\uNoQk1Ye.gz",
@@ -7716,6 +7937,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Diagnostics.StackTrace.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\wVt1xAX7.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.EntityFrameworkCore.Relational.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Relational.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Relational.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\wX32j1+x.gz",
+      "SourceId": "FrontOrderApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/blazor.webassembly.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\WZ6UAofT.gz",

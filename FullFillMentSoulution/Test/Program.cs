@@ -4,5 +4,5 @@ using MVVMToolkit.Blazor.SampleApp.ViewModels;
 using OrderCommon.Services;
 using Quartz;
 
-OrderService OrderService = new();
-await OrderService.RandomPlaceOrder();
+//OrderService OrderService = new();
+//await OrderService.RandomPlaceOrder();

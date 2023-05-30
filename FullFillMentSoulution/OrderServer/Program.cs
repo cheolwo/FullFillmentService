@@ -1,12 +1,9 @@
-using Autofac.Core;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using OrderCommon.Model;
 using OrderCommon.Services;
 using OrderCommon.Services.Command;
 using Quartz;
-using System.Net;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,0 +1,41 @@
+﻿@page "/login"
+@using Microsoft.AspNetCore.Identity;
+<MudCard>
+    <MudCardContent>
+        <h3>Login</h3>
+
+        <MudForm Model="@loginModel" OnValidSubmit="HandleSubmit">
+            <MudTextField @bind-Value="@loginModel.Email" Label="Email" />
+            <MudTextField @bind-Value="@loginModel.Password" Label="Password" Type="InputType.Password" />
+
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" Type="ButtonType.Submit">Login</MudButton>
+        </MudForm>
+    </MudCardContent>
+</MudCard>
+
+@code {
+    public class LoginModel
+    {
+        public string Password { get; set; }
+        public string Email { get; set; }
+    }
+    private LoginModel loginModel = new LoginModel();
+
+    private async Task HandleSubmit()
+    {
+        //// Perform login logic here
+        //// Example: Use ASP.NET Core Identity SignInManager to authenticate the user
+        //var result = await signInManager.PasswordSignInAsync(loginModel.Email, loginModel.Password, false, false);
+
+        //if (result.Succeeded)
+        //{
+        //    // Login successful, redirect to home page
+        //    navigationManager.NavigateTo("/");
+        //}
+        //else
+        //{
+        //    // Handle login failure
+        //    // Example: loginForm.Errors.Add("Invalid email or password");
+        //}
+    }
+}

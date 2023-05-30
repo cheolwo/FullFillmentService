@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using MVVMToolkit.Blazor.SampleApp.ViewModels;
 using OrderCommon.Model;
 
 namespace OrderCommon.Services.Command

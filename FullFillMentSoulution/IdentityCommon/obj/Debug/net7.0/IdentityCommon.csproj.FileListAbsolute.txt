@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\IdentityCommon.deps.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\IdentityCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\IdentityCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\refint\IdentityCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\ref\IdentityCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\IdentityCommon.runtimeconfig.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\IdentityCommon.genruntimeconfig.cache
