@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\bin\Debug\net7.0\KoreaCommon.deps.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\bin\Debug\net7.0\KoreaCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\bin\Debug\net7.0\KoreaCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\refint\KoreaCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\ref\KoreaCommon.dll

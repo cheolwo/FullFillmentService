@@ -1,0 +1,37 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">FullFillmentManager</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<MudNavMenu>
+    <AuthorizeView Roles="관리자">
+        <Authorized>
+            <MudNavLink Href="/UserManagement" Match="NavLinkMatch.Prefix">Users</MudNavLink>
+            <MudNavLink Href="/RoleManagement" Match="NavLinkMatch.Prefix">Roles</MudNavLink>
+        </Authorized>
+        <NotAuthorized>
+            <MudNavLink Href="/" Match="NavLinkMatch.All">Dashboard</MudNavLink>
+            <MudNavLink Href="/login" Match="NavLinkMatch.Prefix">Login</MudNavLink>
+            <MudNavLink Href="/loginsample" Match="NavLinkMatch.Prefix">loginsample</MudNavLink>
+            <MudNavGroup Title="Settings" Expanded="true">
+                <MudNavLink Href="/users" Match="NavLinkMatch.Prefix">Users</MudNavLink>
+                <MudNavLink Href="/security" Match="NavLinkMatch.Prefix">Security</MudNavLink>
+            </MudNavGroup>
+        </NotAuthorized>
+    </AuthorizeView>
+</MudNavMenu>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

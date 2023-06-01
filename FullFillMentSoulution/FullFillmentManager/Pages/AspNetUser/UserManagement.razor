@@ -1,0 +1,136 @@
+﻿@page "/UserManagement"
+@    using IdentityCommon.Models;
+@    using IdentityServerTest.Models
+@    using IdentityServerTest.Repository
+@    using Microsoft.AspNetCore.Identity;
+@    using System.Diagnostics;
+    using IdentityCommon.Models.ForApplicationUser;
+@inject UserManager<ApplicationUser> _userManager
+@inject RoleManager<IdentityRole> _roleManager
+@inject PasswordValidator<ApplicationUser> _passwordValidator
+
+<MudForm  Model="@user">
+    <MudTextField Label="Email" @bind-Value="@user.Email" />
+    <MudTextField Label="Name" @bind-Value="@user.Name" />
+    <MudTextField Label="Password" @bind-Value="@user.Password" />
+    <MudSwitch Label="Is Admin" @bind-Checked="@user.IsAdmin" />
+    <MudButton @onclick="@(async()=> await RegisterUser())" Color="Color.Primary">Register</MudButton>
+</MudForm>
+
+<MudTable Items="users"  Dense="true">
+    <HeaderContent>
+        <MudTh>Username</MudTh>
+        <MudTh>Email</MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd>@context.UserName</MudTd>
+        <MudTd>@context.Email</MudTd>
+        <MudTd>
+            <MudButton IconClass="Icons.Material.Filled.Delete" Color="Color.Error" Size="Size.Small" />
+        </MudTd>
+    </RowTemplate>
+</MudTable>
+
+@*<MudButton Color="Color.Primary" OnClick="@CreateUser">Create User</MudButton>
+*@
+@code {
+    RegisterUserModel user = new RegisterUserModel();
+    List<ApplicationUser> users = new List<ApplicationUser>();
+    string searchText = "";
+    string ExceptionMessage = "";
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUsers();
+    }
+
+    private async Task LoadUsers()
+    {
+        users = _userManager.Users.ToList();
+        await Task.Delay(100);
+    }
+
+    //private async Task SearchUsers(string searchText)
+    //{
+    //    //this.searchText = searchText;
+    //    //users = await UserRepository.Search(searchText).ToListAsync();
+    //}
+
+    private async Task RegisterUser()
+    {
+        // 아이디 생성 단계
+        string userId = GenerateUserId(user.Name);
+        user.Id = userId;
+
+        var model = await _userManager.FindByNameAsync(user.Id);
+        if (model != null)
+        {
+            ExceptionMessage = "이미 사용 중인 아이디입니다.";
+        }
+
+        var passwordValidationResult = await _passwordValidator.ValidateAsync(_userManager, null, user.Password);
+
+        if (!passwordValidationResult.Succeeded)
+        {
+            string errors = string.Join(", ", passwordValidationResult.Errors);
+            ExceptionMessage = $"비밀번호 유효성 검사 실패";
+        }
+
+        // 역할 부여 단계
+        string role = "일반사용자"; // 기본 역할은 일반 사용자로 설정
+        if (user.IsAdmin)
+        {
+            role = "관리자";
+        }
+
+        // 회원 등록
+        var newUser = new ApplicationUser { UserName = user.Email, Id = userId, Email = user.Email};
+        var result = await _userManager.CreateAsync(newUser, user.Password);
+
+        if (result.Succeeded)
+        {
+            // 회원가입 처리 또는 추가 작업
+            // 역할 등록
+            await AssignUserRole(newUser, role);
+
+            ExceptionMessage = "회원가입이 성공적으로 완료되었습니다.";
+        }
+        else
+        {
+            foreach (var error in result.Errors)
+            {
+                // 로그에 오류 기록하거나 디버깅
+                Debug.WriteLine($"Error: {error.Description}");
+            }
+            ExceptionMessage = "회원가입에 실패했습니다.";
+        }
+        StateHasChanged();
+    }
+
+    //private async Task DeleteUser(ApplicationUser user)
+    //{
+    //    //bool confirm = await MudDialog.ConfirmAsync("Are you sure you want to delete this user?");
+    //    //if (confirm)
+    //    //{
+    //    //    //await UserRepository.Delete(user);
+    //    //    //await LoadUsers();
+    //    //}
+    //}
+    private async Task AssignUserRole(ApplicationUser user, string role)
+    {
+        var existingRole = await _roleManager.FindByNameAsync(role);
+        if (existingRole == null)
+        {
+            await _roleManager.CreateAsync(new IdentityRole(role));
+        }
+
+        await _userManager.AddToRoleAsync(user, role);
+    }
+    private string GenerateUserId(string name)
+    {
+        // 아이디 생성 로직 구현
+        // 사용자 이름 또는 기타 정보를 이용하여 고유한 아이디를 생성
+        // 실제 구현에 맞게 변경해야 합니다.
+        return $"{name.ToLower()}-{Guid.NewGuid().ToString("N")}";
+    }
+}

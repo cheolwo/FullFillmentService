@@ -1,0 +1,41 @@
+﻿@page "/loginsample"
+@    using IdentityServerTest.Models;
+@    using Microsoft.AspNetCore.Identity;
+@    using System.Security.Claims;
+    using IdentityCommon.Models.ForApplicationUser;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject NavigationManager NavigationManager
+@inject IHttpContextAccessor HttpContextAccessor
+
+<h3>Login</h3>
+
+<div>
+    <label for="username">Username:</label>
+    <input id="username" @bind="Username" />
+
+    <label for="password">Password:</label>
+    <input id="password" @bind="Password" type="password" />
+
+    <button @onclick="Login">Log in</button>
+</div>
+
+@code {
+    private string Username { get; set; }
+    private string Password { get; set; }
+
+    private async Task Login()
+    {
+        if (HttpContextAccessor.HttpContext.Response.HasStarted)
+        {
+            var result = await SignInManager.PasswordSignInAsync(Username, Password, false, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                NavigationManager.NavigateTo("/dashboard");
+            }
+            else
+            {
+                // Handle login failure
+            }
+        }
+    }
+}

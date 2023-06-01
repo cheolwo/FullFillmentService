@@ -17,6 +17,20 @@ public class OrderController : ControllerBase
         _dbContext = dbContext;
         _eventQueue = eventQueue;   
     }
+    // POST: api/orders
+    [HttpPost]
+    public async Task<ActionResult<Order>> CreateOrder(OrderRequestModel orderRequest)
+    {
+        var createOrderCommand = new CreateOrderCommand
+        {
+            Name = orderRequest.OrderName,
+            Quantity = orderRequest.OrderQuantity
+            
+        };
+        await _eventQueue.EnqueueEventAsync(createOrderCommand);
+
+        return Ok();
+    }
 
     // GET: api/orders
     [HttpGet]
@@ -39,20 +53,6 @@ public class OrderController : ControllerBase
         return order;
     }
 
-    // POST: api/orders
-    [HttpPost]
-    public async Task<ActionResult<Order>> CreateOrder(OrderRequestModel orderRequest)
-    {
-        var createOrderCommand = new CreateOrderCommand
-        {
-            Name = orderRequest.OrderName,
-            Quantity = orderRequest.OrderQuantity
-            
-        };
-        await _eventQueue.EnqueueEventAsync(createOrderCommand);
-
-        return Ok();
-    }
 
     // PUT: api/orders/{orderId}
     [HttpPut("{orderId}")]

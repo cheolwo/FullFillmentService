@@ -17,6 +17,7 @@ builder.Services.AddScoped<OrderViewModel>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<OrderJob>();
 builder.Services.AddApiAuthorization();
+
 //builder.Services.AddApiAuthorization(options =>
 //{
 //    options.AuthenticationPaths.LogOutSucceededPath = ""; // 로그아웃 후 리디렉션할 경로를 지정할 수 있습니다.

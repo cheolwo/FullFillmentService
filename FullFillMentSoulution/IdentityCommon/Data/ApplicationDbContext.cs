@@ -1,4 +1,4 @@
-﻿using IdentityServerTest.Models;
+﻿using IdentityCommon.Models.ForApplicationUser;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

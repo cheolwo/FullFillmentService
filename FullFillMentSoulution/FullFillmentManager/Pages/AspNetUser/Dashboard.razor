@@ -1,0 +1,21 @@
+﻿@page "/dashboard"
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<h3>Dashboard</h3>
+
+<p>Welcome, @UserName!</p>
+
+@code {
+    private string UserName { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+
+        if (user.Identity?.IsAuthenticated == true)
+        {
+            UserName = user.Identity.Name;
+        }
+    }
+}

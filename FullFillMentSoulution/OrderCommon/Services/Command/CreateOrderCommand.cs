@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using MVVMToolkit.Blazor.SampleApp.ViewModels;
 using OrderCommon.Model;
 
 namespace OrderCommon.Services.Command
@@ -18,36 +19,36 @@ namespace OrderCommon.Services.Command
     }
 
     public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, int>
-{
-    private readonly IServiceProvider _serviceProvider;
-
-    public CreateOrderCommandHandler(IServiceProvider serviceProvider)
     {
-        _serviceProvider = serviceProvider;
-    }
+        private readonly IServiceProvider _serviceProvider;
 
-    public async Task<int> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
-    {
-        using (var scope = _serviceProvider.CreateScope())
+        public CreateOrderCommandHandler(IServiceProvider serviceProvider)
         {
-            var dbContext = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
-
-            var Order = new Order
-            {
-                Name = command.Name,
-                Quantity = command.Quantity
-            };
-
-            dbContext.Orders.Add(Order);
-            await dbContext.SaveChangesAsync();
+            _serviceProvider = serviceProvider;
         }
 
-        Console.WriteLine("스케줄러에 의해 처리되었습니다.");
-        Console.WriteLine(command.Name);
+        public async Task<int> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
+        {
+            using (var scope = _serviceProvider.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
 
-        return 1;
+                var Order = new Order
+                {
+                    Name = command.Name,
+                    Quantity = command.Quantity
+                };
+
+                dbContext.Orders.Add(Order);
+                await dbContext.SaveChangesAsync();
+            }
+
+            Console.WriteLine("스케줄러에 의해 처리되었습니다.");
+            Console.WriteLine(command.Name);
+
+            return 1;
+        }
     }
-}
 
     public class GetOrderQueryHandler : IRequestHandler<GetOrderQuery, Order>
     {
