@@ -5,7 +5,7 @@ public class Program
 {
     public static async Task Main()
     {
-        string serviceKey = "D0wkCvWHdCeJsYuU8A14KWl7mzOJ%2FiKbyKR%2F5xvnALYMf5wi5rcbCp2CXsx6xCsBhvgl5PJ8u%2Fwilufv%2FjhMcg%3D%3D"; // 서비스 키를 설정해주세요
+        string serviceKey = ""; // 서비스 키를 설정해주세요
 
         위탁장별위탁판매현황API api = new(serviceKey);
 
