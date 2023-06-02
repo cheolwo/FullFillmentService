@@ -32,6 +32,7 @@ namespace Common.Configuration
             builder.Property(e=>e.PhoneNumber).HasMaxLength(128);
             builder.Property(e=>e.FaxNumber).HasMaxLength(128);
             builder.Property(e=>e.Email).HasMaxLength(128);
+            builder.Property(e=>e.Address).HasMaxLength(128);
 
             base.Configure(builder);
         }
