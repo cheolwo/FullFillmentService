@@ -1,0 +1,33 @@
+﻿@page "/산지조합위판장Page"
+@using KoreaCommon.ViewModel;
+@using KoreaCommon.ViewModel.해양수산부;
+@inject 산지조합위판장ViewModel _산지조합위판장ViewModel
+<MudText Align="Align.Center" Typo="Typo.h2">산지조합위판장</MudText>
+@foreach (var item in _산지조합위판장ViewModel.Items)
+{
+    <MudCard Outlined="true">
+        <MudCardMedia Image="/images/수협.png" Height="400" />
+        <MudCardHeader>
+            <CardHeaderContent>
+                <MudText Typo="Typo.h6">@item.MxtrNm</MudText>
+            </CardHeaderContent>
+            <CardHeaderActions>
+                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Default" />
+            </CardHeaderActions>
+        </MudCardHeader>
+        <MudCardContent>
+            <MudText Typo="Typo.body2">산지조합위판장코드 : @item.MxtrCode</MudText>
+            <MudText Typo="Typo.body2">팩스번호 : @item.FxNum</MudText>
+            <MudText Typo="Typo.body2">전화번호 : @item.TelNo</MudText>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Text" Color="Color.Primary">Read More</MudButton>
+        </MudCardActions>
+    </MudCard>
+}
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await _산지조합위판장ViewModel.Load산지조합위판장정보();
+    }
+}

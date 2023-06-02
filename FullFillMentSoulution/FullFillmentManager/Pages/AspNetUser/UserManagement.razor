@@ -1,10 +1,9 @@
 ﻿@page "/UserManagement"
-@    using IdentityCommon.Models;
-@    using IdentityServerTest.Models
-@    using IdentityServerTest.Repository
-@    using Microsoft.AspNetCore.Identity;
-@    using System.Diagnostics;
-    using IdentityCommon.Models.ForApplicationUser;
+@using IdentityCommon.Models;
+@using IdentityServerTest.Repository;
+@using Microsoft.AspNetCore.Identity;
+@using System.Diagnostics;
+@using IdentityCommon.Models.ForApplicationUser;
 @inject UserManager<ApplicationUser> _userManager
 @inject RoleManager<IdentityRole> _roleManager
 @inject PasswordValidator<ApplicationUser> _passwordValidator

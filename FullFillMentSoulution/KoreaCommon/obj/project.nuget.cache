@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "p45AjFfg/ZbaYrEnyL1osQBQuzoXL2s2d83giOcveoSQM4tp1EIbsQ/C5chQPh2W+y+RMDlj1O1f34dq7KFtjQ==",
+  "dgSpecHash": "5C1Z32thAMziFN4i8w2xaBh/zdxY8znyu1j0k8XS/ojQIbSzTTOZOTKJOjqRYK7//ZwodsaI7StN8q0ZnXkEkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\KoreaCommon.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []

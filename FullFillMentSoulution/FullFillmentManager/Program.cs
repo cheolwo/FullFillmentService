@@ -2,6 +2,15 @@ using FullFillmentManager;
 using FullFillmentManager.Data;
 using IdentityCommon.Models.ForApplicationUser;
 using IdentityServerTest.Data;
+using KoreaCommon.Fish.산지조합위판장.해양수산부산지조합정보;
+using KoreaCommon.Fish.수협산지조합위판장.For산지조합위판장정보;
+using KoreaCommon.Fish.수협산지조합위판장.위판장현황;
+using KoreaCommon.Fish.해양수산부.For산지조합창고정보;
+using KoreaCommon.Fish.해양수산부.For위판장별위탁판매현황;
+using KoreaCommon.Fish.해양수산부.For조합창고품목별입출고현황;
+using KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황;
+using KoreaCommon.Fish.해양수산부.For품목별물류센터재고현황;
+using KoreaCommon.ViewModel.해양수산부;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -15,15 +24,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
-//builder.Services.AddScoped<ApplicationUserRepository>();
-//builder.Services.AddScoped<IdentityRoleRepository>();
-//builder.Services.AddScoped<IdentityRoleClaimRepository>();
-//builder.Services.AddScoped<IdentityUserRoleRepository>();
-//builder.Services.AddScoped<IdentityUserTokenRepository>();
-//builder.Services.AddScoped<IdentityUserClaimRepository>();
-//builder.Services.AddScoped<IdentityUserLoginRepository>();
-//builder.Services.AddScoped<UnitOfWork<ApplicationDbContext>>();
-
 var ApplicationDbConnectionString = builder.Configuration.GetConnectionString("ApplicationDbConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySQL(ApplicationDbConnectionString));
@@ -36,15 +36,37 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
             options.LoginPath = "/Login";
             options.AccessDeniedPath = "/AccessDenied";
         });
-//// UserManager, RoleManager �� ���� ���
-//builder.Services.AddScoped<UserManager<ApplicationUser>>();
-//builder.Services.AddScoped<RoleManager<IdentityRole>>();
 builder.Services.AddScoped<PasswordValidator<ApplicationUser>>();
 builder.Services.AddScoped<AuthenticationStateProvider,
     CustomAuthenticationStateProvider>();
 builder.Services.AddScoped<AuthenticationService>();
 builder.Services.AddScoped<ExampleService>();
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<산지조합ViewModel>();
+builder.Services.AddScoped<산지조합API>();
+
+builder.Services.AddScoped<산지조합위판장ViewModel>();
+builder.Services.AddScoped<산지조합위판장API>();
+
+builder.Services.AddScoped<산지조합위판장현황ViewModel>();
+builder.Services.AddScoped<산지조합위판장현황API>();
+
+builder.Services.AddScoped<산지조합창고ViewModel>();
+builder.Services.AddScoped<산지조합창고API>();
+
+builder.Services.AddScoped<위판장별위탁판매현황ViewModel>();
+builder.Services.AddScoped<위판장별위탁판매현황API>();
+
+builder.Services.AddScoped<조합창고품목별입출고현황ViewModel>();
+builder.Services.AddScoped<조합창고품목별입출고현황API>();
+
+builder.Services.AddScoped<조합창고품목별재고현황ViewModel>();
+builder.Services.AddScoped<조합창고품목별재고현황API>();
+
+builder.Services.AddScoped<품목별물류센터재고현황ViewModel>();
+builder.Services.AddScoped<품목별물류센터재고현황API>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

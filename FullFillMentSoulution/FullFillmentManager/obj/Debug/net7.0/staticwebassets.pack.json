@@ -57,6 +57,18 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\images\\물고기.png",
+      "PackagePath": "staticwebassets\\images\\물고기.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\images\\수협.png",
+      "PackagePath": "staticwebassets\\images\\수협.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\images\\창고.png",
+      "PackagePath": "staticwebassets\\images\\창고.png"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FullFillmentManager.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

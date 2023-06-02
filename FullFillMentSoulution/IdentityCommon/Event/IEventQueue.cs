@@ -29,7 +29,7 @@ namespace IdentityCommon.Services
         lock (_lock)
         {
             _eventQueue.Enqueue(@event);
-                if (@event is CreateUserCommandModel createOrderCommand)
+                if (@event is CreateUserCommand createOrderCommand)
                 {
                     Console.WriteLine(createOrderCommand.Name);
                 }

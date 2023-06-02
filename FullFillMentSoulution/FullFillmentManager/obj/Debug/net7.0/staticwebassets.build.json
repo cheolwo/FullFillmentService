@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zuAQ06KkEtG3Rp3SmXT4Md2doqGckl7rRfAMx+jc6qI=",
+  "Hash": "JXI5ZHbCW6pMt9nK7lfEE6bB5hv6lrTPA5MCdij5lYM=",
   "Source": "FullFillmentManager",
   "BasePath": "_content/FullFillmentManager",
   "Mode": "Default",
@@ -321,6 +321,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\images\\물고기.png",
+      "SourceId": "FullFillmentManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\",
+      "BasePath": "_content/FullFillmentManager",
+      "RelativePath": "images/물고기.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\물고기.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\images\\수협.png",
+      "SourceId": "FullFillmentManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\",
+      "BasePath": "_content/FullFillmentManager",
+      "RelativePath": "images/수협.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\수협.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\images\\창고.png",
+      "SourceId": "FullFillmentManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\",
+      "BasePath": "_content/FullFillmentManager",
+      "RelativePath": "images/창고.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\창고.png"
     }
   ]
 }

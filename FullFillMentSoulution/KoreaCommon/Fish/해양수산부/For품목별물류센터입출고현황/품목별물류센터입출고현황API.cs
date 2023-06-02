@@ -13,15 +13,19 @@ namespace KoreaCommon.Fish.해양수산부.For품목별물류센터입출고현�
     using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
+    using Microsoft.Extensions.Configuration;
 
-    public class 품목별물류센터입출고현황정보API
+    public class 품목별물류센터입출고현황API
     {
         private string baseUrl = "http://apis.data.go.kr/1192000/select0160List/getselect0160List";
         private string serviceKey;
+        private readonly IConfiguration _configuration;
 
-        public 품목별물류센터입출고현황정보API(string serviceKey)
+        public 품목별물류센터입출고현황API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
         public async Task<품목별물류센터입출고현황정보> Get품목별물류센터입출고현황정보(string lgistCnterCode="", string lgistCnterNm = "", string mprcStdCode = "", string mprcStdCodeNm = "", 

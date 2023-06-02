@@ -1,23 +1,22 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
-namespace KoreaCommon.Fish.해양수산부.For산지조합창고기본정보
+namespace KoreaCommon.Fish.해양수산부.For산지조합창고정보
 {
-    public class 산지조합창고기본정보API
+    public class 산지조합창고API
     {
         private string baseUrl = "http://apis.data.go.kr/1192000/select0120List/getselect0120List";
+        private readonly IConfiguration _configuration;
         private string serviceKey;
 
-        public 산지조합창고기본정보API(string serviceKey)
+        public 산지조합창고API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
-        public async Task<산지조합창고기본정보> Get산지조합창고기본정보(int numOfRows = 10, int pageNo = 1, string dataType = "json")
+        public async Task<산지조합창고정보> Get산지조합창고정보(int numOfRows = 10, int pageNo = 1, string dataType = "json")
         {
             string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}";
 
@@ -28,7 +27,7 @@ namespace KoreaCommon.Fish.해양수산부.For산지조합창고기본정보
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     string data = await response.Content.ReadAsStringAsync();
-                    산지조합창고기본정보 result = JsonConvert.DeserializeObject<산지조합창고기본정보>(data);
+                    산지조합창고정보 result = JsonConvert.DeserializeObject<산지조합창고정보>(data);
                     return result;
                 }
                 catch (HttpRequestException e)
@@ -112,7 +111,7 @@ namespace KoreaCommon.Fish.해양수산부.For산지조합창고기본정보
         [JsonProperty("body")]
         public Body Body { get; set; }
     }
-    public class 산지조합창고기본정보
+    public class 산지조합창고정보
     {
         [JsonProperty("responseJson")]
         public ResponseJson ResponseJson { get; set; }

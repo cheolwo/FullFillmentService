@@ -1,26 +1,24 @@
-﻿using KoreaCommon.Fish.수협산지조합위판장.위판장정보;
+﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KoreaCommon.Fish.수협산지조합위판장.위판장현황
 {
-    public class 해양수산부수협_산지조합_위판장_현황API
+    public class 산지조합위판장현황API
     {
         private HttpClient client;
         private string baseUrl = "http://apis.data.go.kr/1192000/select0060List/getselect0060List";
         private string serviceKey;
+        private readonly IConfiguration _configuration;
 
-        public 해양수산부수협_산지조합_위판장_현황API(string serviceKey)
+        public 산지조합위판장현황API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
             client = new HttpClient();
         }
 
-        public async Task<산지조합위판장현황> Get산지조합위판장현황(string baseDt = "202305", string dataType = "json")
+        public async Task<산지조합위판장현황정보> Get산지조합위판장현황정보(string baseDt = "202305", string dataType = "json")
         {
             string url = $"{baseUrl}?ServiceKey={serviceKey}&type={dataType}&baseDt={baseDt}";
 
@@ -30,7 +28,7 @@ namespace KoreaCommon.Fish.수협산지조합위판장.위판장현황
                 response.EnsureSuccessStatusCode();
                 string data = await response.Content.ReadAsStringAsync();
                 Console.Write(data);
-                산지조합위판장현황 result = JsonConvert.DeserializeObject<산지조합위판장현황>(data);
+                산지조합위판장현황정보 result = JsonConvert.DeserializeObject<산지조합위판장현황정보>(data);
                 return result;
             }
             catch (HttpRequestException e)
@@ -108,7 +106,7 @@ namespace KoreaCommon.Fish.수협산지조합위판장.위판장현황
         public Body Body { get; set; }
     }
 
-    public class 산지조합위판장현황
+    public class 산지조합위판장현황정보
     {
         [JsonProperty("responseJson")]
         public ResponseJson ResponseJson { get; set; }

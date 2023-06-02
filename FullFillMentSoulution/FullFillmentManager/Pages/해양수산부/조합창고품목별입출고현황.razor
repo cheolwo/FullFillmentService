@@ -1,0 +1,33 @@
+﻿@page "/조합창고품목별입출고현황Page"
+@using KoreaCommon.ViewModel;
+@using KoreaCommon.ViewModel.해양수산부;
+@inject 조합창고품목별입출고현황ViewModel _조합창고품목별입출고현황ViewModel
+<MudText Align="Align.Center" Typo="Typo.h2">조합창고품목별입출고현황</MudText>
+@foreach (var item in _조합창고품목별입출고현황ViewModel.Items)
+{
+    <MudCard Outlined="true">
+        <MudCardMedia Image="/images/창고.png" Height="300" />
+        <MudCardHeader>
+            <CardHeaderContent>
+                <MudText Typo="Typo.h6">@item.MxtrNm</MudText>
+            </CardHeaderContent>
+            <CardHeaderActions>
+                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Default" />
+            </CardHeaderActions>
+        </MudCardHeader>
+        <MudCardContent>
+            <MudText Typo="Typo.body2">조합창고품목별입출고현황코드 : @item.MxtrCode</MudText>
+@*            <MudText Typo="Typo.body2">팩스번호 : @item.FxNum</MudText>
+            <MudText Typo="Typo.body2">전화번호 : @item.TelNo</MudText>*@
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Text" Color="Color.Primary">Read More</MudButton>
+        </MudCardActions>
+    </MudCard>
+}
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await _조합창고품목별입출고현황ViewModel.Load조합창고품목별입출고현황정보();
+    }
+}

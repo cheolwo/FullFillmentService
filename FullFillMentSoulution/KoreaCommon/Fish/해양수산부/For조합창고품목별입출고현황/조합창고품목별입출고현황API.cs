@@ -1,25 +1,26 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
-namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황정보
+namespace KoreaCommon.Fish.해양수산부.For조합창고품목별입출고현황
 {
-    public class 조합창고품목별재고현황정보API
+    public class 조합창고품목별입출고현황API
     {
-        private string baseUrl = "http://apis.data.go.kr/1192000/select0150List/getselect0150List";
         private string serviceKey;
+        private readonly IConfiguration _configuration;
 
-        public 조합창고품목별재고현황정보API(string serviceKey)
+        public 조합창고품목별입출고현황API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
-        public async Task<조합창고품목별재고현황정보> Get조합창고품목별재고현황정보(string baseDt, int numOfRows = 10, int pageNo = 1, string dataType = "json")
+        public async Task<조합창고품목별입출고현황정보> Get조합창고품목별입출고현황정보(int numOfRows = 100, int pageNo = 1, string dataType = "json", string baseDt = "20220101",
+            string mxtrNm = "", string wrhousNm = "", string mprcStdCodeNm = "", string wrhsdlvrSeName = "")
         {
-            string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}";
+            string url = "http://apis.data.go.kr/1192000/select0140List/getselect0140List"; // URL
+            url += "?ServiceKey=" + serviceKey; // Service Key
+            url += $"&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}&mxtrNm={mxtrNm}&wrhousNm={wrhousNm}&mprcStdCodeNm={mprcStdCodeNm}&wrhsdlvrSeName={wrhsdlvrSeName}";
 
             using (HttpClient client = new HttpClient())
             {
@@ -28,7 +29,7 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황�
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     string data = await response.Content.ReadAsStringAsync();
-                    조합창고품목별재고현황정보 result = JsonConvert.DeserializeObject<조합창고품목별재고현황정보>(data);
+                    조합창고품목별입출고현황정보 result = JsonConvert.DeserializeObject<조합창고품목별입출고현황정보>(data);
                     return result;
                 }
                 catch (HttpRequestException e)
@@ -36,9 +37,9 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황�
                     Console.WriteLine($"Error occurred during the request: {e.Message}");
                     return null;
                 }
-                catch (JsonException e)
+                catch (Exception e)
                 {
-                    Console.WriteLine($"Error occurred during deserialization: {e.Message}");
+                    Console.WriteLine($"Error occurred: {e.Message}");
                     return null;
                 }
             }
@@ -48,6 +49,12 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황�
     {
         [JsonProperty("stdrDe")]
         public string StdrDe { get; set; }
+
+        [JsonProperty("mprcStdCode")]
+        public string MprcStdCode { get; set; }
+
+        [JsonProperty("mprcStdCodeNm")]
+        public string MprcStdCodeNm { get; set; }
 
         [JsonProperty("mxtrCode")]
         public string MxtrCode { get; set; }
@@ -61,14 +68,14 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황�
         [JsonProperty("wrhousNm")]
         public string WrhousNm { get; set; }
 
-        [JsonProperty("mprcStdCode")]
-        public string MprcStdCode { get; set; }
+        [JsonProperty("wrhsdlvrSeCode")]
+        public string WrhsdlvrSeCode { get; set; }
 
-        [JsonProperty("mprcStdCodeNm")]
-        public string MprcStdCodeNm { get; set; }
+        [JsonProperty("wrhsdlvrSeName")]
+        public string WrhsdlvrSeName { get; set; }
 
-        [JsonProperty("invntryQy")]
-        public string InvntryQy { get; set; }
+        [JsonProperty("wrhsdlvrQy")]
+        public string WrhsdlvrQy { get; set; }
     }
 
     public class Body
@@ -106,8 +113,7 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황�
         [JsonProperty("body")]
         public Body Body { get; set; }
     }
-
-    public class 조합창고품목별재고현황정보
+    public class 조합창고품목별입출고현황정보
     {
         [JsonProperty("responseJson")]
         public ResponseJson ResponseJson { get; set; }

@@ -1,8 +1,7 @@
 ﻿@page "/loginsample"
-@    using IdentityServerTest.Models;
-@    using Microsoft.AspNetCore.Identity;
-@    using System.Security.Claims;
-    using IdentityCommon.Models.ForApplicationUser;
+@using Microsoft.AspNetCore.Identity;
+@using System.Security.Claims;
+@using IdentityCommon.Models.ForApplicationUser;
 @inject SignInManager<ApplicationUser> SignInManager
 @inject NavigationManager NavigationManager
 @inject IHttpContextAccessor HttpContextAccessor

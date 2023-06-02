@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerSample", "Ide
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullFillmentManager", "FullFillmentManager\FullFillmentManager.csproj", "{F95F9EDF-ADC0-447D-AC85-12ECF6442A94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoreaCommon", "KoreaCommon\KoreaCommon.csproj", "{995E7327-FBD9-48B3-9F8D-C6FBCD0CC7E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoreaCommon", "KoreaCommon\KoreaCommon.csproj", "{995E7327-FBD9-48B3-9F8D-C6FBCD0CC7E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{D56EDC23-9921-4FF3-A4AD-129CF2E58227}"
 EndProject

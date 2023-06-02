@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LAJLEhfyRP4mYswNpfj+GvSydsWS/gbUJk674JkQHWDOzrfMnNSn5drsoQF0AdK+WBLBuAM4jHKhy02FiqX+og==",
+  "dgSpecHash": "C5nwME+o9IIUM+7+/NQu5zFx2ssMG2Ystx0hZ1S76o7Me2aFbsHavNgqZz+VPYphXKxpNXyno/npvPQBhbO/NA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Test\\Test.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []

@@ -8,21 +8,25 @@
 </div>
 
 <MudNavMenu>
-    <AuthorizeView Roles="관리자">
-        <Authorized>
-            <MudNavLink Href="/UserManagement" Match="NavLinkMatch.Prefix">Users</MudNavLink>
-            <MudNavLink Href="/RoleManagement" Match="NavLinkMatch.Prefix">Roles</MudNavLink>
-        </Authorized>
-        <NotAuthorized>
-            <MudNavLink Href="/" Match="NavLinkMatch.All">Dashboard</MudNavLink>
-            <MudNavLink Href="/login" Match="NavLinkMatch.Prefix">Login</MudNavLink>
-            <MudNavLink Href="/loginsample" Match="NavLinkMatch.Prefix">loginsample</MudNavLink>
-            <MudNavGroup Title="Settings" Expanded="true">
-                <MudNavLink Href="/users" Match="NavLinkMatch.Prefix">Users</MudNavLink>
-                <MudNavLink Href="/security" Match="NavLinkMatch.Prefix">Security</MudNavLink>
-            </MudNavGroup>
-        </NotAuthorized>
-    </AuthorizeView>
+
+    <MudNavLink Href="/UserManagement" Match="NavLinkMatch.Prefix">Users</MudNavLink>
+    <MudNavLink Href="/RoleManagement" Match="NavLinkMatch.Prefix">Roles</MudNavLink>
+    <MudNavLink Href="/" Match="NavLinkMatch.All">Dashboard</MudNavLink>
+    <MudNavLink Href="/login" Match="NavLinkMatch.Prefix">Login</MudNavLink>
+    <MudNavGroup Title="Settings" Expanded="true">
+        <MudNavLink Href="/users" Match="NavLinkMatch.Prefix">Users</MudNavLink>
+        <MudNavLink Href="/security" Match="NavLinkMatch.Prefix">Security</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="해양수산부" Expanded="true">
+        <MudNavLink Href="/산지조합Page" Match="NavLinkMatch.Prefix">산지조합</MudNavLink>
+        <MudNavLink Href="/산지조합위판장Page" Match="NavLinkMatch.Prefix">산지조합위판장</MudNavLink>
+        <MudNavLink Href="/산지조합위판장현황Page" Match="NavLinkMatch.Prefix">산지조합위판장현황</MudNavLink>
+        <MudNavLink Href="/산지조합창고Page" Match="NavLinkMatch.Prefix">산지조합창고</MudNavLink>
+        <MudNavLink Href="/위판장별위탁판매현황Page" Match="NavLinkMatch.Prefix">위판장별위탁판매현황</MudNavLink>
+        <MudNavLink Href="/조합창고품목별입출고현황Page" Match="NavLinkMatch.Prefix">조합창고품목별입출고현황</MudNavLink>
+        <MudNavLink Href="/조합창고품목별재고현황Page" Match="NavLinkMatch.Prefix">조합창고품목별재고현황</MudNavLink>
+        <MudNavLink Href="/품목별물류센터재고현황Page" Match="NavLinkMatch.Prefix">품목별물류센터재고현황</MudNavLink>
+    </MudNavGroup>
 </MudNavMenu>
 
 @code {

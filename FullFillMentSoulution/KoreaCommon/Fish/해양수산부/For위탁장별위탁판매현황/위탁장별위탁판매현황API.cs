@@ -1,23 +1,22 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
-namespace KoreaCommon.Fish.해양수산부.For위탁장별위탁판매현황
+namespace KoreaCommon.Fish.해양수산부.For위판장별위탁판매현황
 {
-    public class 위탁장별위탁판매현황API
+    public class 위판장별위탁판매현황API
     {
         private string baseUrl = "http://apis.data.go.kr/1192000/select0040List/getselect0040List";
         private string serviceKey;
+        private readonly IConfiguration _configuration;
 
-        public 위탁장별위탁판매현황API(string serviceKey)
+        public 위판장별위탁판매현황API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
-        public async Task<위탁장별위탁판매현황정보> Get위탁장별위탁판매현황(string baseDt = "20220101", string mxtrNm="", string csmtmktNm = "", string mprcStdCode = "", string mprcStdCodeNm = "", int numOfRows = 10, int pageNo = 1, string dataType = "json")
+        public async Task<위판장별위탁판매현황정보> Get위판장별위탁판매현황정보(string baseDt = "20220101", string mxtrNm="", string csmtmktNm = "", string mprcStdCode = "", string mprcStdCodeNm = "", int numOfRows = 10, int pageNo = 1, string dataType = "json")
         {
             string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}&mxtrNm={mxtrNm}&csmtmktNm={csmtmktNm}&mprcStdCode={mprcStdCode}&mprcStdCodeNm={mprcStdCodeNm}";
 
@@ -28,7 +27,7 @@ namespace KoreaCommon.Fish.해양수산부.For위탁장별위탁판매현황
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     string data = await response.Content.ReadAsStringAsync();
-                    위탁장별위탁판매현황정보 result = JsonConvert.DeserializeObject<위탁장별위탁판매현황정보>(data);
+                    위판장별위탁판매현황정보 result = JsonConvert.DeserializeObject<위판장별위탁판매현황정보>(data);
                     return result;
                 }
                 catch (HttpRequestException e)
@@ -155,7 +154,7 @@ namespace KoreaCommon.Fish.해양수산부.For위탁장별위탁판매현황
         public Body Body { get; set; }
     }
 
-    public class 위탁장별위탁판매현황정보
+    public class 위판장별위탁판매현황정보
     {
         [JsonProperty("responseJson")]
         public ResponseJson ResponseJson { get; set; }

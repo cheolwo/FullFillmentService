@@ -1,9 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 namespace KoreaCommon.Fish.해양수산부.For품목별물류센터재고현황
 {
@@ -11,13 +7,16 @@ namespace KoreaCommon.Fish.해양수산부.For품목별물류센터재고현황
     {
         private string baseUrl = "http://apis.data.go.kr/1192000/select0170List/getselect0170List";
         private string serviceKey;
+        private readonly IConfiguration _configuration;
 
-        public 품목별물류센터재고현황API(string serviceKey)
+        public 품목별물류센터재고현황API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
-        public async Task<List<Item>> Get품목별물류센터재고현황(string baseDt = "20230520", string lgistCnterCode="", string lgistCnterNm = "", string mprcStdCode = "", string mprcStdCodeNm = "", int numOfRows = 10, int pageNo = 1, string dataType = "json")
+        public async Task<품목별물류센터재고현황정보> Get품목별물류센터재고현황정보(string baseDt = "20230520", string lgistCnterCode="", string lgistCnterNm = "", string mprcStdCode = "", string mprcStdCodeNm = "", int numOfRows = 10, int pageNo = 1, string dataType = "json")
         {
             string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}&lgistCnterCode={lgistCnterCode}&lgistCnterNm={lgistCnterNm}&mprcStdCode={mprcStdCode}&mprcStdCodeNm={mprcStdCodeNm}";
 
@@ -28,8 +27,8 @@ namespace KoreaCommon.Fish.해양수산부.For품목별물류센터재고현황
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     string data = await response.Content.ReadAsStringAsync();
-                    ResponseJson result = JsonConvert.DeserializeObject<품목별물류센터재고현황정보>(data)?.ResponseJson;
-                    return result?.Body?.Item;
+                    품목별물류센터재고현황정보 result = JsonConvert.DeserializeObject<품목별물류센터재고현황정보>(data);
+                    return result;
                 }
                 catch (HttpRequestException e)
                 {

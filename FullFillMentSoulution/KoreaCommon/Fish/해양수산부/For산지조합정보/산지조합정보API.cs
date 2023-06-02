@@ -1,23 +1,21 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
-namespace KoreaCommon.Fish.수협산지조합위판장.해양수산부수협산지조합정보
+namespace KoreaCommon.Fish.산지조합위판장.해양수산부산지조합정보
 {
-    public class 해양수산부수협산지조합정보API
+    public class 산지조합API
     {
         private string baseUrl = "http://apis.data.go.kr/1192000/select0010List/getselect0010List";
-        private string serviceKey;
-
-        public 해양수산부수협산지조합정보API(string serviceKey)
+        private string? serviceKey;
+        private readonly IConfiguration _configuration;
+        public 산지조합API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
-        public async Task<산지조합정보> Get해양수산부수협산지조합정보(string mxtrNm="", int numOfRows = 10, int pageNo = 1, string dataType = "json")
+        public async Task<산지조합정보> Get산지조합정보(string mxtrNm="", int numOfRows = 10, int pageNo = 1, string dataType = "json")
         {
             string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}&mxtrNm={mxtrNm}";
 

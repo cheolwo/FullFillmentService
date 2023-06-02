@@ -1,56 +1,22 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
-namespace KoreaCommon.Fish.수협산지조합위판장.위판장정보
+namespace KoreaCommon.Fish.수협산지조합위판장.For산지조합위판장정보
 {
-    public class CustomApiModule<TResponse>
-    {
-        private string baseUrl;
-        private string serviceKey;
-
-        public CustomApiModule(string baseUrl, string serviceKey)
-        {
-            this.baseUrl = baseUrl;
-            this.serviceKey = serviceKey;
-        }
-
-        public virtual async Task<TResponse> GetDataAsync(int numOfRows = 100, int pageNo = 1, string dataType = "json")
-        {
-            string url = $"{baseUrl}?serviceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}";
-
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
-                    HttpResponseMessage response = await client.GetAsync(url);
-                    response.EnsureSuccessStatusCode();
-                    string data = await response.Content.ReadAsStringAsync();
-                    TResponse result = JsonConvert.DeserializeObject<TResponse>(data);
-                    return result;
-                }
-                catch (HttpRequestException e)
-                {
-                    Console.WriteLine($"Error occurred during the request: {e.Message}");
-                    return default;
-                }
-                catch (JsonException e)
-                {
-                    Console.WriteLine($"Error occurred during deserialization: {e.Message}");
-                    return default;
-                }
-            }
-        }
-    }
-    public class 해양수산부수협_산지조합_위판장_정보API
+    public class 산지조합위판장API
     {
         private string baseUrl = "https://apis.data.go.kr/1192000/select0020List/getselect0020List";
         private string serviceKey;
+        private readonly IConfiguration _configuration;
 
-        public 해양수산부수협_산지조합_위판장_정보API(string serviceKey)
+        public 산지조합위판장API(IConfiguration configuration)
         {
-            this.serviceKey = serviceKey;
+            _configuration = configuration;
+            serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
+                                ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
-        public async Task<ResponseJson> Get_해양수산부_수협_산지조합_위판장_정보(int numOfRows = 100, int pageNo = 1, string csmtmktCode = "", string csmtmktNm = "", string dataType = "json")
+        public async Task<산지조합위판장정보> Get산지조합위판장정보(int numOfRows = 100, int pageNo = 1, string csmtmktCode = "", string csmtmktNm = "", string dataType = "json")
         {
             string url = $"{baseUrl}?serviceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}&csmtmktCode={csmtmktCode}&csmtmktNm={csmtmktNm}";
 
@@ -61,7 +27,7 @@ namespace KoreaCommon.Fish.수협산지조합위판장.위판장정보
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     string data = await response.Content.ReadAsStringAsync();
-                    ResponseJson result = JsonConvert.DeserializeObject<산지조합위판장정보>(data)?.ResponseJson;
+                    산지조합위판장정보 result = JsonConvert.DeserializeObject<산지조합위판장정보>(data);
                     return result;
                 }
                 catch (HttpRequestException e)
