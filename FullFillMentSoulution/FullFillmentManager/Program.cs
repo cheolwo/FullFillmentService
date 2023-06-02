@@ -10,6 +10,7 @@ using KoreaCommon.Fish.해양수산부.For위판장별위탁판매현황;
 using KoreaCommon.Fish.해양수산부.For조합창고품목별입출고현황;
 using KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황;
 using KoreaCommon.Fish.해양수산부.For품목별물류센터재고현황;
+using KoreaCommon.Model;
 using KoreaCommon.ViewModel.해양수산부;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -27,6 +28,10 @@ builder.Services.AddSingleton<WeatherForecastService>();
 var ApplicationDbConnectionString = builder.Configuration.GetConnectionString("ApplicationDbConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySQL(ApplicationDbConnectionString));
+
+var 수협DbConnectionString = builder.Configuration.GetConnectionString("수협DbConnection");
+builder.Services.AddDbContext<수협DbContext>(options =>
+    options.UseMySQL(수협DbConnectionString));
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddMudServices();

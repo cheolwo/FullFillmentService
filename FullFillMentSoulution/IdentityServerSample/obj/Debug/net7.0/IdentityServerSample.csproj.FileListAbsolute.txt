@@ -91,3 +91,7 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSa
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\MediatR.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\MediatR.Contracts.dll

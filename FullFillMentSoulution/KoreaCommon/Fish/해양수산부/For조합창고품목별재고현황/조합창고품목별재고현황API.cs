@@ -1,10 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
 {
@@ -21,7 +16,7 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
                                 ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
 
-        public async Task<조합창고품목별재고현황정보> Get조합창고품목별재고현황정보(string baseDt="20230520", int numOfRows = 10, int pageNo = 1, string dataType = "json")
+        public async Task<조합창고품목별재고현황정보> Get조합창고품목별재고현황정보(string baseDt="20230520", int numOfRows = 100, int pageNo = 1, string dataType = "json")
         {
             string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numOfRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}";
 
@@ -50,28 +45,59 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
     }
     public class Item
     {
-        [JsonProperty("stdrDe")]
+        /// <summary>
+        /// 기준일자
+        /// </summary>
+        [JsonProperty("stdrDe")] 
         public string StdrDe { get; set; }
 
-        [JsonProperty("mxtrCode")]
+        /// <summary>
+        /// 조합코드
+        /// </summary>
+
+        [JsonProperty("mxtrCode")] 
         public string MxtrCode { get; set; }
 
-        [JsonProperty("mxtrNm")]
+        /// <summary>
+        /// 조합명
+        /// </summary>
+
+        [JsonProperty("mxtrNm")] 
         public string MxtrNm { get; set; }
 
-        [JsonProperty("wrhousCode")]
+        /// <summary>
+        /// 창고코드
+        /// </summary>
+
+        [JsonProperty("wrhousCode")] 
         public string WrhousCode { get; set; }
 
-        [JsonProperty("wrhousNm")]
+        /// <summary>
+        /// 창고명
+        /// </summary>
+
+        [JsonProperty("wrhousNm")] 
         public string WrhousNm { get; set; }
 
-        [JsonProperty("mprcStdCode")]
+        /// <summary>
+        /// 수산물표준코드
+        /// </summary>
+
+        [JsonProperty("mprcStdCode")] 
         public string MprcStdCode { get; set; }
 
-        [JsonProperty("mprcStdCodeNm")]
+        /// <summary>
+        /// 수산물표준코드명
+        /// </summary>
+
+        [JsonProperty("mprcStdCodeNm")] 
         public string MprcStdCodeNm { get; set; }
 
-        [JsonProperty("invntryQy")]
+        /// <summary>
+        /// 재고량
+        /// </summary>
+
+        [JsonProperty("invntryQy")] 
         public string InvntryQy { get; set; }
     }
 

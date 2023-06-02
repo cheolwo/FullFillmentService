@@ -10,3 +10,8 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\refint\KoreaCommon.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\ref\KoreaCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\bin\Debug\net7.0\Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\bin\Debug\net7.0\Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.csproj.CopyComplete
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\bin\Debug\net7.0\KoreaCommon.runtimeconfig.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\KoreaCommon\obj\Debug\net7.0\KoreaCommon.genruntimeconfig.cache

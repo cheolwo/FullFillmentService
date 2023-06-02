@@ -3,8 +3,10 @@
 @using KoreaCommon.ViewModel.해양수산부;
 @inject 조합창고품목별재고현황ViewModel _조합창고품목별재고현황ViewModel
 <MudText Align="Align.Center" Typo="Typo.h2">조합창고품목별재고현황</MudText>
+<MudGrid Justify="Justify.SpaceBetween">
 @foreach (var item in _조합창고품목별재고현황ViewModel.Items)
 {
+    <MudItem xs="12" sm="6" md="4" lg="3">
     <MudCard Outlined="true">
         <MudCardMedia Image="/images/창고.png" Height="300" />
         <MudCardHeader>
@@ -16,15 +18,22 @@
             </CardHeaderActions>
         </MudCardHeader>
         <MudCardContent>
-            <MudText Typo="Typo.body2">조합창고품목별재고현황코드 : @item.MxtrCode</MudText>
-@*            <MudText Typo="Typo.body2">팩스번호 : @item.FxNum</MudText>
-            <MudText Typo="Typo.body2">전화번호 : @item.TelNo</MudText>*@
+            <MudText Typo="Typo.body2">기준일자 : @item.StdrDe</MudText>
+            <MudText Typo="Typo.body2">조합코드 : @item.MxtrCode</MudText>
+            <MudText Typo="Typo.body2">조합명 : @item.MxtrNm</MudText>
+            <MudText Typo="Typo.body2">창고코드 : @item.WrhousCode</MudText>
+            <MudText Typo="Typo.body2">창고명 : @item.WrhousNm</MudText>
+            <MudText Typo="Typo.body2">수산물표준코드 : @item.MprcStdCode</MudText>
+            <MudText Typo="Typo.body2">수산물표준코드명 : @item.MprcStdCodeNm</MudText>
+            <MudText Typo="Typo.body2">재고량 : @item.InvntryQy</MudText>
         </MudCardContent>
         <MudCardActions>
             <MudButton Variant="Variant.Text" Color="Color.Primary">Read More</MudButton>
         </MudCardActions>
     </MudCard>
+    </MudItem>
 }
+</MudGrid>
 @code {
     protected override async Task OnInitializedAsync()
     {
