@@ -5,6 +5,7 @@ using IdentityServerTest.Data;
 using KoreaCommon.Fish.산지조합위판장.해양수산부산지조합정보;
 using KoreaCommon.Fish.수협산지조합위판장.For산지조합위판장정보;
 using KoreaCommon.Fish.수협산지조합위판장.위판장현황;
+using KoreaCommon.Fish.해양수산부;
 using KoreaCommon.Fish.해양수산부.For산지조합창고정보;
 using KoreaCommon.Fish.해양수산부.For위판장별위탁판매현황;
 using KoreaCommon.Fish.해양수산부.For조합창고품목별입출고현황;
@@ -71,6 +72,7 @@ builder.Services.AddScoped<조합창고품목별재고현황API>();
 
 builder.Services.AddScoped<품목별물류센터재고현황ViewModel>();
 builder.Services.AddScoped<품목별물류센터재고현황API>();
+builder.Services.AddScoped<수협APIToDbManager>();
 
 var app = builder.Build();
 

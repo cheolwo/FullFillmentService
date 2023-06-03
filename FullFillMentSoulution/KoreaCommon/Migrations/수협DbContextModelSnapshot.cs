@@ -20,15 +20,11 @@ namespace KoreaCommon.Migrations
 
             modelBuilder.Entity("KoreaCommon.Model.수산창고", b =>
                 {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Address")
+                    b.Property<string>("Code")
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
 
-                    b.Property<string>("Code")
+                    b.Property<string>("Address")
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
 
@@ -53,9 +49,9 @@ namespace KoreaCommon.Migrations
 
                     b.Property<string>("수협Id")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(128)");
 
-                    b.HasKey("Id");
+                    b.HasKey("Code");
 
                     b.HasIndex("수협Id");
 
@@ -78,11 +74,11 @@ namespace KoreaCommon.Migrations
 
                     b.Property<string>("수협Id")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("창고Id")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(128)");
 
                     b.HasKey("Id");
 
@@ -111,17 +107,21 @@ namespace KoreaCommon.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("date")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("수산품Id")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("수협Id")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(128)");
 
                     b.Property<string>("창고Id")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(128)");
 
                     b.HasKey("Id");
 
@@ -136,15 +136,11 @@ namespace KoreaCommon.Migrations
 
             modelBuilder.Entity("KoreaCommon.Model.수산협동조합", b =>
                 {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Address")
+                    b.Property<string>("Code")
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
 
-                    b.Property<string>("Code")
+                    b.Property<string>("Address")
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
 
@@ -167,7 +163,7 @@ namespace KoreaCommon.Migrations
                     b.Property<string>("ZipCode")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Id");
+                    b.HasKey("Code");
 
                     b.ToTable("수산협동조합");
                 });
@@ -186,7 +182,7 @@ namespace KoreaCommon.Migrations
             modelBuilder.Entity("KoreaCommon.Model.수산품", b =>
                 {
                     b.HasOne("KoreaCommon.Model.수산협동조합", "수협")
-                        .WithMany()
+                        .WithMany("수산품들")
                         .HasForeignKey("수협Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -205,19 +201,19 @@ namespace KoreaCommon.Migrations
             modelBuilder.Entity("KoreaCommon.Model.수산품별재고현황", b =>
                 {
                     b.HasOne("KoreaCommon.Model.수산품", "수산품")
-                        .WithMany()
+                        .WithMany("수산품별재고현황들")
                         .HasForeignKey("수산품Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KoreaCommon.Model.수산협동조합", "수협")
-                        .WithMany()
+                        .WithMany("수산품별재고현황들")
                         .HasForeignKey("수협Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KoreaCommon.Model.수산창고", "창고")
-                        .WithMany()
+                        .WithMany("수산품별재고현황들")
                         .HasForeignKey("창고Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -232,10 +228,21 @@ namespace KoreaCommon.Migrations
             modelBuilder.Entity("KoreaCommon.Model.수산창고", b =>
                 {
                     b.Navigation("수산품들");
+
+                    b.Navigation("수산품별재고현황들");
+                });
+
+            modelBuilder.Entity("KoreaCommon.Model.수산품", b =>
+                {
+                    b.Navigation("수산품별재고현황들");
                 });
 
             modelBuilder.Entity("KoreaCommon.Model.수산협동조합", b =>
                 {
+                    b.Navigation("수산품들");
+
+                    b.Navigation("수산품별재고현황들");
+
                     b.Navigation("창고들");
                 });
 #pragma warning restore 612, 618

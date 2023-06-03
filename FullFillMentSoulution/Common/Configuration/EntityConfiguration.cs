@@ -9,9 +9,6 @@ namespace Common.Configuration
     {
         public virtual void Configure(EntityTypeBuilder<TEntity> builder)
         {
-            // Set primary key
-            builder.HasKey(e => e.Id);
-            builder.Property(e=>e.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Property(e=>e.Name).HasMaxLength(128);
             builder.Property(e=>e.Code).HasMaxLength(128);
         }

@@ -6,8 +6,6 @@ namespace Common.Model
     [NotMapped]
     public class Entity
     {
-        [Key]
-        public string Id { get; set; }
         public string? Code { get; set; }
         public string? Name { get; set; }
     }

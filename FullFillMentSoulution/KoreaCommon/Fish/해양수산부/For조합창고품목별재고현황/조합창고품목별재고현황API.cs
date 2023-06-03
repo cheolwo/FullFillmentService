@@ -15,6 +15,10 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
             serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
                                 ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
         }
+        public 조합창고품목별재고현황API()
+        {
+            serviceKey = "D0wkCvWHdCeJsYuU8A14KWl7mzOJ%2FiKbyKR%2F5xvnALYMf5wi5rcbCp2CXsx6xCsBhvgl5PJ8u%2Fwilufv%2FjhMcg%3D%3D";
+        }
 
         public async Task<조합창고품목별재고현황정보> Get조합창고품목별재고현황정보(string baseDt="20230520", int numOfRows = 100, int pageNo = 1, string dataType = "json")
         {
@@ -39,6 +43,31 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
                 {
                     Console.WriteLine($"Error occurred during deserialization: {e.Message}");
                     return null;
+                }
+            }
+        }
+        public async Task<int> PrintTotalCount(string baseDt, int numofRows = 100, int pageNo = 1, string dataType = "json")
+        {
+            string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numofRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}";
+            using (HttpClient client = new())
+            {
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    response.EnsureSuccessStatusCode();
+                    string data = await response.Content.ReadAsStringAsync();
+                    조합창고품목별재고현황정보 result = JsonConvert.DeserializeObject<조합창고품목별재고현황정보>(data);
+                    return result.ResponseJson.Header.TotalCount;
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine($"Error occurred during the request: {e.Message}");
+                    return 0;
+                }
+                catch (JsonException e)
+                {
+                    Console.WriteLine($"Error occurred during deserialization: {e.Message}");
+                    return 0;
                 }
             }
         }
@@ -142,4 +171,5 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
         [JsonProperty("responseJson")]
         public ResponseJson ResponseJson { get; set; }
     }
+
 }
