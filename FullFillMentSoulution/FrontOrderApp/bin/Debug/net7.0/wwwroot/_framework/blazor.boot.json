@@ -2,7 +2,7 @@
   "cacheBootResources": true,
   "config": [ ],
   "debugBuild": true,
-  "entryAssembly": "FrontOrderApp",
+  "entryAssembly": "주문자App",
   "icuDataMode": 0,
   "linkerEnabled": false,
   "resources": {
@@ -237,14 +237,14 @@
       "netstandard.dll": "sha256-+jUzj0FB0YcoBUeSkSNEjhVDTG08qbZ2twfCBMbzT+Q=",
       "System.Private.CoreLib.dll": "sha256-l+\/quNqfNCSUDSMJcp0+IxlSdOdnAtwVVWMXmYGHMpg=",
       "OrderCommon.dll": "sha256-OO2xYSgvKlxQ24E624AuL6kp8BzRmHvXwwf5jn0819M=",
-      "FrontOrderApp.dll": "sha256-0MBjuy+YGdxqqkGTqiMWZEH345PU89DkKKnPrMhmU10="
+      "주문자App.dll": "sha256-qrwcHubP+q7Ec\/FdqI2afLkf0w23FEJ5ZbhG8eon5I8="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "OrderCommon.pdb": "sha256-LknjyraIUVihzdHn+M2OfBiaktEhEa3XMReNdROJ4J0=",
-      "FrontOrderApp.pdb": "sha256-I65UuAl1LQot+bk9vZpHl8TYBTERvqKpPsZbyHjkvY4="
+      "주문자App.pdb": "sha256-39ZCbWqVhkURAuxoSypntpIUIBLlVyeVjTJXqigUDws="
     },
     "runtime": {
       "dotnet.7.0.1.j9zuvsgzyx.js": "sha256-jjax3FMRXzFAziWowdtJf6vipP2xXAaA5gD6VBYB6Y0=",

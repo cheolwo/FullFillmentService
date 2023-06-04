@@ -5502,9 +5502,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\FrontOrderApp.csproj",
-      "projectName": "FrontOrderApp",
-      "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\FrontOrderApp.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\주문자App.csproj",
+      "projectName": "주문자App",
+      "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\주문자App.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\",
       "projectStyle": "PackageReference",

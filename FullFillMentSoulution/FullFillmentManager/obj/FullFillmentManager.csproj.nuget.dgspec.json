@@ -45,6 +45,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "DotNetCore.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[17.51.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -342,6 +346,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.0, )"
+            },
+            "DotNetCore.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[17.51.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

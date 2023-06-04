@@ -51,25 +51,25 @@
           }
         }
       },
-      "DotNetCore.EntityFrameworkCore/17.50.0": {
+      "DotNetCore.EntityFrameworkCore/17.51.0": {
         "dependencies": {
-          "DotNetCore.Repositories": "17.50.0",
+          "DotNetCore.Repositories": "17.51.0",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.5",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
           "Microsoft.Extensions.DependencyInjection": "7.0.0"
         },
         "runtime": {
           "lib/net7.0/DotNetCore.EntityFrameworkCore.dll": {
-            "assemblyVersion": "17.50.0.0",
-            "fileVersion": "17.50.0.0"
+            "assemblyVersion": "17.51.0.0",
+            "fileVersion": "17.51.0.0"
           }
         }
       },
-      "DotNetCore.Repositories/17.50.0": {
+      "DotNetCore.Repositories/17.51.0": {
         "runtime": {
           "lib/net7.0/DotNetCore.Repositories.dll": {
-            "assemblyVersion": "17.50.0.0",
-            "fileVersion": "17.50.0.0"
+            "assemblyVersion": "17.51.0.0",
+            "fileVersion": "17.51.0.0"
           }
         }
       },
@@ -1439,6 +1439,7 @@
       },
       "Common/1.0.0": {
         "dependencies": {
+          "DotNetCore.EntityFrameworkCore": "17.51.0",
           "Microsoft.EntityFrameworkCore": "7.0.5"
         },
         "runtime": {
@@ -1449,7 +1450,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "DotNetCore.EntityFrameworkCore": "17.50.0",
+          "DotNetCore.EntityFrameworkCore": "17.51.0",
           "FluentHttpClient": "2.1.0",
           "IdentityModel": "6.1.0",
           "IdentityModel.AspNetCore": "4.3.0",
@@ -1470,6 +1471,7 @@
         "dependencies": {
           "Common": "1.0.0",
           "CommunityToolkit.Mvvm": "8.2.0",
+          "DotNetCore.EntityFrameworkCore": "17.51.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "MySql.EntityFrameworkCore": "7.0.2",
@@ -1508,19 +1510,19 @@
       "path": "communitytoolkit.mvvm/8.2.0",
       "hashPath": "communitytoolkit.mvvm.8.2.0.nupkg.sha512"
     },
-    "DotNetCore.EntityFrameworkCore/17.50.0": {
+    "DotNetCore.EntityFrameworkCore/17.51.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fvw+s6DNivkVW8ZF7rcn8ppPjGpzYWIHDxb4xTpmUDcIOglMhgaQODIgJh31WVPnS1Agxz7FYnWTRfRG5DwTog==",
-      "path": "dotnetcore.entityframeworkcore/17.50.0",
-      "hashPath": "dotnetcore.entityframeworkcore.17.50.0.nupkg.sha512"
+      "sha512": "sha512-gaQJPWze/nyGG8FFR8tfdnHNhxZ0vFWrh7x9qzMbZppqCyTfC132eFvJoQo2CHbsBhGdlJ7pTDASOU7vvACTZw==",
+      "path": "dotnetcore.entityframeworkcore/17.51.0",
+      "hashPath": "dotnetcore.entityframeworkcore.17.51.0.nupkg.sha512"
     },
-    "DotNetCore.Repositories/17.50.0": {
+    "DotNetCore.Repositories/17.51.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ntdfNGGZOafW7mZmPM5gjZfsTOueKyS0zTs4KZrdd1i/3VVhc7YeHaZyAs0uIuFVt/bScKrfmWLNwJNB8q+8Yw==",
-      "path": "dotnetcore.repositories/17.50.0",
-      "hashPath": "dotnetcore.repositories.17.50.0.nupkg.sha512"
+      "sha512": "sha512-E8jiG1p5Q2pRvoH3Zkn51tlvVbt0Re+1S3Dma1Iqo6Y/rtHsyw/jkbi4YWlILCV7pF62TR3zUGAlpGEtaMn9ug==",
+      "path": "dotnetcore.repositories/17.51.0",
+      "hashPath": "dotnetcore.repositories.17.51.0.nupkg.sha512"
     },
     "FluentHttpClient/2.1.0": {
       "type": "package",

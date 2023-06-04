@@ -9,8 +9,8 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\FrontOrderApp.styles.css",
-      "PackagePath": "staticwebassets\\FrontOrderApp.styles.css"
+      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\주문자App.styles.css",
+      "PackagePath": "staticwebassets\\주문자App.styles.css"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\wwwroot\\css\\app.css",
@@ -77,20 +77,20 @@
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FrontOrderApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.주문자App.props",
+      "PackagePath": "build\\주문자App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.주문자App.props",
+      "PackagePath": "buildMultiTargeting\\주문자App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.주문자App.props",
+      "PackagePath": "buildTransitive\\주문자App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.주문자App.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
-    },
-    {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FrontOrderApp.props",
-      "PackagePath": "build\\FrontOrderApp.props"
-    },
-    {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FrontOrderApp.props",
-      "PackagePath": "buildMultiTargeting\\FrontOrderApp.props"
-    },
-    {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FrontOrderApp.props",
-      "PackagePath": "buildTransitive\\FrontOrderApp.props"
     }
   ],
   "ElementsToRemove": []

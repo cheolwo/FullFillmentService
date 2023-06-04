@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\FullFillmentManager.bundle.scp.css",
-      "PackagePath": "staticwebassets\\FullFillmentManager.bundle.scp.css"
+      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\시스템관리자App.bundle.scp.css",
+      "PackagePath": "staticwebassets\\시스템관리자App.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -69,20 +69,20 @@
       "PackagePath": "staticwebassets\\images\\창고.png"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FullFillmentManager.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.시스템관리자App.props",
+      "PackagePath": "build\\시스템관리자App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.시스템관리자App.props",
+      "PackagePath": "buildMultiTargeting\\시스템관리자App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.시스템관리자App.props",
+      "PackagePath": "buildTransitive\\시스템관리자App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.시스템관리자App.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
-    },
-    {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FullFillmentManager.props",
-      "PackagePath": "build\\FullFillmentManager.props"
-    },
-    {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FullFillmentManager.props",
-      "PackagePath": "buildMultiTargeting\\FullFillmentManager.props"
-    },
-    {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FullFillmentManager.props",
-      "PackagePath": "buildTransitive\\FullFillmentManager.props"
     }
   ],
   "ElementsToRemove": []

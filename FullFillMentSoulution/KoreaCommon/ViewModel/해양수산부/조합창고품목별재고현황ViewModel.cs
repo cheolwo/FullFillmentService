@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황;
+using 해양수산부.API.For조합창고품목별재고현황;
 
 namespace KoreaCommon.ViewModel.해양수산부
 {

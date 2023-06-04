@@ -2,14 +2,11 @@ using FullFillmentManager;
 using FullFillmentManager.Data;
 using IdentityCommon.Models.ForApplicationUser;
 using IdentityServerTest.Data;
-using KoreaCommon.Fish.산지조합위판장.해양수산부산지조합정보;
 using KoreaCommon.Fish.수협산지조합위판장.For산지조합위판장정보;
 using KoreaCommon.Fish.수협산지조합위판장.위판장현황;
 using KoreaCommon.Fish.해양수산부;
-using KoreaCommon.Fish.해양수산부.For산지조합창고정보;
 using KoreaCommon.Fish.해양수산부.For위판장별위탁판매현황;
 using KoreaCommon.Fish.해양수산부.For조합창고품목별입출고현황;
-using KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황;
 using KoreaCommon.Fish.해양수산부.For품목별물류센터재고현황;
 using KoreaCommon.Model;
 using KoreaCommon.ViewModel.해양수산부;
@@ -18,6 +15,9 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
+using 해양수산부.API.For산지조합;
+using 해양수산부.API.For산지조합창고;
+using 해양수산부.API.For조합창고품목별재고현황;
 
 var builder = WebApplication.CreateBuilder(args);
 

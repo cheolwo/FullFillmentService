@@ -1,6 +1,8 @@
-﻿using KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황;
-using KoreaCommon.Model;
+﻿using KoreaCommon.Model;
 using Microsoft.EntityFrameworkCore;
+using 해양수산부.API.For산지조합;
+using 해양수산부.API.For산지조합창고;
+using 해양수산부.API.For조합창고품목별재고현황;
 
 namespace KoreaCommon.Fish.해양수산부
 {
@@ -8,14 +10,22 @@ namespace KoreaCommon.Fish.해양수산부
     {
         Task APIToDb(DateTime startDate, DateTime endDate);
     }
-    public class 수협APIToDbManager : IInventoryStausToDb
+    public interface ICollett수산창고
+    {
+        Task Collect수산창고(string startDate);
+    }
+    public class 수협APIToDbManager : IInventoryStausToDb/*, ICollett수산창고*/
     {
         private readonly 조합창고품목별재고현황API _조합창고품목별재고현황;
+        private readonly 산지조합API _산지조합API;
+        private readonly 산지조합창고API _산지조합창고API;
         private readonly 수협DbContext _수협DbContext;
         
-        public 수협APIToDbManager(조합창고품목별재고현황API 조합창고품목별재고현황, 수협DbContext 수협DbContext) 
+        public 수협APIToDbManager(산지조합API 산지조합API, 산지조합창고API 산지조합창고API, 조합창고품목별재고현황API 조합창고품목별재고현황, 수협DbContext 수협DbContext) 
         {
             _조합창고품목별재고현황 = 조합창고품목별재고현황;
+            _산지조합API = 산지조합API;
+            _산지조합창고API = 산지조합창고API;
             _수협DbContext = 수협DbContext;
         }
         public async Task APIToDb(DateTime startDate, DateTime endDate)
@@ -32,6 +42,7 @@ namespace KoreaCommon.Fish.해양수산부
                 }
             }
         }
+
         private async Task ItemsToDb(조합창고품목별재고현황정보 Result)
         {
             foreach(var item in Result.ResponseJson.Body.Item)
@@ -59,7 +70,8 @@ namespace KoreaCommon.Fish.해양수산부
                 }
                 if (상품 == null)
                 {
-                    await _수협DbContext.AddAsync(new 수산품 { 창고Id= 창고.Code, 수협Id = 조합.Code, Code = 상품코드, Name = item.MprcStdCodeNm.ToString() });
+                    await _수협DbContext.AddAsync(new 수산품 { 창고Id= 창고.Code, 수협Id = 조합.Code, 
+                                        Code = 상품코드, Name = item.MprcStdCodeNm.ToString() });
                     await _수협DbContext.SaveChangesAsync();
                     상품 = await _수협DbContext.Set<수산품>().FirstOrDefaultAsync(e => e.Code.Equals(상품코드));
                 }
@@ -70,7 +82,9 @@ namespace KoreaCommon.Fish.해양수산부
                                                                                  e.Quantity.Equals(item.InvntryQy)).FirstOrDefaultAsync();
                 if(newData == null)
                 {
-                    newData = new 수산품별재고현황 { 수산품Id = 상품.Id, 창고Id = 창고.Code, 수협Id = 조합.Code, date=item.StdrDe, Quantity=item.InvntryQy, Name=item.MprcStdCodeNm };
+                    newData = new 수산품별재고현황 { 수산품Id = 상품.Id, 창고Id = 창고.Code, 
+                                                    수협Id = 조합.Code, date=item.StdrDe, 
+                                                    Quantity=item.InvntryQy, Name=item.MprcStdCodeNm };
                     await _수협DbContext.AddAsync(newData);
                     await _수협DbContext.SaveChangesAsync();
                 }

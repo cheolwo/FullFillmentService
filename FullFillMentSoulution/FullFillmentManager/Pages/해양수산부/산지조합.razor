@@ -3,8 +3,10 @@
 @using KoreaCommon.ViewModel.해양수산부;
 @inject 산지조합ViewModel _산지조합ViewModel
 <MudText Align="Align.Center" Typo="Typo.h2">산지조합</MudText>
+<MudGrid Justify="Justify.SpaceBetween">
 @foreach (var item in _산지조합ViewModel.Items)
 {
+    <MudItem xs="12" sm="6" md="4" lg="3">
     <MudCard Outlined="true">
         <MudCardMedia Image="/images/dcinside.png" Height="300" />
         <MudCardHeader>
@@ -24,7 +26,9 @@
             <MudButton Variant="Variant.Text" Color="Color.Primary">Read More</MudButton>
         </MudCardActions>
     </MudCard>
+    </MudItem>
 }
+</MudGrid>
 @code {
     protected override async Task OnInitializedAsync()
     {

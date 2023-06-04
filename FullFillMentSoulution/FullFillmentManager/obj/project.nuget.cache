@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "YNc0CccGDK3yX7yjMZ+YcksW9WULxYpl8sBQDb2zhcSn1xQ5fytZJqbfY+v/7Ro1gXD8fZZo0kqIxk61v5Cwnw==",
+  "dgSpecHash": "bhLrpr1j9NmD3doJRpiwMrzKbTOqsCcQZReuZEuxUWyoQA1DQVQpb51ex3eaNhZaPlvfeP1ceS5rtGB8k1vr9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\FullFillmentManager.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\시스템관리자App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\dotnetcore.entityframeworkcore\\17.50.0\\dotnetcore.entityframeworkcore.17.50.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\dotnetcore.repositories\\17.50.0\\dotnetcore.repositories.17.50.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\dotnetcore.entityframeworkcore\\17.51.0\\dotnetcore.entityframeworkcore.17.51.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\dotnetcore.repositories\\17.51.0\\dotnetcore.repositories.17.51.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\fluenthttpclient\\2.1.0\\fluenthttpclient.2.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

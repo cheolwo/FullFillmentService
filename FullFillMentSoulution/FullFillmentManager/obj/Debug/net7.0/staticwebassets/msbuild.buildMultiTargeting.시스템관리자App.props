@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\시스템관리자App.props" />
+</Project>

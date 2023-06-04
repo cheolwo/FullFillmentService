@@ -1,23 +1,40 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using AutoMapper;
+using KoreaCommon.Model;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
+namespace 해양수산부.API.For조합창고품목별재고현황
 {
     public class 조합창고품목별재고현황API
     {
         private string baseUrl = "http://apis.data.go.kr/1192000/select0150List/getselect0150List";
         private string serviceKey;
         private readonly IConfiguration _configuration;
+        private readonly IMapper _mapper;
 
-        public 조합창고품목별재고현황API(IConfiguration configuration)
+        public 조합창고품목별재고현황API(IConfiguration configuration, IMapper mapper)
         {
             _configuration = configuration;
             serviceKey = _configuration.GetSection("APIConnection")["해양수산부_수협"]
                                 ?? throw new Exception("해양수산부_수협 service key is missing or empty.");
+            _mapper = mapper;
         }
-        public 조합창고품목별재고현황API()
+        public async Task<List<수산품별재고현황>> Get조합창고품목별재고현황List(string baseDt = "20230520", int numOfRows = 100, int pageNo = 1, string dataType = "json")
         {
-            serviceKey = "D0wkCvWHdCeJsYuU8A14KWl7mzOJ%2FiKbyKR%2F5xvnALYMf5wi5rcbCp2CXsx6xCsBhvgl5PJ8u%2Fwilufv%2FjhMcg%3D%3D";
+            var 조합창고품목별재고현황List = new List<수산품별재고현황>();
+
+            var 조합창고품목별재고현황정보 = await Get조합창고품목별재고현황정보(baseDt, numOfRows, pageNo, dataType);
+
+            if (조합창고품목별재고현황정보?.ResponseJson?.Body?.Item != null)
+            {
+                foreach (var item in 조합창고품목별재고현황정보.ResponseJson.Body.Item)
+                {
+                    var 수산품별재고현황 = MapItemTo수산품별재고현황(item);
+                    조합창고품목별재고현황List.Add(수산품별재고현황);
+                }
+            }
+
+            return 조합창고품목별재고현황List;
         }
 
         public async Task<조합창고품목별재고현황정보> Get조합창고품목별재고현황정보(string baseDt="20230520", int numOfRows = 100, int pageNo = 1, string dataType = "json")
@@ -70,6 +87,10 @@ namespace KoreaCommon.Fish.해양수산부.For조합창고품목별재고현황
                     return 0;
                 }
             }
+        }
+        private 수산품별재고현황 MapItemTo수산품별재고현황(Item item)
+        {
+            return _mapper.Map<Item, 수산품별재고현황>(item);
         }
     }
     public class Item

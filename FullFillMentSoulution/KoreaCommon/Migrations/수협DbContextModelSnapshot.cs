@@ -48,7 +48,6 @@ namespace KoreaCommon.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("수협Id")
-                        .IsRequired()
                         .HasColumnType("varchar(128)");
 
                     b.HasKey("Code");
@@ -73,11 +72,9 @@ namespace KoreaCommon.Migrations
                         .HasColumnType("varchar(128)");
 
                     b.Property<string>("수협Id")
-                        .IsRequired()
                         .HasColumnType("varchar(128)");
 
                     b.Property<string>("창고Id")
-                        .IsRequired()
                         .HasColumnType("varchar(128)");
 
                     b.HasKey("Id");
@@ -108,19 +105,15 @@ namespace KoreaCommon.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("date")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("수산품Id")
-                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("수협Id")
-                        .IsRequired()
                         .HasColumnType("varchar(128)");
 
                     b.Property<string>("창고Id")
-                        .IsRequired()
                         .HasColumnType("varchar(128)");
 
                     b.HasKey("Id");
@@ -172,9 +165,7 @@ namespace KoreaCommon.Migrations
                 {
                     b.HasOne("KoreaCommon.Model.수산협동조합", "수협")
                         .WithMany("창고들")
-                        .HasForeignKey("수협Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("수협Id");
 
                     b.Navigation("수협");
                 });
@@ -183,15 +174,11 @@ namespace KoreaCommon.Migrations
                 {
                     b.HasOne("KoreaCommon.Model.수산협동조합", "수협")
                         .WithMany("수산품들")
-                        .HasForeignKey("수협Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("수협Id");
 
                     b.HasOne("KoreaCommon.Model.수산창고", "창고")
                         .WithMany("수산품들")
-                        .HasForeignKey("창고Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("창고Id");
 
                     b.Navigation("수협");
 
@@ -202,21 +189,15 @@ namespace KoreaCommon.Migrations
                 {
                     b.HasOne("KoreaCommon.Model.수산품", "수산품")
                         .WithMany("수산품별재고현황들")
-                        .HasForeignKey("수산품Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("수산품Id");
 
                     b.HasOne("KoreaCommon.Model.수산협동조합", "수협")
                         .WithMany("수산품별재고현황들")
-                        .HasForeignKey("수협Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("수협Id");
 
                     b.HasOne("KoreaCommon.Model.수산창고", "창고")
                         .WithMany("수산품별재고현황들")
-                        .HasForeignKey("창고Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("창고Id");
 
                     b.Navigation("수산품");
 
