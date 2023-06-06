@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using OrderCommon.Model;
-using OrderCommon.Services.Command;
+using 주문Common.Model;
+using 주문Common.Services.Command;
 
-namespace OrderCommon.Services
+namespace 주문Common.Services
 {
     public interface IEvent
     {
@@ -31,9 +31,9 @@ namespace OrderCommon.Services
         lock (_lock)
         {
             _eventQueue.Enqueue(@event);
-                if (@event is CreateOrderCommand createOrderCommand)
+                if (@event is Create주문Command create주문Command)
                 {
-                    Console.WriteLine(createOrderCommand.Name);
+                    Console.WriteLine(create주문Command.Name);
                 }
             }
 

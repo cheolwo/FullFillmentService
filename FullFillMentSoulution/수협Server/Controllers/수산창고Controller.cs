@@ -22,11 +22,28 @@ namespace 수협Server.Controllers
             Console.WriteLine(수산창고List.Count());
             return Ok(수산창고List);
         }
+        [HttpGet("With수산품목종류")]
+        public async Task<IActionResult> Get수산창고With수산품목종류Async()
+        {
+            var 수산창고List = await _repository.GetToList수산창고With수산품목종류Async();
+            if (수산창고List == null || 수산창고List.Count == 0)
+                return NotFound();
 
+            return Ok(수산창고List);
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
             var 수산창고 = await _repository.GetAsync(id);
+            if (수산창고 == null)
+                return NotFound();
+
+            return Ok(수산창고);
+        }
+        [HttpGet("{id}/수산품별재고현황")]
+        public async Task<IActionResult> GetWith수산품별재고현황(string id)
+        {
+            var 수산창고 = await _repository.GetByIdWith수산품별재고현황Async(id);
             if (수산창고 == null)
                 return NotFound();
 
@@ -74,5 +91,6 @@ namespace 수협Server.Controllers
 
             return NoContent();
         }
+
     }
 }

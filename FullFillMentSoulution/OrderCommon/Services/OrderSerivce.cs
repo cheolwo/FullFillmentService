@@ -1,12 +1,10 @@
 ﻿using System.Text;
 using System.Text.Json;
 using MediatR;
-using Microsoft.Extensions.DependencyInjection;
 using MVVMToolkit.Blazor.SampleApp.ViewModels;
-using OrderCommon.Model;
-using OrderCommon.Services.Command;
-using Org.BouncyCastle.Crypto.Fpe;
 using Quartz;
+using 주문Common.Services;
+using 주문Common.Services.Command;
 
 namespace OrderCommon.Services
 {
@@ -131,9 +129,9 @@ namespace OrderCommon.Services
 
         private async Task ProcessEventAndAddToDbContextAsync(IEvent @event)
         {
-            if (@event is CreateOrderCommand createOrderCommand)
+            if (@event is Create주문Command create주문Command)
             {
-                var result = await _mediator.Send(createOrderCommand);
+                var result = await _mediator.Send(create주문Command);
             }
             else
             {

@@ -2648,6 +2648,21 @@
         "runtime": {
           "bin/placeholder/KoreaCommon.dll": {}
         }
+      },
+      "수협시스템관리자Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.0",
+          "KoreaCommon": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/수협시스템관리자Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/수협시스템관리자Common.dll": {}
+        }
       }
     }
   },
@@ -7868,6 +7883,11 @@
       "type": "project",
       "path": "../KoreaCommon/KoreaCommon.csproj",
       "msbuildProject": "../KoreaCommon/KoreaCommon.csproj"
+    },
+    "수협시스템관리자Common/1.0.0": {
+      "type": "project",
+      "path": "../수협시스템관리자Common/수협시스템관리자Common.csproj",
+      "msbuildProject": "../수협시스템관리자Common/수협시스템관리자Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7878,7 +7898,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "MudBlazor >= 6.3.1",
       "MudBlazor.ThemeManager >= 1.0.8",
-      "MySql.EntityFrameworkCore >= 7.0.2"
+      "MySql.EntityFrameworkCore >= 7.0.2",
+      "수협시스템관리자Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7919,6 +7940,9 @@
             },
             "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\KoreaCommon.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\KoreaCommon.csproj"
+            },
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협시스템관리자Common\\수협시스템관리자Common.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협시스템관리자Common\\수협시스템관리자Common.csproj"
             }
           }
         }

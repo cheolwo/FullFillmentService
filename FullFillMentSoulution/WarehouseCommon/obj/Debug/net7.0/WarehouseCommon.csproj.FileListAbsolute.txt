@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\bin\Debug\net7.0\WarehouseCommon.deps.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\bin\Debug\net7.0\WarehouseCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\bin\Debug\net7.0\WarehouseCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\bin\Debug\net7.0\Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\bin\Debug\net7.0\Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.csproj.CopyComplete
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\refint\WarehouseCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\WarehouseCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\ref\WarehouseCommon.dll

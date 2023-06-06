@@ -41,7 +41,7 @@ namespace Common.Repository
 
         public async Task<TEntity?> GetByName(string name)
         {
-            return await _dbContext.Set<TEntity>().FirstOrDefaultAsync(e => e.Name != null && e.Name.Equals(name));
+            return await _dbContext.Set<TEntity> ().FirstOrDefaultAsync(e => e.Name != null && e.Name.Equals(name));
         }
         public async Task SaveChangesAsync()
         {

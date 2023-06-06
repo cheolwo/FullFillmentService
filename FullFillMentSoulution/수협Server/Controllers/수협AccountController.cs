@@ -3,6 +3,7 @@ using KoreaCommon.Model;
 using KoreaCommon.Model.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using 수협Server.Manager;
 using 해양수산부.API.For산지조합;
 using 해양수산부.API.For산지조합창고;
 
@@ -12,6 +13,7 @@ namespace 수협Server.Controllers
     [ApiController]
     public class 수협AccountController : Controller
     {
+        private readonly 수협Manager _수협Manager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly 산지조합창고API _산지조합창고API;
         private readonly 수산창고Repository _수산창고Repository;
@@ -20,13 +22,28 @@ namespace 수협Server.Controllers
 
         public 수협AccountController(UserManager<ApplicationUser> userManager, 
             산지조합창고API 산지조합창고API, 산지조합API 산지조합API
-            , 수산창고Repository 수산창고Repository, 수산협동조합Repository 수산협동조합Repository)
+            ,수산창고Repository 수산창고Repository, 수산협동조합Repository 수산협동조합Repository, 수협Manager 수협Manager)
         {
             _userManager = userManager;
             _산지조합창고API = 산지조합창고API;
             _수산창고Repository = 수산창고Repository;
             _산지조합API = 산지조합API;
             _수산협동조합Repository = 수산협동조합Repository;
+            _수협Manager = 수협Manager;
+        }
+        [HttpPost("initialize")]
+        public async Task<IActionResult> InitializeAccount()
+        {
+            try
+            {
+                await _수협Manager.InitializeAccount();
+                return Ok("계정 초기화가 완료되었습니다.");
+            }
+            catch (Exception ex)
+            {
+                // 예외 처리
+                return StatusCode(500, "계정 초기화 중 오류가 발생했습니다.");
+            }
         }
         [HttpGet("load-merge-hyup")]
         public async Task<IActionResult> LoadAndMergeHyup()

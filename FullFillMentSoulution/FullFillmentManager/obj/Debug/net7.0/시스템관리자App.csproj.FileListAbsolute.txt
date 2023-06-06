@@ -105,3 +105,5 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentMana
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\obj\Debug\net7.0\시스템관리자App.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\obj\Debug\net7.0\시스템관리자App.genruntimeconfig.cache
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\obj\Debug\net7.0\ref\시스템관리자App.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\수협시스템관리자Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\수협시스템관리자Common.pdb

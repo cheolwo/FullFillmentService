@@ -1,12 +1,6 @@
 ﻿using AutoMapper;
 using MVVMToolkit.Blazor.SampleApp.ViewModels;
-using OrderCommon.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using 주문Common.Model;
 
 namespace OrderCommon.Mapper
 {
@@ -14,15 +8,9 @@ namespace OrderCommon.Mapper
     {
         public OrderProfile()
         {
-            CreateMap<OrderRequestModel, Order>()
+            CreateMap<OrderRequestModel, 주문>()
                 .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.OrderQuantity))
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.OrderName))
-                .ForMember(dest => dest.OrderId, opt => opt.Ignore())
-                .ForMember(dest => dest.OrdererId, opt => opt.Ignore())
-                .ForMember(dest => dest.SellerCommodityId, opt => opt.Ignore())
-                .ForMember(dest => dest.Price, opt => opt.Ignore())
-                .ForMember(dest => dest.SellerCommodity, opt => opt.Ignore())
-                .ForMember(dest => dest.Orderer, opt => opt.Ignore());
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.OrderName));
         }
     }
 }

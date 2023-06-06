@@ -24,3 +24,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.genruntimeconfig.cache
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\ref\OrderCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\bin\Debug\net7.0\Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\bin\Debug\net7.0\Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\OrderCommon.csproj.CopyComplete

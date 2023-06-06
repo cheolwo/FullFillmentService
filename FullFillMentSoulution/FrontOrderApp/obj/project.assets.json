@@ -34,6 +34,30 @@
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
         }
       },
+      "DotNetCore.EntityFrameworkCore/17.51.0": {
+        "type": "package",
+        "dependencies": {
+          "DotNetCore.Repositories": "17.51.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.5",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/DotNetCore.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/DotNetCore.EntityFrameworkCore.dll": {}
+        }
+      },
+      "DotNetCore.Repositories/17.51.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/DotNetCore.Repositories.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/DotNetCore.Repositories.dll": {}
+        }
+      },
       "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
@@ -378,6 +402,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/7.0.5": {
@@ -1412,11 +1452,26 @@
           }
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DotNetCore.EntityFrameworkCore": "17.51.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "OrderCommon/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "Common": "1.0.0",
           "CommunityToolkit.Mvvm": "8.2.0",
           "MediatR": "12.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.5",
@@ -1462,6 +1517,30 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "DotNetCore.EntityFrameworkCore/17.51.0": {
+        "type": "package",
+        "dependencies": {
+          "DotNetCore.Repositories": "17.51.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.5",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/DotNetCore.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/DotNetCore.EntityFrameworkCore.dll": {}
+        }
+      },
+      "DotNetCore.Repositories/17.51.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/DotNetCore.Repositories.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/DotNetCore.Repositories.dll": {}
         }
       },
       "Google.Protobuf/3.21.9": {
@@ -1808,6 +1887,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/7.0.5": {
@@ -2847,11 +2942,26 @@
           }
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DotNetCore.EntityFrameworkCore": "17.51.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "OrderCommon/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "Common": "1.0.0",
           "CommunityToolkit.Mvvm": "8.2.0",
           "MediatR": "12.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.5",
@@ -2912,6 +3022,32 @@
         "lib/netstandard2.1/CommunityToolkit.Mvvm.dll",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.pdb",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
+      ]
+    },
+    "DotNetCore.EntityFrameworkCore/17.51.0": {
+      "sha512": "gaQJPWze/nyGG8FFR8tfdnHNhxZ0vFWrh7x9qzMbZppqCyTfC132eFvJoQo2CHbsBhGdlJ7pTDASOU7vvACTZw==",
+      "type": "package",
+      "path": "dotnetcore.entityframeworkcore/17.51.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetcore.entityframeworkcore.17.51.0.nupkg.sha512",
+        "dotnetcore.entityframeworkcore.nuspec",
+        "lib/net7.0/DotNetCore.EntityFrameworkCore.dll",
+        "readme.md"
+      ]
+    },
+    "DotNetCore.Repositories/17.51.0": {
+      "sha512": "E8jiG1p5Q2pRvoH3Zkn51tlvVbt0Re+1S3Dma1Iqo6Y/rtHsyw/jkbi4YWlILCV7pF62TR3zUGAlpGEtaMn9ug==",
+      "type": "package",
+      "path": "dotnetcore.repositories/17.51.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetcore.repositories.17.51.0.nupkg.sha512",
+        "dotnetcore.repositories.nuspec",
+        "lib/net7.0/DotNetCore.Repositories.dll",
+        "readme.md"
       ]
     },
     "Google.Protobuf/3.21.9": {
@@ -3482,6 +3618,20 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.5": {
+      "sha512": "y3S/A/0uJX7KOhppC3xqyta6Z0PRz0qPLngH5GFu4GZ7/+Sw2u/amf7MavvR5GfZjGabGcohMpsRSahMmpF9gA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.7.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/7.0.5": {
@@ -5473,6 +5623,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
     },
     "OrderCommon/1.0.0": {
       "type": "project",

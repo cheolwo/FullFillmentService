@@ -1,6 +1,5 @@
 ﻿using KoreaCommon.Model.Repository;
 using KoreaCommon.Model;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace 수협Server.Controllers
@@ -31,6 +30,12 @@ namespace 수협Server.Controllers
                 return NotFound();
 
             return Ok(수산품별재고현황);
+        }
+        [HttpGet("by창고번호/{창고번호}")]
+        public async Task<IActionResult> GetBy창고번호(string 창고번호)
+        {
+            var 수산품별재고현황List = await _repository.GetToListBy창고번호Async(창고번호);
+            return Ok(수산품별재고현황List);
         }
 
         [HttpPost]

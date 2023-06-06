@@ -14,7 +14,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "MudBlazor": "6.3.1",
           "MudBlazor.ThemeManager": "1.0.8",
-          "MySql.EntityFrameworkCore": "7.0.2"
+          "MySql.EntityFrameworkCore": "7.0.2",
+          "수협시스템관리자Common": "1.0.0"
         },
         "runtime": {
           "시스템관리자App.dll": {}
@@ -1481,6 +1482,16 @@
         "runtime": {
           "KoreaCommon.dll": {}
         }
+      },
+      "수협시스템관리자Common/1.0.0": {
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.0",
+          "KoreaCommon": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "수협시스템관리자Common.dll": {}
+        }
       }
     }
   },
@@ -2558,6 +2569,11 @@
       "sha512": ""
     },
     "KoreaCommon/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "수협시스템관리자Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

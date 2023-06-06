@@ -32,6 +32,22 @@ namespace 수협Server.Controllers
 
             return Ok(수산협동조합);
         }
+        [HttpGet("{id}/수산창고")]
+        public async Task<IActionResult> Get수산협동조합With수산창고(string id)
+        {
+            var 수산협동조합 = await _repository.GetByIdWith수산창고Async(id);
+            if (수산협동조합 == null)
+                return NotFound();
+
+            return Ok(수산협동조합);
+        }
+
+        [HttpGet("With수산창고")]
+        public async Task<IActionResult> GetAll수산협동조합With수산창고()
+        {
+            var 수산협동조합List = await _repository.GetToListWith수산창고Async();
+            return Ok(수산협동조합List);
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] 수산협동조합 수산협동조합)
@@ -61,6 +77,7 @@ namespace 수협Server.Controllers
 
             return NoContent();
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
