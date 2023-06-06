@@ -4,11 +4,11 @@ using System.Net.Http.Json;
 
 namespace WarehouseCommon.APIService
 {
-    public class 창고상품ApiService
+    public class 창고상품APIService
     {
         private readonly HttpClient _httpClient;
-        public 창고상품ApiService(HttpClient httpClient)
-        {
+        public 창고상품APIService(HttpClient httpClient)
+        {   
             _httpClient = httpClient;
         }
 

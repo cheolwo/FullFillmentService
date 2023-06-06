@@ -4,11 +4,11 @@ using 창고Common;
 
 namespace WarehouseCommon.APIService
 {
-    public class 입고상품ApiService
+    public class 입고상품APIService
     {
         private readonly HttpClient _httpClient;
 
-        public 입고상품ApiService(HttpClient httpClient)
+        public 입고상품APIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

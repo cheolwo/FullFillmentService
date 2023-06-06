@@ -2602,7 +2602,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "IdentityCommon/1.0.0": {
+      "계정Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -2622,10 +2622,10 @@
           "MySql.EntityFrameworkCore": "7.0.2"
         },
         "compile": {
-          "bin/placeholder/IdentityCommon.dll": {}
+          "bin/placeholder/계정Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/IdentityCommon.dll": {}
+          "bin/placeholder/계정Common.dll": {}
         }
       }
     }
@@ -8153,16 +8153,15 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "IdentityCommon/1.0.0": {
+    "계정Common/1.0.0": {
       "type": "project",
-      "path": "../IdentityCommon/IdentityCommon.csproj",
-      "msbuildProject": "../IdentityCommon/IdentityCommon.csproj"
+      "path": "../IdentityCommon/계정Common.csproj",
+      "msbuildProject": "../IdentityCommon/계정Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "DotNetCore.EntityFrameworkCore >= 17.50.0",
-      "IdentityCommon >= 1.0.0",
       "MediatR >= 12.0.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.5",
@@ -8170,7 +8169,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Microsoft.Extensions.Identity.Core >= 7.0.5",
       "MySql.EntityFrameworkCore >= 7.0.2",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "계정Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8206,8 +8206,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\IdentityCommon.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\IdentityCommon.csproj"
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj"
             }
           }
         }

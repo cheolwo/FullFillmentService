@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrderCommon\OrderCommon.csproj" />
+    <ProjectReference Include="..\OrderCommon\주문Common.csproj" />
   </ItemGroup>
 
 </Project>

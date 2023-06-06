@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\IdentityCommon\IdentityCommon.csproj" />
+    <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
     <ProjectReference Include="..\KoreaCommon\수협Common.csproj" />
   </ItemGroup>
 

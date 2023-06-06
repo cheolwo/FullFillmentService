@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityCommon\IdentityCommon.csproj" />
+    <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
   </ItemGroup>
 
 </Project>

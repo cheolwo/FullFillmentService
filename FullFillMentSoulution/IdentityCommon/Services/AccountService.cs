@@ -70,12 +70,5 @@ namespace IdentityCommon.Services
             response.EnsureSuccessStatusCode();
             return response;
         }
-
-        //public async Task<HttpResponseMessage> Logout(LogoutInputModel model)
-        //{
-        //    var response = await _httpClient.PostAsJsonAsync("/account/logout", model);
-        //    response.EnsureSuccessStatusCode();
-        //    return response;
-        //}
     }
 }

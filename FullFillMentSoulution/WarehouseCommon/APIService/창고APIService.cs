@@ -9,11 +9,11 @@ using 창고Common;
 
 namespace WarehouseCommon.APIService
 {
-    public class 창고ApiService
+    public class 창고APIService
     {
         private readonly HttpClient _httpClient;
 
-        public 창고ApiService(HttpClient httpClient)
+        public 창고APIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

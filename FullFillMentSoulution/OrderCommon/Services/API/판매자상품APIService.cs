@@ -4,11 +4,11 @@ using 주문Common.Model;
 
 namespace OrderClient.Services
 {
-    public class 판매자상품ApiService
+    public class 판매자상품APIService
     {
         private readonly HttpClient _httpClient;
 
-        public 판매자상품ApiService(HttpClient httpClient)
+        public 판매자상품APIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

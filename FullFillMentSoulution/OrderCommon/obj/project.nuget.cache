@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mzm+mNCvFjclHrCtkDtoloqwLMp9iRedWStRioPyHVzSKpzA/wBwIACrWy28x5pKqtbd8iutjDSKxzR/vXJJeg==",
+  "dgSpecHash": "7alGq5rDs1FYY1KZmeTOn3UaAzWA0IDcrWCezOfMotTxRg6zI39h3WHKOfYDNiRjmukUIeSCUH5/4iRqhwBGag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\OrderCommon.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\주문Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",

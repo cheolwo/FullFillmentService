@@ -240,16 +240,16 @@
       "netstandard.dll": "sha256-+jUzj0FB0YcoBUeSkSNEjhVDTG08qbZ2twfCBMbzT+Q=",
       "System.Private.CoreLib.dll": "sha256-l+\/quNqfNCSUDSMJcp0+IxlSdOdnAtwVVWMXmYGHMpg=",
       "Common.dll": "sha256-0ulVCf3CK5IvAwaDjP8CO0qs89Q01DSAsjeeYo6ylHA=",
-      "OrderCommon.dll": "sha256-1w2uNoaYRONPF5Ub0Ehl+d43NnsNfQpR9oJQiqWClXg=",
-      "주문자App.dll": "sha256-azThPUe\/1Y2d9VGXt0PORM40QzK570d0jY0E7bOiu7k="
+      "주문Common.dll": "sha256-ncrD5IdNOzxzvFtmp2C6thRMQkdeOp1vE9U+x1rJex0=",
+      "주문자App.dll": "sha256-p7Z0R++pk2cY8rcqE3RxyKZButmvnmlKsKCDH5QMals="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "OrderCommon.pdb": "sha256-vF5A0SGFNdMSenr+IznJaioIxzI5tNrUVtHpMd5qk2w=",
+      "주문Common.pdb": "sha256-6o4CQmle8PtHCIBEiekMpQ0ze5Bm1iY6DQJ6H\/DLBW8=",
       "Common.pdb": "sha256-FMG5rFva+2a5VYAQRVqShByorapxfytmEjVJU5ryBDQ=",
-      "주문자App.pdb": "sha256-tvDyFQ+wyFFT\/dknD\/tOPAqEDr6+7Xr1fnrBhfour4A="
+      "주문자App.pdb": "sha256-i8lc+JGhGS5E3zHEN7VjWjDBStiKfwUrkTloDGK1UUw="
     },
     "runtime": {
       "dotnet.7.0.1.j9zuvsgzyx.js": "sha256-jjax3FMRXzFAziWowdtJf6vipP2xXAaA5gD6VBYB6Y0=",

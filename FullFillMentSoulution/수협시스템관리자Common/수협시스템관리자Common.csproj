@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
     <ProjectReference Include="..\KoreaCommon\수협Common.csproj" />
+    <ProjectReference Include="..\OrderCommon\주문Common.csproj" />
+    <ProjectReference Include="..\WarehouseCommon\창고Common.csproj" />
   </ItemGroup>
 
 </Project>

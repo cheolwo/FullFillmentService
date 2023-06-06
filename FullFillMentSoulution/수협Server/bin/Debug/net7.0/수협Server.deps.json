@@ -9,12 +9,12 @@
       "수협Server/1.0.0": {
         "dependencies": {
           "Common": "1.0.0",
-          "IdentityCommon": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.5",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "MySql.EntityFrameworkCore": "7.0.2",
           "Swashbuckle.AspNetCore": "6.5.0",
+          "계정Common": "1.0.0",
           "수협Common": "1.0.0"
         },
         "runtime": {
@@ -1413,7 +1413,7 @@
           "Common.dll": {}
         }
       },
-      "IdentityCommon/1.0.0": {
+      "계정Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
@@ -1431,7 +1431,7 @@
           "MySql.EntityFrameworkCore": "7.0.2"
         },
         "runtime": {
-          "IdentityCommon.dll": {}
+          "계정Common.dll": {}
         }
       },
       "수협Common/1.0.0": {
@@ -2505,7 +2505,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "IdentityCommon/1.0.0": {
+    "계정Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

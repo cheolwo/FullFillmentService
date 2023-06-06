@@ -70,8 +70,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bi
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\MySql.Data.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\MySql.EntityFrameworkCore.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\netstandard.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\OrderCommon.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\OrderCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\Quartz.AspNetCore.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\Quartz.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\Quartz.Extensions.DependencyInjection.dll
@@ -253,7 +251,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bi
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.ComponentModel.Annotations.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.Threading.Tasks.Parallel.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.IO.FileSystem.dll.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\OrderCommon.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.ComponentModel.TypeConverter.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.Xml.Serialization.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.Runtime.InteropServices.RuntimeInformation.dll.gz
@@ -412,7 +409,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bi
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.Threading.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.Security.Principal.Windows.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\OrderCommon.pdb.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\K4os.Hash.xxHash.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\MediatR.Contracts.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\System.Globalization.dll.gz
@@ -726,8 +722,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bi
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\icudt_CJK.dat
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\icudt_EFIGS.dat
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\icudt_no_CJK.dat
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\OrderCommon.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\OrderCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\btZwPhkq.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\xm2udtoY.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\s9SvFmYb.gz
@@ -964,8 +958,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\ob
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\nrZvSqHJ.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\dvQbnUyN.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\KREB2eJa.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\0ElYO7Xd.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\QpD+MAdt.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\83hbyPfC.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\bzeMrnjY.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\wX32j1+x.gz
@@ -1006,3 +998,11 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\ob
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\QlXJHPtn.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\APbY5Kj6.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\9jWAZw+1.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\주문Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\주문Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\주문Common.pdb.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\wwwroot\_framework\주문Common.dll.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\주문Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\bin\Debug\net7.0\주문Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\iWGUDa0j.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontOrderApp\obj\Debug\net7.0\build-gz\hrWNrPrX.gz

@@ -9,7 +9,6 @@
       "IdentityServerSample/1.0.0": {
         "dependencies": {
           "DotNetCore.EntityFrameworkCore": "17.50.0",
-          "IdentityCommon": "1.0.0",
           "MediatR": "12.0.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
           "Microsoft.AspNetCore.Identity.UI": "7.0.5",
@@ -17,7 +16,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "Microsoft.Extensions.Identity.Core": "7.0.5",
           "MySql.EntityFrameworkCore": "7.0.2",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "계정Common": "1.0.0"
         },
         "runtime": {
           "IdentityServerSample.dll": {}
@@ -1426,7 +1426,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "IdentityCommon/1.0.0": {
+      "계정Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
@@ -1444,7 +1444,7 @@
           "MySql.EntityFrameworkCore": "7.0.2"
         },
         "runtime": {
-          "IdentityCommon.dll": {}
+          "계정Common.dll": {}
         }
       }
     }
@@ -2512,7 +2512,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "IdentityCommon/1.0.0": {
+    "계정Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

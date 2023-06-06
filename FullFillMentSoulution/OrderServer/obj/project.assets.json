@@ -1274,7 +1274,7 @@
           "bin/placeholder/Common.dll": {}
         }
       },
-      "OrderCommon/1.0.0": {
+      "주문Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1287,10 +1287,10 @@
           "Quartz": "3.6.2"
         },
         "compile": {
-          "bin/placeholder/OrderCommon.dll": {}
+          "bin/placeholder/주문Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/OrderCommon.dll": {}
+          "bin/placeholder/주문Common.dll": {}
         }
       }
     }
@@ -3660,10 +3660,10 @@
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
     },
-    "OrderCommon/1.0.0": {
+    "주문Common/1.0.0": {
       "type": "project",
-      "path": "../OrderCommon/OrderCommon.csproj",
-      "msbuildProject": "../OrderCommon/OrderCommon.csproj"
+      "path": "../OrderCommon/주문Common.csproj",
+      "msbuildProject": "../OrderCommon/주문Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3676,11 +3676,11 @@
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "MySql.EntityFrameworkCore >= 7.0.2",
-      "OrderCommon >= 1.0.0",
       "Quartz >= 3.6.2",
       "Quartz.AspNetCore >= 3.6.2",
       "Quartz.Extensions.Hosting >= 3.6.2",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "주문Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3716,8 +3716,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\OrderCommon.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\OrderCommon.csproj"
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\주문Common.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\주문Common.csproj"
             }
           }
         }

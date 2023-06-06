@@ -702,9 +702,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\WarehouseCommon.csproj",
-      "projectName": "WarehouseCommon",
-      "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\WarehouseCommon.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\창고Common.csproj",
+      "projectName": "창고Common",
+      "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\창고Common.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\obj\\",
       "projectStyle": "PackageReference",

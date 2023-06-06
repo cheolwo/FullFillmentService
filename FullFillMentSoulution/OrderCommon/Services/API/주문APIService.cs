@@ -4,10 +4,10 @@ using 주문Common.Model;
 
 namespace OrderCommon.Services.API
 {
-    public class 주문ApiService
+    public class 주문APIService
     {
         private readonly HttpClient _httpClient;
-        public 주문ApiService(HttpClient httpClient)
+        public 주문APIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

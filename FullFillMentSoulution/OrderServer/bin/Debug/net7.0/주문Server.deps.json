@@ -16,11 +16,11 @@
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "MySql.EntityFrameworkCore": "7.0.2",
-          "OrderCommon": "1.0.0",
           "Quartz": "3.6.2",
           "Quartz.AspNetCore": "3.6.2",
           "Quartz.Extensions.Hosting": "3.6.2",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "주문Common": "1.0.0"
         },
         "runtime": {
           "주문Server.dll": {}
@@ -686,7 +686,7 @@
           "Common.dll": {}
         }
       },
-      "OrderCommon/1.0.0": {
+      "주문Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
@@ -697,7 +697,7 @@
           "Quartz": "3.6.2"
         },
         "runtime": {
-          "OrderCommon.dll": {}
+          "주문Common.dll": {}
         }
       }
     }
@@ -1245,7 +1245,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "OrderCommon/1.0.0": {
+    "주문Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -11,14 +11,14 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "DotNetCore.EntityFrameworkCore": "17.51.0",
-          "IdentityCommon": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
           "Microsoft.AspNetCore.OpenApi": "7.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "MySql.EntityFrameworkCore": "7.0.2",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "WarehouseCommon": "1.0.0"
+          "계정Common": "1.0.0",
+          "창고Common": "1.0.0"
         },
         "runtime": {
           "창고Server.dll": {}
@@ -1408,7 +1408,7 @@
           "Common.dll": {}
         }
       },
-      "IdentityCommon/1.0.0": {
+      "계정Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
@@ -1426,17 +1426,17 @@
           "MySql.EntityFrameworkCore": "7.0.2"
         },
         "runtime": {
-          "IdentityCommon.dll": {}
+          "계정Common.dll": {}
         }
       },
-      "WarehouseCommon/1.0.0": {
+      "창고Common/1.0.0": {
         "dependencies": {
           "Common": "1.0.0",
           "DotNetCore.EntityFrameworkCore": "17.51.0",
           "Microsoft.EntityFrameworkCore": "7.0.5"
         },
         "runtime": {
-          "WarehouseCommon.dll": {}
+          "창고Common.dll": {}
         }
       }
     }
@@ -2488,12 +2488,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "IdentityCommon/1.0.0": {
+    "계정Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "WarehouseCommon/1.0.0": {
+    "창고Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

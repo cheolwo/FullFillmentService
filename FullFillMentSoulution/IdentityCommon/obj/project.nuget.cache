@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R0WSlPLu6YvnaDH1YblZA6VGdSVq1ZYpnRDJP5bKyznn2LJ7piNXbXHWYGK66JOcSFVPRpVBgkytL+MzQauGPw==",
+  "dgSpecHash": "xzXAZOWFVWJEy0mjJ4NlTeb8JQisEasdEO1ax/OBHtAIBHaE4uCX+4ZVsLzLL3cnriFTBJf1wVBdDceR/vaFTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\IdentityCommon.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

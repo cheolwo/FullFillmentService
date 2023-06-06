@@ -15,3 +15,9 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템�
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\obj\Debug\net7.0\ref\수협시스템관리자Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\수협Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\수협Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\계정Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\주문Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\창고Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\계정Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\주문Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협시스템관리자Common\bin\Debug\net7.0\창고Common.pdb

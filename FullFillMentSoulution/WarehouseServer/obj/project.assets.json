@@ -2548,7 +2548,7 @@
           "bin/placeholder/Common.dll": {}
         }
       },
-      "IdentityCommon/1.0.0": {
+      "계정Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -2568,13 +2568,13 @@
           "MySql.EntityFrameworkCore": "7.0.2"
         },
         "compile": {
-          "bin/placeholder/IdentityCommon.dll": {}
+          "bin/placeholder/계정Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/IdentityCommon.dll": {}
+          "bin/placeholder/계정Common.dll": {}
         }
       },
-      "WarehouseCommon/1.0.0": {
+      "창고Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -2583,10 +2583,10 @@
           "Microsoft.EntityFrameworkCore": "7.0.5"
         },
         "compile": {
-          "bin/placeholder/WarehouseCommon.dll": {}
+          "bin/placeholder/창고Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/WarehouseCommon.dll": {}
+          "bin/placeholder/창고Common.dll": {}
         }
       }
     }
@@ -7951,15 +7951,15 @@
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
     },
-    "IdentityCommon/1.0.0": {
+    "계정Common/1.0.0": {
       "type": "project",
-      "path": "../IdentityCommon/IdentityCommon.csproj",
-      "msbuildProject": "../IdentityCommon/IdentityCommon.csproj"
+      "path": "../IdentityCommon/계정Common.csproj",
+      "msbuildProject": "../IdentityCommon/계정Common.csproj"
     },
-    "WarehouseCommon/1.0.0": {
+    "창고Common/1.0.0": {
       "type": "project",
-      "path": "../WarehouseCommon/WarehouseCommon.csproj",
-      "msbuildProject": "../WarehouseCommon/WarehouseCommon.csproj"
+      "path": "../WarehouseCommon/창고Common.csproj",
+      "msbuildProject": "../WarehouseCommon/창고Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7967,14 +7967,14 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "DotNetCore.EntityFrameworkCore >= 17.51.0",
-      "IdentityCommon >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.5",
       "Microsoft.AspNetCore.OpenApi >= 7.0.1",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "MySql.EntityFrameworkCore >= 7.0.2",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "WarehouseCommon >= 1.0.0"
+      "계정Common >= 1.0.0",
+      "창고Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8010,11 +8010,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\IdentityCommon.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\IdentityCommon.csproj"
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj"
             },
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\WarehouseCommon.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\WarehouseCommon.csproj"
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\창고Common.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseCommon\\창고Common.csproj"
             }
           }
         }
