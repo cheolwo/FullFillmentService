@@ -2590,7 +2590,7 @@
           "bin/placeholder/IdentityCommon.dll": {}
         }
       },
-      "KoreaCommon/1.0.0": {
+      "수협Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -2604,10 +2604,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         }
       }
     }
@@ -8017,22 +8017,22 @@
       "path": "../IdentityCommon/IdentityCommon.csproj",
       "msbuildProject": "../IdentityCommon/IdentityCommon.csproj"
     },
-    "KoreaCommon/1.0.0": {
+    "수협Common/1.0.0": {
       "type": "project",
-      "path": "../KoreaCommon/KoreaCommon.csproj",
-      "msbuildProject": "../KoreaCommon/KoreaCommon.csproj"
+      "path": "../KoreaCommon/수협Common.csproj",
+      "msbuildProject": "../KoreaCommon/수협Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Common >= 1.0.0",
       "IdentityCommon >= 1.0.0",
-      "KoreaCommon >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "MySql.EntityFrameworkCore >= 7.0.2",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "수협Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8074,8 +8074,8 @@
             "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\IdentityCommon.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\IdentityCommon.csproj"
             },
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\KoreaCommon.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\KoreaCommon.csproj"
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj"
             }
           }
         }

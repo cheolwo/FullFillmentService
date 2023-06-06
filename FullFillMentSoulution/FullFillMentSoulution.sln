@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerSample", "Ide
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "시스템관리자App", "FullFillmentManager\시스템관리자App.csproj", "{F95F9EDF-ADC0-447D-AC85-12ECF6442A94}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoreaCommon", "KoreaCommon\KoreaCommon.csproj", "{995E7327-FBD9-48B3-9F8D-C6FBCD0CC7E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협Common", "KoreaCommon\수협Common.csproj", "{995E7327-FBD9-48B3-9F8D-C6FBCD0CC7E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{6B8F43A9-9772-490D-A7BD-483D0DF6D05F}"
 EndProject
@@ -33,11 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협관리자App", "수�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApplication", "TestApplication\TestApplication.csproj", "{28D334EC-B04B-4DC2-B812-E011FB45E76E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "수협시스템관리자Common", "수협시스템관리자Common\수협시스템관리자Common.csproj", "{F370DA4F-C353-4852-AD0B-1A6B4351EAC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협시스템관리자Common", "수협시스템관리자Common\수협시스템관리자Common.csproj", "{F370DA4F-C353-4852-AD0B-1A6B4351EAC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "창고Server", "WarehouseServer\창고Server.csproj", "{20DBFC10-10BF-4C1D-AA54-5C5BA3C175E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "창고Server", "WarehouseServer\창고Server.csproj", "{20DBFC10-10BF-4C1D-AA54-5C5BA3C175E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseCommon", "WarehouseCommon\WarehouseCommon.csproj", "{DA8B76DA-91A7-4F51-85B9-941511CDD69F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarehouseCommon", "WarehouseCommon\WarehouseCommon.csproj", "{DA8B76DA-91A7-4F51-85B9-941511CDD69F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateWay", "APIGateWay", "{632A0FB2-61F1-4FF7-8986-0FA30144AC87}"
 EndProject

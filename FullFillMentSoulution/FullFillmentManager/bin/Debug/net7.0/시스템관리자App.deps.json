@@ -9,12 +9,12 @@
       "시스템관리자App/1.0.0": {
         "dependencies": {
           "IdentityCommon": "1.0.0",
-          "KoreaCommon": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "MudBlazor": "6.3.1",
           "MudBlazor.ThemeManager": "1.0.8",
           "MySql.EntityFrameworkCore": "7.0.2",
+          "수협Common": "1.0.0",
           "수협시스템관리자Common": "1.0.0"
         },
         "runtime": {
@@ -1468,7 +1468,7 @@
           "IdentityCommon.dll": {}
         }
       },
-      "KoreaCommon/1.0.0": {
+      "수협Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
@@ -1480,14 +1480,14 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "KoreaCommon.dll": {}
+          "수협Common.dll": {}
         }
       },
       "수협시스템관리자Common/1.0.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.0",
-          "KoreaCommon": "1.0.0",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "수협Common": "1.0.0"
         },
         "runtime": {
           "수협시스템관리자Common.dll": {}
@@ -2568,7 +2568,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "KoreaCommon/1.0.0": {
+    "수협Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

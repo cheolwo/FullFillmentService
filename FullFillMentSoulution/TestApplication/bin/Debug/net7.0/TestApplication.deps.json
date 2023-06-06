@@ -10,7 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
-          "KoreaCommon": "1.0.0"
+          "수협Common": "1.0.0"
         },
         "runtime": {
           "TestApplication.dll": {}
@@ -512,7 +512,7 @@
           "Common.dll": {}
         }
       },
-      "KoreaCommon/1.0.0": {
+      "수협Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
@@ -524,7 +524,7 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "KoreaCommon.dll": {}
+          "수협Common.dll": {}
         }
       }
     }
@@ -897,7 +897,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "KoreaCommon/1.0.0": {
+    "수협Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

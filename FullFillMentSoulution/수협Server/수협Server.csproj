@@ -20,7 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\IdentityCommon\IdentityCommon.csproj" />
-    <ProjectReference Include="..\KoreaCommon\KoreaCommon.csproj" />
+    <ProjectReference Include="..\KoreaCommon\수협Common.csproj" />
   </ItemGroup>
 
 </Project>

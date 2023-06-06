@@ -100,8 +100,5 @@ namespace WarehouseServer.Controllers
             var 적재상품List = await _repository.GetToListBy입고상품Id(입고상품Id);
             return Ok(적재상품List);
         }
-
-
-
     }
 }

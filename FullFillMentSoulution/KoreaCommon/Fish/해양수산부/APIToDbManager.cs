@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using 해양수산부.API.For산지조합;
 using 해양수산부.API.For산지조합창고;
 using 해양수산부.API.For조합창고품목별재고현황;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace KoreaCommon.Fish.해양수산부
 {
@@ -42,7 +43,10 @@ namespace KoreaCommon.Fish.해양수산부
                 }
             }
         }
-
+        public async Task APIToDb(DateTime CurrentTime)
+        {
+            string dateString = CurrentTime.ToString("yyyyMMdd");
+        }
         private async Task ItemsToDb(조합창고품목별재고현황정보 Result)
         {
             foreach(var item in Result.ResponseJson.Body.Item)

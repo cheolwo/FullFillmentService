@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IdentityCommon\IdentityCommon.csproj" />
-    <ProjectReference Include="..\KoreaCommon\KoreaCommon.csproj" />
+    <ProjectReference Include="..\KoreaCommon\수협Common.csproj" />
     <ProjectReference Include="..\수협시스템관리자Common\수협시스템관리자Common.csproj" />
   </ItemGroup>
 

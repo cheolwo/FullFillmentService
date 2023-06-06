@@ -46,9 +46,7 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Common.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\KoreaCommon.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Common.pdb
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\KoreaCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.AssemblyInfoInputs.cache
@@ -60,3 +58,5 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.genruntimeconfig.cache
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\ref\TestApplication.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\수협Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\수협Common.pdb

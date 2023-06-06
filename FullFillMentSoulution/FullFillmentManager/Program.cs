@@ -76,10 +76,10 @@ builder.Services.AddScoped<품목별물류센터재고현황ViewModel>();
 builder.Services.AddScoped<품목별물류센터재고현황API>();
 builder.Services.AddScoped<수협APIToDbManager>();
 
-builder.Services.AddScoped<수산품Service>();
-builder.Services.AddScoped<수산창고Service>();
-builder.Services.AddScoped<수산품별재고현황Service>();
-builder.Services.AddScoped<수산협동조합Service>();
+builder.Services.AddScoped<수산품APIService>();
+builder.Services.AddScoped<수산창고APIService>();
+builder.Services.AddScoped<수산품별재고현황APIService>();
+builder.Services.AddScoped<수산협동조합APIService>();
 
 builder.Services.AddScoped<수산협동조합ViewModel>();
 builder.Services.AddScoped<수산창고ViewModel>();

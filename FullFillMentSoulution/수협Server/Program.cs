@@ -17,8 +17,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<산지조합창고API>();
-
-
 builder.Services.AddScoped<산지조합API>();
 
 
@@ -27,6 +25,7 @@ builder.Services.AddScoped<수산협동조합Repository>();
 builder.Services.AddScoped<수산품Repository>();
 builder.Services.AddScoped<수산품별재고현황Repository>();
 builder.Services.AddScoped<수산창고Repository>();
+
 builder.Services.AddScoped<수협Manager>();
 var 수협DbConnectionString = builder.Configuration.GetConnectionString("수협DbConnection");
 builder.Services.AddDbContext<수협DbContext>(options =>
@@ -42,7 +41,6 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
         options.Password.RequiredLength = 4; // 비밀번호 최소 길이
     }
     ).AddEntityFrameworkStores<ApplicationDbContext>();
-
 var ApplicationDbConnectionString = builder.Configuration.GetConnectionString("ApplicationDbConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySQL(ApplicationDbConnectionString));

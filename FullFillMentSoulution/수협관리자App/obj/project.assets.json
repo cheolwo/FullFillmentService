@@ -1198,7 +1198,7 @@
           "bin/placeholder/Common.dll": {}
         }
       },
-      "KoreaCommon/1.0.0": {
+      "수협Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1212,10 +1212,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         }
       },
       "수협시스템관리자Common/1.0.0": {
@@ -1223,8 +1223,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.0",
-          "KoreaCommon": "1.0.0",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "수협Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/수협시스템관리자Common.dll": {}
@@ -2426,7 +2426,7 @@
           "bin/placeholder/Common.dll": {}
         }
       },
-      "KoreaCommon/1.0.0": {
+      "수협Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -2440,10 +2440,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         }
       },
       "수협시스템관리자Common/1.0.0": {
@@ -2451,8 +2451,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.0",
-          "KoreaCommon": "1.0.0",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "수협Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/수협시스템관리자Common.dll": {}
@@ -4901,10 +4901,10 @@
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
     },
-    "KoreaCommon/1.0.0": {
+    "수협Common/1.0.0": {
       "type": "project",
-      "path": "../KoreaCommon/KoreaCommon.csproj",
-      "msbuildProject": "../KoreaCommon/KoreaCommon.csproj"
+      "path": "../KoreaCommon/수협Common.csproj",
+      "msbuildProject": "../KoreaCommon/수협Common.csproj"
     },
     "수협시스템관리자Common/1.0.0": {
       "type": "project",

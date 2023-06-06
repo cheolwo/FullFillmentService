@@ -37,6 +37,44 @@ namespace KoreaCommon.Model.Repository
         {
             return await _dbContext.Set<수산품별재고현황>().Where(e => e.수산품Id != null && e.수산품Id.Equals(수산품id)).ToListAsync();
         }
+        public async Task<List<수산품별재고현황>> GetToListBy창고번호Async(string 창고id, int? quantityMin, int? quantityMax)
+        {
+            var query = _dbContext.Set<수산품별재고현황>().Where(e => e.창고Id != null && e.창고Id.Equals(창고id));
+
+            if (quantityMin.HasValue)
+                query = query.Where(e => int.Parse(e.Quantity) >= quantityMin.Value);
+
+            if (quantityMax.HasValue)
+                query = query.Where(e => int.Parse(e.Quantity) <= quantityMax.Value);
+
+            return await query.ToListAsync();
+        }
+
+        public async Task<List<수산품별재고현황>> GetToListBy조합번호Async(string 조합id, int? quantityMin, int? quantityMax)
+        {
+            var query = _dbContext.Set<수산품별재고현황>().Where(e => e.수협Id != null && e.수협Id.Equals(조합id));
+
+            if (quantityMin.HasValue)
+                query = query.Where(e => int.Parse(e.Quantity) >= quantityMin.Value);
+
+            if (quantityMax.HasValue)
+                query = query.Where(e => int.Parse(e.Quantity) <= quantityMax.Value);
+
+            return await query.ToListAsync();
+        }
+
+        public async Task<List<수산품별재고현황>> GetToListBy품목번호Async(string 수산품id, int? quantityMin, int? quantityMax)
+        {
+            var query = _dbContext.Set<수산품별재고현황>().Where(e => e.수산품Id != null && e.수산품Id.Equals(수산품id));
+
+            if (quantityMin.HasValue)
+                query = query.Where(e => int.Parse(e.Quantity) >= quantityMin.Value);
+
+            if (quantityMax.HasValue)
+                query = query.Where(e => int.Parse(e.Quantity) <= quantityMax.Value);
+
+            return await query.ToListAsync();
+        }
     }
     public class 수산창고Repository : CenterRepository<수산창고>
     {

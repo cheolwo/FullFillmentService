@@ -16,8 +16,12 @@ namespace 수협Server.Manager
         private const string 조합장역할 = "조합장";
         private const string 창고장역할 = "창고장";
 
-        public 수협Manager(UserManager<ApplicationUser> userManager, 수산협동조합Repository 수산협동조합Repostiroy, 
-            수산품Repository 수산품Repsotiroy, 수산품별재고현황Repository 수산품별재고현황Repostiroy, 수산창고Repository 수산창고Repository, RoleManager<IdentityRole> roleManager)
+        public 수협Manager(UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager,
+            수산협동조합Repository 수산협동조합Repostiroy, 
+            수산품Repository 수산품Repsotiroy, 수산품별재고현황Repository 
+            수산품별재고현황Repostiroy, 수산창고Repository 수산창고Repository
+            )
         {
             _userManager = userManager;
             _수산협동조합Repostiroy = 수산협동조합Repostiroy;

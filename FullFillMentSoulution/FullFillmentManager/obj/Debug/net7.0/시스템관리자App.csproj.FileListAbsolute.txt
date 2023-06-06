@@ -84,9 +84,7 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentMana
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\IdentityCommon.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\KoreaCommon.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\IdentityCommon.pdb
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\KoreaCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\obj\Debug\net7.0\staticwebassets\msbuild.시스템관리자App.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\obj\Debug\net7.0\staticwebassets\msbuild.build.시스템관리자App.props
@@ -107,3 +105,5 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentMana
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\obj\Debug\net7.0\ref\시스템관리자App.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\수협시스템관리자Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\수협시스템관리자Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\수협Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\수협Common.pdb

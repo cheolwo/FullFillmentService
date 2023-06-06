@@ -867,7 +867,7 @@
           "bin/placeholder/Common.dll": {}
         }
       },
-      "KoreaCommon/1.0.0": {
+      "수협Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -881,10 +881,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/KoreaCommon.dll": {}
+          "bin/placeholder/수협Common.dll": {}
         }
       }
     }
@@ -2633,17 +2633,17 @@
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
     },
-    "KoreaCommon/1.0.0": {
+    "수협Common/1.0.0": {
       "type": "project",
-      "path": "../KoreaCommon/KoreaCommon.csproj",
-      "msbuildProject": "../KoreaCommon/KoreaCommon.csproj"
+      "path": "../KoreaCommon/수협Common.csproj",
+      "msbuildProject": "../KoreaCommon/수협Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "CommunityToolkit.Mvvm >= 8.2.0",
-      "KoreaCommon >= 1.0.0",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "수협Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2679,8 +2679,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\KoreaCommon.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\KoreaCommon.csproj"
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj"
             }
           }
         }

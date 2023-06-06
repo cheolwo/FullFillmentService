@@ -830,8 +830,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자A
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\K4os.Compression.LZ4.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\K4os.Compression.LZ4.Streams.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\K4os.Hash.xxHash.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\KoreaCommon.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\KoreaCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.InMemory.dll
@@ -855,7 +853,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자A
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Common.pdb.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Common.dll.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\KoreaCommon.pdb.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\수협시스템관리자Common.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\AutoMapper.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Newtonsoft.Json.dll.gz
@@ -873,7 +870,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자A
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\K4os.Hash.xxHash.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Google.Protobuf.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\DotNetCore.Repositories.dll.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\KoreaCommon.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.Relational.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\K4os.Compression.LZ4.Streams.dll.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\수협시스템관리자Common.pdb.gz
@@ -904,11 +900,9 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자A
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\System.Security.Permissions.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\System.Windows.Extensions.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\Common.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\KoreaCommon.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\수협시스템관리자Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\수협시스템관리자Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\Common.pdb
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\KoreaCommon.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\btZwPhkq.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\xm2udtoY.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\k+kFUtWf.gz
@@ -934,11 +928,9 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자A
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\JP+FbRm9.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\j8BDwF9+.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\APbY5Kj6.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\vFZHWxW9.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\BSpE+HHz.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\xh3E3SWW.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\9jWAZw+1.gz
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\AqUejnlb.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\MudBlazor.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\MudBlazor.ThemeManager.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\MudBlazor.ThemeManager.dll.gz
@@ -954,3 +946,11 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자A
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\wtEHRlvG.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\vknsAH5N.gz
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\DMlT09dP.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\수협Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\수협Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\수협Common.pdb.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\수협Common.dll.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\수협Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\수협Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\ywWMfUU8.gz
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\obj\Debug\net7.0\build-gz\k6QVhVb4.gz

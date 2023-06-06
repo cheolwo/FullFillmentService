@@ -6,7 +6,7 @@ namespace 수협시스템관리자Common.ViewModel
 {
     public class 수산창고ViewModel : ObservableObject
     {
-        private readonly 수산창고Service _service;
+        private readonly 수산창고APIService _service;
         private List<수산창고> _수산창고List;
         private List<수산창고> _수산창고With수산품목종류List;
 
@@ -30,7 +30,7 @@ namespace 수협시스템관리자Common.ViewModel
             }
         }
 
-        public 수산창고ViewModel(수산창고Service service)
+        public 수산창고ViewModel(수산창고APIService service)
         {
             _service = service;
             수산창고List = new List<수산창고>();
