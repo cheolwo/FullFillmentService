@@ -1,5 +1,7 @@
-﻿using KoreaCommon.Model;
+﻿using AutoMapper;
+using KoreaCommon.Model;
 using Microsoft.AspNetCore.Mvc;
+using 수협Common.DTO;
 using 수협Common.Repository;
 
 namespace 수협Server.Controllers
@@ -9,19 +11,22 @@ namespace 수협Server.Controllers
     public class 수산창고Controller : ControllerBase
     {
         private readonly 수산창고Repository _repository;
+        private readonly IMapper _mapper;
 
-        public 수산창고Controller(수산창고Repository repository)
+        public 수산창고Controller(수산창고Repository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var 수산창고List = await _repository.ListAsync();
-            Console.WriteLine(수산창고List.Count());
-            return Ok(수산창고List);
+            var 수산창고DTOList = _mapper.Map<List<Read수산창고DTO>>(수산창고List);
+            return Ok(수산창고DTOList);
         }
+
         [HttpGet("With수산품목종류")]
         public async Task<IActionResult> Get수산창고With수산품목종류Async()
         {
@@ -29,8 +34,10 @@ namespace 수협Server.Controllers
             if (수산창고List == null || 수산창고List.Count == 0)
                 return NotFound();
 
-            return Ok(수산창고List);
+            var 수산창고DTOList = _mapper.Map<List<Read수산창고DTO>>(수산창고List);
+            return Ok(수산창고DTOList);
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
@@ -38,8 +45,10 @@ namespace 수협Server.Controllers
             if (수산창고 == null)
                 return NotFound();
 
-            return Ok(수산창고);
+            var 수산창고DTO = _mapper.Map<Read수산창고DTO>(수산창고);
+            return Ok(수산창고DTO);
         }
+
         [HttpGet("{id}/수산품별재고현황")]
         public async Task<IActionResult> GetWith수산품별재고현황(string id)
         {
@@ -47,34 +56,34 @@ namespace 수협Server.Controllers
             if (수산창고 == null)
                 return NotFound();
 
-            return Ok(수산창고);
+            var 수산창고DTO = _mapper.Map<Read수산창고DTO>(수산창고);
+            return Ok(수산창고DTO);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] 수산창고 수산창고)
+        public async Task<IActionResult> Create([FromBody] Create수산창고DTO 수산창고DTO)
         {
-            if (수산창고 == null)
+            if (수산창고DTO == null)
                 return BadRequest();
 
+            var 수산창고 = _mapper.Map<수산창고>(수산창고DTO);
             await _repository.AddAsync(수산창고);
 
-            return CreatedAtAction(nameof(GetById), new { id = 수산창고.Code }, 수산창고);
+            var created수산창고DTO = _mapper.Map<Read수산창고DTO>(수산창고);
+            return CreatedAtAction(nameof(GetById), new { id = created수산창고DTO.Id }, created수산창고DTO);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(string id, [FromBody] 수산창고 updated수산창고)
+        public async Task<IActionResult> Update(string id, [FromBody] Update수산창고DTO updated수산창고DTO)
         {
-            if (updated수산창고 == null || id != updated수산창고.Code)
+            if (updated수산창고DTO == null || id != updated수산창고DTO.Id)
                 return BadRequest();
 
             var existing수산창고 = await _repository.GetAsync(id);
             if (existing수산창고 == null)
                 return NotFound();
 
-            existing수산창고.Name = updated수산창고.Name;
-            //existing수산창고.Description = updated수산창고.Description;
-            // 필요한 다른 속성들 업데이트
-
+            _mapper.Map(updated수산창고DTO, existing수산창고);
             await _repository.UpdateAsync(existing수산창고);
 
             return NoContent();
@@ -91,6 +100,5 @@ namespace 수협Server.Controllers
 
             return NoContent();
         }
-
     }
 }

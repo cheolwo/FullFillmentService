@@ -4,9 +4,9 @@ using 주문Common.Model;
 
 namespace OrderCommon.Mapper
 {
-    public class OrderProfile : Profile
+    public class 주문Profile : Profile
     {
-        public OrderProfile()
+        public 주문Profile()
         {
             CreateMap<OrderRequestModel, 주문>()
                 .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.OrderQuantity))

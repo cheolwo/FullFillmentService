@@ -1,7 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using OrderCommon.Services.API;
 using 주문Common.DTO.주문;
-using 주문Common.DTO.주문자;
 namespace 주문FrontCommon.ViewModels
 {
     public class 주문ViewModel : ObservableObject

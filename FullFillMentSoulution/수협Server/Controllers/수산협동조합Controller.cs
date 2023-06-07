@@ -1,5 +1,7 @@
-﻿using KoreaCommon.Model;
+﻿using AutoMapper;
+using KoreaCommon.Model;
 using Microsoft.AspNetCore.Mvc;
+using 수협Common.DTO;
 using 수협Common.Repository;
 
 namespace 수협Server.Controllers
@@ -9,18 +11,21 @@ namespace 수협Server.Controllers
     public class 수산협동조합Controller : ControllerBase
     {
         private readonly 수산협동조합Repository _repository;
+        private readonly IMapper _mapper;
 
-        public 수산협동조합Controller(수산협동조합Repository repository)
+        public 수산협동조합Controller(수산협동조합Repository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var 수산협동조합List = await _repository.ListAsync();
-            Console.Write(수산협동조합List.Count());
-            return Ok(수산협동조합List);
+            var 수산협동조합DTOList = _mapper.Map<List<Read수산협동조합DTO>>(수산협동조합List);
+
+            return Ok(수산협동조합DTOList);
         }
 
         [HttpGet("{id}")]
@@ -30,8 +35,11 @@ namespace 수협Server.Controllers
             if (수산협동조합 == null)
                 return NotFound();
 
-            return Ok(수산협동조합);
+            var 수산협동조합DTO = _mapper.Map<Read수산협동조합DTO>(수산협동조합);
+
+            return Ok(수산협동조합DTO);
         }
+
         [HttpGet("{id}/수산창고")]
         public async Task<IActionResult> Get수산협동조합With수산창고(string id)
         {
@@ -39,45 +47,50 @@ namespace 수협Server.Controllers
             if (수산협동조합 == null)
                 return NotFound();
 
-            return Ok(수산협동조합);
+            var 수산협동조합DTO = _mapper.Map<Read수산협동조합DTO>(수산협동조합);
+
+            return Ok(수산협동조합DTO);
         }
 
         [HttpGet("With수산창고")]
         public async Task<IActionResult> GetAll수산협동조합With수산창고()
         {
             var 수산협동조합List = await _repository.GetToListWith수산창고Async();
-            return Ok(수산협동조합List);
+            var 수산협동조합DTOList = _mapper.Map<List<Read수산협동조합DTO>>(수산협동조합List);
+
+            return Ok(수산협동조합DTOList);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] 수산협동조합 수산협동조합)
+        public async Task<IActionResult> Create([FromBody] Create수산협동조합DTO 수산협동조합DTO)
         {
-            if (수산협동조합 == null)
+            if (수산협동조합DTO == null)
                 return BadRequest();
 
+            var 수산협동조합 = _mapper.Map<수산협동조합>(수산협동조합DTO);
             await _repository.AddAsync(수산협동조합);
 
-            return CreatedAtAction(nameof(GetById), new { id = 수산협동조합.Code }, 수산협동조합);
+            var created수산협동조합DTO = _mapper.Map<Read수산협동조합DTO>(수산협동조합);
+
+            return CreatedAtAction(nameof(GetById), new { id = created수산협동조합DTO.Id }, created수산협동조합DTO);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(string id, [FromBody] 수산협동조합 updated수산협동조합)
+        public async Task<IActionResult> Update(string id, [FromBody] Update수산협동조합DTO updated수산협동조합DTO)
         {
-            if (updated수산협동조합 == null || id != updated수산협동조합.Code)
+            if (updated수산협동조합DTO == null || id != updated수산협동조합DTO.Id)
                 return BadRequest();
 
             var existing수산협동조합 = await _repository.GetAsync(id);
             if (existing수산협동조합 == null)
                 return NotFound();
 
-            existing수산협동조합.Name = updated수산협동조합.Name;
-            // 필요한 다른 속성들 업데이트
+            _mapper.Map(updated수산협동조합DTO, existing수산협동조합);
 
             await _repository.UpdateAsync(existing수산협동조합);
 
             return NoContent();
         }
-
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
