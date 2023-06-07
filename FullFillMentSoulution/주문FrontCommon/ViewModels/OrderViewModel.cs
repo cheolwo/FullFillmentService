@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using OrderCommon.Services;
 using 주문Common;
 
-namespace MVVMToolkit.Blazor.SampleApp.ViewModels
+namespace 주문FrontCommon.ViewModels
 {
     public class OrderViewModel : ObservableRecipient
     {
@@ -59,33 +59,19 @@ namespace MVVMToolkit.Blazor.SampleApp.ViewModels
         {
             await _orderService.RandomPlaceOrder();
         }
-    }
-    public class 주문자ViewModel : ObservableObject
-    {
-        public 주문자ViewModel()
-        {
 
-        }
-    }
-    public class 주문ViewModel : ObservableObject
-    {
-        public 주문ViewModel()
+        public override bool Equals(object obj)
         {
-
-        }
-    }
-    public class 판매자ViewModel : ObservableObject
-    {
-        public 판매자ViewModel()
-        {
-
-        }
-    }
-    public class 판매자상품ViewModel : ObservableObject
-    {
-        public 판매자상품ViewModel()
-        {
-
+            return obj is OrderViewModel model &&
+                   System.Collections.Generic.EqualityComparer<IOrderService>.Default.Equals(_orderService, model._orderService) &&
+                   _orderName == model._orderName &&
+                   OrderName == model.OrderName &&
+                   _orderQuantity == model._orderQuantity &&
+                   OrderQuantity == model.OrderQuantity &&
+                   _orderPlaced == model._orderPlaced &&
+                   OrderPlaced == model.OrderPlaced &&
+                   System.Collections.Generic.EqualityComparer<IAsyncRelayCommand>.Default.Equals(PlaceOrderCommand, model.PlaceOrderCommand) &&
+                   System.Collections.Generic.EqualityComparer<IAsyncRelayCommand>.Default.Equals(RandomOrderCommnad, model.RandomOrderCommnad);
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using KoreaCommon.Model;
-using System.Net.Http.Json;
+﻿using System.Net.Http.Json;
+using 수협Common.DTO;
 
 namespace KoreaCommon.Services
 {
@@ -13,52 +13,58 @@ namespace KoreaCommon.Services
             _httpClient = httpClient;
         }
 
-        public async Task<List<수산창고>> GetAll수산창고Async()
+        public async Task<List<Read수산창고DTO>> GetAll수산창고Async()
         {
             var response = await _httpClient.GetAsync(BaseUrl);
             response.EnsureSuccessStatusCode();
 
-            var 수산창고List = await response.Content.ReadFromJsonAsync<List<수산창고>>();
+            var 수산창고List = await response.Content.ReadFromJsonAsync<List<Read수산창고DTO>>();
             return 수산창고List;
         }
-        public async Task<List<수산창고>> Get수산창고With수산품목종류Async()
+
+        public async Task<List<Read수산창고DTO>> Get수산창고With수산품목종류Async()
         {
             var response = await _httpClient.GetAsync($"{BaseUrl}/With수산품목종류");
             response.EnsureSuccessStatusCode();
 
-            var 수산창고List = await response.Content.ReadFromJsonAsync<List<수산창고>>();
+            var 수산창고List = await response.Content.ReadFromJsonAsync<List<Read수산창고DTO>>();
             return 수산창고List;
         }
 
-        public async Task<수산창고> Get수산창고ByIdAsync(string id)
+        public async Task<Read수산창고DTO> Get수산창고ByIdAsync(string id)
         {
             var response = await _httpClient.GetAsync($"{BaseUrl}/{id}");
             response.EnsureSuccessStatusCode();
 
-            var 수산창고 = await response.Content.ReadFromJsonAsync<수산창고>();
+            var 수산창고 = await response.Content.ReadFromJsonAsync<Read수산창고DTO>();
             return 수산창고;
         }
-        public async Task<수산창고> Get수산창고With수산품별재고현황Async(string 수산창고Id)
+
+        public async Task<Read수산창고DTO> Get수산창고With수산품별재고현황Async(string 수산창고Id)
         {
             var response = await _httpClient.GetAsync($"{BaseUrl}/{수산창고Id}/수산품별재고현황");
             response.EnsureSuccessStatusCode();
 
-            var 수산창고 = await response.Content.ReadFromJsonAsync<수산창고>();
+            var 수산창고 = await response.Content.ReadFromJsonAsync<Read수산창고DTO>();
             return 수산창고;
         }
-        public async Task<수산창고> Create수산창고Async(수산창고 수산창고)
+
+        public async Task<Read수산창고DTO> Create수산창고Async(Create수산창고DTO 수산창고)
         {
             var response = await _httpClient.PostAsJsonAsync(BaseUrl, 수산창고);
             response.EnsureSuccessStatusCode();
 
-            var created수산창고 = await response.Content.ReadFromJsonAsync<수산창고>();
+            var created수산창고 = await response.Content.ReadFromJsonAsync<Read수산창고DTO>();
             return created수산창고;
         }
 
-        public async Task Update수산창고Async(string id, 수산창고 updated수산창고)
+        public async Task<Read수산창고DTO> Update수산창고Async(string id, Update수산창고DTO updated수산창고)
         {
             var response = await _httpClient.PutAsJsonAsync($"{BaseUrl}/{id}", updated수산창고);
             response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadFromJsonAsync<Read수산창고DTO>();
+            return result;
         }
 
         public async Task Delete수산창고Async(string id)

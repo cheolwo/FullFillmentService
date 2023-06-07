@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Json;
 using System.Net;
-using 주문Common.Model;
+using 주문Common.DTO.주문자;
+using 주문Common.DTO.주문;
 
 namespace OrderCommon.Services.API
 {
@@ -13,20 +14,20 @@ namespace OrderCommon.Services.API
             _httpClient.BaseAddress = new Uri("https://localhost:7007");
         }
 
-        public async Task<List<주문자>> GetAll주문자()
+        public async Task<List<Read주문자DTO>> GetAll주문자()
         {
             var response = await _httpClient.GetAsync("api/주문자");
             response.EnsureSuccessStatusCode();
-            var 주문자List = await response.Content.ReadFromJsonAsync<List<주문자>>();
+            var 주문자List = await response.Content.ReadFromJsonAsync<List<Read주문자DTO>>();
             return 주문자List;
         }
 
-        public async Task<주문자> Get주문자ById(string id)
+        public async Task<Read주문자DTO> Get주문자ById(string id)
         {
             var response = await _httpClient.GetAsync($"api/주문자/{id}");
             if (response.IsSuccessStatusCode)
             {
-                var 주문자 = await response.Content.ReadFromJsonAsync<주문자>();
+                var 주문자 = await response.Content.ReadFromJsonAsync<Read주문자DTO>();
                 return 주문자;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -39,12 +40,12 @@ namespace OrderCommon.Services.API
             }
         }
 
-        public async Task<List<주문>> GetOrdersByCustomerId(string id)
+        public async Task<List<Read주문DTO>> GetOrdersByCustomerId(string id)
         {
             var response = await _httpClient.GetAsync($"api/주문자/{id}/주문들");
             if (response.IsSuccessStatusCode)
             {
-                var 주문들 = await response.Content.ReadFromJsonAsync<List<주문>>();
+                var 주문들 = await response.Content.ReadFromJsonAsync<List<Read주문DTO>>();
                 return 주문들;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -57,20 +58,20 @@ namespace OrderCommon.Services.API
             }
         }
 
-        public async Task<주문자> Create주문자(주문자 주문자)
+        public async Task<Read주문자DTO> Create주문자(Create주문자DTO 주문자)
         {
             var response = await _httpClient.PostAsJsonAsync("api/주문자", 주문자);
             response.EnsureSuccessStatusCode();
-            var created주문자 = await response.Content.ReadFromJsonAsync<주문자>();
+            var created주문자 = await response.Content.ReadFromJsonAsync<Read주문자DTO>();
             return created주문자;
         }
 
-        public async Task<주문자> Update주문자(string id, 주문자 updated주문자)
+        public async Task<Read주문자DTO> Update주문자(string id, Update주문자DTO updated주문자)
         {
             var response = await _httpClient.PutAsJsonAsync($"api/주문자/{id}", updated주문자);
             if (response.IsSuccessStatusCode)
             {
-                var 주문자 = await response.Content.ReadFromJsonAsync<주문자>();
+                var 주문자 = await response.Content.ReadFromJsonAsync<Read주문자DTO>();
                 return 주문자;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)

@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using 창고Common;
+using 창고Common.DTO.창고;
 
 namespace WarehouseCommon.APIService
 {
@@ -19,20 +20,21 @@ namespace WarehouseCommon.APIService
             _httpClient.BaseAddress = new Uri("https://localhost:7187");
         }
 
-        public async Task<List<창고>> GetAll창고()
+        public async Task<List<Read창고DTO>> GetAll창고()
         {
             var response = await _httpClient.GetAsync("api/창고");
             response.EnsureSuccessStatusCode();
-            var 창고List = await response.Content.ReadFromJsonAsync<List<창고>>();
+            var 창고List = await response.Content.ReadFromJsonAsync<List<Read창고DTO>>();
             return 창고List;
         }
 
-        public async Task<창고> Get창고ById(string id)
+
+        public async Task<Read창고DTO> Get창고ById(string id)
         {
             var response = await _httpClient.GetAsync($"api/창고/{id}");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -45,12 +47,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByAddress(string address)
+
+        public async Task<Read창고DTO> Get창고ByAddress(string address)
         {
             var response = await _httpClient.GetAsync($"api/창고/getByAddress?address={address}");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -63,12 +66,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByEmail(string email)
+
+        public async Task<Read창고DTO> Get창고ByEmail(string email)
         {
             var response = await _httpClient.GetAsync($"api/창고/getByEmail?email={email}");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -81,12 +85,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByFaxNumber(string faxNumber)
+
+        public async Task<Read창고DTO> Get창고ByFaxNumber(string faxNumber)
         {
             var response = await _httpClient.GetAsync($"api/창고/getByFaxNumber?faxNumber={faxNumber}");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -99,12 +104,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByPhoneNumber(string phoneNumber)
+
+        public async Task<Read창고DTO> Get창고ByPhoneNumber(string phoneNumber)
         {
             var response = await _httpClient.GetAsync($"api/창고/getByPhoneNumber?phoneNumber={phoneNumber}");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -117,12 +123,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByCode(string code)
+
+        public async Task<Read창고DTO> Get창고ByCode(string code)
         {
             var response = await _httpClient.GetAsync($"api/창고/getByCode?code={code}");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -135,12 +142,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByName(string name)
+
+        public async Task<Read창고DTO> Get창고ByName(string name)
         {
             var response = await _httpClient.GetAsync($"api/창고/getByName?name={name}");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -153,12 +161,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByIdWith창고상품(string id)
+
+        public async Task<Read창고DTO> Get창고ByIdWith창고상품(string id)
         {
             var response = await _httpClient.GetAsync($"api/창고/{id}/with창고상품");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -171,12 +180,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByIdWith입고상품(string id)
+
+        public async Task<Read창고DTO> Get창고ByIdWith입고상품(string id)
         {
             var response = await _httpClient.GetAsync($"api/창고/{id}/with입고상품");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -189,12 +199,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByIdWith적재상품(string id)
+
+        public async Task<Read창고DTO> Get창고ByIdWith적재상품(string id)
         {
             var response = await _httpClient.GetAsync($"api/창고/{id}/with적재상품");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -207,12 +218,13 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Get창고ByIdWith출고상품(string id)
+
+        public async Task<Read창고DTO> Get창고ByIdWith출고상품(string id)
         {
             var response = await _httpClient.GetAsync($"api/창고/{id}/with출고상품");
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
@@ -225,20 +237,22 @@ namespace WarehouseCommon.APIService
             }
         }
 
-        public async Task<창고> Create창고(창고 창고)
+
+        public async Task<Read창고DTO> Create창고(Create창고DTO 창고)
         {
             var response = await _httpClient.PostAsJsonAsync("api/창고", 창고);
             response.EnsureSuccessStatusCode();
-            var created창고 = await response.Content.ReadFromJsonAsync<창고>();
+            var created창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
             return created창고;
         }
 
-        public async Task<창고> Update창고(string id, 창고 updated창고)
+
+        public async Task<Read창고DTO> Update창고(string id, Update창고DTO updated창고)
         {
             var response = await _httpClient.PutAsJsonAsync($"api/창고/{id}", updated창고);
             if (response.IsSuccessStatusCode)
             {
-                var 창고 = await response.Content.ReadFromJsonAsync<창고>();
+                var 창고 = await response.Content.ReadFromJsonAsync<Read창고DTO>();
                 return 창고;
             }
             else if (response.StatusCode == HttpStatusCode.NotFound)
