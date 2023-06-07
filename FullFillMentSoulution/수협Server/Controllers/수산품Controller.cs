@@ -1,6 +1,6 @@
-﻿using KoreaCommon.Model.Repository;
-using KoreaCommon.Model;
+﻿using KoreaCommon.Model;
 using Microsoft.AspNetCore.Mvc;
+using 수협Common.Repository;
 
 namespace 수협Server.Controllers
 {

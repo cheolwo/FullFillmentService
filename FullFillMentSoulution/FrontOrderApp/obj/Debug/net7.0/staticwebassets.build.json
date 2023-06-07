@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LC4eQkD7WEiP/7SxnMnVLBrkyu/9Ej3FHlkBOpNFgU0=",
+  "Hash": "pDD/qiGyPqyczvDrlrB2U+t4SW/Z11gMkxID3P9pVMs=",
   "Source": "주문자App",
   "BasePath": "/",
   "Mode": "Root",
@@ -287,6 +287,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\dotnetcore.repositories\\17.51.0\\lib\\net7.0\\DotNetCore.Repositories.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\FluentValidation.dll",
+      "SourceId": "주문자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentValidation.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.5.2\\lib\\net7.0\\FluentValidation.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Google.Protobuf.dll",
@@ -884,40 +901,6 @@
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.DependencyInjection.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "runtime",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Diagnostics.HealthChecks.dll",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Diagnostics.HealthChecks.dll",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "runtime",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.Diagnostics.HealthChecks.dll"
-    },
-    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.dll",
       "SourceId": "주문자App",
       "SourceType": "Computed",
@@ -967,23 +950,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.FileSystemGlobbing.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Hosting.Abstractions.dll",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Hosting.Abstractions.dll",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "runtime",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Hosting.Abstractions.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll",
@@ -1309,12 +1275,12 @@
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.1\\runtimes\\browser-wasm\\lib\\net7.0\\netstandard.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.AspNetCore.dll",
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
       "SourceId": "주문자App",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Quartz.AspNetCore.dll",
+      "RelativePath": "_framework/Newtonsoft.Json.dll",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1323,7 +1289,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\quartz.aspnetcore\\3.6.2\\lib\\net6.0\\Quartz.AspNetCore.dll"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib\\net6.0\\Newtonsoft.Json.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.dll",
@@ -1341,40 +1307,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\quartz\\3.6.2\\lib\\netstandard2.0\\Quartz.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.Extensions.DependencyInjection.dll",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Quartz.Extensions.DependencyInjection.dll",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "runtime",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\quartz.extensions.dependencyinjection\\3.6.2\\lib\\net6.0\\Quartz.Extensions.DependencyInjection.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.Extensions.Hosting.dll",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Quartz.Extensions.Hosting.dll",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "runtime",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\quartz.extensions.hosting\\3.6.2\\lib\\net6.0\\Quartz.Extensions.Hosting.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.AppContext.dll",
@@ -4250,6 +4182,40 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\bin\\Debug\\net7.0\\주문Common.pdb"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\주문FrontCommon.dll",
+      "SourceId": "주문자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/주문FrontCommon.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\주문FrontCommon\\bin\\Debug\\net7.0\\주문FrontCommon.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\주문FrontCommon.pdb",
+      "SourceId": "주문자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/주문FrontCommon.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\주문FrontCommon\\bin\\Debug\\net7.0\\주문FrontCommon.pdb"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\주문자App.dll",
       "SourceId": "주문자App",
       "SourceType": "Computed",
@@ -4384,6 +4350,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.Serialization.Json.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\+PoNc8eV.gz",
+      "SourceId": "주문자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/주문FrontCommon.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\주문FrontCommon.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\주문FrontCommon.pdb"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\+PY7XpiC.gz",
@@ -4554,6 +4537,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.SecureString.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\1Ai+7h1u.gz",
+      "SourceId": "주문자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentValidation.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\FluentValidation.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\FluentValidation.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\1Kp6f1Ti.gz",
@@ -5474,23 +5474,6 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Identity.Core.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\dIKBZ4We.gz",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Quartz.Extensions.DependencyInjection.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.Extensions.DependencyInjection.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.Extensions.DependencyInjection.dll"
-    },
-    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\DMlT09dP.gz",
       "SourceId": "주문자App",
       "SourceType": "Computed",
@@ -5506,6 +5489,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MudBlazor.ThemeManager.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\dpU3DE0s.gz",
+      "SourceId": "주문자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Newtonsoft.Json.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\dvQbnUyN.gz",
@@ -5574,23 +5574,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Quic.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\EiuSZG09.gz",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Quartz.AspNetCore.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.AspNetCore.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.AspNetCore.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\EKi+2uoS.gz",
@@ -6171,23 +6154,6 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\K4os.Compression.LZ4.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\IemlRs0K.gz",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll"
-    },
-    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\Igy1wfa2.gz",
       "SourceId": "주문자App",
       "SourceType": "Computed",
@@ -6511,23 +6477,6 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Drawing.Primitives.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\kPj+h6X0.gz",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Hosting.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Hosting.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Hosting.Abstractions.dll"
-    },
-    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\KREB2eJa.gz",
       "SourceId": "주문자App",
       "SourceType": "Computed",
@@ -6732,23 +6681,6 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Win32.Registry.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\mo1RNCsP.gz",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Quartz.Extensions.Hosting.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.Extensions.Hosting.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Quartz.Extensions.Hosting.dll"
-    },
-    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\mO4qHFs0.gz",
       "SourceId": "주문자App",
       "SourceType": "Computed",
@@ -6866,23 +6798,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Transactions.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\nn1ieNnp.gz",
-      "SourceId": "주문자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Diagnostics.HealthChecks.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Diagnostics.HealthChecks.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Diagnostics.HealthChecks.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\nrZvSqHJ.gz",
@@ -7886,6 +7801,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\uZzVmfLw.gz",
+      "SourceId": "주문자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/주문FrontCommon.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\주문FrontCommon.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\bin\\Debug\\net7.0\\wwwroot\\_framework\\주문FrontCommon.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontOrderApp\\obj\\Debug\\net7.0\\build-gz\\vbVJEHZ5.gz",

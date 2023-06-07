@@ -87,6 +87,19 @@
           }
         }
       },
+      "FluentValidation/11.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
@@ -2609,6 +2622,24 @@
         "runtime": {
           "bin/placeholder/수협Common.dll": {}
         }
+      },
+      "수협FrontCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "CommunityToolkit.Mvvm": "8.2.0",
+          "FluentValidation": "11.5.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "수협Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/수협FrontCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/수협FrontCommon.dll": {}
+        }
       }
     }
   },
@@ -2718,6 +2749,29 @@
         "lib/net7.0/FluentHttpClient.pdb",
         "lib/netstandard2.1/FluentHttpClient.dll",
         "lib/netstandard2.1/FluentHttpClient.pdb"
+      ]
+    },
+    "FluentValidation/11.5.2": {
+      "sha512": "kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "type": "package",
+      "path": "fluentvalidation/11.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.5.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Google.Protobuf/3.21.9": {
@@ -8021,6 +8075,11 @@
       "type": "project",
       "path": "../KoreaCommon/수협Common.csproj",
       "msbuildProject": "../KoreaCommon/수협Common.csproj"
+    },
+    "수협FrontCommon/1.0.0": {
+      "type": "project",
+      "path": "../수협FrontCommon/수협FrontCommon.csproj",
+      "msbuildProject": "../수협FrontCommon/수협FrontCommon.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8032,7 +8091,8 @@
       "MySql.EntityFrameworkCore >= 7.0.2",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "계정Common >= 1.0.0",
-      "수협Common >= 1.0.0"
+      "수협Common >= 1.0.0",
+      "수협FrontCommon >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8076,6 +8136,9 @@
             },
             "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj"
+            },
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협FrontCommon\\수협FrontCommon.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협FrontCommon\\수협FrontCommon.csproj"
             }
           }
         }

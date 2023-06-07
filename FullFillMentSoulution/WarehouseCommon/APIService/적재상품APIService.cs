@@ -16,6 +16,7 @@ namespace WarehouseCommon.APIService
         public 적재상품APIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+            _httpClient.BaseAddress = new Uri("https://localhost:7187");
         }
 
         public async Task<List<적재상품>> GetAll적재상품()

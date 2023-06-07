@@ -16,12 +16,10 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="7.0.5" />
     <PackageReference Include="MudBlazor" Version="6.3.1" />
     <PackageReference Include="MudBlazor.ThemeManager" Version="1.0.8" />
-    <PackageReference Include="Quartz" Version="3.6.2" />
-    <PackageReference Include="Quartz.AspNetCore" Version="3.6.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrderCommon\주문Common.csproj" />
+    <ProjectReference Include="..\주문FrontCommon\주문FrontCommon.csproj" />
   </ItemGroup>
 
 </Project>

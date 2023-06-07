@@ -24,21 +24,4 @@ builder.Services.AddApiAuthorization();
 //});
 // Add services to the container
 
-builder.Services.AddQuartz(q =>
-{
-    q.UseMicrosoftDependencyInjectionJobFactory();
-    // Just use the name of your job that you created in the Jobs folder.
-    var jobKey = new JobKey("OrderJob");
-    q.AddJob<OrderJob>(opts => opts.WithIdentity(jobKey));
-
-    q.AddTrigger(opts => opts
-        .ForJob(jobKey)
-        .WithIdentity("OrderJob-trigger")
-        //This Cron interval can be described as "run every minute" (when second is zero)
-        .WithCronSchedule("0 * * ? * *")
-        .StartNow().WithSimpleSchedule(x => x.WithInterval(TimeSpan.FromMilliseconds(1000)).RepeatForever())
-
-    );
-});
-builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 await builder.Build().RunAsync();

@@ -10,20 +10,18 @@ using KoreaCommon.Fish.해양수산부.For조합창고품목별입출고현황;
 using KoreaCommon.Fish.해양수산부.For품목별물류센터재고현황;
 using KoreaCommon.Model;
 using KoreaCommon.Services;
-using KoreaCommon.ViewModel.해양수산부;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
+using 수협FrontCommon.ViewModel.Sample;
 using 수협시스템관리자Common.ViewModel;
 using 해양수산부.API.For산지조합;
 using 해양수산부.API.For산지조합창고;
 using 해양수산부.API.For조합창고품목별재고현황;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
@@ -81,8 +79,6 @@ builder.Services.AddScoped<수산창고APIService>();
 builder.Services.AddScoped<수산품별재고현황APIService>();
 builder.Services.AddScoped<수산협동조합APIService>();
 
-builder.Services.AddScoped<수산협동조합ViewModel>();
-builder.Services.AddScoped<수산창고ViewModel>();
 builder.Services.AddScoped<창고별재고현황ViewModel>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddHttpClient();

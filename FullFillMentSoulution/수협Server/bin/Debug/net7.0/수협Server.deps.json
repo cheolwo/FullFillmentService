@@ -15,7 +15,8 @@
           "MySql.EntityFrameworkCore": "7.0.2",
           "Swashbuckle.AspNetCore": "6.5.0",
           "계정Common": "1.0.0",
-          "수협Common": "1.0.0"
+          "수협Common": "1.0.0",
+          "수협FrontCommon": "1.0.0"
         },
         "runtime": {
           "수협Server.dll": {}
@@ -82,6 +83,14 @@
           "lib/net7.0/FluentHttpClient.dll": {
             "assemblyVersion": "2.1.0.0",
             "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "FluentValidation/11.5.2": {
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.5.2.0"
           }
         }
       },
@@ -1448,6 +1457,19 @@
         "runtime": {
           "수협Common.dll": {}
         }
+      },
+      "수협FrontCommon/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "CommunityToolkit.Mvvm": "8.2.0",
+          "FluentValidation": "11.5.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "수협Common": "1.0.0"
+        },
+        "runtime": {
+          "수협FrontCommon.dll": {}
+        }
       }
     }
   },
@@ -1498,6 +1520,13 @@
       "sha512": "sha512-zFiajzid94I8i69RlazWkmB7r9o1013fNx2REtecENhmDUXknPR5H72bXXGTx4mJv9olYmFBLaMrFYeeiYH0yg==",
       "path": "fluenthttpclient/2.1.0",
       "hashPath": "fluenthttpclient.2.1.0.nupkg.sha512"
+    },
+    "FluentValidation/11.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "path": "fluentvalidation/11.5.2",
+      "hashPath": "fluentvalidation.11.5.2.nupkg.sha512"
     },
     "Google.Protobuf/3.21.9": {
       "type": "package",
@@ -2511,6 +2540,11 @@
       "sha512": ""
     },
     "수협Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "수협FrontCommon/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

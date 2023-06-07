@@ -1,6 +1,6 @@
 ﻿using IdentityCommon.Models.ForApplicationUser;
-using KoreaCommon.Model.Repository;
 using Microsoft.AspNetCore.Identity;
+using 수협Common.Repository;
 
 namespace 수협Server.Manager
 {

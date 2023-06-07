@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DC/ylWHBaS40yQfYxNBsVksaP/glkZfOIO8Zq099JgU=",
+  "Hash": "snOQgHiOQO70Jl/+yWglIw/yd7HnoubN5U1EqC+Y22g=",
   "Source": "수협관리자App",
   "BasePath": "/",
   "Mode": "Root",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\dotnetcore.repositories\\17.51.0\\lib\\net7.0\\DotNetCore.Repositories.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\FluentValidation.dll",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentValidation.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.5.2\\lib\\net7.0\\FluentValidation.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Google.Protobuf.dll",
@@ -3978,6 +3995,40 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\bin\\Debug\\net7.0\\수협Common.pdb"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협FrontCommon.dll",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/수협FrontCommon.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협FrontCommon\\bin\\Debug\\net7.0\\수협FrontCommon.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협FrontCommon.pdb",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/수협FrontCommon.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협FrontCommon\\bin\\Debug\\net7.0\\수협FrontCommon.pdb"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협관리자App.dll",
       "SourceId": "수협관리자App",
       "SourceType": "Computed",
@@ -4012,12 +4063,12 @@
       "OriginalItemSpec": "obj\\Debug\\net7.0\\수협관리자App.pdb"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협시스템관리자Common.dll",
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협관리자AppCommon.dll",
       "SourceId": "수협관리자App",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/수협시스템관리자Common.dll",
+      "RelativePath": "_framework/수협관리자AppCommon.dll",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4026,15 +4077,15 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협시스템관리자Common\\bin\\Debug\\net7.0\\수협시스템관리자Common.dll"
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자AppCommon\\bin\\Debug\\net7.0\\수협관리자AppCommon.dll"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협시스템관리자Common.pdb",
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협관리자AppCommon.pdb",
       "SourceId": "수협관리자App",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/수협시스템관리자Common.pdb",
+      "RelativePath": "_framework/수협관리자AppCommon.pdb",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4043,7 +4094,7 @@
       "AssetTraitValue": "symbol",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협시스템관리자Common\\bin\\Debug\\net7.0\\수협시스템관리자Common.pdb"
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자AppCommon\\bin\\Debug\\net7.0\\수협관리자AppCommon.pdb"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\++ZDah+x.gz",
@@ -4333,6 +4384,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.SecureString.dll"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\1Ai+7h1u.gz",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentValidation.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\FluentValidation.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\FluentValidation.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\1Kp6f1Ti.gz",
@@ -4726,6 +4794,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.NetworkInformation.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\8ASwip9o.gz",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/수협FrontCommon.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협FrontCommon.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협FrontCommon.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\8jNfS8mc.gz",
       "SourceId": "수협관리자App",
       "SourceType": "Computed",
@@ -4998,6 +5083,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Reflection.Primitives.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\bELLzAq3.gz",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/수협관리자AppCommon.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협관리자AppCommon.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협관리자AppCommon.dll"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\bIrdsVDG.gz",
       "SourceId": "수협관리자App",
       "SourceType": "Computed",
@@ -5030,23 +5132,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.7.0.1.j9zuvsgzyx.js"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\BSpE+HHz.gz",
-      "SourceId": "수협관리자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/수협시스템관리자Common.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협시스템관리자Common.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협시스템관리자Common.dll"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\bTsLxFyD.gz",
@@ -7140,6 +7225,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Private.Xml.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\sN7O+hpg.gz",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/수협관리자AppCommon.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협관리자AppCommon.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협관리자AppCommon.pdb"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\SorT7G4C.gz",
       "SourceId": "수협관리자App",
       "SourceType": "Computed",
@@ -7531,6 +7633,23 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.VisualBasic.dll"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\VsuWYR1v.gz",
+      "SourceId": "수협관리자App",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/수협FrontCommon.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협FrontCommon.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협FrontCommon.pdb"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\vt2b9kO6.gz",
       "SourceId": "수협관리자App",
       "SourceType": "Computed",
@@ -7784,23 +7903,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Text.RegularExpressions.dll"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\xh3E3SWW.gz",
-      "SourceId": "수협관리자App",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/수협시스템관리자Common.pdb.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협시스템관리자Common.pdb",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\수협시스템관리자Common.pdb"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\xjltbfxc.gz",

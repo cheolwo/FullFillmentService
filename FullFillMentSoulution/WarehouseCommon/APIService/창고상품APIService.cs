@@ -10,6 +10,7 @@ namespace WarehouseCommon.APIService
         public 창고상품APIService(HttpClient httpClient)
         {   
             _httpClient = httpClient;
+            _httpClient.BaseAddress = new Uri("https://localhost:7187");
         }
 
         public async Task<List<창고상품>> GetAll창고상품()

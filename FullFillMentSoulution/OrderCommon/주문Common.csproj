@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Services\Query\" />
   </ItemGroup>
 
   <ItemGroup>

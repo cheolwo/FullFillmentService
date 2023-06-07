@@ -1,9 +1,9 @@
 using IdentityCommon.Models.ForApplicationUser;
 using IdentityServerTest.Data;
 using KoreaCommon.Model;
-using KoreaCommon.Model.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using 수협Common.Repository;
 using 수협Server.Manager;
 using 해양수산부.API.For산지조합;
 using 해양수산부.API.For산지조합창고;

@@ -97,3 +97,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\수협Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\계정Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\계정Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\수협FrontCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\수협FrontCommon.pdb

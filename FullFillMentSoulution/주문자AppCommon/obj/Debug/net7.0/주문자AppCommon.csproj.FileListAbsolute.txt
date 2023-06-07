@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\bin\Debug\net7.0\주문자AppCommon.deps.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\bin\Debug\net7.0\주문자AppCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\bin\Debug\net7.0\주문자AppCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\주문자AppCommon.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\주문자AppCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\주문자AppCommon.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\주문자AppCommon.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\주문자AppCommon.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\주문자AppCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\refint\주문자AppCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\주문자AppCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\주문자AppCommon\obj\Debug\net7.0\ref\주문자AppCommon.dll

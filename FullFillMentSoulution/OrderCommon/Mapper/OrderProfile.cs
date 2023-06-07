@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using MVVMToolkit.Blazor.SampleApp.ViewModels;
+using 주문Common;
 using 주문Common.Model;
 
 namespace OrderCommon.Mapper

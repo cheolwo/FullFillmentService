@@ -14,7 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\수협시스템관리자Common\수협시스템관리자Common.csproj" />
+    <Folder Include="Pages\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\수협FrontCommon\수협FrontCommon.csproj" />
+    <ProjectReference Include="..\수협관리자AppCommon\수협관리자AppCommon.csproj" />
   </ItemGroup>
 
 </Project>

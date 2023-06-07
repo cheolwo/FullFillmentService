@@ -11,6 +11,7 @@ namespace WarehouseCommon.APIService
         public 입고상품APIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+            _httpClient.BaseAddress = new Uri("https://localhost:7187");
         }
 
         public async Task<List<입고상품>> GetAll입고상품()

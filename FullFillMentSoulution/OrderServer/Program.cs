@@ -5,8 +5,8 @@ using OrderCommon.Repository;
 using OrderCommon.Services;
 using Quartz;
 using System.Reflection;
-using 林巩Common.Services;
-using 林巩Common.Services.Command;
+using 林巩Common.Command;
+using 林巩Common.Event;
 
 var builder = WebApplication.CreateBuilder(args);
 

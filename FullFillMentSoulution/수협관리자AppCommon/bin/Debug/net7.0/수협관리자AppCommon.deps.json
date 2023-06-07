@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "수협관리자AppCommon/1.0.0": {
+        "runtime": {
+          "수협관리자AppCommon.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "수협관리자AppCommon/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

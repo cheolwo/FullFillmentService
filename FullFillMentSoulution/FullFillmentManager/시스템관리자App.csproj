@@ -22,13 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
-    <ProjectReference Include="..\KoreaCommon\수협Common.csproj" />
-    <ProjectReference Include="..\수협시스템관리자Common\수협시스템관리자Common.csproj" />
+    <None Include="wwwroot\images\dcinside.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\images\dcinside.png" />
+    <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
+    <ProjectReference Include="..\수협FrontCommon\수협FrontCommon.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7nmPu9JtJmiF4ptYD1tQIyZAA2N9eaW5lvVtqf0KR6rc8xX/oxTtK1pL6bQIHvmUgTb4v0yqhtmad3G6MZBjhA==",
+  "dgSpecHash": "I/D8NM8di1ANZIPatSJuTzNdGEEYSlIFBbXDZUr+ShCPDftz5+SBcAotuUxC88gsOXoqwDvPDK9AezBmn33mlQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협Server\\수협Server.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\user\\.nuget\\packages\\dotnetcore.entityframeworkcore\\17.51.0\\dotnetcore.entityframeworkcore.17.51.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\dotnetcore.repositories\\17.51.0\\dotnetcore.repositories.17.51.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\fluenthttpclient\\2.1.0\\fluenthttpclient.2.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\identitymodel\\6.1.0\\identitymodel.6.1.0.nupkg.sha512",

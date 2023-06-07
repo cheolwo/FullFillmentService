@@ -58,6 +58,19 @@
           "lib/net7.0/DotNetCore.Repositories.dll": {}
         }
       },
+      "FluentValidation/11.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
@@ -618,38 +631,6 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Diagnostics.HealthChecks/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -704,24 +685,6 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "Microsoft.Extensions.Hosting.Abstractions/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Identity.Core/7.0.5": {
@@ -1011,6 +974,19 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Portable.BouncyCastle/1.9.0": {
         "type": "package",
         "compile": {
@@ -1038,60 +1014,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Quartz.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Quartz.AspNetCore/3.6.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Diagnostics.HealthChecks": "6.0.0",
-          "Quartz.Extensions.Hosting": "3.6.2"
-        },
-        "compile": {
-          "lib/net6.0/Quartz.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Quartz.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Quartz.Extensions.DependencyInjection/3.6.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0",
-          "Quartz": "3.6.2"
-        },
-        "compile": {
-          "lib/net6.0/Quartz.Extensions.DependencyInjection.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Quartz.Extensions.DependencyInjection.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Quartz.Extensions.Hosting/3.6.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
-          "Quartz.Extensions.DependencyInjection": "3.6.2"
-        },
-        "compile": {
-          "lib/net6.0/Quartz.Extensions.Hosting.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Quartz.Extensions.Hosting.dll": {
             "related": ".xml"
           }
         }
@@ -1484,6 +1406,22 @@
         "runtime": {
           "bin/placeholder/주문Common.dll": {}
         }
+      },
+      "주문FrontCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.0",
+          "FluentValidation": "11.5.2",
+          "Newtonsoft.Json": "13.0.3",
+          "주문Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/주문FrontCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/주문FrontCommon.dll": {}
+        }
       }
     },
     "net7.0/browser-wasm": {
@@ -1541,6 +1479,19 @@
         },
         "runtime": {
           "lib/net7.0/DotNetCore.Repositories.dll": {}
+        }
+      },
+      "FluentValidation/11.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Google.Protobuf/3.21.9": {
@@ -2103,38 +2054,6 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Diagnostics.HealthChecks/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -2189,24 +2108,6 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "Microsoft.Extensions.Hosting.Abstractions/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Identity.Core/7.0.5": {
@@ -2468,6 +2369,19 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Portable.BouncyCastle/1.9.0": {
         "type": "package",
         "compile": {
@@ -2495,60 +2409,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Quartz.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Quartz.AspNetCore/3.6.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Diagnostics.HealthChecks": "6.0.0",
-          "Quartz.Extensions.Hosting": "3.6.2"
-        },
-        "compile": {
-          "lib/net6.0/Quartz.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Quartz.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Quartz.Extensions.DependencyInjection/3.6.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0",
-          "Quartz": "3.6.2"
-        },
-        "compile": {
-          "lib/net6.0/Quartz.Extensions.DependencyInjection.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Quartz.Extensions.DependencyInjection.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Quartz.Extensions.Hosting/3.6.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
-          "Quartz.Extensions.DependencyInjection": "3.6.2"
-        },
-        "compile": {
-          "lib/net6.0/Quartz.Extensions.Hosting.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Quartz.Extensions.Hosting.dll": {
             "related": ".xml"
           }
         }
@@ -2974,6 +2834,22 @@
         "runtime": {
           "bin/placeholder/주문Common.dll": {}
         }
+      },
+      "주문FrontCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.0",
+          "FluentValidation": "11.5.2",
+          "Newtonsoft.Json": "13.0.3",
+          "주문Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/주문FrontCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/주문FrontCommon.dll": {}
+        }
       }
     }
   },
@@ -3048,6 +2924,29 @@
         "dotnetcore.repositories.nuspec",
         "lib/net7.0/DotNetCore.Repositories.dll",
         "readme.md"
+      ]
+    },
+    "FluentValidation/11.5.2": {
+      "sha512": "kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "type": "package",
+      "path": "fluentvalidation/11.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.5.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Google.Protobuf/3.21.9": {
@@ -3897,44 +3796,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Diagnostics.HealthChecks/6.0.0": {
-      "sha512": "ktOGFY2uJ6QqZbLgLZgYg6qWuOnwKEIYbpgGDR/1QY8E+8NhnL75dJZ+WDl88h7Q4JkIFeTkFBUGF5QmNcfUEg==",
-      "type": "package",
-      "path": "microsoft.extensions.diagnostics.healthchecks/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Diagnostics.HealthChecks.dll",
-        "lib/net461/Microsoft.Extensions.Diagnostics.HealthChecks.xml",
-        "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll",
-        "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.xml",
-        "microsoft.extensions.diagnostics.healthchecks.6.0.0.nupkg.sha512",
-        "microsoft.extensions.diagnostics.healthchecks.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/6.0.0": {
-      "sha512": "6C9uhsA7GwT1qlXF+1JgOktilrWBSMLNVcwIjg63UvFaDVizg8fYTv826MC58dznvvT9yG31gGwsN1cFfg+yZQ==",
-      "type": "package",
-      "path": "microsoft.extensions.diagnostics.healthchecks.abstractions/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
-        "lib/net461/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml",
-        "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
-        "lib/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml",
-        "microsoft.extensions.diagnostics.healthchecks.abstractions.6.0.0.nupkg.sha512",
-        "microsoft.extensions.diagnostics.healthchecks.abstractions.nuspec"
-      ]
-    },
     "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
       "sha512": "NyawiW9ZT/liQb34k9YqBSNPLuuPkrjMgQZ24Y/xXX1RoiBkLUdPMaQTmxhZ5TYu8ZKZ9qayzil75JX95vGQUg==",
       "type": "package",
@@ -4013,27 +3874,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
         "microsoft.extensions.filesystemglobbing.7.0.0.nupkg.sha512",
         "microsoft.extensions.filesystemglobbing.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Hosting.Abstractions/6.0.0": {
-      "sha512": "GcT5l2CYXL6Sa27KCSh0TixsRfADUgth+ojQSD5EkzisZxmGFh7CwzkcYuGwvmXLjr27uWRNrJ2vuuEjMhU05Q==",
-      "type": "package",
-      "path": "microsoft.extensions.hosting.abstractions/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/net461/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512",
-        "microsoft.extensions.hosting.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -4407,6 +4247,36 @@
         "mysql.entityframeworkcore.nuspec"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "Portable.BouncyCastle/1.9.0": {
       "sha512": "eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
       "type": "package",
@@ -4438,60 +4308,6 @@
         "quartz-logo-small.png",
         "quartz.3.6.2.nupkg.sha512",
         "quartz.nuspec"
-      ]
-    },
-    "Quartz.AspNetCore/3.6.2": {
-      "sha512": "dcKmsicZjMs2TeSYGnboRFphtckT0/cQGoJK9DCVKIGgwa7b8e/bbCjcaCyHIUDwAAKCgDp3AdtPTExalnS7XA==",
-      "type": "package",
-      "path": "quartz.aspnetcore/3.6.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net6.0/Quartz.AspNetCore.dll",
-        "lib/net6.0/Quartz.AspNetCore.xml",
-        "lib/netcoreapp3.1/Quartz.AspNetCore.dll",
-        "lib/netcoreapp3.1/Quartz.AspNetCore.xml",
-        "lib/netstandard2.0/Quartz.AspNetCore.dll",
-        "lib/netstandard2.0/Quartz.AspNetCore.xml",
-        "quartz-logo-small.png",
-        "quartz.aspnetcore.3.6.2.nupkg.sha512",
-        "quartz.aspnetcore.nuspec"
-      ]
-    },
-    "Quartz.Extensions.DependencyInjection/3.6.2": {
-      "sha512": "EkJCyTVhfaE2SX2hVSQbKSVQs+fw1gWnGaQv+RzfsWASvk7CzDddPE31WA00I0t9gfXpcnV9jDgSOP8K+tO1uA==",
-      "type": "package",
-      "path": "quartz.extensions.dependencyinjection/3.6.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net6.0/Quartz.Extensions.DependencyInjection.dll",
-        "lib/net6.0/Quartz.Extensions.DependencyInjection.xml",
-        "lib/netcoreapp3.1/Quartz.Extensions.DependencyInjection.dll",
-        "lib/netcoreapp3.1/Quartz.Extensions.DependencyInjection.xml",
-        "lib/netstandard2.0/Quartz.Extensions.DependencyInjection.dll",
-        "lib/netstandard2.0/Quartz.Extensions.DependencyInjection.xml",
-        "quartz-logo-small.png",
-        "quartz.extensions.dependencyinjection.3.6.2.nupkg.sha512",
-        "quartz.extensions.dependencyinjection.nuspec"
-      ]
-    },
-    "Quartz.Extensions.Hosting/3.6.2": {
-      "sha512": "P9PIWcFmK/x5GbxTZcgfOFkagb+OBviNvmsrdksLKe1Dv0LfdjuWvWyUxjbttjmAEm+5IibxGVF5hf42Ws2Qkw==",
-      "type": "package",
-      "path": "quartz.extensions.hosting/3.6.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net6.0/Quartz.Extensions.Hosting.dll",
-        "lib/net6.0/Quartz.Extensions.Hosting.xml",
-        "lib/netcoreapp3.1/Quartz.Extensions.Hosting.dll",
-        "lib/netcoreapp3.1/Quartz.Extensions.Hosting.xml",
-        "lib/netstandard2.0/Quartz.Extensions.Hosting.dll",
-        "lib/netstandard2.0/Quartz.Extensions.Hosting.xml",
-        "quartz-logo-small.png",
-        "quartz.extensions.hosting.3.6.2.nupkg.sha512",
-        "quartz.extensions.hosting.nuspec"
       ]
     },
     "runtime.any.System.IO/4.3.0": {
@@ -5633,6 +5449,11 @@
       "type": "project",
       "path": "../OrderCommon/주문Common.csproj",
       "msbuildProject": "../OrderCommon/주문Common.csproj"
+    },
+    "주문FrontCommon/1.0.0": {
+      "type": "project",
+      "path": "../주문FrontCommon/주문FrontCommon.csproj",
+      "msbuildProject": "../주문FrontCommon/주문FrontCommon.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5645,9 +5466,7 @@
       "Microsoft.Extensions.Identity.Core >= 7.0.5",
       "MudBlazor >= 6.3.1",
       "MudBlazor.ThemeManager >= 1.0.8",
-      "Quartz >= 3.6.2",
-      "Quartz.AspNetCore >= 3.6.2",
-      "주문Common >= 1.0.0"
+      "주문FrontCommon >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5683,8 +5502,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\주문Common.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\주문Common.csproj"
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\주문FrontCommon\\주문FrontCommon.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\주문FrontCommon\\주문FrontCommon.csproj"
             }
           }
         }
@@ -5731,14 +5550,6 @@
           "MudBlazor.ThemeManager": {
             "target": "Package",
             "version": "[1.0.8, )"
-          },
-          "Quartz": {
-            "target": "Package",
-            "version": "[3.6.2, )"
-          },
-          "Quartz.AspNetCore": {
-            "target": "Package",
-            "version": "[3.6.2, )"
           }
         },
         "imports": [

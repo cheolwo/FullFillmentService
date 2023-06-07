@@ -11,6 +11,7 @@
       "CommunityToolkit.Mvvm.dll": "sha256-4ffCq8aFuUxUK0HImwkKdPyUDh8pb7uRI8W+KGUa+gQ=",
       "DotNetCore.EntityFrameworkCore.dll": "sha256-4UmkawU9+F8S7wOQYOYhkHrA9Yfnarv7+COwVJ3wzHU=",
       "DotNetCore.Repositories.dll": "sha256-kLa0c4n5Du3bXAHlffJ6+jt2Q5IZ0VqOI38AHk1yIFA=",
+      "FluentValidation.dll": "sha256-AerL0YWVusUjQ161sI1tP5jyzULbGlkWMb3RFoodQ\/A=",
       "Google.Protobuf.dll": "sha256-eVC\/G9moy\/ayQzHro6umEE1Fg4dufAEnUriPSAet3Kg=",
       "K4os.Compression.LZ4.dll": "sha256-lxiUWqc+T8aL9I6x3UcEu6rNbhwiZw21bewWGxgiaJc=",
       "K4os.Compression.LZ4.Streams.dll": "sha256-trpaty5efJbCvFmLZ8Gw91sUeYUAiTeKiMZPNkabpUg=",
@@ -225,18 +226,20 @@
       "netstandard.dll": "sha256-+jUzj0FB0YcoBUeSkSNEjhVDTG08qbZ2twfCBMbzT+Q=",
       "System.Private.CoreLib.dll": "sha256-l+\/quNqfNCSUDSMJcp0+IxlSdOdnAtwVVWMXmYGHMpg=",
       "Common.dll": "sha256-0ulVCf3CK5IvAwaDjP8CO0qs89Q01DSAsjeeYo6ylHA=",
-      "수협Common.dll": "sha256-JgxB8Oa41laifl+G271GvsGmll8kAeag18T4mSXeQb8=",
-      "수협시스템관리자Common.dll": "sha256-la38X\/j9r14ZkblAhFY24IxuPwxVWQv89u0oNwDlCT4=",
-      "수협관리자App.dll": "sha256-sCVgkGnLctztXgtT30dz0wFGhigfcudd+RWMIBk5qTM="
+      "수협Common.dll": "sha256-kZNNjgXh5TCouSaw\/pB2KM2of4MtNFf99FQghM9FtW8=",
+      "수협FrontCommon.dll": "sha256-UoGXrGL5XZebDFM5OyNUTEXxA3OyQV2J0ik\/cRj6Jy4=",
+      "수협관리자AppCommon.dll": "sha256-hYOV83cB2+yJG2RfyAQ7spr4jKj+QJLBB8sMgKrdxK8=",
+      "수협관리자App.dll": "sha256-S8JO6Fa45vzycM7ZCkCaxeg97Qgxfn0vsWbCU8oLX7Q="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "수협시스템관리자Common.pdb": "sha256-oTjAOAv3Jp6IRLpu3RHNG24qgbOOT5vqScxISjKNdkM=",
+      "수협FrontCommon.pdb": "sha256-RjgKTwYzvp\/51IG12GB9Xogo5STVYGzVQXqVGKYNUFg=",
+      "수협관리자AppCommon.pdb": "sha256-eT55uozo2CEVNE\/xpAGaXSLEU4KmxTrSIVj2+4rua+s=",
       "Common.pdb": "sha256-FMG5rFva+2a5VYAQRVqShByorapxfytmEjVJU5ryBDQ=",
-      "수협Common.pdb": "sha256-+GnNeP5\/d3Vz1xLtOSkXd2jgVR2TXNce7mEhoFjg7T8=",
-      "수협관리자App.pdb": "sha256-py85rJg2350DCEDMotBb6vIOCn14DaVspuYQ6MJ8ubM="
+      "수협Common.pdb": "sha256-kKG\/hnd9ST0HIjsFkc5dQKSS3BsUes4ALMfnlphA2co=",
+      "수협관리자App.pdb": "sha256-mdyQq78EB4HWuIoSxVxyEhr552FUuSacJrfQUN6UeLc="
     },
     "runtime": {
       "dotnet.7.0.1.j9zuvsgzyx.js": "sha256-jjax3FMRXzFAziWowdtJf6vipP2xXAaA5gD6VBYB6Y0=",

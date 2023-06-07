@@ -1,0 +1,109 @@
+﻿@page "/Dashboard"
+@inject NavigationManager _NavigationManager
+<MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
+    <MudGrid>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToOrderStatus">
+                <h3>주문 현황</h3>
+                <p>주문 정보를 확인하고 관리합니다.</p>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToWarehouseInventory">
+                <h3>창고 재고</h3>
+                <p>창고의 재고 상태를 확인하고 관리합니다.</p>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="12" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToSalesStatus">
+                <h3>판매 현황</h3>
+                <p>판매량 및 수익 정보를 확인하고 관리합니다.</p>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudGrid>
+                <MudItem xs="12">
+                    <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToPendingShipments">
+                        <h3>출고 대기</h3>
+                        <p>출고 대기 중인 주문 목록을 확인하고 처리합니다.</p>
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="12">
+                    <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToReceivedProducts">
+                        <h3>입고 현황</h3>
+                        <p>입고된 상품의 현황을 확인하고 관리합니다.</p>
+                    </MudPaper>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 100%" @onclick="NavigateToCustomerInfo">
+                <h3>고객 정보</h3>
+                <p>고객의 정보를 확인하고 관리합니다.</p>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToShippingStatus">
+                <h3>배송 현황</h3>
+                <p>주문의 배송 상태를 확인하고 처리합니다.</p>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToProductManagement">
+                <h3>상품 관리</h3>
+                <p>상품의 정보를 확인하고 관리합니다.</p>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="12" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;" @onclick="NavigateToInventoryAdjustment">
+                <h3>재고 조정</h3>
+                <p>창고의 재고를 조정하고 관리합니다.</p>
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+@code {
+    private void NavigateToWarehouseInventory()
+    {
+        _NavigationManager.NavigateTo("/warehouse-inventory");
+    }
+    private void NavigateToOrderStatus()
+    {
+        _NavigationManager.NavigateTo("order-status");
+    }
+
+    private void NavigateToSalesStatus()
+    {
+        _NavigationManager.NavigateTo("/sales-status");
+    }
+
+    private void NavigateToPendingShipments()
+    {
+        _NavigationManager.NavigateTo("/pending-shipments");
+    }
+
+    private void NavigateToReceivedProducts()
+    {
+        _NavigationManager.NavigateTo("/received-products");
+    }
+
+    private void NavigateToCustomerInfo()
+    {
+        _NavigationManager.NavigateTo("/customer-info");
+    }
+
+    private void NavigateToShippingStatus()
+    {
+        _NavigationManager.NavigateTo("/shipping-status");
+    }
+
+    private void NavigateToProductManagement()
+    {
+        _NavigationManager.NavigateTo("/product-management");
+    }
+
+    private void NavigateToInventoryAdjustment()
+    {
+        _NavigationManager.NavigateTo("/inventory-adjustment");
+    }
+}
