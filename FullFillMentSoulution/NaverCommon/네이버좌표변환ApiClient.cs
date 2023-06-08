@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace NaverCommon
+namespace NaverCommon.Gecode
 {
     public class AddressElement
     {
