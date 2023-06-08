@@ -1,56 +1,106 @@
 ﻿using AutoMapper;
 using KoreaCommon.Model;
+using Newtonsoft.Json;
 using System;
 
 namespace ConsoleApp
 {
-    class Program
+    public class AddressElement
     {
-        static void Main(string[] args)
+        public List<string> types { get; set; }
+        public string longName { get; set; }
+        public string shortName { get; set; }
+        public string code { get; set; }
+    }
+
+    public class Address
+    {
+        public string roadAddress { get; set; }
+        public string jibunAddress { get; set; }
+        public string englishAddress { get; set; }
+        public List<AddressElement> addressElements { get; set; }
+        public string x { get; set; }
+        public string y { get; set; }
+        public double distance { get; set; }
+    }
+
+    public class Meta
+    {
+        public int totalCount { get; set; }
+        public int page { get; set; }
+        public int count { get; set; }
+    }
+
+    public class RootObject
+    {
+        public string status { get; set; }
+        public Meta meta { get; set; }
+        public List<Address> addresses { get; set; }
+        public string errorMessage { get; set; }
+    }
+
+    public class 네이버좌표변환ApiClient
+    {
+        private readonly HttpClient _httpClient;
+        private readonly string _clientId;
+        private readonly string _clientSecret;
+
+        public 네이버좌표변환ApiClient(string clientId, string clientSecret)
         {
-            // 매핑 구성
-            var config = new MapperConfiguration(cfg =>
+            _httpClient = new HttpClient();
+            _clientId = clientId;
+            _clientSecret = clientSecret;
+        }
+
+        public async Task<RootObject> GetGeocodeAsync(string address, string coordinate = "", string filter = "", string language = "kor", int page = 1, int count = 10)
+        {
+            _httpClient.DefaultRequestHeaders.Clear();
+            _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+            _httpClient.DefaultRequestHeaders.Add("X-NCP-APIGW-API-KEY-ID", _clientId);
+            _httpClient.DefaultRequestHeaders.Add("X-NCP-APIGW-API-KEY", _clientSecret);
+
+            string url = $"https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query={Uri.EscapeDataString(address)}";
+
+            if (!string.IsNullOrEmpty(coordinate))
             {
-                cfg.CreateMap<해양수산부.API.For산지조합창고.Item, 수산창고>()
-                    .ForMember(dest => dest.Code, opt => opt.MapFrom(src => src.WrhousCode))
-                    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.WrhousNm))
-                    .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.TelNo))
-                    .ForMember(dest => dest.FaxNumber, opt => opt.MapFrom(src => src.FxNum))
-                    .ForMember(dest => dest.ZipCode, opt => opt.MapFrom(src => src.Zip))
-                    .ForMember(dest => dest.Address, opt => opt.MapFrom(src => $"{src.WrhousBassAdres} {src.WrhousDetailAdres}"))
-                    .ForMember(dest => dest.수협Id, opt => opt.Ignore())
-                    .ForMember(dest => dest.수협, opt => opt.Ignore())
-                    .ForMember(dest => dest.수산품들, opt => opt.Ignore())
-                    .ForMember(dest => dest.수산품별재고현황들, opt => opt.Ignore());
-            });
+                url += $"&coordinate={coordinate}";
+            }
 
-            // 매핑 객체 생성
-            IMapper mapper = config.CreateMapper();
-
-            // 테스트 데이터 생성
-            var source = new 해양수산부.API.For산지조합창고.Item
+            if (!string.IsNullOrEmpty(filter))
             {
-                WrhousCode = "001",
-                WrhousNm = "창고1",
-                TelNo = "010-1234-5678",
-                FxNum = null,
-                Zip = "12345",
-                WrhousBassAdres = "서울시 강남구",
-                WrhousDetailAdres = "역삼동 123번지"
-            };
+                url += $"&filter={Uri.EscapeDataString(filter)}";
+            }
 
-            // 매핑 수행
-            var destination = mapper.Map<해양수산부.API.For산지조합창고.Item, 수산창고>(source);
+            url += $"&language={language}&page={page}&count={count}";
 
-            // 매핑 결과 출력
-            Console.WriteLine($"Code: {destination.Code}");
-            Console.WriteLine($"Name: {destination.Name}");
-            Console.WriteLine($"Phone Number: {destination.PhoneNumber}");
-            Console.WriteLine($"Fax Number: {destination.FaxNumber}");
-            Console.WriteLine($"Zip Code: {destination.ZipCode}");
-            Console.WriteLine($"Address: {destination.Address}");
+            HttpResponseMessage response = await _httpClient.GetAsync(url);
 
-            Console.ReadLine();
+            string responseBody = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(responseBody);
+
+            if (response.IsSuccessStatusCode)
+            {
+                RootObject result = JsonConvert.DeserializeObject<RootObject>(responseBody);
+                return result;
+            }
+            else
+            {
+                throw new Exception($"Request failed with status code {response.StatusCode}. Error message: {responseBody}");
+            }
+        }
+    }
+
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            네이버좌표변환ApiClient geocodeApiClient = new("qnmcxa3j8i", "onuvNfUFBqgm0QGkXHjTWPk7HGoW8BYTU3qipppP");
+
+            var response = await geocodeApiClient.GetGeocodeAsync("인천광역시 강화군 내가면 해안서로 850 경인북부수협 판매사업팀\r\n ");
+            Console.WriteLine("Status: " + response.status);
+            Console.WriteLine("Meta Total Count: " + response.meta.totalCount);
+            Console.WriteLine("Road x: " + response.addresses[0].x);
+            Console.WriteLine("Road x: " + response.addresses[0].y);
         }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "32Io7s5UTvc7/7Z3jX++31WaQIpJ4t/tXaux5ei1CfTOza1uC8D1McdBHD4oWXMyrXX60FvokyNUF8/BEItvJQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\NaverCommon\\NaverCommon.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1252,6 +1252,9 @@
       "수협관리자AppCommon/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.0"
+        },
         "compile": {
           "bin/placeholder/수협관리자AppCommon.dll": {}
         },
@@ -2506,6 +2509,9 @@
       "수협관리자AppCommon/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.0"
+        },
         "compile": {
           "bin/placeholder/수협관리자AppCommon.dll": {}
         },

@@ -9,73 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = 수협관리자App
 build_property.RootNamespace = 수협관리자App
-build_property.ProjectDir = c:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\
+build_property.ProjectDir = C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/App.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/Dashboard.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/Index.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/고객정보.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/고객정보.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc6rOg6rCd7KCV67O0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/배송현황.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/배송현황.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc67Cw7Iah7ZiE7ZmpLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/상품관리.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/상품관리.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7IOB7ZKI6rSA66asLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/입고현황.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/입고현황.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7J6F6rOg7ZiE7ZmpLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/재고조정.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/재고조정.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7J6s6rOg7KGw7KCVLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/주문현황.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/주문현황.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7KO866y47ZiE7ZmpLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/창고재고.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/창고재고.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7LC96rOg7J6s6rOgLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/출고대기.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/출고대기.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7Lac6rOg64yA6riwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/판매현황.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Pages/판매현황.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7YyQ66ek7ZiE7ZmpLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Shared/SurveyPrompt.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/_Imports.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Shared/MainLayout.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tlhezcvsjp
 
-[c:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Shared/NavMenu.razor]
+[C:/Users/user/Desktop/FullFillmentService/FullFillMentSoulution/수협관리자App/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-moeyoytszz

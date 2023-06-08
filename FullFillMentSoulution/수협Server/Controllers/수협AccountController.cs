@@ -73,7 +73,6 @@ namespace 수협Server.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-
         private async Task<IEnumerable<수산창고>> LoadMergeFetch수산창고정보()
         {
             // 산지조합창고정보 로드
@@ -90,6 +89,51 @@ namespace 수협Server.Controllers
             await _수산창고Repository.SaveChangesAsync();
 
             return merged수산창고들;
+        }
+        private async Task<IEnumerable<수산창고>> update수산창고정보()
+        {
+            // 산지조합창고정보 로드
+            IEnumerable<수산창고> api수산창고들 = await _산지조합창고API.LoadAll수산창고정보();
+
+            // 수산창고 Repository에서 로드
+            IEnumerable<수산창고> repository수산창고들 = await _수산창고Repository.ListAsync();
+
+
+            // 수산창고 Repository에 저장
+            _수산창고Repository.UpdateRange(api수산창고들);
+            await _수산창고Repository.SaveChangesAsync();
+
+            return api수산창고들;
+        }
+        [HttpGet("update-merge-changgo")]
+        public async Task<IActionResult> UpdateMergerWarehouse()
+        {
+            try
+            {
+                var merged수산창고들 = await update수산창고정보();
+                return Ok(merged수산창고들);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+        private IEnumerable<수산창고> UpdateRange수산창고(IEnumerable<수산창고> api수산창고들, IEnumerable<수산창고> repository수산창고들)
+        {
+            List<수산창고> AddRange수산창고들 = new List<수산창고>();
+
+
+            // 중복된 수산창고 필터링하여 병합
+            foreach (var api수산창고 in api수산창고들)
+            {
+                if (!repository수산창고들.Any(c => c.Code == api수산창고.Code))
+                {
+                    AddRange수산창고들.Add(api수산창고);
+                }
+            }
+
+            return AddRange수산창고들;
         }
 
         private IEnumerable<수산창고> AddRange수산창고(IEnumerable<수산창고> api수산창고들, IEnumerable<수산창고> repository수산창고들)

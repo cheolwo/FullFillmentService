@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "V4bZEb7sr1KPbTd1UioN3MfToGtdCua6jALR+f4XTSH3VdjamffQll2DJ8LzbS7iksAKF1xAX0LprLNFiTAxRA==",
+  "dgSpecHash": "1Jcldn0e+gsYVNa1MNsx/rVcP7HR2PLVQHJm+iBRab5F+Xlds30V4euT5qcAGtGh7H+iNsBTH3cCYLQ2JfcI1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자AppCommon\\수협관리자AppCommon.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512"
+  ],
   "logs": []
 }
