@@ -867,6 +867,19 @@
           "bin/placeholder/Common.dll": {}
         }
       },
+      "NaverCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/NaverCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NaverCommon.dll": {}
+        }
+      },
       "수협Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2633,6 +2646,11 @@
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
     },
+    "NaverCommon/1.0.0": {
+      "type": "project",
+      "path": "../NaverCommon/NaverCommon.csproj",
+      "msbuildProject": "../NaverCommon/NaverCommon.csproj"
+    },
     "수협Common/1.0.0": {
       "type": "project",
       "path": "../KoreaCommon/수협Common.csproj",
@@ -2643,6 +2661,7 @@
     "net7.0": [
       "AutoMapper >= 12.0.1",
       "Common >= 1.0.0",
+      "NaverCommon >= 1.0.0",
       "수협Common >= 1.0.0"
     ]
   },
@@ -2684,6 +2703,9 @@
             },
             "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj"
+            },
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\NaverCommon\\NaverCommon.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\NaverCommon\\NaverCommon.csproj"
             }
           }
         }

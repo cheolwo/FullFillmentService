@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
+          "NaverCommon": "1.0.0",
           "수협Common": "1.0.0"
         },
         "runtime": {
@@ -512,6 +513,14 @@
           "Common.dll": {}
         }
       },
+      "NaverCommon/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "NaverCommon.dll": {}
+        }
+      },
       "수협Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
@@ -893,6 +902,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NaverCommon/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

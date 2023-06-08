@@ -60,3 +60,5 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\ref\TestApplication.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\수협Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\수협Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\NaverCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\NaverCommon.pdb

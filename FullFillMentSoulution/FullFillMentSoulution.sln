@@ -43,21 +43,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협관리자App", "수�
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonBack", "CommonBack", "{D5B9421C-4B72-4EB8-989D-73CF4EACA4B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "주문FrontCommon", "주문FrontCommon\주문FrontCommon.csproj", "{F70FC481-2834-403F-A6AE-EF39498F3320}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "주문FrontCommon", "주문FrontCommon\주문FrontCommon.csproj", "{F70FC481-2834-403F-A6AE-EF39498F3320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "창고FrontCommon", "창고FrontCommon\창고FrontCommon.csproj", "{212A39CA-FD04-4982-B6A4-DD1B403F49ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "창고FrontCommon", "창고FrontCommon\창고FrontCommon.csproj", "{212A39CA-FD04-4982-B6A4-DD1B403F49ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "계정FrontCommon", "계정FrontCommon\계정FrontCommon.csproj", "{CE75E919-B772-4167-A845-DC5E78AD6CAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "계정FrontCommon", "계정FrontCommon\계정FrontCommon.csproj", "{CE75E919-B772-4167-A845-DC5E78AD6CAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "수협FrontCommon", "수협FrontCommon\수협FrontCommon.csproj", "{CC0E1EE5-4994-4138-AF11-776892677288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협FrontCommon", "수협FrontCommon\수협FrontCommon.csproj", "{CC0E1EE5-4994-4138-AF11-776892677288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "수협관리자AppCommon", "수협관리자AppCommon\수협관리자AppCommon.csproj", "{6B1084B7-FAD1-4209-80B5-C4E4F3027A68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협관리자AppCommon", "수협관리자AppCommon\수협관리자AppCommon.csproj", "{6B1084B7-FAD1-4209-80B5-C4E4F3027A68}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppCommon", "AppCommon", "{8381AF77-E6DA-4598-BB88-56A83D1C2E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "시스템관리자AppCommon", "시스템관리자AppCommon\시스템관리자AppCommon.csproj", "{138FD150-980C-405E-95CE-89A1D6F146B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "시스템관리자AppCommon", "시스템관리자AppCommon\시스템관리자AppCommon.csproj", "{138FD150-980C-405E-95CE-89A1D6F146B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "주문자AppCommon", "주문자AppCommon\주문자AppCommon.csproj", "{11E8E1BF-0D82-47C4-9F88-A1DEE42E12AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "주문자AppCommon", "주문자AppCommon\주문자AppCommon.csproj", "{11E8E1BF-0D82-47C4-9F88-A1DEE42E12AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaverCommon", "NaverCommon\NaverCommon.csproj", "{86803290-E402-47F0-B218-C1EFA69EAA7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +147,10 @@ Global
 		{11E8E1BF-0D82-47C4-9F88-A1DEE42E12AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11E8E1BF-0D82-47C4-9F88-A1DEE42E12AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11E8E1BF-0D82-47C4-9F88-A1DEE42E12AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86803290-E402-47F0-B218-C1EFA69EAA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86803290-E402-47F0-B218-C1EFA69EAA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86803290-E402-47F0-B218-C1EFA69EAA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86803290-E402-47F0-B218-C1EFA69EAA7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
