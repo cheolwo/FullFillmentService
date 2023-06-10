@@ -60,6 +60,7 @@ builder.Services.AddScoped<IdentityUserClaimRepository>();
 builder.Services.AddScoped<IdentityUserLoginRepository>();
 builder.Services.AddScoped<UnitOfWork<ApplicationDbContext>>();
 
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("MyPolicy",

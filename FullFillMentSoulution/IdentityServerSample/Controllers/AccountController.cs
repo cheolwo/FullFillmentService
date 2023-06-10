@@ -3,6 +3,8 @@ using IdentityCommon.Models;
 using IdentityCommon.Models.ForApplicationUser;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace IdentityServerSample.Controllers
 {
@@ -47,7 +49,6 @@ namespace IdentityServerSample.Controllers
             {
                 // 로그인 성공
                 var token = await _tokenProvider.GenerateTokenAsync(user); // JwtTokenProvider를 사용하여 토큰 생성
-
                 return Ok(token); // 토큰 반환
             }
             if (result.RequiresTwoFactor)
@@ -64,6 +65,31 @@ namespace IdentityServerSample.Controllers
             // 로그인 실패
             // 적절한 처리를 수행하거나 적절한 응답을 반환합니다.
             return BadRequest("Invalid username or password.");
+        }
+        private List<Claim> GetClaimsFromToken(string token)
+        {
+            // 토큰 해석 및 필요한 정보를 추출하여 클레임 생성
+            // 예: JWT 토큰의 클레임 정보 추출
+
+            var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+            var jwtToken = jwtSecurityTokenHandler.ReadJwtToken(token);
+
+            var claims = jwtToken.Claims.ToList();
+
+            return claims;
+        }
+        [HttpPost("refreshToken")]
+        public async Task<IActionResult> RefreshToken([FromBody] string token)
+        {
+            try
+            {
+                var refreshedToken = await _tokenProvider.RefreshToken(token);
+                return Ok(refreshedToken);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         [HttpPost]
         public async Task<IActionResult> RegisterUser(RegisterUserModel model)
