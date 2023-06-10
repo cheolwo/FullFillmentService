@@ -4,7 +4,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\TestApplication.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\TestApplication.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\AutoMapper.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\CommunityToolkit.Mvvm.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\DotNetCore.EntityFrameworkCore.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\DotNetCore.Repositories.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Google.Protobuf.dll

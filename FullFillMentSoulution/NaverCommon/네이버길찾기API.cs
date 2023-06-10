@@ -1,6 +1,5 @@
-﻿using Newtonsoft.Json;
-using NaverCommon.Diriection;
-using NaverCommon.Direction;
+﻿using NaverCommon.Direction;
+using Newtonsoft.Json;
 
 namespace NaverCommon.Diriection
 {

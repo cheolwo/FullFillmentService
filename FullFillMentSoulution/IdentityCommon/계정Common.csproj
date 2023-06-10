@@ -41,7 +41,6 @@
     <Folder Include="Models\ForIdentityUserLogin\" />
     <Folder Include="Models\ForIdentityUserToken\" />
     <Folder Include="Command\" />
-    <Folder Include="ViewModel\창고장\" />
   </ItemGroup>
 
 </Project>

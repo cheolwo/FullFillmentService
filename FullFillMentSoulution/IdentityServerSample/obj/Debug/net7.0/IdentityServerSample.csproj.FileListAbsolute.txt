@@ -95,15 +95,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSa
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\MediatR.Contracts.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\계정Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\계정Common.pdb
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.JSInterop.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.JSInterop.WebAssembly.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\수협Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Common.pdb
