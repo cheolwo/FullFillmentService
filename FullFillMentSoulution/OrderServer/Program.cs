@@ -1,15 +1,39 @@
+using IdentityServerSample;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using OrderCommon.Model;
 using OrderCommon.Repository;
 using OrderCommon.Services;
 using Quartz;
 using System.Reflection;
+using System.Text;
 using 주문Common.Command;
 using 주문Common.Event;
 
 var builder = WebApplication.CreateBuilder(args);
+IConfiguration Configuration = builder.Configuration;
+builder.Services.Configure<JwtOptions>(Configuration.GetSection("JwtOptions"));
+builder.Services.AddScoped<JwtTokenProvider>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        var jwtOptions = Configuration.GetSection("JwtOptions").Get<JwtOptions>();
+        var key = Encoding.ASCII.GetBytes(jwtOptions.SecretKey);
 
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtOptions.Issuer,
+            ValidAudience = jwtOptions.Audience,
+            IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+    });
 // Add services to the container.
 builder.Services.AddCors(options =>
 {
@@ -54,21 +78,21 @@ builder.Services.AddQuartz(q =>
 
     );
 });
+builder.Services.AddMemoryCache();
 builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("MyPolicy");  // CORS 미들웨어 추가
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

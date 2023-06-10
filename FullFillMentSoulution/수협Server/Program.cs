@@ -1,8 +1,12 @@
 using IdentityCommon.Models.ForApplicationUser;
-using IdentityServerTest.Data;
+using IdentityServerSample;
 using KoreaCommon.Model;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using 계정Common.Models;
 using 수협Common.Repository;
 using 수협Server.Manager;
 using 해양수산부.API.For산지조합;
@@ -10,7 +14,27 @@ using 해양수산부.API.For산지조합창고;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+IConfiguration Configuration = builder.Configuration;
+builder.Services.Configure<JwtOptions>(Configuration.GetSection("JwtOptions"));
+builder.Services.AddScoped<JwtTokenProvider>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        var jwtOptions = Configuration.GetSection("JwtOptions").Get<JwtOptions>();
+        var key = Encoding.ASCII.GetBytes(jwtOptions.SecretKey);
+
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtOptions.Issuer,
+            ValidAudience = jwtOptions.Audience,
+            IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+    });
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -41,24 +65,24 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
         options.Password.RequiredLength = 4; // 비밀번호 최소 길이
     }
     ).AddEntityFrameworkStores<ApplicationDbContext>();
+
 var ApplicationDbConnectionString = builder.Configuration.GetConnectionString("ApplicationDbConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySQL(ApplicationDbConnectionString));
-
-
-
+builder.Services.AddMemoryCache();
+builder.Services.AddStackExchangeRedisCache(options => options.Configuration = "localhost:6379");
+builder.Services.AddHttpContextAccessor();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

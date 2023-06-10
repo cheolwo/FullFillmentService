@@ -2,8 +2,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json;
 
-namespace IdentityServerTest.Data
+namespace 계정Common.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
     {
@@ -14,10 +18,33 @@ namespace IdentityServerTest.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.ApplyConfiguration(new UserRoleDomainConfiguration());
             base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
+        }
+    }
+    public class UserRoleDomain
+    {
+        [Key, ForeignKey("User")]
+        public string UserId { get; set; }
+        public ApplicationUser User { get; set; }
+        public string DomainsJson { get; set; }
+        [NotMapped]
+        public List<Domain> Domains
+        {
+            get => string.IsNullOrEmpty(DomainsJson) ? new List<Domain>() : JsonSerializer.Deserialize<List<Domain>>(DomainsJson);
+            set => DomainsJson = JsonSerializer.Serialize(value);
+        }
+    }
+    public class Domain
+    {
+        public string Role { get; set; }
+        public string DomainId { get; set; }
+    }
+    public class UserRoleDomainConfiguration : IEntityTypeConfiguration<UserRoleDomain>
+    {
+        public void Configure(EntityTypeBuilder<UserRoleDomain> builder)
+        {
+               
         }
     }
 }

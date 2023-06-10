@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
-    <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="17.50.0" />
+    <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="17.51.0" />
     <PackageReference Include="FluentHttpClient" Version="2.1.0" />
     <PackageReference Include="IdentityModel" Version="6.1.0" />
     <PackageReference Include="IdentityModel.AspNetCore" Version="4.3.0" />
@@ -41,6 +41,7 @@
     <Folder Include="Models\ForIdentityUserLogin\" />
     <Folder Include="Models\ForIdentityUserToken\" />
     <Folder Include="Command\" />
+    <Folder Include="ViewModel\창고장\" />
   </ItemGroup>
 
 </Project>

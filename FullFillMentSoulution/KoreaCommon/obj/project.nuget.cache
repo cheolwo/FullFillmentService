@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "go7WMHjlpUrD53tT3NkqkQDGXpX2WIua/fS7Q+1XeBXOvxXunN95IdxuWQ0R1AMyokB0SYbuvQb1pgPDv2t9Fg==",
+  "dgSpecHash": "BjPfTJCTsaj/dNPLspvu+lmLney6O18qCOw2LPElUAiarVAUgRMp9mZh0RUXTq4vjglaaWm/KkBw7VrcdDMFcw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\dotnetcore.entityframeworkcore\\17.51.0\\dotnetcore.entityframeworkcore.17.51.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\dotnetcore.repositories\\17.51.0\\dotnetcore.repositories.17.51.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",

@@ -9,6 +9,10 @@ namespace IdentityCommon.Models.ForApplicationUser
     {
         
     }
+    public class ApplicationRole : IdentityRole
+    {
+    }
+    
     public class CreateUserCommand : IRequest<int>, IEvent
     {
         public string? Email { get; set; }

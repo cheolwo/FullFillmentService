@@ -15,6 +15,16 @@ namespace OrderServer.Controllers
             _repository = repository;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] 주문 주문)
+        {
+            if (주문 == null)
+                return BadRequest();
+
+            await _repository.AddAsync(주문);
+
+            return CreatedAtAction(nameof(GetById), new { id = 주문.Id }, 주문);
+        }
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -32,16 +42,6 @@ namespace OrderServer.Controllers
             return Ok(주문);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] 주문 주문)
-        {
-            if (주문 == null)
-                return BadRequest();
-
-            await _repository.AddAsync(주문);
-
-            return CreatedAtAction(nameof(GetById), new { id = 주문.Id }, 주문);
-        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(string id, [FromBody] 주문 updated주문)

@@ -31,10 +31,10 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "DotNetCore.EntityFrameworkCore/17.50.0": {
+      "DotNetCore.EntityFrameworkCore/17.51.0": {
         "type": "package",
         "dependencies": {
-          "DotNetCore.Repositories": "17.50.0",
+          "DotNetCore.Repositories": "17.51.0",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.5",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
           "Microsoft.Extensions.DependencyInjection": "7.0.0"
@@ -46,7 +46,7 @@
           "lib/net7.0/DotNetCore.EntityFrameworkCore.dll": {}
         }
       },
-      "DotNetCore.Repositories/17.50.0": {
+      "DotNetCore.Repositories/17.51.0": {
         "type": "package",
         "compile": {
           "lib/net7.0/DotNetCore.Repositories.dll": {}
@@ -2460,27 +2460,27 @@
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
-    "DotNetCore.EntityFrameworkCore/17.50.0": {
-      "sha512": "fvw+s6DNivkVW8ZF7rcn8ppPjGpzYWIHDxb4xTpmUDcIOglMhgaQODIgJh31WVPnS1Agxz7FYnWTRfRG5DwTog==",
+    "DotNetCore.EntityFrameworkCore/17.51.0": {
+      "sha512": "gaQJPWze/nyGG8FFR8tfdnHNhxZ0vFWrh7x9qzMbZppqCyTfC132eFvJoQo2CHbsBhGdlJ7pTDASOU7vvACTZw==",
       "type": "package",
-      "path": "dotnetcore.entityframeworkcore/17.50.0",
+      "path": "dotnetcore.entityframeworkcore/17.51.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dotnetcore.entityframeworkcore.17.50.0.nupkg.sha512",
+        "dotnetcore.entityframeworkcore.17.51.0.nupkg.sha512",
         "dotnetcore.entityframeworkcore.nuspec",
         "lib/net7.0/DotNetCore.EntityFrameworkCore.dll",
         "readme.md"
       ]
     },
-    "DotNetCore.Repositories/17.50.0": {
-      "sha512": "ntdfNGGZOafW7mZmPM5gjZfsTOueKyS0zTs4KZrdd1i/3VVhc7YeHaZyAs0uIuFVt/bScKrfmWLNwJNB8q+8Yw==",
+    "DotNetCore.Repositories/17.51.0": {
+      "sha512": "E8jiG1p5Q2pRvoH3Zkn51tlvVbt0Re+1S3Dma1Iqo6Y/rtHsyw/jkbi4YWlILCV7pF62TR3zUGAlpGEtaMn9ug==",
       "type": "package",
-      "path": "dotnetcore.repositories/17.50.0",
+      "path": "dotnetcore.repositories/17.51.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dotnetcore.repositories.17.50.0.nupkg.sha512",
+        "dotnetcore.repositories.17.51.0.nupkg.sha512",
         "dotnetcore.repositories.nuspec",
         "lib/net7.0/DotNetCore.Repositories.dll",
         "readme.md"
@@ -7449,7 +7449,7 @@
     "net7.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
-      "DotNetCore.EntityFrameworkCore >= 17.50.0",
+      "DotNetCore.EntityFrameworkCore >= 17.51.0",
       "FluentHttpClient >= 2.1.0",
       "IdentityModel >= 6.1.0",
       "IdentityModel.AspNetCore >= 4.3.0",
@@ -7520,7 +7520,7 @@
           },
           "DotNetCore.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[17.50.0, )"
+            "version": "[17.51.0, )"
           },
           "FluentHttpClient": {
             "target": "Package",

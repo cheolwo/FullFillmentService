@@ -1,24 +1,70 @@
-﻿using IdentityCommon.Models;
+﻿using AppCommon.DTO;
+using IdentityCommon.Models;
 using IdentityCommon.Models.ForApplicationUser;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+
 namespace IdentityServerSample.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class RegisterController : ControllerBase
+    public class AccountController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly PasswordValidator<ApplicationUser> _passwordValidator;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly JwtTokenProvider _tokenProvider;
 
-        public RegisterController(UserManager<ApplicationUser> userManager, PasswordValidator<ApplicationUser> passwordValidator, RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<ApplicationUser> userManager, PasswordValidator<ApplicationUser> passwordValidator, 
+            RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager,
+            JwtTokenProvider jwtTokenProvider)
         {
             _userManager = userManager;
             _passwordValidator = passwordValidator;
             _roleManager = roleManager;
+            _signInManager = signInManager;
+            _tokenProvider = jwtTokenProvider;
         }
+        /// <summary>
+        /// 1. 로그인 인증
+        /// 2. 토큰 발행
+        /// 3. 토큰 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginModel model)
+        {
+            var user = await _userManager.FindByNameAsync(model.Username);
+            if (user == null)
+            {
+                return BadRequest("Invalid username or password.");
+            }
 
+            var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                // 로그인 성공
+                var token = await _tokenProvider.GenerateTokenAsync(user); // JwtTokenProvider를 사용하여 토큰 생성
+
+                return Ok(token); // 토큰 반환
+            }
+            if (result.RequiresTwoFactor)
+            {
+                // 2단계 인증이 필요한 경우
+                // 적절한 처리를 수행하거나 적절한 응답을 반환합니다.
+            }
+            if (result.IsLockedOut)
+            {
+                // 계정이 잠긴 경우
+                // 적절한 처리를 수행하거나 적절한 응답을 반환합니다.
+            }
+
+            // 로그인 실패
+            // 적절한 처리를 수행하거나 적절한 응답을 반환합니다.
+            return BadRequest("Invalid username or password.");
+        }
         [HttpPost]
         public async Task<IActionResult> RegisterUser(RegisterUserModel model)
         {

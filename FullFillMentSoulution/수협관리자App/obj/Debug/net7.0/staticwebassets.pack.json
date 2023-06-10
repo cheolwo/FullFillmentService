@@ -1,16 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
-      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\build-gz\\NHIyRsSK.gz",
-      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\scopedcss\\bundle\\수협관리자App.styles.css",
-      "PackagePath": "staticwebassets\\수협관리자App.styles.css"
+      "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\수협관리자App.bundle.scp.css",
+      "PackagePath": "staticwebassets\\수협관리자App.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협관리자App\\wwwroot\\css\\app.css",

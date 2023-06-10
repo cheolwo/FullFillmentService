@@ -1,5 +1,6 @@
 ﻿using Common.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using OrderCommon.Model;
 using System.Globalization;
 using 주문Common.Model;
@@ -12,6 +13,10 @@ namespace OrderCommon.Repository
         {
         }
         public async Task<주문자?> GetByIdWith주문(string id)
+        {
+            return await _dbContext.Set<주문자>().Where(e => e.Id == id).Include(e => e.주문들).FirstOrDefaultAsync();
+        }
+        public async Task<주문자?> GetByIdWithRelatedData(string id)
         {
             return await _dbContext.Set<주문자>().Where(e => e.Id == id).Include(e => e.주문들).FirstOrDefaultAsync();
         }

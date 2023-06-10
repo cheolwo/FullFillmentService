@@ -1,7 +1,7 @@
 ﻿using DotNetCore.EntityFrameworkCore;
 using IdentityCommon.Models.ForApplicationUser;
-using IdentityServerTest.Data;
 using Microsoft.AspNetCore.Identity;
+using 계정Common.Models;
 
 namespace IdentityServerTest.Repository
 {

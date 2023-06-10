@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using KoreaCommon.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
+using System.Text;
 using 수협Common.DTO;
 using 수협Common.Repository;
 
@@ -12,11 +15,38 @@ namespace 수협Server.Controllers
     {
         private readonly 수산협동조합Repository _repository;
         private readonly IMapper _mapper;
+        private readonly IDistributedCache _distributedCache;
 
-        public 수산협동조합Controller(수산협동조합Repository repository, IMapper mapper)
+        public 수산협동조합Controller(수산협동조합Repository repository, IMapper mapper, IDistributedCache distributedCache)
         {
             _repository = repository;
             _mapper = mapper;
+            _distributedCache = distributedCache;
+        }
+        [HttpGet("Text")]
+        public async Task<List<string>> GetStringItems()
+        {
+            string cacheKey = "redisCacheKey";
+            string serializedStringItems;
+            List<string> stringItemsList;
+
+            var encodedStringItems = await _distributedCache.GetAsync(cacheKey);
+            if (encodedStringItems != null)
+            {
+                serializedStringItems = Encoding.UTF8.GetString(encodedStringItems);
+                stringItemsList = JsonConvert.DeserializeObject<List<string>>(serializedStringItems);
+            }
+            else
+            {
+                stringItemsList = new List<string>() { "John wick", "La La Land", "It" };
+                serializedStringItems = JsonConvert.SerializeObject(stringItemsList);
+                encodedStringItems = Encoding.UTF8.GetBytes(serializedStringItems);
+                var options = new DistributedCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromMinutes(1))
+                    .SetAbsoluteExpiration(TimeSpan.FromHours(6));
+                await _distributedCache.SetAsync(cacheKey, encodedStringItems, options);
+
+            }
+            return stringItemsList;
         }
 
         [HttpGet]

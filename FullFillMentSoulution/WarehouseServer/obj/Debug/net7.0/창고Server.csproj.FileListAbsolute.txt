@@ -96,3 +96,12 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\창고Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\계정Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\창고Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\IdentityServerSample.deps.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\IdentityServerSample.runtimeconfig.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\IdentityServerSample.staticwebassets.runtime.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\IdentityServerSample.exe
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\IdentityServerSample.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseServer\bin\Debug\net7.0\IdentityServerSample.pdb

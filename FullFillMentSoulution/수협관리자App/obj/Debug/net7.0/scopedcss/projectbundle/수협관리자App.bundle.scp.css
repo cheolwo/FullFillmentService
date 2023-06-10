@@ -1,4 +1,4 @@
-/* /Shared/MainLayout.razor.rz.scp.css */
+/* _content/수협관리자App/Shared/MainLayout.razor.rz.scp.css */
 .page[b-tlhezcvsjp] {
     position: relative;
     display: flex;
@@ -80,7 +80,7 @@ main[b-tlhezcvsjp] {
         padding-right: 1.5rem !important;
     }
 }
-/* /Shared/NavMenu.razor.rz.scp.css */
+/* _content/수협관리자App/Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-moeyoytszz] {
     background-color: rgba(255, 255, 255, 0.1);
 }

@@ -21,12 +21,12 @@ namespace IdentityCommon.Services
             _httpClient = httpClient;
             _httpClient.BaseAddress = new Uri("https://localhost:5001");
         }
-        public async Task<List<ApplicationUser>> GetAllUsers()
+        public async Task<List<ApplicationUser>?> GetAllUsers()
         {
             return await _httpClient.GetFromJsonAsync<List<ApplicationUser>>("/api/account");
         }
 
-        public async Task<ApplicationUser> GetUserById(string id)
+        public async Task<ApplicationUser?> GetUserById(string id)
         {
             return await _httpClient.GetFromJsonAsync<ApplicationUser>($"/api/account/{id}");
         }
@@ -57,12 +57,12 @@ namespace IdentityCommon.Services
             return response;
         }
 
-        public async Task<HttpResponseMessage> Login(LoginInputModel model)
-        {
-            var response = await _httpClient.PostAsJsonAsync("/account/login", model);
-            response.EnsureSuccessStatusCode();
-            return response;
-        }
+        //public async Task<HttpResponseMessage> Login(LoginInputModel model)
+        //{
+        //    var response = await _httpClient.PostAsJsonAsync("/account/login", model);
+        //    response.EnsureSuccessStatusCode();
+        //    return response;
+        //}
 
         public async Task<HttpResponseMessage> Logout(string logoutId)
         {

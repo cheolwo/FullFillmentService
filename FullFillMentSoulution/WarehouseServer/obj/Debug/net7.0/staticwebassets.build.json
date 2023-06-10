@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "gAA7AqNUtwgtVezve4jYPK2i8W3qV0ZjSax456pVioM=",
+  "Hash": "04xIhQD4oeddgqN5Z1BoOvChe0XpVlSNtZL9Owgp/sw=",
   "Source": "창고Server",
   "BasePath": "_content/창고Server",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\IdentityServerSample.csproj",
+      "Version": 2,
+      "Source": "IdentityServerSample",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

@@ -1,16 +1,21 @@
 using DotNetCore.EntityFrameworkCore;
 using DotNetCore.Repositories;
 using IdentityCommon.Models.ForApplicationUser;
-using IdentityServerTest.Data;
+using IdentityServerSample;
 using IdentityServerTest.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ∞Ë¡§Common.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// Add services to the container.
+IConfiguration Configuration = builder.Configuration;
+builder.Services.Configure<JwtOptions>(Configuration.GetSection("JwtOptions"));
+builder.Services.AddScoped<JwtTokenProvider>();
+builder.Services.AddControllers();
 // Add services to the container.
 
-builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -55,6 +60,24 @@ builder.Services.AddScoped<IdentityUserClaimRepository>();
 builder.Services.AddScoped<IdentityUserLoginRepository>();
 builder.Services.AddScoped<UnitOfWork<ApplicationDbContext>>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyPolicy",
+        builder =>
+        {
+            builder.WithOrigins("https://localhost:7284")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+            builder.WithOrigins("https://localhost:7299")
+            .AllowAnyHeader()
+                .AllowAnyMethod();
+            builder.WithOrigins("https://localhost:7114")
+            .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+    
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -63,9 +86,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 
+app.UseCors("MyPolicy");
 app.UseAuthorization();
 
 app.MapControllers();

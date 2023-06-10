@@ -13,6 +13,24 @@ namespace OrderCommon.Services.API
             _httpClient = httpClient;
             _httpClient.BaseAddress = new Uri("https://localhost:7007");
         }
+        public async Task<Read주문자DTO> GetByIdWithRelatedData(string id)
+        {
+            // 주문자 API의 initialize/{id} 엔드포인트에 GET 요청을 보냅니다.
+            var response = await _httpClient.GetAsync($"api/주문자/initialize/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                var 주문자 = await response.Content.ReadFromJsonAsync<Read주문자DTO>();
+                return 주문자;
+            }
+            else if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                return null;
+            }
+            else
+            {
+                throw new Exception("주문자 데이터 조회 중에 오류가 발생했습니다.");
+            }
+        }
 
         public async Task<List<Read주문자DTO>> GetAll주문자()
         {

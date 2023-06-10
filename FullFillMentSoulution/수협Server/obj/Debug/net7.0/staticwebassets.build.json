@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "Kn4PwbK4e5X15/sxpbUiTBFcmqSFu01NoEYqy4aqUqQ=",
+  "Hash": "Seu4jbuwPChwbNrL5/98T9eReZei5dNrvYvnXXWKxgg=",
   "Source": "수협Server",
   "BasePath": "_content/수협Server",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\IdentityServerSample.csproj",
+      "Version": 2,
+      "Source": "IdentityServerSample",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

@@ -55,7 +55,7 @@
             },
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[17.50.0, )"
+              "version": "[17.51.0, )"
             },
             "FluentHttpClient": {
               "target": "Package",

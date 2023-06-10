@@ -4,7 +4,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/app.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -20,7 +20,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/bootstrap/bootstrap.min.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -36,7 +36,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/bootstrap/bootstrap.min.css.map</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -52,7 +52,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/FONT-LICENSE</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -68,7 +68,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/font/css/open-iconic-bootstrap.min.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -84,7 +84,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/font/fonts/open-iconic.eot</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -100,7 +100,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/font/fonts/open-iconic.otf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -116,7 +116,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/font/fonts/open-iconic.svg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -132,7 +132,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/font/fonts/open-iconic.ttf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -148,7 +148,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/font/fonts/open-iconic.woff</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -164,7 +164,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/ICON-LICENSE</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -180,7 +180,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>css/open-iconic/README.md</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -196,7 +196,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>favicon.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -212,7 +212,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>icon-192.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -228,7 +228,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>index.html</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -244,7 +244,7 @@
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
+      <BasePath>_content/수협관리자App</BasePath>
       <RelativePath>sample-data/weather.json</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
@@ -256,53 +256,21 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\sample-data\weather.json))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.webassembly.js))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\수협관리자App.bundle.scp.css))">
       <SourceType>Package</SourceType>
       <SourceId>수협관리자App</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
-      <RelativePath>_framework/blazor.webassembly.js</RelativePath>
+      <BasePath>_content/수협관리자App</BasePath>
+      <RelativePath>수협관리자App.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName>BlazorWebAssemblyResource</AssetTraitName>
-      <AssetTraitValue>boot</AssetTraitValue>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.webassembly.js))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.webassembly.js.gz))">
-      <SourceType>Package</SourceType>
-      <SourceId>수협관리자App</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
-      <RelativePath>_framework/blazor.webassembly.js.gz</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협관리자App\bin\Debug\net7.0\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
-      <AssetTraitName>Content-Encoding</AssetTraitName>
-      <AssetTraitValue>gzip</AssetTraitValue>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.webassembly.js.gz))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\수협관리자App.styles.css))">
-      <SourceType>Package</SourceType>
-      <SourceId>수협관리자App</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>/</BasePath>
-      <RelativePath>수협관리자App.styles.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>CurrentProject</AssetMode>
+      <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
-      <AssetTraitValue>ApplicationBundle</AssetTraitValue>
+      <AssetTraitValue>ProjectBundle</AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\수협관리자App.styles.css))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\수협관리자App.bundle.scp.css))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

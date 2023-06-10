@@ -1,6 +1,26 @@
 ﻿@page "/"
+@using AppCommon.ViewModel;
+@using 수협관리자AppCommon;
+@inject 수협LoginViewModel _loginViewModel
+@inject NavigationManager _NavigationManager;
 
-<MudContainer Class="mt-16">
+@if(!_loginViewModel.IsLogin)
+{
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Id" @bind-Value="@_loginViewModel.Username" />
+
+            <MudTextField Label="Password" @bind-Value="@_loginViewModel.Password" Type="InputType.Password" />
+
+            <MudCheckBox Label="Remember Me" @bind-Checked="@_loginViewModel.RememberMe" />
+
+            <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="@(async ()=>await Login())">Login</MudButton>
+        </MudCardContent>
+    </MudCard>
+}
+else
+{
+    <MudContainer Class="mt-16">
     <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">수협(水俠)</MudText>
     <MudText Align="Align.Center">수협의 세계에 온 걸 환영한다</MudText>
     <MudText Align="Align.Center">당신은 수산물 직거래로 일본의 원자력 방수로 인한 수산물 물가 인플레이션 현상을 해결하고자 하는가?</MudText>
@@ -95,3 +115,10 @@
         </MudItem>
     </MudGrid>
 </MudContainer>
+}
+@code{
+    public async Task Login()
+    {
+        await _loginViewModel.ExecuteLoginCommand();
+    }
+}

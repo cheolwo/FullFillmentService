@@ -1,9 +1,124 @@
 ﻿@page "/"
+@using AppCommon.ViewModel;
+@using 수협관리자AppCommon;
+@inject 수협LoginViewModel _loginViewModel
+@inject NavigationManager _NavigationManager;
 
-<PageTitle>Index</PageTitle>
+@if(!_loginViewModel.IsLogin)
+{
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Id" @bind-Value="@_loginViewModel.Username" />
 
-<h1>Hello, world!</h1>
+            <MudTextField Label="Password" @bind-Value="@_loginViewModel.Password" Type="InputType.Password" />
 
-Welcome to your new app.
+            <MudCheckBox Label="Remember Me" @bind-Checked="@_loginViewModel.RememberMe" />
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+            <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="@(async ()=>await Login())">Login</MudButton>
+        </MudCardContent>
+    </MudCard>
+}
+else
+{
+    <MudContainer Class="mt-16">
+    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">수협(水俠)</MudText>
+    <MudText Align="Align.Center">수협의 세계에 온 걸 환영한다</MudText>
+    <MudText Align="Align.Center">당신은 수산물 직거래로 일본의 원자력 방수로 인한 수산물 물가 인플레이션 현상을 해결하고자 하는가?</MudText>
+    <MudText Align="Align.Center">그렇다면 그대의 역할을 선택해라!</MudText>
+    <MudGrid Class="mt-8">
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">직원</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <div class="d-flex justify-center">
+                        <MudText Typo="Typo.h3">$50</MudText>
+                        <MudText Typo="Typo.h5" Class="ml-1 mt-5" Color="Color.Secondary">/day</MudText>
+                    </div>
+                    <MudList Class="mx-auto mt-4" Style="width:300px;">
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            HUB(상하차)
+                        </MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            입고, 검수, 적재(입고)
+                        </MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            피킹, 패킹(출고)
+                        </MudListItem>
+                    </MudList>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Start Now</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">창고장</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <div class="d-flex justify-center">
+                        <MudText Typo="Typo.h3">$100</MudText>
+                        <MudText Typo="Typo.h5" Class="ml-1 mt-5" Color="Color.Secondary">/day</MudText>
+                    </div>
+                    <MudList Class="mx-auto mt-4" Style="width:300px;">
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            Hub 총괄자
+                        </MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            입고 총괄자
+                        </MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            출고 총괄자
+                        </MudListItem>
+                    </MudList>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Start Now</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="12" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">조합장</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <div class="d-flex justify-center">
+                        <MudText Typo="Typo.h3">$200</MudText>
+                        <MudText Typo="Typo.h5" Class="ml-1 mt-5" Color="Color.Secondary">/Monthly</MudText>
+                    </div>
+                    <MudList Class="mx-auto mt-4" Style="width:300px;">
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            입고계약
+                        </MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            판매계약
+                        </MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.LiveHelp">
+                            주문 총괄자
+                        </MudListItem>
+                    </MudList>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Start Now</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+}
+@code{
+    public async Task Login()
+    {
+        await _loginViewModel.ExecuteLoginCommand();
+    }
+}
