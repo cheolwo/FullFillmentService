@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "주문FrontCommon": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54437;http://localhost:54438"
+    }
+  }
+}

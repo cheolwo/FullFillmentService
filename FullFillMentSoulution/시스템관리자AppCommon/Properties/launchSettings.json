@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "시스템관리자AppCommon": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54441;http://localhost:54442"
+    }
+  }
+}

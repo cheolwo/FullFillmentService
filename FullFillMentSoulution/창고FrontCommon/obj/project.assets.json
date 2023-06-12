@@ -335,7 +335,6 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Common": "1.0.0",
-          "DotNetCore.EntityFrameworkCore": "17.51.0",
           "Microsoft.EntityFrameworkCore": "7.0.5"
         },
         "compile": {

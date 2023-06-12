@@ -691,7 +691,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Common >= 1.0.0",
-      "DotNetCore.EntityFrameworkCore >= 17.51.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5"
     ]
   },
@@ -744,10 +743,6 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-          "DotNetCore.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[17.51.0, )"
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.5, )"

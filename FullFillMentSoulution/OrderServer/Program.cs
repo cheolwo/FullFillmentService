@@ -1,6 +1,8 @@
+using IdentityCommon.Models.ForApplicationUser;
 using IdentityServerSample;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using OrderCommon.Model;
@@ -9,11 +11,17 @@ using OrderCommon.Services;
 using Quartz;
 using System.Reflection;
 using System.Text;
+using 계정Common.Models;
 using 주문Common.Command;
 using 주문Common.Event;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration Configuration = builder.Configuration;
+
+// 계정 인증관련 서비스
+var ApplicationDbConnectionString = builder.Configuration.GetConnectionString("ApplicationDbConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySQL(ApplicationDbConnectionString));
 builder.Services.Configure<JwtOptions>(Configuration.GetSection("JwtOptions"));
 builder.Services.AddScoped<JwtTokenProvider>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -34,6 +42,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(key)
         };
     });
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+
 // Add services to the container.
 builder.Services.AddCors(options =>
 {
@@ -45,7 +57,9 @@ builder.Services.AddCors(options =>
                 .AllowAnyMethod();
         });
 });
-
+//builder.Services.AddScoped<UserManager<ApplicationUser>>();
+//builder.Services.AddScoped<RoleManager<IdentityRole>>();
+//builder.Services.AddScoped<PasswordValidator<ApplicationUser>>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -85,8 +99,8 @@ builder.Services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
 var app = builder.Build();
 
 app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 if (app.Environment.IsDevelopment())
 {

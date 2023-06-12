@@ -1,27 +1,29 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using OrderCommon.Services.API;
-using 주문Common.DTO.주문;
+using System.Collections.ObjectModel;
+using 주문Common.DTO.For주문;
 namespace 주문FrontCommon.ViewModels
 {
     public class 주문ViewModel : ObservableObject
     {
         private readonly 주문APIService _주문APIService;
 
+        public ObservableCollection<Read주문DTO> 주문List { get; set; }
+
         public 주문ViewModel(주문APIService 주문APIService)
         {
             _주문APIService = 주문APIService;
+            주문List = new ObservableCollection<Read주문DTO>();
         }
 
-        private List<Read주문DTO> _주문List;
-        public List<Read주문DTO> 주문List
+        public async Task LoadAll주문()
         {
-            get { return _주문List; }
-            set { SetProperty(ref _주문List, value); }
-        }
-
-        public async Task Load주문()
-        {
-            주문List = await _주문APIService.GetAll주문();
+            var 주문List = await _주문APIService.GetAll주문();
+            주문List.Clear();
+            foreach (var 주문 in 주문List)
+            {
+                주문List.Add(주문);
+            }
         }
 
         public async Task<Read주문DTO> Get주문ById(string id)
@@ -69,19 +71,34 @@ namespace 주문FrontCommon.ViewModels
             return await _주문APIService.Get주문ByIdWith판매자And판매자상품And주문자(id);
         }
 
-        public async Task<List<Read주문DTO>> Get주문ByPriceAbove(double price)
+        public async Task Load주문ByPriceAbove(double price)
         {
-            return await _주문APIService.Get주문ByPriceAbove(price);
+            var 주문List = await _주문APIService.Get주문ByPriceAbove(price);
+            주문List.Clear();
+            foreach (var 주문 in 주문List)
+            {
+                주문List.Add(주문);
+            }
         }
 
-        public async Task<List<Read주문DTO>> Get주문ByPriceBelow(double price)
+        public async Task Load주문ByPriceBelow(double price)
         {
-            return await _주문APIService.Get주문ByPriceBelow(price);
+            var 주문List = await _주문APIService.Get주문ByPriceBelow(price);
+            주문List.Clear();
+            foreach (var 주문 in 주문List)
+            {
+                주문List.Add(주문);
+            }
         }
 
-        public async Task<List<Read주문DTO>> Get주문ByPriceInRange(double minPrice, double maxPrice)
+        public async Task Load주문ByPriceInRange(double minPrice, double maxPrice)
         {
-            return await _주문APIService.Get주문ByPriceInRange(minPrice, maxPrice);
+            var 주문List = await _주문APIService.Get주문ByPriceInRange(minPrice, maxPrice);
+            주문List.Clear();
+            foreach (var 주문 in 주문List)
+            {
+                주문List.Add(주문);
+            }
         }
     }
 }

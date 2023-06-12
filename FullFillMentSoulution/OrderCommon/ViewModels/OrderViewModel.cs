@@ -63,15 +63,15 @@ namespace 주문FrontCommon.ViewModels
         public override bool Equals(object obj)
         {
             return obj is OrderViewModel model &&
-                   System.Collections.Generic.EqualityComparer<IOrderService>.Default.Equals(_orderService, model._orderService) &&
+                   EqualityComparer<IOrderService>.Default.Equals(_orderService, model._orderService) &&
                    _orderName == model._orderName &&
                    OrderName == model.OrderName &&
                    _orderQuantity == model._orderQuantity &&
                    OrderQuantity == model.OrderQuantity &&
                    _orderPlaced == model._orderPlaced &&
                    OrderPlaced == model.OrderPlaced &&
-                   System.Collections.Generic.EqualityComparer<IAsyncRelayCommand>.Default.Equals(PlaceOrderCommand, model.PlaceOrderCommand) &&
-                   System.Collections.Generic.EqualityComparer<IAsyncRelayCommand>.Default.Equals(RandomOrderCommnad, model.RandomOrderCommnad);
+                   EqualityComparer<IAsyncRelayCommand>.Default.Equals(PlaceOrderCommand, model.PlaceOrderCommand) &&
+                   EqualityComparer<IAsyncRelayCommand>.Default.Equals(RandomOrderCommnad, model.RandomOrderCommnad);
         }
     }
 }

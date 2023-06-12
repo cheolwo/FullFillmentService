@@ -30,4 +30,8 @@
     <ProjectReference Include="..\KoreaCommon\수협Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\해양수산부\" />
+  </ItemGroup>
+
 </Project>

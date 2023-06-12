@@ -99,3 +99,4 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSa
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\수협Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\수협Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityServerSample\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
