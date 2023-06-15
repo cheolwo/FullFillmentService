@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +7,17 @@ using System.Threading.Tasks;
 
 namespace 주문Common.DTO.댓글
 {
-    public class Create댓글DTO
+    public class Create댓글DTO : CudDTO
     {
-        public string Id { get; set; }
     }
-    public class Update댓글DTO
+    public class Update댓글DTO : CudDTO
     {
-        public string Id { get; set; }
         public string Content { get; set; }
     }
-    public class Delete댓글TO
+    public class Delete댓글TO : CudDTO
     {
-        public string Id { get; set; }
     }
-    public class Read댓글DTO
+    public class Read댓글DTO : ReadDto
     {
-        public string Id { get; set; }
     }
 }

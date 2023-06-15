@@ -38,8 +38,6 @@ namespace KoreaCommon.Model
     }
     public class 수산품 : Entity
     {
-        [Key]
-        public string Id { get; set; }
         public string? 수협Id { get; set; }
         public string? 창고Id { get; set; }
         public 수산협동조합 수협 { get; set; }
@@ -48,8 +46,6 @@ namespace KoreaCommon.Model
     }
     public class 수산품별재고현황 : Commodity
     {
-        [Key]
-        public string Id { get; set; }
         public string? 수협Id { get; set; }
         public string? 창고Id { get; set; }
         public string? 수산품Id { get; set; }
@@ -79,6 +75,7 @@ namespace KoreaCommon.Model
         public override void Configure(EntityTypeBuilder<수산품> builder)
         {
             builder.Property(e => e.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.HasKey(e => e.Id);
             base.Configure(builder);
         }
     }
@@ -88,6 +85,7 @@ namespace KoreaCommon.Model
         {
 
             builder.Property(e => e.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.HasKey(e => e.Id);
             base.Configure(builder);
         }
     }

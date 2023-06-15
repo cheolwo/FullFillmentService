@@ -1,16 +1,20 @@
 using IdentityCommon.Models.ForApplicationUser;
 using IdentityServerSample;
+using KoreaCommon.Fish.해양수산부;
 using KoreaCommon.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Quartz;
 using System.Text;
 using 계정Common.Models;
 using 수협Common.Repository;
+using 수협Server.Job;
 using 수협Server.Manager;
 using 해양수산부.API.For산지조합;
 using 해양수산부.API.For산지조합창고;
+using 해양수산부.API.For조합창고품목별재고현황;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,15 +46,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<산지조합창고API>();
 builder.Services.AddScoped<산지조합API>();
-
-
+builder.Services.AddScoped<조합창고품목별재고현황API>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<수산협동조합Repository>();
 builder.Services.AddScoped<수산품Repository>();
 builder.Services.AddScoped<수산품별재고현황Repository>();
 builder.Services.AddScoped<수산창고Repository>();
-
 builder.Services.AddScoped<수협Manager>();
+
 var 수협DbConnectionString = builder.Configuration.GetConnectionString("수협DbConnection");
 builder.Services.AddDbContext<수협DbContext>(options =>
     options.UseMySQL(수협DbConnectionString));
@@ -69,6 +72,24 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
 var ApplicationDbConnectionString = builder.Configuration.GetConnectionString("ApplicationDbConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySQL(ApplicationDbConnectionString));
+
+builder.Services.AddScoped<I수협창고재고상품수집, 수협APIToDbManager>();
+builder.Services.AddQuartz(q =>
+{
+    q.UseMicrosoftDependencyInjectionJobFactory();
+    // Just use the name of your job that you created in the Jobs folder.
+    var jobKey = new JobKey("수협창고재고상품CollectingJob");
+    q.AddJob<수협창고재고상품CollectingJob>(opts => opts.WithIdentity(jobKey));
+
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey)
+        .WithIdentity("수협창고재고상품CollectingJob-trigger")
+        //This Cron interval can be described as "run every minute" (when second is zero)
+        .WithCronSchedule("0 * * ? * *")
+        .StartNow().WithSimpleSchedule(x => x.WithInterval(TimeSpan.FromMilliseconds(1000)).RepeatForever())
+        );
+});
+
 builder.Services.AddMemoryCache();
 builder.Services.AddStackExchangeRedisCache(options => options.Configuration = "localhost:6379");
 builder.Services.AddHttpContextAccessor();

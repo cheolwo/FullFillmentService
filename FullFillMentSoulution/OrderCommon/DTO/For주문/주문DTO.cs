@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,16 @@ using System.Threading.Tasks;
 
 namespace 주문Common.DTO.For주문
 {
-    public class Create주문DTO
+    public class Create주문DTO : CudDTO
     {
-        public string Id { get; set; }
     }
-    public class Update주문DTO
+    public class Update주문DTO : CudDTO
     {
-        public string Id { get; set; }
     }
-    public class Delete주문TO
+    public class Delete주문TO : CudDTO
     {
-        public string Id { get; set; }
     }
-    public class Read주문DTO
+    public class Read주문DTO : ReadDto
     {
-        public string Id { get; set; }
     }
 }

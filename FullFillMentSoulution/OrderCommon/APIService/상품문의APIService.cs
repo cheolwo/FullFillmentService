@@ -1,5 +1,5 @@
-﻿using System.Net.Http.Json;
-using 계정Common.API;
+﻿using Common.APIService;
+using System.Net.Http.Json;
 using 주문Common.DTO.상품문의;
 
 namespace 주문Common.APIService
@@ -55,15 +55,6 @@ namespace 주문Common.APIService
         {
             ReadyBearerToken();
             var response = await _httpClient.GetAsync($"api/상품문의/주문자/{주문자Id}");
-            response.EnsureSuccessStatusCode();
-            var 상품문의DTOs = await response.Content.ReadFromJsonAsync<List<Read상품문의DTO>>();
-            return 상품문의DTOs;
-        }
-
-        public async Task<List<Read상품문의DTO>> Get상품문의By판매자상품IdWith판매자(string 판매자상품Id)
-        {
-            ReadyBearerToken();
-            var response = await _httpClient.GetAsync($"api/상품문의/판매자상품/{판매자상품Id}/with판매자");
             response.EnsureSuccessStatusCode();
             var 상품문의DTOs = await response.Content.ReadFromJsonAsync<List<Read상품문의DTO>>();
             return 상품문의DTOs;

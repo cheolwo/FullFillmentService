@@ -1,6 +1,6 @@
-﻿using System.Net;
+﻿using Common.APIService;
+using System.Net;
 using System.Net.Http.Json;
-using 계정Common.API;
 using 주문Common.DTO.For주문;
 
 namespace OrderCommon.Services.API

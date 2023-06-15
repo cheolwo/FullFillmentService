@@ -15,3 +15,5 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\주문Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\주문Common.genruntimeconfig.cache
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\obj\Debug\net7.0\ref\주문Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\bin\Debug\net7.0\계정Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\OrderCommon\bin\Debug\net7.0\계정Common.pdb

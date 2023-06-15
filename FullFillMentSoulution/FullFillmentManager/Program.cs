@@ -35,8 +35,6 @@ builder.Services.AddScoped<AuthenticationStateProvider,
 builder.Services.AddScoped<AuthenticationService>();
 builder.Services.AddScoped<ExampleService>();
 builder.Services.AddHttpContextAccessor();
-
-builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddHttpClient();
 var app = builder.Build();
 

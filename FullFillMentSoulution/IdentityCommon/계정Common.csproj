@@ -8,38 +8,25 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
     <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="17.51.0" />
-    <PackageReference Include="FluentHttpClient" Version="2.1.0" />
-    <PackageReference Include="IdentityModel" Version="6.1.0" />
-    <PackageReference Include="IdentityModel.AspNetCore" Version="4.3.0" />
-    <PackageReference Include="IdentityServer4" Version="4.1.2" />
-    <PackageReference Include="MediatR" Version="12.0.1" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.5" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.31.0" />
+    <PackageReference Include="Microsoft.JSInterop" Version="7.0.7" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Models\ForIdentityRole\" />
-    <Folder Include="Models\ForIdentityUserRole\" />
-    <Folder Include="Models\ForIdentityUserClaim\" />
-    <Folder Include="Models\ForIdentityRoleClaim\" />
-    <Folder Include="Models\ForIdentityUserLogin\" />
-    <Folder Include="Models\ForIdentityUserToken\" />
     <Folder Include="Command\" />
   </ItemGroup>
 

@@ -1,17 +1,14 @@
 ﻿using System.Net.Http.Json;
-using System.Net;
 using 주문Common.DTO.주문자;
 using 주문Common.DTO.For주문;
-using Microsoft.AspNetCore.Mvc;
 using 주문Common.DTO.댓글;
 using 주문Common.DTO.상품문의;
-using 계정Common.API;
+using Common.APIService;
 
 namespace OrderCommon.Services.API
 {
     public class 주문자ApiService : JwtTokenAPIService
     {
-        private readonly HttpClient _httpClient;
         public 주문자ApiService(HttpClient httpClient) : base(httpClient) 
         {
         }

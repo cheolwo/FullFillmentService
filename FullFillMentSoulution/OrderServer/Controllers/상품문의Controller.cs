@@ -80,15 +80,6 @@ namespace 주문Server.Controllers
 
             return NoContent();
         }
-        [HttpGet("판매자상품/{판매자상품Id}")]
-        public async Task<IActionResult> GetBy판매자상품Id(string 판매자상품Id)
-        {
-            _logger.LogInformation($"GetBy판매자상품Id called with 판매자상품Id: {판매자상품Id}");
-
-            var 상품문의List = await _repository.GetToListBy판매자상품Id(판매자상품Id);
-            var 상품문의DTOs = _mapper.Map<List<Read상품문의DTO>>(상품문의List);
-            return Ok(상품문의DTOs);
-        }
 
         [HttpGet("주문자/{주문자Id}")]
         public async Task<IActionResult> GetBy주문자Id(string 주문자Id)

@@ -45,13 +45,33 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.16.0, )"
+            },
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",
               "version": "[17.51.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -102,7 +122,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -119,37 +143,21 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[8.2.0, )"
             },
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",
               "version": "[17.51.0, )"
             },
-            "FluentHttpClient": {
+            "Microsoft.AspNetCore.Authentication.Abstractions": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.2.0, )"
             },
-            "IdentityModel": {
+            "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
-              "version": "[6.1.0, )"
-            },
-            "IdentityModel.AspNetCore": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "IdentityServer4": {
-              "target": "Package",
-              "version": "[4.1.2, )"
-            },
-            "MediatR": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "Microsoft.AspNet.WebApi.Client": {
-              "target": "Package",
-              "version": "[5.2.9, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -159,29 +167,27 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[7.0.5, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
             },
-            "Microsoft.Extensions.Identity.Stores": {
+            "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.31.0, )"
+            },
+            "Microsoft.JSInterop": {
+              "target": "Package",
+              "version": "[7.0.7, )"
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.31.0, )"
             }
           },
           "imports": [
@@ -366,6 +372,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.0, )"
             },
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",

@@ -13,12 +13,6 @@ namespace 주문Common.Command
         public int Quantity { get; set; }
     }
 
-    // Queries
-    public class Get주문Query : IRequest<주문>
-    {
-        public int Id { get; set; }
-    }
-
     public class Create주문CommandHandler : IRequestHandler<Create주문Command, int>
     {
         private readonly IServiceProvider _serviceProvider;
@@ -51,6 +45,12 @@ namespace 주문Common.Command
         }
     }
 
+    // Queries
+    public class Get주문Query : IRequest<주문>
+    {
+        public int Id { get; set; }
+    }
+
     public class Get주문QueryHandler : IRequestHandler<Get주문Query, 주문>
     {
         private readonly 주문DbContext _context;
@@ -60,7 +60,7 @@ namespace 주문Common.Command
             _context = context;
         }
 
-        public async Task<주문?> Handle(Get주문Query query, CancellationToken cancellationToken)
+        public async Task<주문> Handle(Get주문Query query, CancellationToken cancellationToken)
         {
             var 주문 = await _context.Set<주문>().FindAsync(query.Id);
             return 주문;

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using OrderCommon.Repository;
 using 주문Common.DTO.For주문;
@@ -13,12 +14,14 @@ namespace OrderServer.Controllers
         private readonly 주문Repository _repository;
         private readonly IMapper _mapper;
         private readonly ILogger<주문Controller> _logger;
+        private readonly IMediator _mediator;
 
-        public 주문Controller(주문Repository repository, IMapper mapper, ILogger<주문Controller> logger)
+        public 주문Controller(주문Repository repository, IMapper mapper, ILogger<주문Controller> logger, IMediator mediator)
         {
             _repository = repository;
             _mapper = mapper;
             _logger = logger;
+            _mediator = mediator;
         }
 
         [HttpPost]

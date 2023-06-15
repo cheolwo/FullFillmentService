@@ -6,7 +6,24 @@ using 주문Common.Model;
 
 namespace OrderCommon.Repository
 {
-    public class 판매자상품Repository : CommodityRepository<판매자상품>
+    public interface I판매자상품QueryRepository : ICommodityQueryRepository<판매자상품>
+    {
+        Task<판매자상품?> GetByIdWith상품문의(string id);
+        Task<판매자상품?> GetByIdWith주문(string id);
+        Task<판매자상품?> GetByIdWith판매자(string id);
+        Task<판매자상품?> GetByIdWith판매자And주문(string id);
+        Task<List<판매자상품>> GetByPriceAbove(double price);
+        Task<List<판매자상품>> GetByPriceBelow(double price);
+        Task<List<판매자상품>> GetByPriceInRange(double minPrice, double maxPrice);
+        Task<List<판매자상품>> GetBySaleDateBefore(string date);
+        Task<List<판매자상품>> GetBySaleDateAfter(string date);
+        Task<List<판매자상품>> GetBySaleDate(string startDate, string endDate);
+        Task<List<판매자상품>> GetBySaleDateBefore(DateTime saleDate);
+        Task<List<판매자상품>> GetBySaleDateAfter(DateTime saleDate);
+        Task<List<판매자상품>> GetBySaleDateRange(DateTime startDate, DateTime endDate);
+
+    }
+    public class 판매자상품Repository : CommodityRepository<판매자상품>, I판매자상품QueryRepository
     {
         public 판매자상품Repository(주문DbContext context) : base(context)
         {

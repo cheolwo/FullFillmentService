@@ -5,7 +5,22 @@ using 주문Common.Model;
 
 namespace OrderCommon.Repository
 {
-    public class 댓글Repository : EntityRepository<댓글>
+    public interface I댓글QueryRepository : IEntityQueryRepository<댓글>
+    {
+        Task<List<댓글>> GetToListBy판매자상품Id(string 판매자상품Id);
+        Task<List<댓글>> GetToListBy주문자Id(string 주문자Id);
+        Task<List<댓글>> GetToListBy판매자상품IdWith주문자(string 판매자상품Id);
+        Task<List<댓글>> GetToListBy주문자IdWith판매자상품(string 주문자Id);
+        Task<List<댓글>> GetToListBy판매자상품IdWith주문자And판매자(string 판매자상품Id);
+        Task<List<댓글>> GetToListBy주문자IdWith판매자상품And주문자(string 주문자Id);
+    }
+    public interface I댓글CommandRespoitory : IEntityCommandRepository<댓글>
+    {
+
+    }
+    public class 댓글Repository : EntityRepository<댓글>, 
+        I댓글CommandRespoitory,
+        I댓글QueryRepository
     {
         public 댓글Repository(주문DbContext context) : base(context)
         {

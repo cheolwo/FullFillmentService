@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using Common.APIService;
+using Newtonsoft.Json;
 using System.Text;
-using 계정Common.API;
+
 using 주문Common.DTO.판매자판매정보요약;
 
 namespace 주문Common.APIService

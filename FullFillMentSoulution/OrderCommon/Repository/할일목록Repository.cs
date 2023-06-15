@@ -5,7 +5,14 @@ using 주문Common.Model;
 
 namespace OrderCommon.Repository
 {
-    public class 할일목록Repository : EntityRepository<할일목록>
+    public interface I할일목록QueryRepository : IEntityQueryRepository<할일목록>
+    {
+        Task<List<할일목록>> GetToListBy판매자IdAnd주문Id(string 판매자Id, string 주문Id);
+        Task<List<할일목록>> GetToListBy판매자IdWithPriorityDescending(string 판매자Id);
+        Task<List<할일목록>> GetToListBy주문IdAndStatus(string 주문Id, string 상태);
+        Task<List<할일목록>> GetToListBy판매자IdAndStatus(string 판매자Id, string 상태);
+    }
+    public class 할일목록Repository : EntityRepository<할일목록>, I할일목록QueryRepository
     {
         public 할일목록Repository(주문DbContext context) : base(context)
         {

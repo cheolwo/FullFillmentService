@@ -33,7 +33,6 @@ namespace 해양수산부.API.For조합창고품목별재고현황
                     조합창고품목별재고현황List.Add(수산품별재고현황);
                 }
             }
-
             return 조합창고품목별재고현황List;
         }
 
@@ -66,6 +65,31 @@ namespace 해양수산부.API.For조합창고품목별재고현황
         public async Task<int> PrintTotalCount(string baseDt, int numofRows = 100, int pageNo = 1, string dataType = "json")
         {
             string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numofRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}";
+            using (HttpClient client = new())
+            {
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    response.EnsureSuccessStatusCode();
+                    string data = await response.Content.ReadAsStringAsync();
+                    조합창고품목별재고현황정보 result = JsonConvert.DeserializeObject<조합창고품목별재고현황정보>(data);
+                    return result.ResponseJson.Header.TotalCount;
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine($"Error occurred during the request: {e.Message}");
+                    return 0;
+                }
+                catch (JsonException e)
+                {
+                    Console.WriteLine($"Error occurred during deserialization: {e.Message}");
+                    return 0;
+                }
+            }
+        }
+        public async Task<int> PrintTotalCountBy조합및창고이름(string baseDt, string mxtrNm, string wrhousNm, int numofRows = 100, int pageNo = 1, string dataType = "json")
+        {
+            string url = $"{baseUrl}?ServiceKey={serviceKey}&numOfRows={numofRows}&pageNo={pageNo}&type={dataType}&baseDt={baseDt}&mxtrNm={mxtrNm}&wrhousNm={wrhousNm}";
             using (HttpClient client = new())
             {
                 try

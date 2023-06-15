@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Bcpg.OpenPgp;
+﻿using Common.DTO;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,20 +8,16 @@ using System.Threading.Tasks;
 
 namespace 수협Common.DTO
 {
-    public class Create수산협동조합DTO
+    public class Create수산협동조합DTO : CudDTO
     {
-        public string? Id;
     }
-    public class Update수산협동조합DTO
+    public class Update수산협동조합DTO : CudDTO
     {
-        public string? Id;
     }
-    public class Delete수산협동조합TO
+    public class Delete수산협동조합TO : CudDTO
     {
-
     }
-    public class Read수산협동조합DTO
+    public class Read수산협동조합DTO : ReadDto
     {
-        public string? Id;
     }
 }

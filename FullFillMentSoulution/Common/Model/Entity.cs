@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Common.Model
@@ -6,8 +6,11 @@ namespace Common.Model
     [NotMapped]
     public class Entity
     {
+        public string Id { get; set; }
         public string? Code { get; set; }
         public string? Name { get; set; }
+        public string? FileUrlJson { get; set; } // JSON 직렬화된 문자열을 저장할 속성 추가
+        public DateTime CreatedAt { get; set; }
         public override bool Equals(object? obj)
         {
             if (obj == null || GetType() != obj.GetType())
@@ -24,7 +27,12 @@ namespace Common.Model
             hash = hash * 23 + (Name?.GetHashCode() ?? 0);
             return hash;
         }
-
+        [NotMapped]
+        public List<string> FileUrls
+        {
+            get => JsonConvert.DeserializeObject<List<string>>(FileUrlJson);
+            set => FileUrlJson = JsonConvert.SerializeObject(value);
+        }
     }
     [NotMapped]
     public class Center : Entity

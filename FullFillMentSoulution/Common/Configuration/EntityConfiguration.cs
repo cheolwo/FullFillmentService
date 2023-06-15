@@ -11,6 +11,9 @@ namespace Common.Configuration
         {
             builder.Property(e=>e.Name).HasMaxLength(128);
             builder.Property(e=>e.Code).HasMaxLength(128);
+            builder.Property(e => e.CreatedAt)
+            .ValueGeneratedOnAddOrUpdate()
+            .HasDefaultValueSql("CURRENT_TIMESTAMP");
         }
     }
     public class CommodityConfiguration<TEntity> : EntityConfiguration<TEntity> 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,16 @@ using System.Threading.Tasks;
 
 namespace 수협Common.DTO
 {
-    public class Create수산창고DTO
+    public class Create수산창고DTO : CudDTO
     {
-        public string? Id { get; set; }
     }
-    public class Update수산창고DTO
+    public class Update수산창고DTO : CudDTO
     {
-        public string? Id { get; set; }
     }
-    public class Delete수산창고TO
+    public class Delete수산창고TO : CudDTO
     {
-        public string? Id { get; set; }
     }
-    public class Read수산창고DTO
+    public class Read수산창고DTO : ReadDto
     {
-        public string? Id { get; set; }
     }
 }

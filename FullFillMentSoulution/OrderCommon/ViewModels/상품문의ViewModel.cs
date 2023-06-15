@@ -62,15 +62,6 @@ namespace 주문Common.ViewModels
             }
         }
 
-        public async Task Load상품문의By판매자상품IdWith판매자(string 판매자상품Id)
-        {
-            var 상품문의DTOs = await _상품문의APIService.Get상품문의By판매자상품IdWith판매자(판매자상품Id);
-            상품문의List.Clear();
-            foreach (var 상품문의DTO in 상품문의DTOs)
-            {
-                상품문의List.Add(상품문의DTO);
-            }
-        }
 
         public async Task Load상품문의By주문자IdWith주문자(string 주문자Id)
         {

@@ -1,10 +1,10 @@
-﻿using AppCommon.DTO;
-using IdentityCommon.Models;
+﻿using IdentityCommon.Models;
 using IdentityCommon.Models.ForApplicationUser;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using 계정Common.DTO;
 
 namespace IdentityServerSample.Controllers
 {

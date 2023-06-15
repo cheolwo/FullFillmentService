@@ -5,7 +5,22 @@ using 주문Common.Model;
 
 namespace OrderCommon.Repository
 {
-    public class 판매자Repository : CenterRepository<판매자>
+    public interface I판매자QueryRepository : ICenterQueryRepository<판매자>
+    {
+        Task<판매자?> GetByIdWith판매자상품(string id);
+        Task<판매자?> GetByIdWith주문(string id);
+        Task<판매자?> GetByIdWithRelatedData(string id);
+        Task<List<판매자>> GetAllWith판매자상품();
+        Task<List<판매자>> GetAllWith주문();
+        Task<판매자?> GetByIdWith상품문의(string id);
+        Task<판매자?> GetByIdWith댓글(string id);
+        Task<판매자?> GetByIdWith할일목록(string id);
+        Task<판매자?> GetByIdWith주문자구매요약(string id);
+        Task<판매자?> GetByIdWith판매자상품판매정보요약(string id);
+        Task<판매자?> GetByIdWith판매자판매정보요약(string id);
+
+    }
+    public class 판매자Repository : CenterRepository<판매자>, I판매자QueryRepository
     {
         public 판매자Repository(주문DbContext context) : base(context)
         {

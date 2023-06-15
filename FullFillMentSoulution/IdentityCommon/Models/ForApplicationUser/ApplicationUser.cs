@@ -1,6 +1,4 @@
-﻿using IdentityCommon.Services;
-using MediatR;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace IdentityCommon.Models.ForApplicationUser
 {
@@ -13,22 +11,4 @@ namespace IdentityCommon.Models.ForApplicationUser
     {
     }
     
-    public class CreateUserCommand : IRequest<int>, IEvent
-    {
-        public string? Email { get; set; }
-        public string? Password { get; set; }
-        public string? Name { get; set; }
-    }
-    public class UpdateUserCommand : IRequest<int>, IEvent
-    {
-
-    }
-    public class DeleteUserCommand : IRequest<int>, IEvent
-    {
-
-    }
-    public class GetUserQuery : IRequest<ApplicationUser>, IEvent
-    {
-        public string Id { get; set; }
-    }
 }

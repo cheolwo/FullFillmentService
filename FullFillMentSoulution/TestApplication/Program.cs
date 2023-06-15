@@ -1,34 +1,94 @@
-﻿namespace ConsoleApp
+﻿using StackExchange.Redis;
+using System;
+using System.Reflection.Emit;
+using System.Reflection;
+
+
+public interface IApiService
 {
-    public class Program
+    void SomeMethod(string value);
+    // 다른 필요한 메서드들을 선언할 수 있습니다.
+}
+
+public class MyController : IApiService
+{
+    public void SomeMethod(string value)
     {
-        public static async Task Main(string[] args)
+        Console.WriteLine(value);
+    }
+
+    // 다른 필요한 액션 메서드들을 선언할 수 있습니다.
+}
+
+public class APIServiceGenerator
+{
+    public object GenerateAPIServiceForController(Type controllerType)
+    {
+        Type apiServiceType = GenerateAPIServiceType(controllerType);
+
+        object apiServiceInstance = Activator.CreateInstance(apiServiceType);
+
+        return apiServiceInstance;
+    }
+
+    private Type GenerateAPIServiceType(Type controllerType)
+    {
+        TypeBuilder typeBuilder = CreateTypeBuilder();
+        typeBuilder.AddInterfaceImplementation(typeof(IApiService));
+
+        ImplementInterfaceMethods(typeBuilder, controllerType);
+
+        Type generatedType = typeBuilder.CreateType();
+        return generatedType;
+    }
+
+    private TypeBuilder CreateTypeBuilder()
+    {
+        AssemblyName assemblyName = new AssemblyName("DynamicAssembly");
+        AssemblyBuilder assemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
+        ModuleBuilder moduleBuilder = assemblyBuilder.DefineDynamicModule("DynamicModule");
+        TypeBuilder typeBuilder = moduleBuilder.DefineType("DynamicAPIService", TypeAttributes.Public);
+        return typeBuilder;
+    }
+
+    private void ImplementInterfaceMethods(TypeBuilder typeBuilder, Type controllerType)
+    {
+        MethodInfo[] methods = controllerType.GetMethods();
+
+        foreach (MethodInfo method in methods)
         {
-            //네이버좌표변환ApiClient geocodeApiClient = new("", "");
+            if (method.IsPublic && !method.IsSpecialName)
+            {
+                ParameterInfo[] parameters = method.GetParameters();
+                Type[] parameterTypes = parameters.Select(p => p.ParameterType).ToArray();
 
-            //var response1 = await geocodeApiClient.GetGeocodeAsync("인천광역시 강화군 내가면 해안서로 850 경인북부수협 판매사업팀");
-            //Console.WriteLine("Status: " + response1.status);
-            //Console.WriteLine("Meta Total Count: " + response1.meta.totalCount);
-            //Console.WriteLine("Road x: " + response1.addresses[0].x);
-            //Console.WriteLine("Road y: " + response1.addresses[0].y);
-            //Console.WriteLine();
+                MethodBuilder methodBuilder = typeBuilder.DefineMethod(
+                    method.Name,
+                    MethodAttributes.Public | MethodAttributes.Virtual,
+                    method.ReturnType,
+                    parameterTypes);
 
-            //var response2 = await geocodeApiClient.GetGeocodeAsync("인천광역시 옹진군 영흥면 외리 247-53 영흥수협김건조장");
-            //Console.WriteLine("Status: " + response2.status);
-            //Console.WriteLine("Meta Total Count: " + response1.meta.totalCount);
-            //Console.WriteLine("Road x: " + response2.addresses[0].x);
-            //Console.WriteLine("Road y: " + response2.addresses[0].y);
-
-            //Console.WriteLine();
-            //네이버길찾기ApiClient directionApiClient = new("", "");
-            //var result = await directionApiClient.GetDrivingDirectionsAsync($"{response1.addresses[0].x},{response1.addresses[0].y}", $"{response2.addresses[0].x},{response2.addresses[0].y}");
-            //foreach(var summary in result.route.traoptimal)
-            //{
-            //    Console.WriteLine("distance: " + summary.summary.distance);
-            //    Console.WriteLine("fuelPrice: " + summary.summary.fuelPrice);
-            //    Console.WriteLine("tollFare: " + summary.summary.tollFare);
-            //    Console.WriteLine("summary.duration: " + summary.summary.duration);
-            //}
+                ILGenerator ilGenerator = methodBuilder.GetILGenerator();
+                for (int i = 0; i < parameters.Length; i++)
+                {
+                    ilGenerator.Emit(OpCodes.Ldarg, i + 1);
+                }
+                ilGenerator.Emit(OpCodes.Call, method);
+                ilGenerator.Emit(OpCodes.Ret);
+            }
         }
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Type controllerType = typeof(MyController);
+        APIServiceGenerator apiServiceGenerator = new APIServiceGenerator();
+        object apiService = apiServiceGenerator.GenerateAPIServiceForController(controllerType);
+
+        // 생성된 APIService 사용
+        IApiService apiServiceInstance = (IApiService)apiService;
+        apiServiceInstance.SomeMethod("asdf");
     }
 }
