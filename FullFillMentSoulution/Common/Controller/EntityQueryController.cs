@@ -13,14 +13,14 @@ namespace Common.Controller
                                                                         where TDto : ReadDto
     {
         protected readonly IMapper _mapper;
-        protected readonly IEntityQueryRepository<TEntity> _entityQueryRepository;
+        private readonly IEntityQueryRepository<TEntity> _repository;
         protected readonly MemoryModule<TEntity> _memoryModule;
         protected readonly ILogger<EntityQueryController<TEntity, TDto>> _logger;
-        public EntityQueryController(IMapper mapper, IEntityQueryRepository<TEntity> entityQueryRepository,
+        public EntityQueryController(IMapper mapper, IEntityQueryRepository<TEntity> repository,
              MemoryModule<TEntity> memoryModule, ILogger<EntityQueryController<TEntity, TDto>> logger)
         {
             _mapper = mapper;
-            _entityQueryRepository = entityQueryRepository;
+            _repository = repository;
             _memoryModule = memoryModule;
             _logger = logger;
         }
@@ -33,7 +33,7 @@ namespace Common.Controller
 
                 if (entity == null)
                 {
-                    entity = await _entityQueryRepository.GetAsync(id);
+                    entity = await _repository.GetAsync(id);
 
                     if (entity == null)
                     {
@@ -63,7 +63,7 @@ namespace Common.Controller
 
                 if (entities.Count == 0)
                 {
-                    entities = (await _entityQueryRepository.ListAsync()).ToList();
+                    entities = (await _repository.ListAsync()).ToList();
                     entities.ForEach(entity => _memoryModule.SetEntity(entity.Id, entity));
                 }
 
@@ -82,7 +82,7 @@ namespace Common.Controller
         {
             try
             {
-                TEntity entity = await _entityQueryRepository.GetByCode(code);
+                TEntity entity = await _repository.GetByCode(code);
 
                 if (entity == null)
                 {
@@ -105,7 +105,7 @@ namespace Common.Controller
         {
             try
             {
-                TEntity entity = await _entityQueryRepository.GetByName(name);
+                TEntity entity = await _repository.GetByName(name);
 
                 if (entity == null)
                 {

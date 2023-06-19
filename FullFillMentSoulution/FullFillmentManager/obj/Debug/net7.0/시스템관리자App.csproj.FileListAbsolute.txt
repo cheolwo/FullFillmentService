@@ -95,3 +95,15 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentMana
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\obj\Debug\net7.0\시스템관리자App.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Azure.Storage.Blobs.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\System.IO.Hashing.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\System.Memory.Data.dll

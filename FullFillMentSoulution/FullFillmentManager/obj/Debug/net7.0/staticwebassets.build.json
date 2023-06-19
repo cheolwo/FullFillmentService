@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BURuzjjolkQKkelawhRAygmI+OCksrDz2pyTs8+w3OI=",
+  "Hash": "uI2TJuxiEUVld1Nhvq6pvzVVHyziB6R3zJZ4AQmxSe0=",
   "Source": "시스템관리자App",
   "BasePath": "_content/시스템관리자App",
   "Mode": "Default",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\mudblazor.thememanager\\1.0.8\\staticwebassets\\MudBlazorThemeManager.css"
     },
     {
-      "Identity": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.3.1\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.4.1\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.4.1\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.3.1\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.4.1\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.3.1\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.4.1\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.4.1\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.3.1\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\user\\.nuget\\packages\\mudblazor\\6.4.1\\staticwebassets\\MudBlazor.min.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FullFillmentManager\\obj\\Debug\\net7.0\\scopedcss\\bundle\\시스템관리자App.styles.css",

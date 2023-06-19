@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace 수협Common.DTO
 {
+    public class Cud수산창고DTO : CudDTO
+    {
+
+    }
     public class Create수산창고DTO : CudDTO
     {
     }

@@ -3,9 +3,8 @@ using Common.Configuration;
 using Common.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.ComponentModel.DataAnnotations;
 
-namespace KoreaCommon.Model
+namespace 수협Common.Model
 {
     public class 수협DbContext : DbContext
     {

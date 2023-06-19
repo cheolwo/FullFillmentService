@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using KoreaCommon.Model;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using 수협Common.Model;
 
 namespace 해양수산부.API.For조합창고품목별재고현황
 {

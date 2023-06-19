@@ -6,28 +6,12 @@ namespace 주문Common.ViewModels
 {
     public class 판매자상품판매정보요약ViewModel : ObservableObject
     {
-        private readonly 판매자상품판매정보요약APIService _판매자상품판매정보요약APIService;
+        private readonly 판매자상품판매정보요약APIQueryService _판매자상품판매정보요약APIService;
 
-        public 판매자상품판매정보요약ViewModel(판매자상품판매정보요약APIService 판매자상품판매정보요약APIService)
+        public 판매자상품판매정보요약ViewModel(판매자상품판매정보요약APIQueryService 판매자상품판매정보요약APIService)
         {
             _판매자상품판매정보요약APIService = 판매자상품판매정보요약APIService;
         }
-
-        public async Task<HttpResponseMessage> Create판매자상품판매정보요약(Create판매자상품판매정보요약DTO 판매자상품판매정보요약)
-        {
-            return await _판매자상품판매정보요약APIService.Create판매자상품판매정보요약Async(판매자상품판매정보요약);
-        }
-
-        public async Task<HttpResponseMessage> Update판매자상품판매정보요약(string id, Update판매자상품판매정보요약DTO updated판매자상품판매정보요약)
-        {
-            return await _판매자상품판매정보요약APIService.Update판매자상품판매정보요약Async(id, updated판매자상품판매정보요약);
-        }
-
-        public async Task<HttpResponseMessage> Delete판매자상품판매정보요약(string id)
-        {
-            return await _판매자상품판매정보요약APIService.Delete판매자상품판매정보요약Async(id);
-        }
-
         public async Task<Read판매자상품판매정보요약DTO> Get판매자상품판매정보요약ById(string id)
         {
             return await _판매자상품판매정보요약APIService.Get판매자상품판매정보요약ByIdAsync(id);

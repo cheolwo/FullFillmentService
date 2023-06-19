@@ -11,7 +11,14 @@ namespace Common.Cache
         {
             _memoryCache = memoryCache;
         }
-
+        public void SetEntities(List<TEntity> entities)
+        {
+            foreach (var entity in entities)
+            {
+                string cacheKey = $"{typeof(TEntity).Name}_{entity.Id}";
+                _memoryCache.Set(cacheKey, entity);
+            }
+        }
         public TEntity GetEntity(string entityId) 
         {
             string cacheKey = $"{typeof(TEntity).Name}_{entityId}";

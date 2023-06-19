@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace 주문Common.DTO.판매자상품
 {
+    public class Cud판매자상품DTO : CudDTO
+    {
+
+    }
     public class Create판매자상품DTO : CudDTO
     {
     }
@@ -17,5 +21,7 @@ namespace 주문Common.DTO.판매자상품
     {
     }
     public class Read판매자상품DTO : ReadDto
+    { 
+        public DateTime SaleDate { get; set; }
     }
 }

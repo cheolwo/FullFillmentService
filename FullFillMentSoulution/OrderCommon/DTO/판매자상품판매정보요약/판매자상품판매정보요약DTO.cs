@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace 주문Common.DTO.판매자상품판매정보요약
 {
+    public class Cud판매자상품판매정보요약DTO : CudDTO
+    {
+
+    }
     public class Create판매자상품판매정보요약DTO : CudDTO
     {
     }

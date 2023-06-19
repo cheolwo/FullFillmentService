@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace 수협Common.DTO
 {
+    public class Cud수산협동조합DTO : CudDTO
+    {
+
+    }
     public class Create수산협동조합DTO : CudDTO
     {
     }

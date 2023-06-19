@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KyTcOY3P4/dOvJ6elZV54e9fn8bp33zt0pcEoa05HrFIxrHx3sRrj7abFGHsfUDJkVdVWp6LIehLUec2ju9ezQ==",
+  "dgSpecHash": "6u1QO6ONFOm9addZbJz/wJRR2k7jaZ0TVDwatA2gV5Fv6zfnnfawGRZmfJtk/8YbfM0b28EmYpH4J6+40tIjow==",
   "success": false,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\IdentityServerSample.csproj",
   "expectedPackageFiles": [
@@ -36,9 +36,9 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.5\\microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.7\\microsoft.entityframeworkcore.7.0.7.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.7\\microsoft.entityframeworkcore.abstractions.7.0.7.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.7\\microsoft.entityframeworkcore.analyzers.7.0.7.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.5\\microsoft.entityframeworkcore.design.7.0.5.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.5\\microsoft.entityframeworkcore.inmemory.7.0.5.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.5\\microsoft.entityframeworkcore.relational.7.0.5.nupkg.sha512",
@@ -109,6 +109,33 @@
     "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "17.52.0에서 17.51.0(으)로 다운그레이드된 패키지 DotNetCore.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n IdentityServerSample -> 수협Common -> DotNetCore.EntityFrameworkCore (>= 17.52.0) \r\n IdentityServerSample -> DotNetCore.EntityFrameworkCore (>= 17.51.0)",
+      "libraryId": "DotNetCore.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "17.52.0에서 17.51.0(으)로 다운그레이드된 패키지 DotNetCore.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n IdentityServerSample -> 계정Common -> DotNetCore.EntityFrameworkCore (>= 17.52.0) \r\n IdentityServerSample -> DotNetCore.EntityFrameworkCore (>= 17.51.0)",
+      "libraryId": "DotNetCore.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "7.0.7에서 7.0.5(으)로 다운그레이드된 패키지 Microsoft.AspNetCore.Identity.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n IdentityServerSample -> 계정Common -> Microsoft.AspNetCore.Identity.EntityFrameworkCore (>= 7.0.7) \r\n IdentityServerSample -> Microsoft.AspNetCore.Identity.EntityFrameworkCore (>= 7.0.5)",
+      "libraryId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
     {
       "code": "NU1605",
       "level": "Error",

@@ -1,6 +1,6 @@
 ﻿using Common.Repository;
-using KoreaCommon.Model;
 using Microsoft.EntityFrameworkCore;
+using 수협Common.Model;
 
 namespace 수협Common.Repository
 {

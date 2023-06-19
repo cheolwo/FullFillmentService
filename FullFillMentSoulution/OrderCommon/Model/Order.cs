@@ -1,6 +1,5 @@
 ﻿using Common.Model;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,7 +7,7 @@ namespace 주문Common.Model
 {
     public enum 주문상태
     {
-        미확인,
+        미확인, 
         확인,
         할당,
         피킹,

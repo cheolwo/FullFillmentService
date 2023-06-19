@@ -12,3 +12,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\o
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.genruntimeconfig.cache
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\ref\계정Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.csproj.CopyComplete

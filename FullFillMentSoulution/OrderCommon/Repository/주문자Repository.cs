@@ -5,7 +5,14 @@ using 주문Common.Model;
 
 namespace OrderCommon.Repository
 {
-    public class 주문자Repository : CenterRepository<주문자>
+    public interface I주문자QueryRepository : ICenterQueryRepository<주문자>
+    {
+        Task<주문자?> GetByIdWith주문(string id);
+        Task<주문자?> GetByIdWith댓글(string id);
+        Task<주문자?> GetByIdWith상품문의(string id);
+        Task<주문자?> GetByIdWithRelatedData(string id);
+    }
+    public class 주문자Repository : CenterRepository<주문자>, I주문자QueryRepository
     {
         public 주문자Repository(주문DbContext context) : base(context)
         {

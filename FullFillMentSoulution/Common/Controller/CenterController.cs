@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace Common.Controller
-{
+{   
     public class CenterQueryController<TEntity, TDto> : EntityQueryController<TEntity, TDto>
     where TEntity : Center
     where TDto : ReadDto

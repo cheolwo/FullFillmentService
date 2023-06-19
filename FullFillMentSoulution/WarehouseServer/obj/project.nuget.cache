@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "p0lMVrhi/JzUkdFnybC+xfbVQPYSYm1TD9HydKJw+wTcjQzvARKl4DvBIoRjhC4jstbcThXMEIs7KWApw1NnVA==",
+  "dgSpecHash": "8OmO3fXYfV/KrpeKwHIA5EJ3dhvoa6mtLNFi6DOplvFZP0BkOgcGlQFTJ/0FRN7bqlkTELA6G09zCUx6fW10ZQ==",
   "success": false,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\WarehouseServer\\창고Server.csproj",
   "expectedPackageFiles": [
@@ -105,6 +105,33 @@
     "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "17.52.0에서 17.51.0(으)로 다운그레이드된 패키지 DotNetCore.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n 창고Server -> 계정Common -> DotNetCore.EntityFrameworkCore (>= 17.52.0) \r\n 창고Server -> DotNetCore.EntityFrameworkCore (>= 17.51.0)",
+      "libraryId": "DotNetCore.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "7.0.7에서 7.0.5(으)로 다운그레이드된 패키지 Microsoft.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n 창고Server -> 계정Common -> Microsoft.EntityFrameworkCore (>= 7.0.7) \r\n 창고Server -> Microsoft.EntityFrameworkCore (>= 7.0.5)",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "7.0.7에서 7.0.5(으)로 다운그레이드된 패키지 Microsoft.AspNetCore.Identity.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n 창고Server -> 계정Common -> Microsoft.AspNetCore.Identity.EntityFrameworkCore (>= 7.0.7) \r\n 창고Server -> Microsoft.AspNetCore.Identity.EntityFrameworkCore (>= 7.0.5)",
+      "libraryId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
     {
       "code": "NU1605",
       "level": "Error",

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using KoreaCommon.Model;
 using 수협Common.DTO;
+using 수협Common.Model;
 
 namespace 수협Common.Mapper
 {

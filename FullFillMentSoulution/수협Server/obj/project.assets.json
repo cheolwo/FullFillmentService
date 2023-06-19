@@ -103,12 +103,12 @@
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
         }
       },
-      "DotNetCore.EntityFrameworkCore/17.51.0": {
+      "DotNetCore.EntityFrameworkCore/17.52.0": {
         "type": "package",
         "dependencies": {
-          "DotNetCore.Repositories": "17.51.0",
-          "Microsoft.EntityFrameworkCore.InMemory": "7.0.5",
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
+          "DotNetCore.Repositories": "17.52.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.7",
           "Microsoft.Extensions.DependencyInjection": "7.0.0"
         },
         "compile": {
@@ -118,7 +118,7 @@
           "lib/net7.0/DotNetCore.EntityFrameworkCore.dll": {}
         }
       },
-      "DotNetCore.Repositories/17.51.0": {
+      "DotNetCore.Repositories/17.52.0": {
         "type": "package",
         "compile": {
           "lib/net7.0/DotNetCore.Repositories.dll": {}
@@ -322,7 +322,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.Internal/7.0.5": {
+      "Microsoft.AspNetCore.Cryptography.Internal/7.0.7": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -335,10 +335,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/7.0.5": {
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/7.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "7.0.5"
+          "Microsoft.AspNetCore.Cryptography.Internal": "7.0.7"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
@@ -384,11 +384,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.5": {
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.5",
-          "Microsoft.Extensions.Identity.Stores": "7.0.5"
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.7",
+          "Microsoft.Extensions.Identity.Stores": "7.0.7"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
@@ -584,10 +584,10 @@
           "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.InMemory/7.0.5": {
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.5"
+          "Microsoft.EntityFrameworkCore": "7.0.7"
         },
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
@@ -816,10 +816,10 @@
           "buildMultiTargeting/_._": {}
         }
       },
-      "Microsoft.Extensions.Identity.Core/7.0.5": {
+      "Microsoft.Extensions.Identity.Core/7.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "7.0.5",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "7.0.7",
           "Microsoft.Extensions.Logging": "7.0.0",
           "Microsoft.Extensions.Options": "7.0.1"
         },
@@ -834,11 +834,11 @@
           }
         }
       },
-      "Microsoft.Extensions.Identity.Stores/7.0.5": {
+      "Microsoft.Extensions.Identity.Stores/7.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Caching.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Identity.Core": "7.0.5",
+          "Microsoft.Extensions.Identity.Core": "7.0.7",
           "Microsoft.Extensions.Logging": "7.0.0"
         },
         "compile": {
@@ -1911,11 +1911,11 @@
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
           "CommunityToolkit.Mvvm": "8.2.0",
-          "DotNetCore.EntityFrameworkCore": "17.51.0",
+          "DotNetCore.EntityFrameworkCore": "17.52.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.7",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
-          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.7",
+          "Microsoft.EntityFrameworkCore": "7.0.7",
           "Microsoft.IdentityModel.Tokens": "6.31.0",
           "Microsoft.JSInterop": "7.0.7",
           "MySql.EntityFrameworkCore": "7.0.2",
@@ -1935,8 +1935,8 @@
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
           "CommunityToolkit.Mvvm": "8.2.0",
-          "DotNetCore.EntityFrameworkCore": "17.51.0",
-          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "DotNetCore.EntityFrameworkCore": "17.52.0",
+          "Microsoft.EntityFrameworkCore": "7.0.7",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "MySql.EntityFrameworkCore": "7.0.2",
           "Newtonsoft.Json": "13.0.3"
@@ -1956,7 +1956,7 @@
           "Common": "1.0.0",
           "CommunityToolkit.Mvvm": "8.2.0",
           "MediatR": "12.0.1",
-          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.7",
           "MySql.EntityFrameworkCore": "7.0.2",
           "Newtonsoft.Json": "13.0.3",
           "Quartz": "3.6.2",
@@ -2094,27 +2094,27 @@
         "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
       ]
     },
-    "DotNetCore.EntityFrameworkCore/17.51.0": {
-      "sha512": "gaQJPWze/nyGG8FFR8tfdnHNhxZ0vFWrh7x9qzMbZppqCyTfC132eFvJoQo2CHbsBhGdlJ7pTDASOU7vvACTZw==",
+    "DotNetCore.EntityFrameworkCore/17.52.0": {
+      "sha512": "bdUrdcDvdiNn3qze9oVnyxIEUHIcfosSNX2i/ggWIkXo5MaJZZ897j/5cz29vulOMr2j5mgNSquTYgbrYmtcsg==",
       "type": "package",
-      "path": "dotnetcore.entityframeworkcore/17.51.0",
+      "path": "dotnetcore.entityframeworkcore/17.52.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dotnetcore.entityframeworkcore.17.51.0.nupkg.sha512",
+        "dotnetcore.entityframeworkcore.17.52.0.nupkg.sha512",
         "dotnetcore.entityframeworkcore.nuspec",
         "lib/net7.0/DotNetCore.EntityFrameworkCore.dll",
         "readme.md"
       ]
     },
-    "DotNetCore.Repositories/17.51.0": {
-      "sha512": "E8jiG1p5Q2pRvoH3Zkn51tlvVbt0Re+1S3Dma1Iqo6Y/rtHsyw/jkbi4YWlILCV7pF62TR3zUGAlpGEtaMn9ug==",
+    "DotNetCore.Repositories/17.52.0": {
+      "sha512": "48TSMVn+A6AKvRMehqfuBh1KpzDgCP+G+mQok6IHGo/ttS6NEezA4JSdIII1PLhbgQ9zNKwDgWMVuUn67uZ8Rg==",
       "type": "package",
-      "path": "dotnetcore.repositories/17.51.0",
+      "path": "dotnetcore.repositories/17.52.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dotnetcore.repositories.17.51.0.nupkg.sha512",
+        "dotnetcore.repositories.17.52.0.nupkg.sha512",
         "dotnetcore.repositories.nuspec",
         "lib/net7.0/DotNetCore.Repositories.dll",
         "readme.md"
@@ -2347,10 +2347,10 @@
         "microsoft.aspnetcore.components.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Cryptography.Internal/7.0.5": {
-      "sha512": "fevCVLxTfSsJEGtxNJlNYYzHhXWN8Uw2+qdi3VGzSoWSv114xTszRuRdGXUEVRmA+fYcQ9aRYqsvfVLtZi+VcQ==",
+    "Microsoft.AspNetCore.Cryptography.Internal/7.0.7": {
+      "sha512": "cg/L/vXys1csH0ljfJJX9QfeHB6ezK7jwEsTg1J/hv2tZtBeeVKltXG7EWcnCt6t5yHGbmwiG2g1xNew/Tl8EQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.cryptography.internal/7.0.5",
+      "path": "microsoft.aspnetcore.cryptography.internal/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2362,14 +2362,14 @@
         "lib/net7.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
-        "microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.internal.7.0.7.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.internal.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Cryptography.KeyDerivation/7.0.5": {
-      "sha512": "OZ6lOoh6R+Uow4ZhCGpzT0Ji19ZH5no8/x+i8/I7lbYYJwOC51XxoP5xfI8gyqXJEigkod0j9+ZZ/pAKqoeTsg==",
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/7.0.7": {
+      "sha512": "E1iXMtzhxeSwGm/AWaEB1A02hK361uHLTaRDT6ipdAqmMZweQ32v2KxPE0IWaGXz6kzW0EMj3OnrDckoncc2Jw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.cryptography.keyderivation/7.0.5",
+      "path": "microsoft.aspnetcore.cryptography.keyderivation/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2381,7 +2381,7 @@
         "lib/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
-        "microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.keyderivation.7.0.7.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
       ]
     },
@@ -2411,10 +2411,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.5": {
-      "sha512": "HcTFkwn3P+60CXbl+ZSbVvOPrCZZIAKCqfVZRMEmY23MnuIXr0TVIdLojznBtf0KRIXkb6rZKbXhhiLU87dm7A==",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.7": {
+      "sha512": "3W0NUZ538YiPPAUQqBkW+2c4cTjcpYoSYXxbkiIQTa48WwjTR6Ejtha6Jc/GR6GsP07KEz+RdjlNHodCLps01Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.identity.entityframeworkcore/7.0.5",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2422,7 +2422,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
         "lib/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
-        "microsoft.aspnetcore.identity.entityframeworkcore.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.identity.entityframeworkcore.7.0.7.nupkg.sha512",
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
@@ -2764,17 +2764,17 @@
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.InMemory/7.0.5": {
-      "sha512": "y3S/A/0uJX7KOhppC3xqyta6Z0PRz0qPLngH5GFu4GZ7/+Sw2u/amf7MavvR5GfZjGabGcohMpsRSahMmpF9gA==",
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.7": {
+      "sha512": "H+WLi56HOM3H+76ybOKXg7oKeQtck+fTZfiONeG6ZIDwP6pgIUmvhHkMsiv2Xhj0wijoHIe+pfYLaC7FFQ61nQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.inmemory/7.0.5",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
-        "microsoft.entityframeworkcore.inmemory.7.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.7.0.7.nupkg.sha512",
         "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
@@ -3284,10 +3284,10 @@
         "tasks/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
       ]
     },
-    "Microsoft.Extensions.Identity.Core/7.0.5": {
-      "sha512": "3fK2nd/3pJaT6jHNhwbSQS19Xxb4D3nsMrj0Vhag/rGk3GwVZusSWbtpnP2Li9Jl6BcJrRP+7M3jCmyVUYloeQ==",
+    "Microsoft.Extensions.Identity.Core/7.0.7": {
+      "sha512": "HHRiKLPwtklPLHIdSS4uqwBqDWUOLARsKI6J91toQPsHJfiUHPFsCMk4eD5TzvXI514gfBwEUkXwWqyEG/Y8Ug==",
       "type": "package",
-      "path": "microsoft.extensions.identity.core/7.0.5",
+      "path": "microsoft.extensions.identity.core/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3299,14 +3299,14 @@
         "lib/net7.0/Microsoft.Extensions.Identity.Core.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.xml",
-        "microsoft.extensions.identity.core.7.0.5.nupkg.sha512",
+        "microsoft.extensions.identity.core.7.0.7.nupkg.sha512",
         "microsoft.extensions.identity.core.nuspec"
       ]
     },
-    "Microsoft.Extensions.Identity.Stores/7.0.5": {
-      "sha512": "IRLvTWiZ9lnkMrj6f3dh+NAOpnhUhMAPTmEOC6dzhXbVvX36dUElIQe6EzNsl9T93tMtgXgnrOAkj/UPutzZWQ==",
+    "Microsoft.Extensions.Identity.Stores/7.0.7": {
+      "sha512": "OYY0x4KoR9FtwkBNpbOySIU2R4RdRJ3qlH3qUTpDnKzuOZqxLirZosiU8u25BUBLmE2q5wukBKQhPiyhR95OOQ==",
       "type": "package",
-      "path": "microsoft.extensions.identity.stores/7.0.5",
+      "path": "microsoft.extensions.identity.stores/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3318,7 +3318,7 @@
         "lib/net7.0/Microsoft.Extensions.Identity.Stores.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.xml",
-        "microsoft.extensions.identity.stores.7.0.5.nupkg.sha512",
+        "microsoft.extensions.identity.stores.7.0.7.nupkg.sha512",
         "microsoft.extensions.identity.stores.nuspec"
       ]
     },

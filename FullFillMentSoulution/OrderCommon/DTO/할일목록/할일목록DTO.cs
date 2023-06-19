@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace 주문Common.DTO.할일목록
 {
+    public class Cud할일목록DTO : CudDTO
+    {
+
+    }
     public class Create할일목록DTO : CudDTO
     {
     }

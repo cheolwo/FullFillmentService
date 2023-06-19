@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "창고Common": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:56730;http://localhost:56731"
+    }
+  }
+}

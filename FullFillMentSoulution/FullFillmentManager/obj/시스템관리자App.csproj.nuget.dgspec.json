@@ -144,17 +144,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "MudBlazor": {
               "target": "Package",
-              "version": "[6.3.1, )"
+              "version": "[6.4.1, )"
             },
             "MudBlazor.ThemeManager": {
               "target": "Package",
@@ -243,7 +243,7 @@
             },
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[17.51.0, )"
+              "version": "[17.52.0, )"
             },
             "Microsoft.AspNetCore.Authentication.Abstractions": {
               "target": "Package",
@@ -255,17 +255,17 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -359,17 +359,17 @@
             },
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[17.51.0, )"
+              "version": "[17.52.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",

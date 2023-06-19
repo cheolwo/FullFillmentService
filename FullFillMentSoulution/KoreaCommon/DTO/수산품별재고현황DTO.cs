@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace 수협Common.DTO
 {
+    public class Cud수산품별재고현황DTO : CudDTO
+    {
+
+    }
     public class Create수산품별재고현황DTO : CudDTO
     {
         public string? Code;

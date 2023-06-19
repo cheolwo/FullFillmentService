@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace 주문Common.DTO.주문자
 {
+    public class Cud주문자DTO : CudDTO
+    {
+
+    }
     public class Create주문자DTO : CudDTO
     {
     }

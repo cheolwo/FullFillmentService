@@ -1634,11 +1634,11 @@
           "AutoMapper": "12.0.1",
           "Common": "1.0.0",
           "CommunityToolkit.Mvvm": "8.2.0",
-          "DotNetCore.EntityFrameworkCore": "17.51.0",
+          "DotNetCore.EntityFrameworkCore": "17.52.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.7",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
-          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.7",
+          "Microsoft.EntityFrameworkCore": "7.0.7",
           "Microsoft.IdentityModel.Tokens": "6.31.0",
           "Microsoft.JSInterop": "7.0.7",
           "MySql.EntityFrameworkCore": "7.0.2",
@@ -4756,6 +4756,33 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "17.52.0에서 17.51.0(으)로 다운그레이드된 패키지 DotNetCore.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n 창고Server -> 계정Common -> DotNetCore.EntityFrameworkCore (>= 17.52.0) \r\n 창고Server -> DotNetCore.EntityFrameworkCore (>= 17.51.0)",
+      "libraryId": "DotNetCore.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "7.0.7에서 7.0.5(으)로 다운그레이드된 패키지 Microsoft.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n 창고Server -> 계정Common -> Microsoft.EntityFrameworkCore (>= 7.0.7) \r\n 창고Server -> Microsoft.EntityFrameworkCore (>= 7.0.5)",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "7.0.7에서 7.0.5(으)로 다운그레이드된 패키지 Microsoft.AspNetCore.Identity.EntityFrameworkCore을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n 창고Server -> 계정Common -> Microsoft.AspNetCore.Identity.EntityFrameworkCore (>= 7.0.7) \r\n 창고Server -> Microsoft.AspNetCore.Identity.EntityFrameworkCore (>= 7.0.5)",
+      "libraryId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
     {
       "code": "NU1605",
       "level": "Error",
