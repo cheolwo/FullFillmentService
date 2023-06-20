@@ -9,13 +9,11 @@ namespace Common.Actor.Builder
 {
     public class DtoTypeCommandBuilder<TDto> : DtoTypeBuilder<TDto> where TDto : class
     {
-        protected List<ServerBaseRouteInfo> ServerBaseRoutes { get; } = new List<ServerBaseRouteInfo>();
         protected IValidator<TDto> Validator { get; private set; }
         protected string Route { get; private set; }
         protected string BaseAddress { get; private set; }
 
         public DtoTypeCommandBuilder(IDtoTypeCommandConfiguration<TDto> configuration)
-            : base(configuration)
         {
             configuration.Configure(this);
         }
@@ -59,8 +57,7 @@ namespace Common.Actor.Builder
 
                 var jsonContent = JsonConvert.SerializeObject(dto);
                 var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                await SendRequestToApiGateway(httpClient, selectedRoute.Route, httpContent, HttpMethod.Post);
+                await httpClient.PostAsync(selectedRoute.Route, httpContent);
             }
         }
         public async Task PutAsync(TDto dto, string userId, string jwtToken)
@@ -85,9 +82,7 @@ namespace Common.Actor.Builder
 
                 var jsonContent = JsonConvert.SerializeObject(dto);
                 var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-
-                await SendRequestToApiGateway(httpClient, selectedRoute.Route, httpContent, HttpMethod.Put);
+                await httpClient.PutAsync(selectedRoute.BaseAddress, httpContent);
             }
         }
 
@@ -101,8 +96,7 @@ namespace Common.Actor.Builder
                 // Set Authorization header with JWT token
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
                 httpClient.DefaultRequestHeaders.Add("UserId", userId);
-
-                await SendRequestToApiGateway(httpClient, $"{selectedRoute.Route}/{id}", null, HttpMethod.Delete);
+                await httpClient.DeleteAsync($"{selectedRoute.Route}/{id}");
             }
         }
         private bool IsApiGatewayCompatible(TDto dto)

@@ -1,5 +1,4 @@
-﻿using Common.Actor.Query;
-using FrontCommon.Actor;
+﻿using FrontCommon.Actor;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 using System.Net.Http.Headers;
@@ -12,7 +11,6 @@ namespace Common.Actor.Builder.TypeBuilder
     {
         private string redisConnection;
         public DtoTypeQueryBuilder(IDtoTypeQueryConfiguration<TDto> configuration)
-            :base(configuration)
         {
             configuration.Configure(this);
         }

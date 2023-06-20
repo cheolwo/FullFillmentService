@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using Common.Actor.Builder;
+using FluentValidation;
 using FluentValidation.Results;
 using FrontCommon.Actor;
 using 주문Common.DTO.For주문;
@@ -22,9 +23,9 @@ namespace 주문FrontCommon.Actor
         }
     }
 
-    public class Create주문DtoConfiguration : IDtoConfiguration<Create주문DTO>
+    public class Create주문DtoConfiguration : IDtoTypeCommandConfiguration<Create주문DTO>
     {
-        public void Configure(DtoTypeBuilder<Create주문DTO> builder)
+        public void Configure(DtoTypeCommandBuilder<Create주문DTO> builder)
         {
             builder
                 .SetValidator(new Create주문DtoValidator())
@@ -42,6 +43,34 @@ namespace 주문FrontCommon.Actor
                 });
         }
     }
+    public class Delete주문DtoConfiguration : IDtoTypeCommandConfiguration<Delete주문DTO>
+    {
+        public void Configure(DtoTypeCommandBuilder<Delete주문DTO> builder)
+        {
+            builder
+                .SetServerBaseRouteInfo(new ServerBaseRouteInfo
+                {
+                    Route = "delete/order",
+                    BaseAddress = "https://business-server.example.com",
+                    UseApiGateway = false
+                });
+        }
+    }
+    public class Update주문DtoConfiguration : IDtoTypeCommandConfiguration<Update주문DTO>
+    {
+        public void Configure(DtoTypeCommandBuilder<Update주문DTO> builder)
+        {
+            builder
+                .SetValidator(new Update주문DtoValidator())
+                .SetServerBaseRouteInfo(new ServerBaseRouteInfo
+                {
+                    Route = "update/order",
+                    BaseAddress = "https://business-server.example.com",
+                    UseApiGateway = false
+                });
+        }
+    }
+    
     public class Create주문DtoValidator : IValidator<Create주문DTO>
     {
         public bool CanValidateInstancesOfType(Type type)
@@ -110,34 +139,7 @@ namespace 주문FrontCommon.Actor
         }
     }
 
-    public class Update주문DtoConfiguration : IDtoConfiguration<Update주문DTO>
-    {
-        public void Configure(DtoTypeBuilder<Update주문DTO> builder)
-        {
-            builder
-                .SetValidator(new Update주문DtoValidator())
-                .SetServeBaseRouteInfo(new ServeBaseRouteInfo
-                {
-                    Route = "update/order",
-                    BaseAddress = "https://business-server.example.com",
-                    UseApiGateway = false
-                });
-        }
-    }
 
-    public class Delete주문DtoConfiguration : IDtoConfiguration<Delete주문DTO>
-    {
-        public void Configure(DtoTypeBuilder<Delete주문DTO> builder)
-        {
-            builder
-                .SetServeBaseRouteInfo(new ServeBaseRouteInfo
-                {
-                    Route = "delete/order",
-                    BaseAddress = "https://business-server.example.com",
-                    UseApiGateway = false
-                });
-        }
-    }
     public class Update주문DtoValidator : IValidator<Update주문DTO>
     {
         public bool CanValidateInstancesOfType(Type type)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lXli6VbWbb34mI82+0hpJUEu0UrVYVD7GgfHAI+tfaraz/POY6SPMZiAbAmijqvHhiPaWhdyqrJQrfe9rmOi+A==",
+  "dgSpecHash": "cHR/G+66C7wyN0CujmDh+fnx03oi3/ZwEi92aRUq1itfoCxd+PKjuweJwkbk/8dlybOR4Rupt8zDgUhbLTptSA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.31.0\\azure.core.1.31.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.storage.blobs\\12.16.0\\azure.storage.blobs.12.16.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.storage.common\\12.15.0\\azure.storage.common.12.15.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\dotnetcore.entityframeworkcore\\17.52.0\\dotnetcore.entityframeworkcore.17.52.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\dotnetcore.repositories\\17.52.0\\dotnetcore.repositories.17.52.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",

@@ -39,7 +39,6 @@ namespace FrontCommon.Actor
     public class ActorQueryContextOptions : ActorContextOptions { }
     public interface IDtoConfiguration<TDto> where TDto : class
     {
-        void Configure(DtoTypeBuilder<TDto> builder);
     }
     public interface IDtoTypeCommandConfiguration<TDto> : IDtoConfiguration<TDto> where TDto : class
     {

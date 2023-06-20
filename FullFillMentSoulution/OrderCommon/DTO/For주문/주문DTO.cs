@@ -7,7 +7,8 @@ namespace 주문Common.DTO.For주문
     {
         public string 주문명 { get; set; }
     }
-    [CQRS(true)]
+
+    [CQRS]
     public class Create주문DTO : Cud주문DTO
     {
     }

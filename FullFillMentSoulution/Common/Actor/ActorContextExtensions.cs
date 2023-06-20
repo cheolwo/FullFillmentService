@@ -4,7 +4,9 @@ namespace FrontCommon.Actor
 {
     public static class ActorContextExtensions
     {
-        public static IServiceCollection AddActorContext<TActorContext>(this IServiceCollection services, Action<ActorContextOptions> configureOptions)
+        public static IServiceCollection AddActorContext<TActorContext>(
+                                this IServiceCollection services, 
+                                Action<ActorContextOptions> configureOptions)
         where TActorContext : ActorContext
         {
             // ActorContextOptions 객체 생성 및 구성
@@ -22,6 +24,7 @@ namespace FrontCommon.Actor
         public static IServiceCollection AddActorContext<TActorContext>(this IServiceCollection services)
         where TActorContext : ActorContext
         {
+            var options = new ActorContextOptions();
             // ActorContext 등록
             services.AddScoped(provider =>
             {
