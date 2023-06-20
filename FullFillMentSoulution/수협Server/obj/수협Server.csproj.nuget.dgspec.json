@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[12.16.0, )"
             },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",
               "version": "[17.52.0, )"
