@@ -23,7 +23,7 @@ namespace Common.APIService
         where TDto : CudDTO
     {
         public EntityCommandAPIService(HttpClient httpClient)
-            :base(httpClient)
+            : base(httpClient)
         {
         }
 
@@ -86,7 +86,7 @@ namespace Common.APIService
         private readonly JsonSerializerOptions _jsonSerializerOptions;
 
         public EntityQueryAPIService(HttpClient httpClient)
-            : base(httpClient) 
+            : base(httpClient)
         {
             _jsonSerializerOptions = new JsonSerializerOptions
             {

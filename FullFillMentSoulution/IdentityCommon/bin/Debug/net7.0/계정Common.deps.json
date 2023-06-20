@@ -108,6 +108,14 @@
           }
         }
       },
+      "FluentValidation/11.5.2": {
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.5.2.0"
+          }
+        }
+      },
       "Google.Protobuf/3.21.9": {
         "runtime": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -839,6 +847,7 @@
           "AutoMapper": "12.0.1",
           "Azure.Storage.Blobs": "12.16.0",
           "DotNetCore.EntityFrameworkCore": "17.52.0",
+          "FluentValidation": "11.5.2",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.7",
           "Microsoft.AspNetCore.OpenApi": "7.0.7",
           "Microsoft.EntityFrameworkCore": "7.0.7",
@@ -904,6 +913,13 @@
       "sha512": "sha512-48TSMVn+A6AKvRMehqfuBh1KpzDgCP+G+mQok6IHGo/ttS6NEezA4JSdIII1PLhbgQ9zNKwDgWMVuUn67uZ8Rg==",
       "path": "dotnetcore.repositories/17.52.0",
       "hashPath": "dotnetcore.repositories.17.52.0.nupkg.sha512"
+    },
+    "FluentValidation/11.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kj/hW/iusp2zq1Vt1YPLgDj6UG0DhoJXGkLwjLwm3j7vUtRF8DVA5vHJfItG3BxDjLWJUR2pvw8fK7rnuysZNA==",
+      "path": "fluentvalidation/11.5.2",
+      "hashPath": "fluentvalidation.11.5.2.nupkg.sha512"
     },
     "Google.Protobuf/3.21.9": {
       "type": "package",

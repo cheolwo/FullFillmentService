@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\bin\Debug\net7.0\FrontCommon.deps.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\bin\Debug\net7.0\FrontCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\bin\Debug\net7.0\FrontCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\FrontCommon.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\FrontCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\FrontCommon.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\FrontCommon.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\FrontCommon.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\FrontCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\refint\FrontCommon.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\FrontCommon.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FrontCommon\obj\Debug\net7.0\ref\FrontCommon.dll

@@ -1,133 +1,133 @@
 using Common.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ÁÖ¹®Common.Model;
+using ì£¼ë¬¸Common.Model;
 
 namespace OrderCommon.Model
 {
-    public class ÁÖ¹®DbContext : DbContext
+    public class ì£¼ë¬¸DbContext : DbContext
     {
-        public ÁÖ¹®DbContext(DbContextOptions<ÁÖ¹®DbContext> options)
+        public ì£¼ë¬¸DbContext(DbContextOptions<ì£¼ë¬¸DbContext> options)
             : base(options)
         {
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ÁÖ¹®ÀÚConfiguration());
-            modelBuilder.ApplyConfiguration(new ÆÇ¸ÅÀÚConfiguration());
-            modelBuilder.ApplyConfiguration(new ÆÇ¸ÅÀÚ»óÇ°Configuration());
-            modelBuilder.ApplyConfiguration(new ÁÖ¹®Configuration());
-            modelBuilder.ApplyConfiguration(new ÇÒÀÏ¸ñ·ÏConfiguration());
-            modelBuilder.ApplyConfiguration(new »óÇ°¹®ÀÇConfiguration());
-            modelBuilder.ApplyConfiguration(new ´ñ±ÛConfiguration());
-            modelBuilder.ApplyConfiguration(new ÆÇ¸ÅÀÚÆÇ¸ÅÁ¤º¸¿ä¾àConfiguration());
-            modelBuilder.ApplyConfiguration(new ÆÇ¸ÅÀÚ»óÇ°ÆÇ¸ÅÁ¤º¸¿ä¾àConfiguration());
-            modelBuilder.ApplyConfiguration(new ÁÖ¹®ÀÚ±¸¸Å¿ä¾àConfiguration());
+            modelBuilder.ApplyConfiguration(new ì£¼ë¬¸ìConfiguration());
+            modelBuilder.ApplyConfiguration(new íŒë§¤ìConfiguration());
+            modelBuilder.ApplyConfiguration(new íŒë§¤ììƒí’ˆConfiguration());
+            modelBuilder.ApplyConfiguration(new ì£¼ë¬¸Configuration());
+            modelBuilder.ApplyConfiguration(new í• ì¼ëª©ë¡Configuration());
+            modelBuilder.ApplyConfiguration(new ìƒí’ˆë¬¸ì˜Configuration());
+            modelBuilder.ApplyConfiguration(new ëŒ“ê¸€Configuration());
+            modelBuilder.ApplyConfiguration(new íŒë§¤ìíŒë§¤ì •ë³´ìš”ì•½Configuration());
+            modelBuilder.ApplyConfiguration(new íŒë§¤ììƒí’ˆíŒë§¤ì •ë³´ìš”ì•½Configuration());
+            modelBuilder.ApplyConfiguration(new ì£¼ë¬¸ìêµ¬ë§¤ìš”ì•½Configuration());
         }
     }
-    public class ÁÖ¹®ÀÚConfiguration : CenterConfiguration<ÁÖ¹®ÀÚ>
+    public class ì£¼ë¬¸ìConfiguration : CenterConfiguration<ì£¼ë¬¸ì>
     {
-        public override void Configure(EntityTypeBuilder<ÁÖ¹®ÀÚ> builder)
+        public override void Configure(EntityTypeBuilder<ì£¼ë¬¸ì> builder)
         {
             base.Configure(builder);
         }
     }
-    public class ÆÇ¸ÅÀÚConfiguration : CenterConfiguration<ÆÇ¸ÅÀÚ>
+    public class íŒë§¤ìConfiguration : CenterConfiguration<íŒë§¤ì>
     {
-        public override void Configure(EntityTypeBuilder<ÆÇ¸ÅÀÚ> builder)
+        public override void Configure(EntityTypeBuilder<íŒë§¤ì> builder)
         {
             base.Configure(builder);
         }
     }
-    public class ÆÇ¸ÅÀÚ»óÇ°Configuration : CommodityConfiguration<ÆÇ¸ÅÀÚ»óÇ°>
+    public class íŒë§¤ììƒí’ˆConfiguration : CommodityConfiguration<íŒë§¤ììƒí’ˆ>
     {
-        public override void Configure(EntityTypeBuilder<ÆÇ¸ÅÀÚ»óÇ°> builder)
+        public override void Configure(EntityTypeBuilder<íŒë§¤ììƒí’ˆ> builder)
         {
             base.Configure(builder);
         }
     }
-    public class ÁÖ¹®Configuration : EntityConfiguration<ÁÖ¹®>
+    public class ì£¼ë¬¸Configuration : EntityConfiguration<ì£¼ë¬¸>
     {
-        public override void Configure(EntityTypeBuilder<ÁÖ¹®> builder)
+        public override void Configure(EntityTypeBuilder<ì£¼ë¬¸> builder)
         {
             base.Configure(builder);
         }
     }
-    public class ÇÒÀÏ¸ñ·ÏConfiguration : EntityConfiguration<ÇÒÀÏ¸ñ·Ï>
+    public class í• ì¼ëª©ë¡Configuration : EntityConfiguration<í• ì¼ëª©ë¡>
     {
-        public override void Configure(EntityTypeBuilder<ÇÒÀÏ¸ñ·Ï> builder)
+        public override void Configure(EntityTypeBuilder<í• ì¼ëª©ë¡> builder)
         {
             base.Configure(builder);
 
-            // ÇÒÀÏ¸ñ·Ï ¿£Æ¼Æ¼¿¡ ´ëÇÑ Å×ÀÌºí ±¸¼º
-            builder.ToTable("ÇÒÀÏ¸ñ·Ï"); // Å×ÀÌºí ÀÌ¸§ ¼³Á¤
+            // í• ì¼ëª©ë¡ ì—”í‹°í‹°ì— ëŒ€í•œ í…Œì´ë¸” êµ¬ì„±
+            builder.ToTable("í• ì¼ëª©ë¡"); // í…Œì´ë¸” ì´ë¦„ ì„¤ì •
 
-            // ¼Ó¼º ±¸¼º
-            builder.Property(e => e.¿ì¼±¼øÀ§).HasMaxLength(50);
-            builder.Property(e => e.»óÅÂ).HasMaxLength(50);
+            // ì†ì„± êµ¬ì„±
+            builder.Property(e => e.ìš°ì„ ìˆœìœ„).HasMaxLength(50);
+            builder.Property(e => e.ìƒíƒœ).HasMaxLength(50);
 
         }
     }
 
-    public class »óÇ°¹®ÀÇConfiguration : EntityConfiguration<»óÇ°¹®ÀÇ>
+    public class ìƒí’ˆë¬¸ì˜Configuration : EntityConfiguration<ìƒí’ˆë¬¸ì˜>
     {
-        public override void Configure(EntityTypeBuilder<»óÇ°¹®ÀÇ> builder)
+        public override void Configure(EntityTypeBuilder<ìƒí’ˆë¬¸ì˜> builder)
         {
             base.Configure(builder);
 
-            // »óÇ°¹®ÀÇ ¿£Æ¼Æ¼¿¡ ´ëÇÑ Å×ÀÌºí ±¸¼º
-            builder.ToTable("»óÇ°¹®ÀÇ"); // Å×ÀÌºí ÀÌ¸§ ¼³Á¤
+            // ìƒí’ˆë¬¸ì˜ ì—”í‹°í‹°ì— ëŒ€í•œ í…Œì´ë¸” êµ¬ì„±
+            builder.ToTable("ìƒí’ˆë¬¸ì˜"); // í…Œì´ë¸” ì´ë¦„ ì„¤ì •
 
-            // ¼Ó¼º ±¸¼º
+            // ì†ì„± êµ¬ì„±
             builder.Property(e => e.Content).HasMaxLength(500);
 
         }
     }
 
-    public class ´ñ±ÛConfiguration : EntityConfiguration<´ñ±Û>
+    public class ëŒ“ê¸€Configuration : EntityConfiguration<ëŒ“ê¸€>
     {
-        public override void Configure(EntityTypeBuilder<´ñ±Û> builder)
+        public override void Configure(EntityTypeBuilder<ëŒ“ê¸€> builder)
         {
             base.Configure(builder);
 
-            // ´ñ±Û ¿£Æ¼Æ¼¿¡ ´ëÇÑ Å×ÀÌºí ±¸¼º
-            builder.ToTable("´ñ±Û"); // Å×ÀÌºí ÀÌ¸§ ¼³Á¤
+            // ëŒ“ê¸€ ì—”í‹°í‹°ì— ëŒ€í•œ í…Œì´ë¸” êµ¬ì„±
+            builder.ToTable("ëŒ“ê¸€"); // í…Œì´ë¸” ì´ë¦„ ì„¤ì •
 
         }
     }
 
-    public class ÆÇ¸ÅÀÚÆÇ¸ÅÁ¤º¸¿ä¾àConfiguration : EntityConfiguration<ÆÇ¸ÅÀÚÆÇ¸ÅÁ¤º¸¿ä¾à>
+    public class íŒë§¤ìíŒë§¤ì •ë³´ìš”ì•½Configuration : EntityConfiguration<íŒë§¤ìíŒë§¤ì •ë³´ìš”ì•½>
     {
-        public override void Configure(EntityTypeBuilder<ÆÇ¸ÅÀÚÆÇ¸ÅÁ¤º¸¿ä¾à> builder)
+        public override void Configure(EntityTypeBuilder<íŒë§¤ìíŒë§¤ì •ë³´ìš”ì•½> builder)
         {
             base.Configure(builder);
 
-            // ÆÇ¸ÅÀÚÆÇ¸ÅÁ¤º¸¿ä¾à ¿£Æ¼Æ¼¿¡ ´ëÇÑ Å×ÀÌºí ±¸¼º
-            builder.ToTable("ÆÇ¸ÅÀÚÆÇ¸ÅÁ¤º¸¿ä¾à"); // Å×ÀÌºí ÀÌ¸§ ¼³Á¤
-            builder.HasKey(e => new { e.ÆÇ¸ÅÀÚId });
+            // íŒë§¤ìíŒë§¤ì •ë³´ìš”ì•½ ì—”í‹°í‹°ì— ëŒ€í•œ í…Œì´ë¸” êµ¬ì„±
+            builder.ToTable("íŒë§¤ìíŒë§¤ì •ë³´ìš”ì•½"); // í…Œì´ë¸” ì´ë¦„ ì„¤ì •
+            builder.HasKey(e => new { e.íŒë§¤ìId });
         }
     }
 
-    public class ÆÇ¸ÅÀÚ»óÇ°ÆÇ¸ÅÁ¤º¸¿ä¾àConfiguration : EntityConfiguration<ÆÇ¸ÅÀÚ»óÇ°ÆÇ¸ÅÁ¤º¸¿ä¾à>
+    public class íŒë§¤ììƒí’ˆíŒë§¤ì •ë³´ìš”ì•½Configuration : EntityConfiguration<íŒë§¤ììƒí’ˆíŒë§¤ì •ë³´ìš”ì•½>
     {
-        public override void Configure(EntityTypeBuilder<ÆÇ¸ÅÀÚ»óÇ°ÆÇ¸ÅÁ¤º¸¿ä¾à> builder)
+        public override void Configure(EntityTypeBuilder<íŒë§¤ììƒí’ˆíŒë§¤ì •ë³´ìš”ì•½> builder)
         {
             base.Configure(builder);
 
-            // ÆÇ¸ÅÀÚ»óÇ°ÆÇ¸ÅÁ¤º¸¿ä¾à ¿£Æ¼Æ¼¿¡ ´ëÇÑ Å×ÀÌºí ±¸¼º
-            builder.ToTable("ÆÇ¸ÅÀÚ»óÇ°ÆÇ¸ÅÁ¤º¸¿ä¾à"); // Å×ÀÌºí ÀÌ¸§ ¼³Á¤
-            builder.HasKey(e => new { e.ÆÇ¸ÅÀÚ»óÇ°Id, e.ÆÇ¸ÅÀÚId });
+            // íŒë§¤ììƒí’ˆíŒë§¤ì •ë³´ìš”ì•½ ì—”í‹°í‹°ì— ëŒ€í•œ í…Œì´ë¸” êµ¬ì„±
+            builder.ToTable("íŒë§¤ììƒí’ˆíŒë§¤ì •ë³´ìš”ì•½"); // í…Œì´ë¸” ì´ë¦„ ì„¤ì •
+            builder.HasKey(e => new { e.íŒë§¤ììƒí’ˆId, e.íŒë§¤ìId });
         }
     }
-    public class ÁÖ¹®ÀÚ±¸¸Å¿ä¾àConfiguration : EntityConfiguration<ÁÖ¹®ÀÚ±¸¸Å¿ä¾à>
+    public class ì£¼ë¬¸ìêµ¬ë§¤ìš”ì•½Configuration : EntityConfiguration<ì£¼ë¬¸ìêµ¬ë§¤ìš”ì•½>
     {
-        public override void Configure(EntityTypeBuilder<ÁÖ¹®ÀÚ±¸¸Å¿ä¾à> builder)
+        public override void Configure(EntityTypeBuilder<ì£¼ë¬¸ìêµ¬ë§¤ìš”ì•½> builder)
         {
             base.Configure(builder);
 
-            // ÁÖ¹®ÀÚ±¸¸Å¿ä¾à ¿£Æ¼Æ¼¿¡ ´ëÇÑ Å×ÀÌºí ±¸¼º
-            builder.ToTable("ÁÖ¹®ÀÚ±¸¸Å¿ä¾à"); // Å×ÀÌºí ÀÌ¸§ ¼³Á¤
+            // ì£¼ë¬¸ìêµ¬ë§¤ìš”ì•½ ì—”í‹°í‹°ì— ëŒ€í•œ í…Œì´ë¸” êµ¬ì„±
+            builder.ToTable("ì£¼ë¬¸ìêµ¬ë§¤ìš”ì•½"); // í…Œì´ë¸” ì´ë¦„ ì„¤ì •
 
         }
     }

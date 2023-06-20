@@ -41,6 +41,26 @@ namespace 주문Common.Model
         public 주문상태 상태 { get; set; }
     }
 
+    public class 상품문의 : Entity
+    {
+        [Key]
+        public string Id { get; set; }
+        public string? Content { get; set; }
+        public string 판매자상품Id { get; set; }
+        public string 주문자Id { get; set; }
+        public 판매자상품 판매자상품 { get; set; }
+        public 주문자 주문자 { get; set; }
+    }
+    public class 댓글 : Entity
+    {
+        [Key]
+        public string Id { get; set; }
+        public string 판매자상품Id { get; set; }
+        public string 주문자Id { get; set; }
+        public string Content { get; set; }
+        public 판매자상품 판매자상품 { get; set; }
+        public 주문자 주문자 { get; set; }
+    }
     public class 판매자 : Center
     {
         [Key]
@@ -78,26 +98,6 @@ namespace 주문Common.Model
         public 판매자 판매자 { get; set; }
         public List<상품문의>? 상품문의들 { get; set; }
         public List<주문>? 주문들 { get; set; }
-    }
-    public class 상품문의 : Entity
-    {
-        [Key]
-        public string Id { get; set; }
-        public string? Content { get; set; }
-        public string 판매자상품Id { get; set; }
-        public string 주문자Id { get; set; }
-        public 판매자상품 판매자상품 { get; set; }
-        public 주문자 주문자 { get; set; }
-    }
-    public class 댓글 : Entity
-    {
-        [Key]
-        public string Id { get; set; }
-        public string 판매자상품Id { get; set; }
-        public string 주문자Id { get; set; }
-        public string Content { get; set; }
-        public 판매자상품 판매자상품 { get; set; }
-        public 주문자 주문자 { get; set; }
     }
     public class 판매자판매정보요약 : Entity
     {

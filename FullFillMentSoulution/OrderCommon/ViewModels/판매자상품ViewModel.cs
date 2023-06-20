@@ -1,5 +1,4 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-using OrderClient.Services;
 using System.Collections.ObjectModel;
 using 주문Common.DTO.판매자상품;
 

@@ -4,14 +4,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\TestApplication.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\TestApplication.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\AutoMapper.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\DotNetCore.EntityFrameworkCore.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\DotNetCore.Repositories.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Common.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\TestApplication.AssemblyInfoInputs.cache
@@ -25,5 +17,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\obj\Debug\net7.0\ref\TestApplication.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\StackExchange.Redis.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\TestApplication\bin\Debug\net7.0\System.IO.Pipelines.dll

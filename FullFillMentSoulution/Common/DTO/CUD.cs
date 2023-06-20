@@ -14,5 +14,6 @@ namespace Common.DTO
     public class ReadDto 
     {
         public string Id { get; set; }
+        public DateTime CreatedAt { get; set;}
     }
 }

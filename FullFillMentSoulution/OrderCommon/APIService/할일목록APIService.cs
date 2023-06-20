@@ -1,5 +1,4 @@
-﻿
-using Common.APIService;
+﻿using Common.APIService;
 using Newtonsoft.Json;
 using System.Text;
 

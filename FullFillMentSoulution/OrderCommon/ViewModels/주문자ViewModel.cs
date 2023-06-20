@@ -1,5 +1,4 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-using OrderCommon.Services.API;
 using System.Collections.ObjectModel;
 using 주문Common.DTO.For주문;
 using 주문Common.DTO.댓글;

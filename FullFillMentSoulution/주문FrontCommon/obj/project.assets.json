@@ -1439,10 +1439,11 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Azure.Storage.Blobs": "12.16.0",
-          "DotNetCore.EntityFrameworkCore": "17.51.0",
+          "DotNetCore.EntityFrameworkCore": "17.52.0",
+          "FluentValidation": "11.5.2",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.7",
           "Microsoft.AspNetCore.OpenApi": "7.0.7",
-          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore": "7.0.7",
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
@@ -1450,6 +1451,21 @@
         },
         "runtime": {
           "bin/placeholder/Common.dll": {}
+        }
+      },
+      "FrontCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "FluentValidation": "11.5.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/FrontCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrontCommon.dll": {}
         }
       },
       "계정Common/1.0.0": {
@@ -3937,6 +3953,11 @@
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
     },
+    "FrontCommon/1.0.0": {
+      "type": "project",
+      "path": "../FrontCommon/FrontCommon.csproj",
+      "msbuildProject": "../FrontCommon/FrontCommon.csproj"
+    },
     "계정Common/1.0.0": {
       "type": "project",
       "path": "../IdentityCommon/계정Common.csproj",
@@ -3952,6 +3973,7 @@
     "net7.0": [
       "CommunityToolkit.Mvvm >= 8.2.0",
       "FluentValidation >= 11.5.2",
+      "FrontCommon >= 1.0.0",
       "Microsoft.JSInterop >= 7.0.7",
       "Newtonsoft.Json >= 13.0.3",
       "주문Common >= 1.0.0"
@@ -3990,6 +4012,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontCommon\\FrontCommon.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\FrontCommon\\FrontCommon.csproj"
+            },
             "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\주문Common.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\OrderCommon\\주문Common.csproj"
             }
