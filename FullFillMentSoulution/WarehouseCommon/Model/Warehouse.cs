@@ -28,28 +28,28 @@ namespace 창고Common
             base.Configure(builder);
         }
     }
-    public class 창고상품Configuration : EntityConfiguration<창고상품>
+    public class 창고상품Configuration : CommodityConfiguration<창고상품>
     {
         public override void Configure(EntityTypeBuilder<창고상품> builder)
         {
             base.Configure(builder);
         }
     }
-    public class 입고상품Configuration : CommodityConfiguration<입고상품>
+    public class 입고상품Configuration : StatusConfiguration<입고상품>
     {
         public override void Configure(EntityTypeBuilder<입고상품> builder)
         {
             base.Configure(builder);
         }
     }
-    public class 적재상품Configuration : CommodityConfiguration<적재상품>
+    public class 적재상품Configuration : StatusConfiguration<적재상품>
     {
         public override void Configure(EntityTypeBuilder<적재상품> builder)
         {
             base.Configure(builder);
         }
     }
-    public class 출고상품Configuration : CommodityConfiguration<출고상품>
+    public class 출고상품Configuration : StatusConfiguration<출고상품>
     {
         public override void Configure(EntityTypeBuilder<출고상품> builder)
         {
@@ -65,7 +65,7 @@ namespace 창고Common
         public List<적재상품>? 적재상품들 { get; set; }
         public List<출고상품>? 출고상품들 { get; set; }
     }
-    public class 창고상품 : Entity
+    public class 창고상품 : Commodity
     {
         [Key]
         public string Id { get; set; }
@@ -75,7 +75,7 @@ namespace 창고Common
         public List<적재상품>? 적재상품들 { get; set; }
         public List<출고상품>? 출고상품들 { get; set; }
     }
-    public class 입고상품 : Commodity
+    public class 입고상품 : Status
     {
         [Key]
         public string Id { get; set; }
@@ -86,7 +86,7 @@ namespace 창고Common
         public List<적재상품>? 적재상품들 { get; set; }
         public List<출고상품>? 출고상품들 { get; set; }
     }
-    public class 적재상품 : Commodity
+    public class 적재상품 : Status
     {
         [Key]
         public string Id { get; set; }
@@ -98,7 +98,7 @@ namespace 창고Common
         public 입고상품? 입고상품 { get; set; }
         public List<출고상품>? 출고상품들 { get; set; }
     }
-    public class 출고상품 : Commodity
+    public class 출고상품 : Status
     {
         [Key]
         public string Id { get; set; }

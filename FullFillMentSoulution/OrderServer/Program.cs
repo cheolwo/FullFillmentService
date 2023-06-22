@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using OrderCommon.Model;
-using OrderCommon.Repository;
 using OrderCommon.Services;
 using Quartz;
 using System.Reflection;
@@ -14,6 +13,7 @@ using System.Text;
 using 계정Common.Models;
 using 주문Common.Command;
 using 주문Common.Event;
+using 주문Common.Model.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration Configuration = builder.Configuration;

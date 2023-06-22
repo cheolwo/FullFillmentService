@@ -24,6 +24,14 @@ namespace Common.Configuration
             base.Configure(builder);
         }
     }
+    public class StatusConfiguration<TEntity> : EntityConfiguration<TEntity>
+        where TEntity : Status
+    {
+        public override void Configure(EntityTypeBuilder<TEntity> builder)
+        {
+            base.Configure(builder);
+        }
+    }
     public class CenterConfiguration<TEntity> : EntityConfiguration<TEntity>
         where TEntity : Center
     {

@@ -3,7 +3,7 @@ using Common.Cache;
 using Common.DTO;
 using Common.FileStorage;
 using Common.Model;
-using Common.Repository;
+using Common.Model.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

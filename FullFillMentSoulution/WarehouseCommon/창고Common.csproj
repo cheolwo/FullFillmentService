@@ -14,4 +14,9 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Event\" />
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+
 </Project>

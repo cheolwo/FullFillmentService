@@ -414,11 +414,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Identity.UI/7.0.5": {
+      "Microsoft.AspNetCore.Identity.UI/7.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.FileProviders.Embedded": "7.0.5",
-          "Microsoft.Extensions.Identity.Stores": "7.0.5"
+          "Microsoft.Extensions.FileProviders.Embedded": "7.0.7",
+          "Microsoft.Extensions.Identity.Stores": "7.0.7"
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Identity.UI.dll": {
@@ -807,7 +807,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.FileProviders.Embedded/7.0.5": {
+      "Microsoft.Extensions.FileProviders.Embedded/7.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.FileProviders.Abstractions": "7.0.0"
@@ -1827,13 +1827,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "DotNetCore.EntityFrameworkCore": "17.51.0",
+          "DotNetCore.EntityFrameworkCore": "17.52.0",
           "MediatR": "12.0.1",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.5",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
-          "Microsoft.AspNetCore.Identity.UI": "7.0.5",
-          "Microsoft.AspNetCore.OpenApi": "7.0.5",
-          "Microsoft.Extensions.Identity.Core": "7.0.5",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.7",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.7",
+          "Microsoft.AspNetCore.Identity.UI": "7.0.7",
+          "Microsoft.AspNetCore.OpenApi": "7.0.7",
+          "Microsoft.Extensions.Identity.Core": "7.0.7",
           "MySql.EntityFrameworkCore": "7.0.2",
           "Swashbuckle.AspNetCore": "6.5.0",
           "계정Common": "1.0.0",
@@ -2394,10 +2394,10 @@
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Identity.UI/7.0.5": {
-      "sha512": "OMq8uXQeoL82hlAT96OW4/dh9OalCWOF5G02vlBrZG2+9PREhkOFz9h8zTeqciXUUTSpr06BR18yjCPqOUJnmQ==",
+    "Microsoft.AspNetCore.Identity.UI/7.0.7": {
+      "sha512": "5SWyk280d2j7TRg3ySq1lHab6bc8j00Jna9ZBX3mFSPdd+GdBZfuEzvxulon3rc2CRyyriVdPlETE0miF9t7uw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.identity.ui/7.0.5",
+      "path": "microsoft.aspnetcore.identity.ui/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2412,7 +2412,7 @@
         "buildTransitive/Microsoft.AspNetCore.Identity.UI.targets",
         "lib/net7.0/Microsoft.AspNetCore.Identity.UI.dll",
         "lib/net7.0/Microsoft.AspNetCore.Identity.UI.xml",
-        "microsoft.aspnetcore.identity.ui.7.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.identity.ui.7.0.7.nupkg.sha512",
         "microsoft.aspnetcore.identity.ui.nuspec",
         "staticwebassets/V4/css/site.css",
         "staticwebassets/V4/favicon.ico",
@@ -3229,10 +3229,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.FileProviders.Embedded/7.0.5": {
-      "sha512": "E6enL5sLbxKjAWyUxthcOxlDYR6OT+wUBj42EpTR3j/cKI+UOkGCW7cSm8F9yQi9KxeM4Iq8dKZd13gMwYE+6Q==",
+    "Microsoft.Extensions.FileProviders.Embedded/7.0.7": {
+      "sha512": "XEB8Dmiqa13buwoRIZyEbKTOHaL+LQjjuHv7gZmQw9b/biykNmhtW4CtZ9uaa/DHhh8itdoE8FTt5HUssVp3iw==",
       "type": "package",
-      "path": "microsoft.extensions.fileproviders.embedded/7.0.5",
+      "path": "microsoft.extensions.fileproviders.embedded/7.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3247,7 +3247,7 @@
         "lib/net7.0/Microsoft.Extensions.FileProviders.Embedded.xml",
         "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll",
         "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.xml",
-        "microsoft.extensions.fileproviders.embedded.7.0.5.nupkg.sha512",
+        "microsoft.extensions.fileproviders.embedded.7.0.7.nupkg.sha512",
         "microsoft.extensions.fileproviders.embedded.nuspec",
         "tasks/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
       ]

@@ -1,4 +1,5 @@
 ﻿using Common.Actor;
+using Common.DTO;
 using CommunityToolkit.Mvvm.ComponentModel;
 using FrontCommon.Actor;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +8,7 @@ using Microsoft.JSInterop;
 
 namespace Common.ViewModel
 {
-    public class BaseViewModel : ObservableObject
+    public abstract class BaseViewModel : ObservableObject
     {
         protected readonly ILogger _logger;
 
@@ -16,7 +17,7 @@ namespace Common.ViewModel
             _logger = logger;
         }
     }
-    public class WebViewModel : BaseViewModel
+    public abstract class WebViewModel : BaseViewModel
     {
         protected readonly IConfiguration _configuration;
         protected readonly IJSRuntime _jsRuntime;
@@ -28,15 +29,41 @@ namespace Common.ViewModel
             _jsRuntime = jsRuntime;
         }
     }
-    public class ActorPageViewModel : WebViewModel
+    public class ActorWebPageViewModel : WebViewModel
     {
         protected readonly ActorCommandContext _actorCommandContext;
         protected readonly ActorQueryContext _actorQueryContext;
-        public ActorPageViewModel(ActorCommandContext actorCommandContext, ActorQueryContext actorQueryContext, IJSRuntime jsRuntime, IConfiguration configuration, ILogger<ActorPageViewModel> logger)
+        public ActorWebPageViewModel(ActorCommandContext actorCommandContext, ActorQueryContext actorQueryContext, IJSRuntime jsRuntime, IConfiguration configuration, ILogger<ActorWebPageViewModel> logger)
             : base(logger, configuration, jsRuntime)
         {
             _actorCommandContext = actorCommandContext;
             _actorQueryContext = actorQueryContext;
+        }
+        public async Task Login(LoginModel loginModel)
+        {
+            var response = await _actorCommandContext.Set<LoginModel>().PostAsync(loginModel);
+            if (response.IsSuccessStatusCode)
+            {
+                var token = await response.Content.ReadAsStringAsync();
+
+                if (!string.IsNullOrEmpty(token))
+                {
+                    await _jsRuntime.InvokeVoidAsync("localStorage.setItem", "token", token);
+                }
+            }
+            else
+            {
+                var errorMessage = await response.Content.ReadAsStringAsync();
+                throw new Exception($"서버 응답: {errorMessage}");
+            }
+        }
+        public async Task<string> GetToken()
+        {
+            return await _jsRuntime.InvokeAsync<string>("localStorage.getItem", "token");
+        }
+        public async Task Logout()
+        {
+            await _jsRuntime.InvokeVoidAsync("localStorage.removeItem", "token");
         }
     }
 }

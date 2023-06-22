@@ -2,7 +2,7 @@
 using Common.Cache;
 using Common.DTO;
 using Common.Model;
-using Common.Repository;
+using Common.Model.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Linq.Expressions;

@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
+    <Folder Include="DTO\" />
     <Folder Include="Migrations\" />
     <Folder Include="Command\" />
   </ItemGroup>

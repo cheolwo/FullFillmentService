@@ -2,12 +2,12 @@
 using Common.Cache;
 using Common.DTO;
 using Common.Model;
-using Common.Repository;
+using Common.Model.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace Common.Controller
-{   
+{
     public class CenterQueryController<TEntity, TDto> : EntityQueryController<TEntity, TDto>
     where TEntity : Center
     where TDto : ReadDto

@@ -1,4 +1,4 @@
-﻿using Common.Repository;
+﻿using Common.Model.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace 창고Common.Repository

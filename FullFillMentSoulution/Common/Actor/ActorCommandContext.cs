@@ -15,9 +15,13 @@ namespace FrontCommon.Actor
         {
 
         }
-        protected DtoTypeCommandBuilder<TDto> Set<TDto>() where TDto : class
+        public DtoTypeCommandBuilder<TDto> Set<TDto>() where TDto : class
         {
             return dtoCommandBuilder.Set<TDto>();
+        }
+        public bool IsWeb()
+        {
+            return _options.IsWeb;
         }
     }
 }

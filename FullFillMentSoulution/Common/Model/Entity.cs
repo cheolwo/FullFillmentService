@@ -33,6 +33,7 @@ namespace Common.Model
             get => JsonConvert.DeserializeObject<List<string>>(FileUrlJson);
             set => FileUrlJson = JsonConvert.SerializeObject(value);
         }
+        public List<문의> 문의들 { get; set; }
     }
     [NotMapped]
     public class Center : Entity
@@ -44,9 +45,32 @@ namespace Common.Model
         public string? ZipCode { get; set; }
 
     }
+    // 상품에 대한 공통정보
     [NotMapped]
     public class Commodity : Entity
     {
         public string Quantity { get; set; }
+        
+    }
+    [NotMapped]
+    public class Status : Entity
+    {
+        public string Quantity { get; set; }
+    }
+    [NotMapped]
+    public class 문의 : Entity
+    {
+        public string 내용 { get; set; }
+        public string CenterId { get; set; }
+        // 자식 댓글들
+        public List<문의> 문의들 { get; set; }
+
+        // 자식 댓글들을 JSON으로 직렬화하는 속성
+        [NotMapped]
+        public string 문의들Json
+        {
+            get => JsonConvert.SerializeObject(문의들);
+            set => 문의들 = JsonConvert.DeserializeObject<List<문의>>(value);
+        }
     }
 }

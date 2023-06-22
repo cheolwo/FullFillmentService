@@ -1,4 +1,4 @@
-﻿using Common.Repository;
+﻿using Common.Model.Repository;
 using Microsoft.EntityFrameworkCore;
 using 수협Common.Model;
 

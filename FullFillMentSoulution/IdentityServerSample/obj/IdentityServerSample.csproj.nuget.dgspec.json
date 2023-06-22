@@ -276,7 +276,7 @@
           "dependencies": {
             "DotNetCore.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[17.51.0, )"
+              "version": "[17.52.0, )"
             },
             "MediatR": {
               "target": "Package",
@@ -284,29 +284,29 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",

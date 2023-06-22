@@ -2,9 +2,9 @@
 using Common.Cache;
 using Common.Controller;
 using Microsoft.AspNetCore.Mvc;
-using OrderCommon.Repository;
 using 주문Common.DTO.주문자;
 using 주문Common.Model;
+using 주문Common.Model.Repository;
 
 namespace 주문QueryServer.Controllers
 {

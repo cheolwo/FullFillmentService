@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using OrderCommon.Repository;
 using 주문Common.DTO.For주문;
 using 주문Common.DTO.댓글;
 using 주문Common.DTO.상품문의;
 using 주문Common.DTO.주문자;
 using 주문Common.Model;
+using 주문Common.Model.Repository;
 
 namespace OrderServer.Controllers
 {

@@ -381,6 +381,20 @@
           "Microsoft.Extensions.Primitives": "7.0.0"
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/7.0.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
+          "Microsoft.Extensions.Options": "7.0.1",
+          "StackExchange.Redis": "2.6.116"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "7.0.7.0",
+            "fileVersion": "7.0.723.27408"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
@@ -633,11 +647,33 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "dependencies": {
+          "System.IO.Pipelines": "6.0.3"
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.8.1080"
+          }
+        }
+      },
       "Portable.BouncyCastle/1.9.0": {
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "assemblyVersion": "1.9.0.0",
             "fileVersion": "1.9.0.1"
+          }
+        }
+      },
+      "StackExchange.Redis/2.6.116": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "runtime": {
+          "lib/net5.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.6.116.40240"
           }
         }
       },
@@ -846,12 +882,15 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Azure.Storage.Blobs": "12.16.0",
+          "CommunityToolkit.Mvvm": "8.2.0",
           "DotNetCore.EntityFrameworkCore": "17.52.0",
           "FluentValidation": "11.5.2",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.7",
           "Microsoft.AspNetCore.OpenApi": "7.0.7",
           "Microsoft.EntityFrameworkCore": "7.0.7",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "7.0.7",
+          "Newtonsoft.Json": "13.0.3",
+          "StackExchange.Redis": "2.6.116"
         },
         "runtime": {
           "Common.dll": {}
@@ -1131,6 +1170,13 @@
       "path": "microsoft.extensions.caching.memory/7.0.0",
       "hashPath": "microsoft.extensions.caching.memory.7.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/7.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qo+H7rCGLo7QW/qLqURxacw1DHwdFXg7jYfQGvNGZW68TN0er3O6cDiWplu+hMKtdh9oDLJ2jPgSnP9b/mZX/g==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/7.0.7",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.7.0.7.nupkg.sha512"
+    },
     "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1299,12 +1345,26 @@
       "path": "newtonsoft.json.bson/1.0.2",
       "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+    },
     "Portable.BouncyCastle/1.9.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
       "path": "portable.bouncycastle/1.9.0",
       "hashPath": "portable.bouncycastle.1.9.0.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.6.116": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YXjxaWhXVhqsx5kDjAEYNM1jxZjO8Tzf/tYixtkK9LVMLhDDkvnfuf5UWfTnZ5h/+cMtwhLI9mWaTg1QcufJ8Q==",
+      "path": "stackexchange.redis/2.6.116",
+      "hashPath": "stackexchange.redis.2.6.116.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",

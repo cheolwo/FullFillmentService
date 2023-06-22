@@ -1,16 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hU9VB7qGeR7a1VnYCeBmgridjeTctfg0TWrdT7O5Z5au8R5asBOvCTbyEUrkmqeiyD322CwvN1MA4u7IoIx2Mw==",
+  "dgSpecHash": "ivbRYCd9RCeCEKEAY7a3VDRoJRhLkzLLR0Q0kLxdwzqFPuHJFdi5yNyx3qhH/u9/3YbHWrx0yKYQVJQ4GoQnGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\TestApplication\\TestApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\stackexchange.redis\\2.6.116\\stackexchange.redis.2.6.116.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

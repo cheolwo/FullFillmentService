@@ -51,41 +51,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "CommunityToolkit.Mvvm": {
-              "target": "Package",
-              "version": "[8.2.0, )"
-            },
-            "Microsoft.AspNetCore.Authorization": {
-              "target": "Package",
-              "version": "[7.0.7, )"
-            },
-            "Microsoft.AspNetCore.Components.Authorization": {
-              "target": "Package",
-              "version": "[7.0.7, )"
-            },
-            "Microsoft.AspNetCore.Components.WebAssembly": {
-              "target": "Package",
-              "version": "[7.0.7, )"
-            },
-            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
-              "target": "Package",
-              "version": "[7.0.7, )"
-            },
-            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.7, )"
-            },
-            "MudBlazor": {
-              "target": "Package",
-              "version": "[6.4.1, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[6.31.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -97,17 +62,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.1, 7.0.1]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }

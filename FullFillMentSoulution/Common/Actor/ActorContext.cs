@@ -33,8 +33,7 @@ namespace FrontCommon.Actor
     }
     public class ActorContextOptions
     {
-        public string? ApiGateWayServerReoute { get; set; }
-        // 추가적인 옵션들...
+        public bool IsWeb { get; set; }
     }
     public class ActorQueryContextOptions : ActorContextOptions { }
     public interface IDtoConfiguration<TDto> where TDto : class
