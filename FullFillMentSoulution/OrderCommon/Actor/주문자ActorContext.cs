@@ -18,6 +18,14 @@ namespace 주문FrontCommon.Actor
             dtoBuilder.ApplyConfiguration(new Create주문DtoConfiguration());
             dtoBuilder.ApplyConfiguration(new Update주문DtoConfiguration());
             dtoBuilder.ApplyConfiguration(new Delete주문DtoConfiguration());
+
+            dtoBuilder.ApplyConfiguration(new Create주문DtoConfiguration());
+            dtoBuilder.ApplyConfiguration(new Update주문DtoConfiguration());
+            dtoBuilder.ApplyConfiguration(new Delete주문DtoConfiguration());
+
+            dtoBuilder.ApplyConfiguration(new Create주문DtoConfiguration());
+            dtoBuilder.ApplyConfiguration(new Update주문DtoConfiguration());
+            dtoBuilder.ApplyConfiguration(new Delete주문DtoConfiguration());
         }
     }
 }

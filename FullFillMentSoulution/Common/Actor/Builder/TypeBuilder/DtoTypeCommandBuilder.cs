@@ -35,7 +35,7 @@ namespace Common.Actor.Builder
             return this;
         }
 
-        public async Task<HttpResponseMessage> PostAsync(TDto dto, string userId, string jwtToken)
+        public async Task<HttpResponseMessage> PostAsync(TDto dto, string jwtToken)
         {
             var selectedRoute = GetSelectedBaseRoute(dto);
             if (Validator != null)
@@ -53,7 +53,6 @@ namespace Common.Actor.Builder
 
                 // Set Authorization header with JWT token
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
-                httpClient.DefaultRequestHeaders.Add("UserId", userId);
 
                 var jsonContent = JsonConvert.SerializeObject(dto);
                 var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
@@ -80,7 +79,7 @@ namespace Common.Actor.Builder
                 return await httpClient.PostAsync(selectedRoute.Route, httpContent);
             }
         }
-        public async Task<HttpResponseMessage> PutAsync(TDto dto, string userId, string jwtToken)
+        public async Task<HttpResponseMessage> PutAsync(TDto dto, string jwtToken)
         {
             var selectedRoute = GetSelectedBaseRoute(dto);
             if (Validator != null)
@@ -98,7 +97,6 @@ namespace Common.Actor.Builder
 
                 // Set Authorization header with JWT token
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
-                httpClient.DefaultRequestHeaders.Add("UserId", userId);
 
                 var jsonContent = JsonConvert.SerializeObject(dto);
                 var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
@@ -125,7 +123,7 @@ namespace Common.Actor.Builder
                 return await httpClient.PutAsync(selectedRoute.BaseAddress, httpContent);
             }
         }
-        public async Task<HttpResponseMessage> DeleteAsync(string id, string userId, string jwtToken)
+        public async Task<HttpResponseMessage> DeleteAsync(string id, string jwtToken)
         {
             var selectedRoute = GetSelectedBaseRoute(null);
             using (var httpClient = new HttpClient())
@@ -134,7 +132,6 @@ namespace Common.Actor.Builder
 
                 // Set Authorization header with JWT token
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
-                httpClient.DefaultRequestHeaders.Add("UserId", userId);
                 return await httpClient.DeleteAsync($"{selectedRoute.Route}/{id}");
             }
         }

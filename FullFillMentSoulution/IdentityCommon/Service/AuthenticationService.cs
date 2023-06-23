@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Common.DTO;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +7,6 @@ using Microsoft.JSInterop;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using 계정Common.Actor;
-using 계정Common.DTO;
 
 namespace 계정Common.Service
 {
@@ -31,7 +31,6 @@ namespace 계정Common.Service
             {
                 // 사용자 인증 요청
                 var token = await _actorLoginService.Login(loginModel);
-
                 if (!string.IsNullOrEmpty(token))
                 {
                     // 토큰을 기반으로 사용자 정보를 가져옴
@@ -149,7 +148,7 @@ namespace 계정Common.Service
 
             // 새로운 AuthenticationState 객체 생성
             var authenticationState = new AuthenticationState(principal);
-
+            
             // 인증 상태 업데이트
             NotifyAuthenticationStateChanged(Task.FromResult(authenticationState));
         }

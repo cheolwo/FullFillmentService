@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 using System.Text;
-using 계정Common.DTO;
+using Common.DTO;
 
 namespace 계정Common.Actor
 {
