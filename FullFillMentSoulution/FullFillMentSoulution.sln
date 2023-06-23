@@ -47,10 +47,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "주문자AppCommon", "주�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaverCommon", "NaverCommon\NaverCommon.csproj", "{86803290-E402-47F0-B218-C1EFA69EAA7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "주문자WebApp", "..\..\OrdererWebApp\주문자WebApp\주문자WebApp\주문자WebApp.csproj", "{C2C52089-33EA-4791-9AE1-B019E82DA46E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협조합장WebApp", "..\..\-WebApp\수협조합장App\수협조합장WebApp\수협조합장WebApp.csproj", "{2C25CD91-E7E9-4F09-BC42-8A7214F75509}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Query", "Query", "{B72202BC-9F6A-4066-954C-FC26719321B4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "수협QueryServer", "수협QueryServer\수협QueryServer.csproj", "{F386A1E9-9850-4D9B-A989-A755003116D3}"
@@ -67,25 +63,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "판매자APIGateWay", "판�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "창고관리자APIGateWay", "창고관리자APIGateWay\창고관리자APIGateWay.csproj", "{AE1DD507-3E7E-4220-9BB4-703D7798BBFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "판매Common", "판매Common\판매Common.csproj", "{BBED3765-513C-4D0B-9812-6AC0E970DB3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "판매Common", "판매Common\판매Common.csproj", "{BBED3765-513C-4D0B-9812-6AC0E970DB3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "판매QueryServer", "판매QueryServer\판매QueryServer.csproj", "{03F725F6-A15C-43BA-8492-B5AA89B97B2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "판매QueryServer", "판매QueryServer\판매QueryServer.csproj", "{03F725F6-A15C-43BA-8492-B5AA89B97B2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "판매Server", "판매Server\판매Server.csproj", "{99F0B8CA-21AC-4369-857B-58F063603E6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "판매Server", "판매Server\판매Server.csproj", "{99F0B8CA-21AC-4369-857B-58F063603E6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "주문판매Common", "주문판매Common\주문판매Common.csproj", "{0C603847-A683-47A5-A2EA-0B76F1992EC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "주문판매Common", "주문판매Common\주문판매Common.csproj", "{0C603847-A683-47A5-A2EA-0B76F1992EC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "판매요약Common", "판매요약Common\판매요약Common.csproj", "{FA1A6539-A02C-4984-93DB-7E8641E88D7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "판매요약Common", "판매요약Common\판매요약Common.csproj", "{FA1A6539-A02C-4984-93DB-7E8641E88D7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "마켓Common", "마켓Common\마켓Common.csproj", "{4EC2E0E9-FBAA-4831-921C-C9BC80E73E0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "마켓Common", "마켓Common\마켓Common.csproj", "{4EC2E0E9-FBAA-4831-921C-C9BC80E73E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "마켓QueryServer", "마켓QueryServer\마켓QueryServer.csproj", "{7373B173-70BE-4801-8698-9C3F3AEA1EE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "마켓QueryServer", "마켓QueryServer\마켓QueryServer.csproj", "{7373B173-70BE-4801-8698-9C3F3AEA1EE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "마켓Server", "마켓Server\마켓Server.csproj", "{CC878FE4-D2F7-429A-B044-09219BFFC135}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "마켓Server", "마켓Server\마켓Server.csproj", "{CC878FE4-D2F7-429A-B044-09219BFFC135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "판매자WebApp", "판매자WebApp\판매자WebApp.csproj", "{17A7A3E6-DB08-4942-91B8-B556C14F5C0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "판매자WebApp", "판매자WebApp\판매자WebApp.csproj", "{17A7A3E6-DB08-4942-91B8-B556C14F5C0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "창고관리자WebApp", "창고관리자WebApp\창고관리자WebApp.csproj", "{E02B66F2-098F-4D3F-B7CA-926D7099A406}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "창고관리자WebApp", "창고관리자WebApp\창고관리자WebApp.csproj", "{E02B66F2-098F-4D3F-B7CA-926D7099A406}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,14 +145,6 @@ Global
 		{86803290-E402-47F0-B218-C1EFA69EAA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86803290-E402-47F0-B218-C1EFA69EAA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86803290-E402-47F0-B218-C1EFA69EAA7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2C52089-33EA-4791-9AE1-B019E82DA46E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2C52089-33EA-4791-9AE1-B019E82DA46E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2C52089-33EA-4791-9AE1-B019E82DA46E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2C52089-33EA-4791-9AE1-B019E82DA46E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C25CD91-E7E9-4F09-BC42-8A7214F75509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C25CD91-E7E9-4F09-BC42-8A7214F75509}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C25CD91-E7E9-4F09-BC42-8A7214F75509}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C25CD91-E7E9-4F09-BC42-8A7214F75509}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F386A1E9-9850-4D9B-A989-A755003116D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F386A1E9-9850-4D9B-A989-A755003116D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F386A1E9-9850-4D9B-A989-A755003116D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -246,8 +234,6 @@ Global
 		{8381AF77-E6DA-4598-BB88-56A83D1C2E30} = {C693EABB-652D-4124-A73D-893463D3FEAA}
 		{138FD150-980C-405E-95CE-89A1D6F146B9} = {8381AF77-E6DA-4598-BB88-56A83D1C2E30}
 		{11E8E1BF-0D82-47C4-9F88-A1DEE42E12AF} = {8381AF77-E6DA-4598-BB88-56A83D1C2E30}
-		{C2C52089-33EA-4791-9AE1-B019E82DA46E} = {B1BFAF3C-0C0F-4E4F-A7B8-BCC5790FD7C6}
-		{2C25CD91-E7E9-4F09-BC42-8A7214F75509} = {B1BFAF3C-0C0F-4E4F-A7B8-BCC5790FD7C6}
 		{B72202BC-9F6A-4066-954C-FC26719321B4} = {D7AD4DD9-FB68-47B1-A65E-164D9661A3D1}
 		{F386A1E9-9850-4D9B-A989-A755003116D3} = {B72202BC-9F6A-4066-954C-FC26719321B4}
 		{C18CE5F5-811D-43D8-97A3-6ED3C248BDE1} = {B72202BC-9F6A-4066-954C-FC26719321B4}

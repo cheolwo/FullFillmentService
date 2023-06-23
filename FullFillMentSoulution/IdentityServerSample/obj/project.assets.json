@@ -1766,6 +1766,7 @@
           "CommunityToolkit.Mvvm": "8.2.0",
           "DotNetCore.EntityFrameworkCore": "17.52.0",
           "FluentValidation": "11.5.2",
+          "MediatR": "12.0.1",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.7",
           "Microsoft.AspNetCore.OpenApi": "7.0.7",
           "Microsoft.EntityFrameworkCore": "7.0.7",
@@ -5067,23 +5068,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Users\\power\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\IdentityServerSample.csproj",
+      "projectUniqueName": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\IdentityServerSample.csproj",
       "projectName": "IdentityServerSample",
-      "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\IdentityServerSample.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\obj\\",
+      "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\IdentityServerSample.csproj",
+      "packagesPath": "C:\\Users\\power\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityServerSample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\power\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5099,11 +5100,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj"
+            "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj": {
+              "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj"
             },
-            "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj"
+            "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj": {
+              "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\KoreaCommon\\수협Common.csproj"
             }
           }
         }
@@ -5180,7 +5181,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

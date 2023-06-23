@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Command\**" />
+    <Compile Remove="DTO\**" />
+    <EmbeddedResource Remove="Command\**" />
+    <EmbeddedResource Remove="DTO\**" />
+    <None Remove="Command\**" />
+    <None Remove="DTO\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
     <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="17.52.0" />
@@ -26,9 +35,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
-    <Folder Include="DTO\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Command\" />
   </ItemGroup>
 
   <ItemGroup>
