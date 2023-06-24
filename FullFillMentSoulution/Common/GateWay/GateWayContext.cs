@@ -1,5 +1,6 @@
 using Common.Actor.Builder;
 using Common.DTO;
+using Common.ForCommand;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -60,11 +61,11 @@ namespace Common.GateWay
             }
         }
     }
-    public interface IQueForGateWayServer<T> where T : class
+    public interface IQueForGateWayServer<T> where T : CudDTO
     {
-        Task Enqueue(T command);
+        Task Enqueue(CudCommand<T> command);
     }
-    public interface IQueForBusinessServer<T> where T : class
+    public interface IQueForBusinessServer<T> where T : CudDTO
     {
         Task<T> Dequeue();
     }
@@ -89,7 +90,7 @@ namespace Common.GateWay
             _connectionString = connectionString;
             return this;
         }
-        public async Task Enqueue(T command)
+        public async Task Enqueue(CudCommand<T> command)
         {
             var factory = new ConnectionFactory
             {
@@ -162,6 +163,10 @@ namespace Common.GateWay
         }
 
         protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
+        public GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO
+        {
+            return commandBuilder.Set<TDto>();
+        }
     }
     //public class RabbitMQCommandQue<T> : IQueForGateWayServer<T>, IQueForBusinessServer<T> where T : CudDTO
     //{

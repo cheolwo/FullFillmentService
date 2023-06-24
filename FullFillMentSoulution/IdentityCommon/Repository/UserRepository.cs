@@ -1,4 +1,5 @@
-﻿using DotNetCore.EntityFrameworkCore;
+﻿using Common.ForCommand;
+using DotNetCore.EntityFrameworkCore;
 using IdentityCommon.Models.ForApplicationUser;
 using Microsoft.AspNetCore.Identity;
 using 계정Common.Models;
@@ -19,6 +20,20 @@ namespace IdentityServerTest.Repository
         public async Task<int> SaveChangesAsync()
         {
             return await _unitOfWork.SaveChangesAsync();
+        }
+        public async Task<ApplicationUser> GetUserByIdAsync(string userId)
+        {
+            return await _applicationDbContext.Users.FindAsync(userId);
+        }
+
+        public async Task<CommandOption?> GetCommandOptionByName(string userId, string nameofCommand)
+        {
+            var user = await _applicationDbContext.Users.FindAsync(userId);
+            if(user == null)
+            {
+                throw new ArgumentNullException(userId + nameofCommand);
+            }
+            return user.commandOptions.FirstOrDefault(c => c.NameofCommand == nameofCommand);
         }
     }
     public class IdentityRoleRepository : EFRepository<IdentityRole>, IUnitOfWork

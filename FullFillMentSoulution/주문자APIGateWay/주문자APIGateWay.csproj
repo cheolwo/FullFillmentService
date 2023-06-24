@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="APIService\" />
+    <Folder Include="Handlr\" />
   </ItemGroup>
 
 </Project>

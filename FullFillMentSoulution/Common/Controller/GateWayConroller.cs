@@ -1,17 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Common.DTO;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Common.Controller
 {
-    public class APIGateWayCommandConroller : ControllerBase
+    public class GateWayCommandConroller<T> : ControllerBase where T : CudDTO
     {
-        public APIGateWayCommandConroller()
+        protected readonly IMediator _mediator;
+        protected readonly IMapper _mapper;
+        public GateWayCommandConroller(IMediator mediator, IMapper mapper)
         {
-
+            _mediator = mediator;
+            _mapper = mapper;
         }
     }
 }
