@@ -23,12 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
-    <ProjectReference Include="..\KoreaCommon\수협Common.csproj" />
+    <Folder Include="Controllers\Service\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Service\" />
+    <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
   </ItemGroup>
 
 </Project>

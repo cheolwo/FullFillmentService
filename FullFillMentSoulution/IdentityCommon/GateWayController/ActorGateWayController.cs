@@ -6,7 +6,7 @@ using 계정Common.Extensions;
 
 namespace 계정Common.GateWayController
 {
-    public class ActorGateWayController<T> : ControllerBase where T : CudDTO
+    public class ActorGateWayController : ControllerBase
     {
         protected readonly ApplicationUserRepository _applicationUserRepository;
 
@@ -14,7 +14,7 @@ namespace 계정Common.GateWayController
         {
             _applicationUserRepository = applicationUserRepository;
         }
-        public async Task<CudCommand<T>> Set(T t)
+        public async Task<CommandOption> Set<T>() where T : CudDTO
         {
             // 헤더에서 토큰 추출
             var token = Request.Headers["Authorization"].ToString()?.Replace("Bearer ", "");
@@ -33,9 +33,7 @@ namespace 계정Common.GateWayController
             }
 
             var userOptions = await _applicationUserRepository.GetCommandOptionByName(userId, typeof(T).Name);
-            var command = t.Mapping(userOptions);
-
-            return command;
+            return userOptions;
         }
     }
 }

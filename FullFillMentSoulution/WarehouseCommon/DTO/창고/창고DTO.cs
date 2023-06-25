@@ -1,21 +1,19 @@
 ﻿using Common.DTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace 창고Common.DTO.창고
 {
-    public class Create창고DTO : CenterCudDTO
+    public class 창고CudDTO : CenterCudDTO
     {
 
     }
-    public class Update창고DTO : CenterCudDTO
+    public class Create창고DTO : 창고CudDTO
+    {
+    }
+    public class Update창고DTO : 창고CudDTO
     {
 
     }
-    public class Delete창고DTO : CenterCudDTO
+    public class Delete창고DTO : 창고CudDTO
     {
 
     }

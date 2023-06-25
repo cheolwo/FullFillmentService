@@ -1,8 +1,6 @@
-﻿using Common.DTO;
-using Common.ForCommand;
+﻿using Common.ForCommand;
 using MediatR;
 using 창고Common.DTO.입고상품;
-using 창고Common.DTO.창고;
 
 namespace 창고Common.Command
 {

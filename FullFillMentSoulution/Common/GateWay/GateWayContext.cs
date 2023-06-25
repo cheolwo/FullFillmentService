@@ -1,10 +1,12 @@
 using Common.Actor.Builder;
 using Common.DTO;
+using Common.Extensions;
 using Common.ForCommand;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
+using StackExchange.Redis;
 using System.Text;
 
 namespace Common.GateWay
@@ -38,7 +40,7 @@ namespace Common.GateWay
                 return new GateWayCommandTypeBuilder<TDto>(null);
             }
         }
-        public IQueForGateWayServer<TDto> SetFromGateWay<TDto>() where TDto : CudDTO
+        public IQueForGateWayServer SetFromGateWay<TDto>() where TDto : CudDTO
         {
             if (_configurations.TryGetValue(typeof(TDto), out var configuration))
             {
@@ -49,7 +51,7 @@ namespace Common.GateWay
                 return new GateWayCommandTypeBuilder<TDto>(null);
             }
         }
-        public IQueForBusinessServer<TDto> SetFromBusinessServer<TDto>() where TDto : CudDTO
+        public IQueForBusinessServer SetFromBusinessServer<TDto>() where TDto : CudDTO
         {
             if (_configurations.TryGetValue(typeof(TDto), out var configuration))
             {
@@ -61,37 +63,38 @@ namespace Common.GateWay
             }
         }
     }
-    public interface IQueForGateWayServer<T> where T : CudDTO
+    public interface IQueForGateWayServer
     {
-        Task Enqueue(CudCommand<T> command);
+        Task Enqueue(byte[] message, string queName);
     }
-    public interface IQueForBusinessServer<T> where T : CudDTO
+    public interface IQueForBusinessServer
     {
-        Task<T> Dequeue();
+        Task<string> Dequeue(string queName);
     }
-    public class GateWayCommandTypeBuilder<T> : IQueForGateWayServer<T>, IQueForBusinessServer<T> where T : CudDTO
+    public class GateWayCommandTypeBuilder<T> : IQueForGateWayServer, IQueForBusinessServer where T : CudDTO
     {
-        private readonly IGateWayCommandConfiguration<T> _configuration;
-        private string _queueName;
-        private string _connectionString;
+        private string? _connectionString;
+        private string? _gateWay;
         public GateWayCommandTypeBuilder(IGateWayCommandConfiguration<T>? configuration)
         {
             if(configuration == null) { throw new ArgumentNullException(nameof(configuration)); }
-            _configuration = configuration;
+            configuration.Configure(this);
         }
-
-        public void Configure(Action<IGateWayCommandConfiguration<T>> configureAction)
+        public GateWayCommandTypeBuilder<T> SetRabbitMqConnection(string connectionString)
         {
-            configureAction?.Invoke(_configuration);
-        }
-        public GateWayCommandTypeBuilder<T> SetRabbitMqConnection(string connectionString, string quename)
-        {
-            _queueName = quename;
             _connectionString = connectionString;
             return this;
         }
-        public async Task Enqueue(CudCommand<T> command)
+        public GateWayCommandTypeBuilder<T> SetGateWay(string gateWay)
         {
+            _gateWay = gateWay;
+            return this;
+        }
+        public async Task Enqueue(byte[] message, string queName)
+        {
+            if(_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString));}
+            if(_gateWay == null) { throw new ArgumentNullException(nameof(_gateWay)); }
+
             var factory = new ConnectionFactory
             {
                 Uri = new Uri(_connectionString)
@@ -100,18 +103,18 @@ namespace Common.GateWay
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
-
-                var message = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(command));
-
-                channel.BasicPublish(exchange: "", routingKey: _queueName, basicProperties: null, body: message);
+                channel.QueueDeclare(queue: queName, durable: true, exclusive: false, autoDelete: false, arguments: null);
+                channel.BasicPublish(exchange: "", routingKey: queName, basicProperties: null, body: message);
             }
 
             await Task.CompletedTask;
         }
 
-        public async Task<T> Dequeue()
+        public async Task<string> Dequeue(string queName)
         {
+            if (_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString)); }
+            if (_gateWay == null) { throw new ArgumentNullException(nameof(_gateWay)); }
+
             var factory = new ConnectionFactory
             {
                 Uri = new Uri(_connectionString)
@@ -120,18 +123,15 @@ namespace Common.GateWay
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+                channel.QueueDeclare(queue: queName, durable: true, exclusive: false, autoDelete: false, arguments: null);
 
-                BasicGetResult result = channel.BasicGet(_queueName, autoAck: true);
+                BasicGetResult result = channel.BasicGet(queName, autoAck: true);
 
                 if (result != null)
                 {
                     var body = result.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
-
-                    T command = JsonConvert.DeserializeObject<T>(message);
-
-                    return command;
+                    return message;
                 }
             }
 
@@ -148,17 +148,15 @@ namespace Common.GateWay
     public abstract class GateWayCommandContext
     {
         protected readonly GateWayCommandBuilder commandBuilder;
-        protected readonly IWebHostEnvironment _webHostEnvironment;
         protected readonly IConfiguration _configuration;
         protected readonly GateWayCommandContextOptions _options;
-        public GateWayCommandContext(IWebHostEnvironment webHostEnvironment,
+        public GateWayCommandContext(
                IConfiguration configuration,
             GateWayCommandContextOptions options)
         {
             commandBuilder = new GateWayCommandBuilder();
             OnModelCreating(commandBuilder);
             _options = options;
-            _webHostEnvironment = webHostEnvironment;
             _configuration = configuration;
         }
 
