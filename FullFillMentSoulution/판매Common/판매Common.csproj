@@ -22,11 +22,8 @@
 
   <ItemGroup>
     <Folder Include="APIService\" />
-    <Folder Include="DTO\" />
     <Folder Include="Event\" />
     <Folder Include="Mapper\" />
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\Web\" />
   </ItemGroup>
 
 </Project>

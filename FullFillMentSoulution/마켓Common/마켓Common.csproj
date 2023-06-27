@@ -11,12 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Actor\" />
     <Folder Include="APIService\" />
-    <Folder Include="DTO\" />
     <Folder Include="Event\" />
     <Folder Include="Mapper\" />
-    <Folder Include="Model\" />
   </ItemGroup>
 
   <ItemGroup>
