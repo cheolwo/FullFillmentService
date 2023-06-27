@@ -13,3 +13,5 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\시스템관리�
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\시스템관리자AppCommon\bin\Debug\net7.0\계정Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\시스템관리자AppCommon\bin\Debug\net7.0\계정Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\시스템관리자AppCommon\obj\Debug\net7.0\시스템관리자AppCommon.csproj.CopyComplete
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\시스템관리자AppCommon\bin\Debug\net7.0\Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\시스템관리자AppCommon\bin\Debug\net7.0\Common.pdb

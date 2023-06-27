@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using KoreaCommon.Model;
 using Microsoft.AspNetCore.Mvc;
 using 수협Common.DTO;
+using 수협Common.Model;
 using 수협Common.Repository;
 
 namespace 수협Server.Controllers

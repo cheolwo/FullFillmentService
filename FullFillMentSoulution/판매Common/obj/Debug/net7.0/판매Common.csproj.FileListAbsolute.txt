@@ -1,0 +1,5 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매Common\obj\Debug\net7.0\판매Common.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매Common\obj\Debug\net7.0\판매Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매Common\obj\Debug\net7.0\판매Common.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매Common\obj\Debug\net7.0\판매Common.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매Common\obj\Debug\net7.0\판매Common.csproj.CoreCompileInputs.cache

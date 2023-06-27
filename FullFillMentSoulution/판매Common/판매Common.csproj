@@ -17,10 +17,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\OrderCommon\주문Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Actor\" />
+    <Folder Include="APIService\" />
     <Folder Include="DTO\" />
     <Folder Include="Event\" />
     <Folder Include="Mapper\" />

@@ -107,3 +107,10 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentMana
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\System.IO.Hashing.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\MediatR.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\MediatR.Contracts.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\RabbitMQ.Client.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\bin\Debug\net7.0\StackExchange.Redis.dll

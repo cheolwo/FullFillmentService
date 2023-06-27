@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\refint\수협비즈니스APIGateWay.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협비즈니스APIGateWay\obj\Debug\net7.0\수협비즈니스APIGateWay.pdb

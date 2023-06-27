@@ -58,8 +58,6 @@ namespace 창고Common
     }
     public class 창고 : Center
     {
-        [Key]
-        public string Id { get; set; }
         public List<창고상품>? 창고상품들 { get; set; }
         public List<입고상품>? 입고상품들 { get; set; }
         public List<적재상품>? 적재상품들 { get; set; }
@@ -67,8 +65,6 @@ namespace 창고Common
     }
     public class 창고상품 : Commodity
     {
-        [Key]
-        public string Id { get; set; }
         public string? 창고Id { get; set; }
         public 창고? 창고 { get; set; }
         public List<입고상품>? 입고상품들 { get; set; }
@@ -77,8 +73,6 @@ namespace 창고Common
     }
     public class 입고상품 : Status
     {
-        [Key]
-        public string Id { get; set; }
         public string? 창고Id { get; set; }
         public string? 창고상품Id { get; set; }
         public 창고? 창고 { get; set; }
@@ -88,8 +82,6 @@ namespace 창고Common
     }
     public class 적재상품 : Status
     {
-        [Key]
-        public string Id { get; set; }
         public string? 창고Id { get; set; }
         public string? 창고상품Id { get; set; }
         public string? 입고상품Id { get; set; }
@@ -100,8 +92,6 @@ namespace 창고Common
     }
     public class 출고상품 : Status
     {
-        [Key]
-        public string Id { get; set; }
         public string? 창고Id { get; set; }
         public string? 창고상품Id { get; set; }
         public string? 입고상품Id { get; set; }

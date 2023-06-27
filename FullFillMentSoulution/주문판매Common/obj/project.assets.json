@@ -1603,7 +1603,8 @@
         "dependencies": {
           "Common": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.7",
-          "MySql.EntityFrameworkCore": "7.0.2"
+          "MySql.EntityFrameworkCore": "7.0.2",
+          "주문Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/판매Common.dll": {}

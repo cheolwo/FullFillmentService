@@ -1,7 +1,6 @@
 using IdentityCommon.Models.ForApplicationUser;
 using IdentityServerSample;
 using KoreaCommon.Fish.п曄熱骯睡;
-using KoreaCommon.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using Quartz;
 using System.Text;
 using 啗薑Common.Models;
+using 熱⑺Common.Model;
 using 熱⑺Common.Repository;
 using 熱⑺Server.Job;
 using 熱⑺Server.Manager;

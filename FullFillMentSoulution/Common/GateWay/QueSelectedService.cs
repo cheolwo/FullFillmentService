@@ -1,28 +1,46 @@
-﻿using Common.DTO;
-using Common.Extensions;
+﻿using Common.Extensions;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Common.GateWay
 {
     public interface IQueSelectedService
     {
         string GetOptimalQueue<T>(List<Server> servers);
+        //int SetCurrentMessageInQue(Server server);
+        //int GetCurrentMessageInQue(Server server);
+        //int GetSetCurretnMessageInQue(Server server);
     }
 
     public class QueSelectedService : IQueSelectedService
     {
         private readonly IRabbitMQQueueStatusService _rabbitMQQueueStatusService;
         private readonly IConfiguration _configuration;
-
+        private Dictionary<string, int> dicQue = new();
         public QueSelectedService(IRabbitMQQueueStatusService rabbitMQQueueStatusService, IConfiguration configuration)
         {
             _rabbitMQQueueStatusService = rabbitMQQueueStatusService ?? throw new ArgumentNullException(nameof(rabbitMQQueueStatusService));
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+        }
+
+        public int SetCurrentMessageInQue<T>(Server server)
+        {
+            var gateWay = _configuration.GetConnectionString("GateWayServerUrl");
+            if (gateWay == null)
+            {
+                throw new ArgumentNullException(nameof(gateWay));
+            }
+            var queName = gateWay.CreateQueueName<T>(server.Url);
+            var count = _rabbitMQQueueStatusService.GetMessageCount(queName);
+            var FindQueName = dicQue.Keys.FirstOrDefault(e => e.Equals(queName));
+            if (FindQueName != null)
+            {
+                dicQue[FindQueName] = count;
+                return dicQue[FindQueName];
+            }
+            else
+            {
+                throw new ArgumentException("등록된 큐가 없습니다.");
+            }
         }
 
         string IQueSelectedService.GetOptimalQueue<T>(List<Server> servers)
@@ -32,8 +50,6 @@ namespace Common.GateWay
             {
                 throw new ArgumentNullException(nameof(gateWay));
             }
-
-            Dictionary<string, int> dicQue = new Dictionary<string, int>();
             foreach (Server server in servers)
             {
                 var queName = gateWay.CreateQueueName<T>(server.Url);

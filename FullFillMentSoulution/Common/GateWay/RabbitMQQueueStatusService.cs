@@ -13,16 +13,18 @@ namespace Common.GateWay
     {
         bool IsQueueReady(string queueName);
         int GetMessageCount(string queueName);
+        int GetSetMessageCount(string queName);
     }
 
     public class RabbitMQQueueStatusService : IRabbitMQQueueStatusService
     {
         private readonly string _connectionString;
+        private Dictionary<string, int> QueMessageCount = new();
 
         public RabbitMQQueueStatusService(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("RabbitMQConnectionString") ??
-                throw new ArgumentNullException(configuration.GetConnectionString("RabbitMQConnectionString")));
+                throw new ArgumentNullException(configuration.GetConnectionString("RabbitMQConnectionString"));
         }
 
         public bool IsQueueReady(string queueName)
@@ -65,6 +67,20 @@ namespace Common.GateWay
             catch (Exception)
             {
                 return -1;
+            }
+        }
+        public int GetSetMessageCount(string queName)
+        {
+            var count = GetMessageCount(queName);
+            var FindQueName = QueMessageCount.Keys.FirstOrDefault(e => e.Equals(queName));
+            if (FindQueName != null)
+            {
+                QueMessageCount[FindQueName] = count;
+                return QueMessageCount[FindQueName];
+            }
+            else
+            {
+                throw new ArgumentException("등록된 큐가 없습니다.");
             }
         }
     }

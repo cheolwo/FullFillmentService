@@ -1,9 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Common.GateWay
 {
@@ -13,6 +8,11 @@ namespace Common.GateWay
         public string Url { get; set; }
         public string Subject { get; set; }
     }
+    public interface IQueConfigurationService
+    {
+        List<Server> GetServers();
+    }
+    public enum ServerSubject { 물류, 판매, 마켓, 주문 }
 
     public class QueConfigurationService
     {
@@ -23,13 +23,13 @@ namespace Common.GateWay
             _configuration = configuration;
         }
 
-        public List<Server> GetLogisticsServers()
+        public List<Server> GetServers(ServerSubject serverSubject)
         {
             List<Server> servers = _configuration.GetSection("Servers")
                                                     .Get<List<Server>>()
                                         ?? throw new Exception("서버 목록을 가져올 수 없습니다.");
 
-            List<Server> filteredServers = servers.FindAll(server => server.Subject == "물류");
+            List<Server> filteredServers = servers.FindAll(server => server.Subject == serverSubject.ToString());
             return filteredServers;
         }
     }

@@ -1,18 +1,18 @@
 using Common.GateWay;
+using Microsoft.Extensions.Configuration;
 using 주문Common.DTO.For주문;
 
 namespace 주문Common.GateWay
 {
     public class 주문자GateWayCommandContext : GateWayCommandContext
     {
-        public 주문자GateWayCommandContext(GateWayCommandContextOptions options)
-                : base(options)
+        public 주문자GateWayCommandContext(IConfiguration configuration, GateWayCommandContextOptions options) : base(configuration, options)
         {
-
         }
+
         protected override void OnModelCreating(GateWayCommandBuilder commandBuilder)
         {
-            base.OnModelCreating(commandBuilder);
+            
         }
     }
     public class GateWayCreate주문Configuration : IGateWayCommandConfiguration<Create주문DTO>

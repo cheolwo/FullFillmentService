@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\마켓관리자APIGateWay.props" />
+</Project>

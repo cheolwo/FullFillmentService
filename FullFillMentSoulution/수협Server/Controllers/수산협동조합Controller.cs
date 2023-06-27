@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
-using Common.Model;
-using KoreaCommon.Model;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Distributed;
 using 수협Common.DTO;
+using 수협Common.Model;
 using 수협Common.Repository;
 
 namespace 수협Server.Controllers
@@ -80,57 +78,6 @@ namespace 수협Server.Controllers
 
             await _repository.DeleteAsync(existing수산협동조합);
             return NoContent();
-        }
-        [HttpGet("address/{address}")]
-        public async Task<ActionResult<TEntity>> GetByAddress(string address)
-        {
-            var entity = await _repository.GetByAddress(address);
-
-            if (entity == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(entity);
-        }
-
-        [HttpGet("email/{email}")]
-        public async Task<ActionResult<TEntity>> GetByEmail(string email)
-        {
-            var entity = await _repository.GetByEmail(email);
-
-            if (entity == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(entity);
-        }
-
-        [HttpGet("faxNumber/{faxNumber}")]
-        public async Task<ActionResult<TEntity>> GetByFaxNumber(string faxNumber)
-        {
-            var entity = await _repository.GetByFaxNumber(faxNumber);
-
-            if (entity == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(entity);
-        }
-
-        [HttpGet("phoneNumber/{phoneNumber}")]
-        public async Task<ActionResult<TEntity>> GetByPhoneNumber(string phoneNumber)
-        {
-            var entity = await _repository.GetByPhoneNumber(phoneNumber);
-
-            if (entity == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(entity);
         }
     }
 

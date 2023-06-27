@@ -21,8 +21,5 @@ namespace Common.Actor.Builder
             }
             _configurations.Clear();
         }
-        //public abstract void ApplyConfiguration<TDto>(IDtoConfiguration<TDto> configuration) where TDto : class;
-
-        //public abstract DtoTypeBuilder<TDto> Set<TDto>() where TDto : class;
     }
 }

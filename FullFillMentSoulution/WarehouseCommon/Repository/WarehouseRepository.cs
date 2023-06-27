@@ -47,7 +47,7 @@ namespace 창고Common.Repository
             return await _dbContext.Set<창고상품>().Where(e => e.창고Id == 창고Id).ToListAsync();
         }
     }
-    public class 입고상품Repository : CommodityRepository<입고상품>
+    public class 입고상품Repository : StatusRepository<입고상품>
     {
         public 입고상품Repository(창고DbContext context) : base(context)
         {
@@ -69,7 +69,7 @@ namespace 창고Common.Repository
             return await _dbContext.Set<입고상품>().Where(e => e.창고상품Id == 창고상품Id).ToListAsync();
         }
     }
-    public class 적재상품Repository : CommodityRepository<적재상품>
+    public class 적재상품Repository : StatusRepository<적재상품>
     {
         public 적재상품Repository(창고DbContext context) : base(context)
         {
@@ -91,7 +91,7 @@ namespace 창고Common.Repository
             return await _dbContext.Set<적재상품>().Where(e => e.입고상품Id == 입고상품Id).ToListAsync();
         }
     }
-    public class 출고상품Repository : CommodityRepository<출고상품>
+    public class 출고상품Repository : StatusRepository<출고상품>
     {
         public 출고상품Repository(창고DbContext context) : base(context)
         {

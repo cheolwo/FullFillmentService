@@ -86,8 +86,6 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\StackExchange.Redis.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\System.Diagnostics.PerformanceCounter.dll
-C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\IdentityServerSample.deps.json
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\IdentityServerSample.runtimeconfig.json
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\IdentityServerSample.staticwebassets.runtime.json
@@ -114,3 +112,14 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Microsoft.JSInterop.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\주문Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\주문Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Azure.Storage.Blobs.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\RabbitMQ.Client.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\System.IO.Hashing.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\수협Server\bin\Debug\net7.0\System.Memory.Data.dll

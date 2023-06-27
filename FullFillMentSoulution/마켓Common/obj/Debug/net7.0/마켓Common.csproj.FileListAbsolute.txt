@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\bin\Debug\net7.0\마켓Common.deps.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\bin\Debug\net7.0\마켓Common.runtimeconfig.json
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\bin\Debug\net7.0\마켓Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\bin\Debug\net7.0\마켓Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\bin\Debug\net7.0\Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\bin\Debug\net7.0\Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.csproj.CopyComplete
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\refint\마켓Common.dll
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.pdb
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\마켓Common.genruntimeconfig.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\마켓Common\obj\Debug\net7.0\ref\마켓Common.dll

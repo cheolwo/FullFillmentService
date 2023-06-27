@@ -34,7 +34,9 @@ namespace Common.Actor.Builder
             configuration.Configure(this);
             return this;
         }
-
+        /// <summary>
+        /// _ActorContext.Set<TDto>().PostAsync(dto, jwtToken);
+        /// </summary>
         public async Task<HttpResponseMessage> PostAsync(TDto dto, string jwtToken)
         {
             var selectedRoute = GetSelectedBaseRoute(dto);

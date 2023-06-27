@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using Common.ForCommand;
+using MediatR;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,10 +30,13 @@ namespace Common.DTO
     //        return null; // 토큰이 유효하지 않은 경우에 대한 처리
     //    }
     //}
-    public static class ConvertToCommand<T> where T : CudDTO
-    {
-        public static T Convert(this T t, )
-    }
+    //public static class ConvertToCommand<T> where T : CudDTO
+    //{
+    //    public static T Convert(this T t, CommandOption option)
+    //    {
+
+    //    }
+    //}
     public class CudDTO 
     {
         public string Id { get; set; }

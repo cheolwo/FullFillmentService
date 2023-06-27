@@ -1,10 +1,8 @@
-﻿using Azure.Core;
-using Common.DTO;
+﻿using Common.DTO;
 using Common.Extensions;
 using Common.ForCommand;
 using Common.GateWay;
 using MediatR;
-using Microsoft.Extensions.Logging;
 
 namespace Common.GateWayCommand
 {
@@ -31,7 +29,7 @@ namespace Common.GateWayCommand
         public async Task Handle(CudCommand<T> request, CancellationToken cancellationToken)
         {
             byte[] messageBytes = request.ToSerializedBytes();
-            List<Server> servers = _queConfigurationService.GetLogisticsServers();
+            List<Server> servers = _queConfigurationService.GetServers(request.serverSubject);
 
             var queueName = _queSelectedService.GetOptimalQueue<T>(servers);
             if (queueName == null)
@@ -41,7 +39,6 @@ namespace Common.GateWayCommand
             }
 
             await _context.Set<T>().Enqueue(messageBytes, queueName);
-            //_logger.LogInformation("Enqueued message to {QueueName}", queueName);
         }
     }
     public class GateWayCreateCommandHandler<T> : GateWayCommandHandler<T> where T : CudDTO

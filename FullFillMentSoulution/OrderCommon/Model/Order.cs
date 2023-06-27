@@ -15,8 +15,6 @@ namespace 주문Common.Model
     }
     public class 주문자 : Center
     {
-        [Key]
-        public string Id { get; set; }
         public string 계좌번호 { get; set; }
         public List<주문상품>? 주문상품들 { get; set; }
         public List<주문대기>? 주문대기들 { get; set; }
@@ -25,8 +23,6 @@ namespace 주문Common.Model
     }
     public class 주문상품 : Commodity
     {
-        [Key]
-        public string Id { get; set; }
         public string? 주문자Id { get; set; }
         public string 판매자상품Id { get; set; }
         public 주문자? 주문자 { get; set; }
@@ -36,8 +32,6 @@ namespace 주문Common.Model
     }
     public class 주문대기 : Status
     {
-        [Key]
-        public string Id { get; set; }
         public string? 주문자Id { get; set; }
         public 주문자? 주문자 { get; set; }
         public string? 주문상품Id { get; set; }
@@ -49,8 +43,6 @@ namespace 주문Common.Model
     }
     public class 주문중 : Status
     {
-        [Key]
-        public string Id { get; set; }
         public string? 주문자Id { get; set; }
         public 주문자? 주문자 { get; set; }
         public string? 주문상품Id { get; set; }
@@ -63,8 +55,6 @@ namespace 주문Common.Model
     }
     public class 주문완료 : Status
     {
-        [Key]
-        public string Id { get; set; }
         public string? 주문자Id { get; set; }
         public 주문자? 주문자 { get; set; }
         public string? 주문상품Id { get; set; }

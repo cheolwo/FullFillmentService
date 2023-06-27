@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GPetKlFPY1Yu5OnjfxLvWwxN5LDwYGb4YRDxXfxXGWM=",
+  "Source": "주문자APIGateWay",
+  "BasePath": "_content/주문자APIGateWay",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

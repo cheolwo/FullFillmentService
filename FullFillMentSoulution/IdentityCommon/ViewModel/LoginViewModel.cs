@@ -1,5 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using 계정Common.DTO;
+﻿using Common.DTO;
+using CommunityToolkit.Mvvm.ComponentModel;
 using 계정Common.Service;
 
 namespace 수협Common.ViewModel.수협.Login

@@ -1,4 +1,5 @@
 using Common.DTO;
+using Common.GateWay;
 using MediatR;
 
 namespace Common.ForCommand
@@ -13,6 +14,7 @@ namespace Common.ForCommand
     public class CudCommand<T> : IRequest where T : CudDTO
     {
         public T t { get; set; }
+        public ServerSubject serverSubject { get; set; }
         public CommandOption commandOption { get; set; }
     }
     public class CreateCommand<T> : CudCommand<T>, IRequest where T : CudDTO

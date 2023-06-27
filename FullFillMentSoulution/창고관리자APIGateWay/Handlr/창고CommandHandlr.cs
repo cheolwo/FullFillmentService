@@ -12,6 +12,7 @@ namespace 창고관리자APIGateWay.Handlr
             GateWayCommandContext context, QueConfigurationService queConfigurationService) : base(queSelectedService, context, queConfigurationService)
         {
         }
+
         public async Task Handle(Create창고Command request, CancellationToken cancellationToken)
         {
             await base.Handle(request, cancellationToken);

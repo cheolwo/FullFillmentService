@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Common.Model
@@ -6,6 +7,7 @@ namespace Common.Model
     [NotMapped]
     public class Entity
     {
+        [Key]
         public string Id { get; set; }
         public string? Code { get; set; }
         public string? Name { get; set; }
@@ -58,7 +60,7 @@ namespace Common.Model
         public string Quantity { get; set; }
     }
     [NotMapped]
-    public class 문의 : Entity
+    public class 문의
     {
         public string 내용 { get; set; }
         public string CenterId { get; set; }

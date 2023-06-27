@@ -1,0 +1,5 @@
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매요약Common\obj\Debug\net7.0\판매요약Common.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매요약Common\obj\Debug\net7.0\판매요약Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매요약Common\obj\Debug\net7.0\판매요약Common.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매요약Common\obj\Debug\net7.0\판매요약Common.AssemblyInfo.cs
+C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\판매요약Common\obj\Debug\net7.0\판매요약Common.csproj.CoreCompileInputs.cache
