@@ -1,5 +1,7 @@
 ﻿using Common.Actor.Builder;
+using Common.Actor.Builder.TypeBuilder;
 using FrontCommon.Actor;
+using System.Data.Common;
 using System.Linq.Expressions;
 
 namespace Common.Actor
@@ -25,6 +27,10 @@ namespace Common.Actor
         }
         protected virtual void OnModelCreating(DtoQueryBuilder dtoBuilder)
         {
+        }
+        public DtoTypeQueryBuilder<TDto> Set<TDto>() where TDto : class
+        {
+            return dtoQueryBuilder.Set<TDto>();
         }
     }
 }

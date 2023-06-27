@@ -2,7 +2,7 @@
 
 HttpClient client = new HttpClient();
 string url = "http://apis.data.go.kr/1613000/AptBasisInfoService1/getAphusBassInfo"; // URL
-url += "?ServiceKey=" + "D0wkCvWHdCeJsYuU8A14KWl7mzOJ%2FiKbyKR%2F5xvnALYMf5wi5rcbCp2CXsx6xCsBhvgl5PJ8u%2Fwilufv%2FjhMcg%3D%3D"; // Service Key
+url += "?ServiceKey=" + ""; // Service Key
 url += "&kaptCode=A10027875";
 
 

@@ -39,7 +39,7 @@ namespace Common.ViewModel
             _actorCommandContext = actorCommandContext;
             _actorQueryContext = actorQueryContext;
         }
-        public async Task Login(LoginModel loginModel)
+        public virtual async Task Login(LoginModel loginModel)
         {
             var response = await _actorCommandContext.Set<LoginModel>().PostAsync(loginModel);
             if (response.IsSuccessStatusCode)
@@ -57,7 +57,7 @@ namespace Common.ViewModel
                 throw new Exception($"서버 응답: {errorMessage}");
             }
         }
-        public async Task<string> GetToken()
+        public virtual async Task<string> GetToken()
         {
             return await _jsRuntime.InvokeAsync<string>("localStorage.getItem", "token");
         }
