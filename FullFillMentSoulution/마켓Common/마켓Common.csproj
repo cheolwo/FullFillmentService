@@ -16,7 +16,6 @@
     <Folder Include="DTO\" />
     <Folder Include="Event\" />
     <Folder Include="Mapper\" />
-    <Folder Include="ViewModel\" />
     <Folder Include="Model\" />
   </ItemGroup>
 

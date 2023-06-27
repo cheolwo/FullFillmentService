@@ -21,13 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Actor\" />
     <Folder Include="APIService\" />
     <Folder Include="DTO\" />
     <Folder Include="Event\" />
     <Folder Include="Mapper\" />
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
+    <Folder Include="ViewModel\Web\" />
   </ItemGroup>
 
 </Project>

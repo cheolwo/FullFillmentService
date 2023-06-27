@@ -1,4 +1,5 @@
 ﻿using Common.Model.Repository;
+using 마켓Common.Model;
 
 namespace 마켓Common.Repository
 {

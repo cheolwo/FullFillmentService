@@ -3,17 +3,17 @@ using FrontCommon.Actor;
 
 namespace Common.ViewService
 {
-    public interface IActorCommandViewService<T> where T : class
+    public interface IActorCommandViewService
     {
-        Task Post(T t, string jwtToken);
-        Task Delete(string id, string jwtToken);
-        Task Update(T t, string jwtToken);
+        Task Post<T>(T t, string jwtToken) where T : class;
+        Task Delete<T>(string id, string jwtToken) where T: class;
+        Task Update<T>(T t, string jwtToken) where T : class;   
     }
-    public interface IActorQueryViewService<T> where T : class
+    public interface IActorQueryViewService
     {
-        Task<List<T>?> GetToListAsync(string userId, string jwtToken);
+        Task<List<T>?> GetToListAsync<T>(string userId, string jwtToken) where T : class;
     }
-    public class ActorViewService
+    public class ActorViewService: IActorCommandViewService, IActorQueryViewService
     {
         protected readonly ActorCommandContext _commandContext;
         protected readonly ActorQueryContext _querytContext;
@@ -23,7 +23,7 @@ namespace Common.ViewService
             _querytContext = queryContext;   
         }
 
-        public async Task Delete<T>(string id, string jwtToken) where T: class
+        public async Task Delete<T>(string id, string jwtToken) where T : class
         {
             await _commandContext.Set<T>().DeleteAsync(id, jwtToken);
         }
@@ -35,7 +35,6 @@ namespace Common.ViewService
         {
             await _commandContext.Set<T>().PostAsync(t, jwtToken);
         }
-
         public async Task Update<T>(T t, string jwtToken) where T : class
         {
             await _commandContext.Set<T>().PutAsync(t, jwtToken);

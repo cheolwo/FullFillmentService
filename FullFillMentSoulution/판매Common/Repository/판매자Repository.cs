@@ -1,5 +1,6 @@
 ﻿using Common.Model.Repository;
 using Microsoft.EntityFrameworkCore;
+using 판매Common.Model;
 
 namespace 판매Common.Repository
 {

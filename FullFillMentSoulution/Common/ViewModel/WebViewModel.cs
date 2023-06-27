@@ -57,13 +57,49 @@ namespace Common.ViewModel
                 throw new Exception($"서버 응답: {errorMessage}");
             }
         }
-        public virtual async Task<string> GetToken()
+        public virtual async Task<string> GetTokenAsync()
         {
             return await _jsRuntime.InvokeAsync<string>("localStorage.getItem", "token");
         }
         public async Task Logout()
         {
             await _jsRuntime.InvokeVoidAsync("localStorage.removeItem", "token");
+        }
+        public async Task Delete<T>(string id) where T : class
+        {
+            var token = await GetTokenAsync();
+            if (token == null)
+            {
+                throw new ArgumentNullException(nameof(token));
+            }
+            await _actorCommandContext.Set<T>().DeleteAsync(id, token);
+        }
+        public async Task<List<T>?> GetToListAsync<T>() where T : class
+        {
+            var token = await GetTokenAsync();
+            if (token == null)
+            {
+                throw new ArgumentNullException(nameof(token));
+            }
+            return await _actorQueryContext.Set<T>().GetToListAsync(token);
+        }
+        public async Task Post<T>(T t, string jwtToken) where T : class
+        {
+            var token = await GetTokenAsync();
+            if (token == null)
+            {
+                throw new ArgumentNullException(nameof(token));
+            }
+            await _actorCommandContext.Set<T>().PostAsync(t, token);
+        }
+        public async Task Update<T>(T t, string jwtToken) where T : class
+        {
+            var token = await GetTokenAsync();
+            if (token == null)
+            {
+                throw new ArgumentNullException(nameof(token));
+            }
+            await _actorCommandContext.Set<T>().PutAsync(t, token);
         }
     }
 }

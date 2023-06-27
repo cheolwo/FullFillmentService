@@ -11,7 +11,7 @@ namespace Common.Actor.Builder.TypeBuilder
         {
             configuration.Configure(this);
         }
-        public async Task<List<TDto>?> GetToListAsync(string userId, string jwtToken)
+        public async Task<List<TDto>?> GetToListAsync(string jwtToken)
         {
             var selectedRoute = GetSelectedBaseRoute();
             using (var httpClient = new HttpClient())
@@ -19,7 +19,6 @@ namespace Common.Actor.Builder.TypeBuilder
                 httpClient.BaseAddress = new Uri(selectedRoute.BaseAddress);
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
-                httpClient.DefaultRequestHeaders.Add("UserId", userId);
 
                 var response = await httpClient.GetAsync(selectedRoute.Route);
                 response.EnsureSuccessStatusCode();
