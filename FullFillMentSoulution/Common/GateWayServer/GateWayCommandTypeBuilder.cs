@@ -1,4 +1,5 @@
 ﻿using Common.DTO;
+using Common.Model;
 using RabbitMQ.Client;
 using System.Text;
 
@@ -60,7 +61,7 @@ namespace Common.GateWay
             return this;
         }
     }
-    public class GateWayCommandTypeBuilder<T> : GateWayTypeBuilder<T>, IQueForGateWayServer, IQueForBusinessServer where T : CudDTO
+    public class GateWayCommandTypeBuilder<T> : GateWayTypeBuilder<T>, IQueForGateWayServer, IQueForBusinessServer where T : class
     {
         private string? _gateWay;
         public GateWayCommandTypeBuilder(IGateWayCommandConfiguration<T>? configuration)
@@ -74,7 +75,7 @@ namespace Common.GateWay
             return this;
         }
     }
-    public class GateWayQueryTypeBuilder<T> : GateWayTypeBuilder<T>, IQueForGateWayServer, IQueForBusinessServer where T : ReadDto
+    public class GateWayQueryTypeBuilder<T> : GateWayTypeBuilder<T>, IQueForGateWayServer, IQueForBusinessServer where T : class
     {
         public GateWayQueryTypeBuilder(IGateWayQueryConfiguration<T>? configuration)
         {

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Common.Cache;
+using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -38,28 +39,43 @@ namespace Common.Model
         public List<문의> 문의들 { get; set; }
     }
     [NotMapped]
-    public class Center : Entity
+    public class Center : Entity, IStorableInCenterMemory
     {
         public string? FaxNumber { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Email { get; set; }
         public string? Address { get; set; }    
         public string? ZipCode { get; set; }
-        public List<Commodity> Commodity { get; set; }
+        public List<Commodity> Commodities { get; set; }
         public List<Status> Statuses { get; set; }
 
+        public string GetCenterId()
+        {
+            return Id;
+        }
     }
     // 상품에 대한 공통정보
     [NotMapped]
-    public class Commodity : Entity
+    public class Commodity : Entity, IStorableInCenterMemory
     {
-        public string Quantity { get; set; }
-        
+        public string? Quantity { get; set; }
+        public string? CenterId { get; set; }
+
+        public virtual string? GetCenterId()
+        {
+            return CenterId;
+        }
     }
     [NotMapped]
-    public class Status : Entity
+    public class Status : Entity, IStorableInCenterMemory
     {
-        public string Quantity { get; set; }
+        public string? Quantity { get; set; }
+        public string? CenterId { get; set; }
+
+        public virtual string? GetCenterId()
+        {
+            return CenterId;
+        }
     }
     [NotMapped]
     public class 문의

@@ -43,15 +43,15 @@ namespace Common.DTO
         public string? Name { get; set; }
         public DateTime CreatedAt { get; set; }
     }
-    public class CenterCudDTO : CudDTO
+    public class CreateDTO : CudDTO
     {
 
     }
-    public class CommodityCudDTO : CudDTO
+    public class UpdateDTO : CudDTO
     {
 
     }
-    public class StatusCudDTO : CudDTO
+    public class DeleteDTO : CudDTO
     {
 
     }

@@ -25,7 +25,7 @@ namespace Common.CommandServer
         protected readonly GateWayCommandContext _gateContext;
         protected readonly IQueryServerConfiguringServcie _queConfigurationService;
         protected readonly IMapper _mapper;
-        protected readonly IEntityCommandRepository<TEntity> _commandRepository;
+        protected readonly EntityRepository<TEntity> _commandRepository;
         protected readonly IConfiguration _configuration;
         protected readonly IWebHostEnvironment _webHostEnvironment;
         protected readonly IQueSelectedService _queSelectedServcie;
@@ -33,7 +33,7 @@ namespace Common.CommandServer
             IQueryServerConfiguringServcie queConfigurationService,
             IQueSelectedService queSelectedService,
             IMapper mapper,
-            IEntityCommandRepository<TEntity> commandRepository,
+            EntityRepository<TEntity> commandRepository,
             IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {
             _queSelectedServcie = queSelectedService;
@@ -55,11 +55,15 @@ namespace Common.CommandServer
         {
             var message = await _gateContext.Set<TDTO>().Dequeue(queName);
             CudCommand<TDTO>? cudCommand = JsonConvert.DeserializeObject<CudCommand<TDTO>>(message);
-            if (cudCommand == null) { throw new ArgumentNullException(nameof(cudCommand)); }
-            TDTO dto = cudCommand.t;
-            if (dto != null)
+            if (cudCommand == null)
             {
-                var entity = _mapper.Map<TEntity>(dto);
+                throw new ArgumentNullException(nameof(cudCommand));
+            }
+
+            TDTO dto = cudCommand.t;
+            if (dto is CreateDTO createDto)
+            {
+                var entity = _mapper.Map<TEntity>(createDto);
                 if (entity != null)
                 {
                     await _commandRepository.AddAsync(entity);
@@ -67,6 +71,27 @@ namespace Common.CommandServer
                     return entity;
                 }
             }
+            else if (dto is UpdateDTO updateDto)
+            {
+                var entity = await _commandRepository.GetAsync(updateDto.Id);
+                if (entity != null)
+                {
+                    _mapper.Map(updateDto, entity);
+                    await _commandRepository.SaveChangesAsync();
+                    return entity;
+                }
+            }
+            else if (dto is DeleteDTO deleteDto)
+            {
+                var entity = await _commandRepository.GetAsync(deleteDto.Id);
+                if (entity != null)
+                {
+                    _commandRepository.Delete(entity.Id);
+                    await _commandRepository.SaveChangesAsync();
+                    return entity;
+                }
+            }
+
             throw new ArgumentNullException(nameof(dto));
         }
         protected async Task EnqueHandleResultToQueryServer(TEntity entity, ServerSubject serverSubject, string jwtToken)
@@ -74,7 +99,7 @@ namespace Common.CommandServer
             ReadQuery<TEntity> query = new(entity, serverSubject, jwtToken);
             var message = query.ToSerializedBytes();
             var servers = _queConfigurationService.GetQueryServers(serverSubject);
-            var server = _queSelectedServcie.GetOptimalQueueForEnque<TDTO>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            var server = _queSelectedServcie.GetOptimalQueueForEnque<TEntity>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             await _gateContext.Set<TDTO>().Enqueue(message, server);
         }
     }

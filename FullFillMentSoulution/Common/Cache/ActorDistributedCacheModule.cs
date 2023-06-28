@@ -15,7 +15,7 @@ namespace Common.Cache
     {
         private readonly IDatabase _database;
 
-        public ActorDistributedCacheModule(IConnectionMultiplexer connectionMultiplexer)
+        public ActorDistributedCacheModule(ConnectionMultiplexer connectionMultiplexer)
         {
             _database = connectionMultiplexer.GetDatabase();
         }

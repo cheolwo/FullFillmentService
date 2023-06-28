@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace Common.GateWay.GateWayCommand
 {
-    public interface IGateWayCommandHandlr<T> where T : CudDTO
+    public interface IGateWayCommandHandlr<T> where T : class
     {
 
     }
-    public class GateWayCommandHandler<T> : IRequestHandler<CudCommand<T>> where T : CudDTO
+    public class GateWayCommandHandler<T> : IRequestHandler<CudCommand<T>> where T : class
     {
         protected readonly IQueSelectedService _queSelectedService;
         protected readonly GateWayCommandContext _context;

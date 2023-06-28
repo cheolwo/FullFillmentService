@@ -1,4 +1,5 @@
 using Common.DTO;
+using Common.Model;
 using Microsoft.Extensions.Configuration;
 
 namespace Common.GateWay
@@ -73,11 +74,11 @@ namespace Common.GateWay
     }
 
 
-    public interface IGateWayCommandConfiguration<T> where T : CudDTO
+    public interface IGateWayCommandConfiguration<T> where T : class
     {
         void Configure(GateWayCommandTypeBuilder<T> builder);
     }
-    public interface IGateWayQueryConfiguration<T> where T : ReadDto
+    public interface IGateWayQueryConfiguration<T> where T : class
     {
         void Configure(GateWayQueryTypeBuilder<T> builder);
     }
@@ -101,7 +102,7 @@ namespace Common.GateWay
         }
 
         protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
-        public abstract GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO;
+        public abstract GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : class;
     }
     public abstract class GateWayQueryContext : GateWayContext
     {
@@ -110,6 +111,6 @@ namespace Common.GateWay
         {
         }
         protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
-        public abstract GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO;
+        public abstract GateWayQueryTypeBuilder<TDto> Set<TDto>() where TDto : class;
     }
 }

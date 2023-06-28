@@ -1,11 +1,8 @@
-﻿using AutoMapper;
-using Common.Cache;
-using Common.DTO;
+﻿using Common.Cache;
 using Common.Extensions;
 using Common.ForCommand;
 using Common.GateWay;
 using Common.Model;
-using Common.Model.Repository;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -24,58 +21,73 @@ namespace Common.CommandServer
     /// <param name="serverSubject"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"></exception>
-    public class QueryServerHandlr<TDTO, TEntity> where TDTO : CudDTO where TEntity : Entity
+    public class QueryServerHandlr<TEntity> where TEntity : Entity, IStorableInCenterMemory
     {
-        protected readonly IConfiguration _configuration;
         protected readonly IWebHostEnvironment _webHostEnvironment;
-        protected readonly IMapper _mapper;
         protected readonly ICommandServerConfiguringService _commandServerConfiguring;
         protected readonly IQueSelectedService _queSelectedService;
-        protected readonly IEntityQueryRepository<TEntity> _entityQueryRepository;
-        protected readonly ActorMemoryModule _actorMemoryModule;
-        protected readonly ActorDistributedCacheModule _actorDistributedCacheModule;
+        protected readonly CenterMemoryModule _centerMemoryModule;
         protected readonly GateWayQueryContext _gateContext;
-        public QueryServerHandlr(IMapper mapper, 
+        public QueryServerHandlr(
             ICommandServerConfiguringService commandServerConfiguringService,
-            IEntityQueryRepository<TEntity> entityQueryRepository,
-            IConfiguration configuration, IWebHostEnvironment webHostEnvironment, IQueSelectedService queSelectedService,
-            ActorMemoryModule actorMemoryModule,
-            ActorDistributedCacheModule actorDistributedCacheModule, 
+            IWebHostEnvironment webHostEnvironment, IQueSelectedService queSelectedService,
+            CenterMemoryModule centerMemoryModule,
             GateWayQueryContext gateContext)
         {
-            _mapper = mapper;
             _commandServerConfiguring = commandServerConfiguringService;
-            _entityQueryRepository = entityQueryRepository;
-            _configuration = configuration;
             _webHostEnvironment = webHostEnvironment;
             _queSelectedService = queSelectedService;
             _gateContext = gateContext;
-            _actorMemoryModule = actorMemoryModule;
-            _actorDistributedCacheModule = actorDistributedCacheModule;
+            _centerMemoryModule = centerMemoryModule;
         }
         // 1, 2
         protected string GetQueNameFromCommandServer(IWebHostEnvironment webHostEnvironment, ServerSubject serverSubject)
         {
             var servers = _commandServerConfiguring.GetCommandServers(serverSubject);
-            var server = _queSelectedService.GetOptimalQueueForDeque<TDTO>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Max);
-            var queName = server.CreateQueueName<TDTO>(webHostEnvironment.ContentRootPath);
+            var server = _queSelectedService.GetOptimalQueueForDeque<TEntity>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Max);
+            var queName = server.CreateQueueName<TEntity>(webHostEnvironment.ContentRootPath);
             return queName;
         }
         // 3.4.5
         protected async Task DequeHandle(string queName)
         {
-            var message = await _gateContext.Set<TDTO>().Dequeue(queName);
-            ReadQuery<TDTO>? readQuery = JsonConvert.DeserializeObject<ReadQuery<TDTO>>(message);
-            if(readQuery == null || readQuery.t == null || readQuery.t.Id == null || readQuery.JwtToken == null) 
-                                                                    { throw new ArgumentNullException(nameof(readQuery)); }
-            _actorMemoryModule.SetDto(readQuery.t.Id, readQuery.t, readQuery.JwtToken);
-            _actorDistributedCacheModule.SetDto(readQuery.t.Id, readQuery.t, readQuery.JwtToken);
+            var message = await _gateContext.Set<TEntity>().Dequeue(queName);
+            ReadQuery<TEntity>? readQuery = JsonConvert.DeserializeObject<ReadQuery<TEntity>>(message);
+            if (readQuery == null || readQuery.t == null || readQuery.t.Id == null || readQuery.JwtToken == null)
+            {
+                throw new ArgumentNullException(nameof(readQuery));
+            }
+
+            if (readQuery.t is Center center)
+            {
+                _centerMemoryModule.SetCenter(center);
+            }
+            else if (readQuery.t is Commodity commodity)
+            {
+                string centerId = commodity.GetCenterId();
+                if (!string.IsNullOrEmpty(centerId))
+                {
+                    _centerMemoryModule.SetCommodity(centerId, commodity);
+                }
+            }
+            else if (readQuery.t is Status status)
+            {
+                string centerId = status.GetCenterId();
+                if (!string.IsNullOrEmpty(centerId))
+                {
+                    _centerMemoryModule.SetStatus(centerId, status);
+                }
+            }
+            else
+            {
+                throw new NotSupportedException($"Type '{typeof(TEntity).Name}' is not supported for storage in the CenterMemoryModule.");
+            }
         }
         protected string GetQueNameFromGateWayServer(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {
             var gateWayServer = configuration.GetSection("GateWayServer").Value;
             if (gateWayServer == null) { throw new ArgumentNullException(nameof(gateWayServer)); }
-            var queName = gateWayServer.CreateQueueName<TDTO>(webHostEnvironment.ContentRootPath);
+            var queName = gateWayServer.CreateQueueName<TEntity>(webHostEnvironment.ContentRootPath);
             return queName;
         }
     }
