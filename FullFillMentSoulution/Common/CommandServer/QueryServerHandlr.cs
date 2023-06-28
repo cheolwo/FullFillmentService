@@ -66,10 +66,10 @@ namespace Common.CommandServer
         {
             var message = await _gateContext.Set<TDTO>().Dequeue(queName);
             ReadQuery<TDTO>? readQuery = JsonConvert.DeserializeObject<ReadQuery<TDTO>>(message);
-            if(readQuery == null || readQuery.T == null || readQuery.T.Id == null || readQuery.JwtToken == null) 
+            if(readQuery == null || readQuery.t == null || readQuery.t.Id == null || readQuery.JwtToken == null) 
                                                                     { throw new ArgumentNullException(nameof(readQuery)); }
-            _actorMemoryModule.SetDto(readQuery.T.Id, readQuery.T, readQuery.JwtToken);
-            _actorDistributedCacheModule.SetDto(readQuery.T.Id, readQuery.T, readQuery.JwtToken);
+            _actorMemoryModule.SetDto(readQuery.t.Id, readQuery.t, readQuery.JwtToken);
+            _actorDistributedCacheModule.SetDto(readQuery.t.Id, readQuery.t, readQuery.JwtToken);
         }
         protected string GetQueNameFromGateWayServer(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {

@@ -45,6 +45,8 @@ namespace Common.Model
         public string? Email { get; set; }
         public string? Address { get; set; }    
         public string? ZipCode { get; set; }
+        public List<Commodity> Commodity { get; set; }
+        public List<Status> Statuses { get; set; }
 
     }
     // 상품에 대한 공통정보

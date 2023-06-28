@@ -21,7 +21,7 @@ namespace Common.CommandServer
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class CommandServerHandlr<TDTO, TEntity> where TDTO : CudDTO where TEntity : Entity
-    { 
+    {
         protected readonly GateWayCommandContext _gateContext;
         protected readonly IQueryServerConfiguringServcie _queConfigurationService;
         protected readonly IMapper _mapper;
@@ -32,8 +32,8 @@ namespace Common.CommandServer
         public CommandServerHandlr(GateWayCommandContext gateContext,
             IQueryServerConfiguringServcie queConfigurationService,
             IQueSelectedService queSelectedService,
-            IMapper mapper, 
-            IEntityCommandRepository<TEntity> commandRepository, 
+            IMapper mapper,
+            IEntityCommandRepository<TEntity> commandRepository,
             IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {
             _queSelectedServcie = queSelectedService;
@@ -63,6 +63,7 @@ namespace Common.CommandServer
                 if (entity != null)
                 {
                     await _commandRepository.AddAsync(entity);
+                    await _commandRepository.SaveChangesAsync();
                     return entity;
                 }
             }
@@ -70,15 +71,11 @@ namespace Common.CommandServer
         }
         protected async Task EnqueHandleResultToQueryServer(TEntity entity, ServerSubject serverSubject, string jwtToken)
         {
-            var dto = _mapper.Map<TDTO>(entity);
-            if (dto != null)
-            {
-                ReadQuery<TDTO> query = new(dto, serverSubject, jwtToken);
-                var message = query.ToSerializedBytes();
-                var servers = _queConfigurationService.GetQueryServers(serverSubject);
-                var server = _queSelectedServcie.GetOptimalQueueForEnque<TDTO>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
-                await _gateContext.Set<TDTO>().Enqueue(message, server);
-            }
+            ReadQuery<TEntity> query = new(entity, serverSubject, jwtToken);
+            var message = query.ToSerializedBytes();
+            var servers = _queConfigurationService.GetQueryServers(serverSubject);
+            var server = _queSelectedServcie.GetOptimalQueueForEnque<TDTO>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            await _gateContext.Set<TDTO>().Enqueue(message, server);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Common.Model.Repository
     }
     public interface IEntityCommandRepository<TEntity> : ICommandRepository<TEntity> where TEntity : Entity
     {
-
+        Task SaveChangesAsync();
     }
     public interface ICenterCommandRepository<TEntity> : IEntityCommandRepository<TEntity> where TEntity : Center
     {
