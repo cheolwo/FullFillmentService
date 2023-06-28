@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.JSInterop;
 
-namespace Common.ViewModel
+namespace Common.App.ViewModel
 {
     public abstract class BaseViewModel : ObservableObject
     {

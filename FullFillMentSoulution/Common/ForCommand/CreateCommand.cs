@@ -13,9 +13,10 @@ namespace Common.ForCommand
 
     public class CudCommand<T> : IRequest where T : CudDTO
     {
-        public T t { get; set; }
-        public ServerSubject serverSubject { get; set; }
-        public CommandOption commandOption { get; set; }
+        public T t  { get; set; }
+        public string? jwtToken { get; set; }
+        public ServerSubject ServerSubject { get; set; }
+        public CommandOption? CommandOption { get; set; }
     }
     public class CreateCommand<T> : CudCommand<T>, IRequest where T : CudDTO
     {
@@ -27,5 +28,17 @@ namespace Common.ForCommand
 
     public class DeleteCommand<T> : CudCommand<T>, IRequest where T : CudDTO
     {
+    }
+    public class ReadQuery<TDTO> : IRequest where T : ReadDto
+    {
+        public TDTO T { get; set; }
+        public ServerSubject? ServerSubject { get; set; }
+        public string JwtToken { get; set; }
+        public ReadQuery(TDTO t, ServerSubject? serverSubject, string jwtToken)
+        {
+            T = t;
+            ServerSubject = serverSubject;
+            JwtToken = jwtToken;
+        }
     }
 }

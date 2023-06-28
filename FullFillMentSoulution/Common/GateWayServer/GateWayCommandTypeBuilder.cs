@@ -4,36 +4,12 @@ using System.Text;
 
 namespace Common.GateWay
 {
-    public class GateWayCommandTypeBuilder<T> : IQueForGateWayServer, IQueForBusinessServer where T : CudDTO
+    public class GateWayTypeBuilder<T> where T : class
     {
-        private string? _connectionString;
-        private string? _gateWay;
-        public GateWayCommandTypeBuilder(IGateWayCommandConfiguration<T>? configuration)
-        {
-            if(configuration == null) { throw new ArgumentNullException(nameof(configuration)); }
-            configuration.Configure(this);
-        }
-        public GateWayCommandTypeBuilder<T> SetRabbitMqConnection(string connectionString)
-        {
-            _connectionString = connectionString;
-            return this;
-        }
-        public GateWayCommandTypeBuilder<T> SetGateWay(string gateWay)
-        {
-            _gateWay = gateWay;
-            return this;
-        }
-        /// <summary>
-        /// _GateWayContext.Set<TDto>().Enque(message, quename)
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="queName"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
+        protected string? _connectionString;
         public async Task<string> Enqueue(byte[] message, string queName)
         {
-            if(_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString));}
-            if(_gateWay == null) { throw new ArgumentNullException(nameof(_gateWay)); }
+            if (_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString)); }
 
             var factory = new ConnectionFactory
             {
@@ -54,7 +30,6 @@ namespace Common.GateWay
         public async Task<string> Dequeue(string queName)
         {
             if (_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString)); }
-            if (_gateWay == null) { throw new ArgumentNullException(nameof(_gateWay)); }
 
             var factory = new ConnectionFactory
             {
@@ -78,6 +53,33 @@ namespace Common.GateWay
             }
 
             return null;
+        }
+        public GateWayTypeBuilder<T> SetRabbitMqConnection(string connectionString)
+        {
+            _connectionString = connectionString;
+            return this;
+        }
+    }
+    public class GateWayCommandTypeBuilder<T> : GateWayTypeBuilder<T>, IQueForGateWayServer, IQueForBusinessServer where T : CudDTO
+    {
+        private string? _gateWay;
+        public GateWayCommandTypeBuilder(IGateWayCommandConfiguration<T>? configuration)
+        {
+            if(configuration == null) { throw new ArgumentNullException(nameof(configuration)); }
+            configuration.Configure(this);
+        }
+        public GateWayCommandTypeBuilder<T> SetGateWay(string gateWay)
+        {
+            _gateWay = gateWay;
+            return this;
+        }
+    }
+    public class GateWayQueryTypeBuilder<T> : GateWayTypeBuilder<T>, IQueForGateWayServer, IQueForBusinessServer where T : ReadDto
+    {
+        public GateWayQueryTypeBuilder(IGateWayQueryConfiguration<T>? configuration)
+        {
+            if (configuration == null) { throw new ArgumentNullException(nameof(configuration)); }
+            configuration.Configure(this);
         }
     }
 }

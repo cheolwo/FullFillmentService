@@ -55,6 +55,14 @@ namespace Common.GateWay
             }
         }
     }
+    public class GateWayQueryBuilder
+    {
+        protected readonly Dictionary<Type, object> _configurations;
+        public GateWayQueryBuilder()
+        {
+            _configurations = new Dictionary<Type, object>();
+        }
+    }
     public interface IQueForGateWayServer
     {
         Task<string> Enqueue(byte[] message, string queName);
@@ -69,26 +77,39 @@ namespace Common.GateWay
     {
         void Configure(GateWayCommandTypeBuilder<T> builder);
     }
-
-    public abstract class GateWayCommandContext
+    public interface IGateWayQueryConfiguration<T> where T : ReadDto
+    {
+        void Configure(GateWayQueryTypeBuilder<T> builder);
+    }
+    public abstract class GateWayContext
     {
         protected readonly GateWayCommandBuilder commandBuilder;
         protected readonly IConfiguration _configuration;
         protected readonly GateWayCommandContextOptions _options;
-        public GateWayCommandContext(
-               IConfiguration configuration,
-            GateWayCommandContextOptions options)
+        public GateWayContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration, GateWayCommandContextOptions options)
         {
-            commandBuilder = new GateWayCommandBuilder();
-            OnModelCreating(commandBuilder);
-            _options = options;
+            this.commandBuilder = commandBuilder;
             _configuration = configuration;
+            _options = options;
+        }
+    }
+    public abstract class GateWayCommandContext : GateWayContext
+    {
+        protected GateWayCommandContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration, 
+            GateWayCommandContextOptions options) : base(commandBuilder, configuration, options)
+        {
         }
 
         protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
-        public GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO
+        public abstract GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO;
+    }
+    public abstract class GateWayQueryContext : GateWayContext
+    {
+        protected GateWayQueryContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration, 
+            GateWayCommandContextOptions options) : base(commandBuilder, configuration, options)
         {
-            return commandBuilder.Set<TDto>();
         }
+        protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
+        public abstract GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO;
     }
 }

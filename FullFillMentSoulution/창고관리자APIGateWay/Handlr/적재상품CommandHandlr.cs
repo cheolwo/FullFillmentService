@@ -1,5 +1,5 @@
 ﻿using Common.GateWay;
-using Common.GateWayCommand;
+using Common.GateWay.GateWayCommand;
 using MediatR;
 using 창고Common.Command;
 using 창고Common.DTO.적재상품;

@@ -8,9 +8,9 @@ namespace Common.Extensions
 {
     public static class QueueExtensions
     {
-        public static string CreateQueueName<T>(this string gateway, string commandServer)
+        public static string CreateQueueName<T>(this string enqueServer, string dequeServer)
         {
-            return $"{gateway}:{commandServer}:{typeof(T).Name}";
+            return $"{enqueServer}:{dequeServer}:{typeof(T).Name}";
         }
     }
 }

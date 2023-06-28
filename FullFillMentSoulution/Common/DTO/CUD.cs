@@ -39,7 +39,7 @@ namespace Common.DTO
     //}
     public class CudDTO 
     {
-        public string Id { get; set; }
+        public string? Id { get; set; }
         public string? Name { get; set; }
         public DateTime CreatedAt { get; set; }
     }
@@ -54,10 +54,5 @@ namespace Common.DTO
     public class StatusCudDTO : CudDTO
     {
 
-    }
-    public class ReadDto 
-    {
-        public string Id { get; set; }
-        public DateTime CreatedAt { get; set;}
     }
 }

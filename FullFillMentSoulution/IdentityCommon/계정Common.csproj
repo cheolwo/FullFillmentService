@@ -35,6 +35,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
+    <Folder Include="Extensions\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

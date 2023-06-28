@@ -10,13 +10,13 @@ namespace 창고Common.CreateCommand
         public Create입고상품Command(Create입고상품DTO dto, CommandOption option)
         {
             t = dto;
-            commandOption = option;
+            CommandOption = option;
         }
         public Create입고상품Command(Create입고상품DTO dto, CommandOption option, ServerSubject serverSubject)
         {
             t = dto;
-            commandOption = option;
-            this.serverSubject = serverSubject;
+            CommandOption = option;
+            this.ServerSubject = serverSubject;
         }
     }
     public class Update입고상품Command : UpdateCommand<Update입고상품DTO>, IRequest<string>
@@ -24,13 +24,13 @@ namespace 창고Common.CreateCommand
         public Update입고상품Command(Update입고상품DTO dto, CommandOption option)
         {
             t = dto;
-            commandOption = option;
+            CommandOption = option;
         }
         public Update입고상품Command(Update입고상품DTO dto, CommandOption option, ServerSubject serverSubject)
         {
             t = dto;
-            commandOption = option;
-            this.serverSubject = serverSubject;
+            CommandOption = option;
+            this.ServerSubject = serverSubject;
         }
     }
     public class Delete입고상품Command : DeleteCommand<Delete입고상품DTO>, IRequest<string>
@@ -38,13 +38,13 @@ namespace 창고Common.CreateCommand
         public Delete입고상품Command(Delete입고상품DTO dto, CommandOption option)
         {
             t = dto;
-            commandOption = option;
+            CommandOption = option;
         }
         public Delete입고상품Command(Delete입고상품DTO dto, CommandOption option, ServerSubject serverSubject)
         {
             t = dto;
-            commandOption = option;
-            this.serverSubject = serverSubject;
+            CommandOption = option;
+            this.ServerSubject = serverSubject;
         }
     }
 }

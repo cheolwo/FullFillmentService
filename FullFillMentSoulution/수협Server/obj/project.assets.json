@@ -1857,8 +1857,10 @@
           "Microsoft.EntityFrameworkCore": "7.0.7",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "7.0.7",
           "Newtonsoft.Json": "13.0.3",
+          "Quartz": "3.6.2",
           "RabbitMQ.Client": "6.5.0",
-          "StackExchange.Redis": "2.6.116"
+          "StackExchange.Redis": "2.6.116",
+          "System.IdentityModel.Tokens.Jwt": "6.31.0"
         },
         "compile": {
           "bin/placeholder/Common.dll": {}

@@ -15,7 +15,7 @@ namespace Common.Extensions
             return new CudCommand<T>
             {
                 t = t,
-                commandOption = options
+                CommandOption = options
             };
         }
     }

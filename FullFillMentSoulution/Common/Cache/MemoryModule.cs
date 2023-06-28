@@ -1,9 +1,9 @@
-﻿using Common.Model;
+﻿using Common.DTO;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Common.Cache
 {
-    public class MemoryModule<TEntity> where TEntity : Entity
+    public class MemoryModule
     {
         private readonly IMemoryCache _memoryCache;
 
@@ -11,83 +11,83 @@ namespace Common.Cache
         {
             _memoryCache = memoryCache;
         }
-        public void SetEntities(List<TEntity> entities)
+        public void SetEntities<T>(List<T> entities) where T : ReadDto
         {
-            foreach (var entity in entities)
+            foreach (var Dto in entities)
             {
-                string cacheKey = $"{typeof(TEntity).Name}_{entity.Id}";
-                _memoryCache.Set(cacheKey, entity);
+                string cacheKey = $"{typeof(T).Name}_{Dto.Id}";
+                //jwtToken.GetUserIdFromToken();
+                //$"{}_{typeof(T).Name}_{Dto.Id}"
+                _memoryCache.Set(cacheKey, Dto);
             }
         }
-        public TEntity GetEntity(string entityId) 
+        public T? GetDto<T>(string DtoId) where T : ReadDto 
         {
-            string cacheKey = $"{typeof(TEntity).Name}_{entityId}";
-            return _memoryCache.Get<TEntity>(cacheKey);
+            string cacheKey = $"{typeof(T).Name}_{DtoId}";
+            return _memoryCache.Get<T>(cacheKey);
         }
-        public void SetEntity(string entityId, TEntity entity)
+        public void SetDto<T>(string DtoId, T Dto) where T : ReadDto
         {
-            string cacheKey = $"{typeof(TEntity).Name}_{entityId}";
-            _memoryCache.Set(cacheKey, entity);
+            string cacheKey = $"{typeof(T).Name}_{DtoId}";
+            _memoryCache.Set(cacheKey, Dto);
         }
-        public void RemoveEntity(string entityId)
+        public void RemoveDto<T>(string DtoId) where T : ReadDto
         {
-            string cacheKey = $"{typeof(TEntity).Name}_{entityId}";
+            string cacheKey = $"{typeof(T).Name}_{DtoId}";
             _memoryCache.Remove(cacheKey);
         }
-        public List<TEntity> LoadEntities()
+        public List<T> LoadEntities<T>() where T : ReadDto
         {
-            List<TEntity> entities = new List<TEntity>();
+            List<T> entities = new List<T>();
 
-            List<string> entityKeys = GetEntityKeys();
+            List<string> DtoKeys = GetDtoKeys<T>();
 
-            foreach (string cacheKey in entityKeys)
+            foreach (string cacheKey in DtoKeys)
             {
-                TEntity entity = _memoryCache.Get<TEntity>(cacheKey);
-                if (entity != null)
+                T? Dto = _memoryCache.Get<T>(cacheKey);
+                if (Dto != null)
                 {
-                    entities.Add(entity);
+                    entities.Add(Dto);
                 }
             }
 
             return entities;
         }
-        public List<TEntity> GetEntities()
+        public List<T> GetEntities<T>() where T : ReadDto
         {
-            List<TEntity> entities = new List<TEntity>();
+            List<T> entities = new List<T>();
 
-            List<string> entityKeys = GetEntityKeys();
+            List<string> DtoKeys = GetDtoKeys<T>();
 
-            foreach (string cacheKey in entityKeys)
+            foreach (string cacheKey in DtoKeys)
             {
-                TEntity entity = _memoryCache.Get<TEntity>(cacheKey);
-                if (entity != null)
+                T? Dto = _memoryCache.Get<T>(cacheKey);
+                if (Dto != null)
                 {
-                    entities.Add(entity);
+                    entities.Add(Dto);
                 }
             }
 
             return entities;
         }
-
-
-        private List<string> GetEntityKeys()
+        private List<string> GetDtoKeys<T>() where T : ReadDto
         {
-            List<string> entityKeys = new List<string>();
+            List<string> DtoKeys = new();
 
             var cacheEntriesCollection = _memoryCache as IDictionary<object, object>;
             if (cacheEntriesCollection != null)
             {
                 foreach (var entry in cacheEntriesCollection)
                 {
-                    string cacheKey = entry.Key.ToString();
-                    if (cacheKey.StartsWith($"{typeof(TEntity).Name}"))
+                    string? cacheKey = entry.Key.ToString();
+                    if (cacheKey.StartsWith($"{typeof(T).Name}"))
                     {
-                        entityKeys.Add(cacheKey);
+                        DtoKeys.Add(cacheKey);
                     }
                 }
             }
 
-            return entityKeys;
+            return DtoKeys;
         }
     }
 

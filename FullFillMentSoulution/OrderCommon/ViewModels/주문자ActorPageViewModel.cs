@@ -1,5 +1,5 @@
 ﻿using Common.Actor;
-using Common.ViewModel;
+using Common.App.ViewModel;
 using FrontCommon.Actor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
