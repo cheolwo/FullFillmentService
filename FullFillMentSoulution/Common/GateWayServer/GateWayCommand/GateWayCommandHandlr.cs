@@ -1,7 +1,6 @@
 ﻿using Common.DTO;
 using Common.Extensions;
 using Common.ForCommand;
-using Common.GateWay;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
 
@@ -32,7 +31,8 @@ namespace Common.GateWay.GateWayCommand
             byte[] messageBytes = request.ToSerializedBytes();
             List<Server> servers = _queConfigurationService.GetCommandServers(request.ServerSubject);
 
-            var queueName = _queSelectedService.GetOptimalQueueForEnque<T>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            var queueName = _queSelectedService.GetOptimalQueueForEnque<T>(
+                _webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             if (queueName == null)
             {
                 //_logger.LogError("No suitable queue found.");
