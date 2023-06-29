@@ -1,4 +1,5 @@
-﻿using Common.Cache;
+﻿using AutoMapper.Configuration.Annotations;
+using Common.Cache;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -41,13 +42,16 @@ namespace Common.Model
     [NotMapped]
     public class Center : Entity, IStorableInCenterMemory
     {
+        public string? UserId { get; set; }
         public string? FaxNumber { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Email { get; set; }
         public string? Address { get; set; }    
         public string? ZipCode { get; set; }
-        public List<Commodity> Commodities { get; set; }
-        public List<Status> Statuses { get; set; }
+        [Ignore]
+        public Dictionary<string, string> Commodities { get; set; }
+        [Ignore]
+        public Dictionary<string, string> Statuses { get; set; }
 
         public string GetCenterId()
         {
@@ -59,6 +63,7 @@ namespace Common.Model
     public class Commodity : Entity, IStorableInCenterMemory
     {
         public string? Quantity { get; set; }
+        [Ignore]
         public string? CenterId { get; set; }
 
         public virtual string? GetCenterId()
@@ -70,7 +75,9 @@ namespace Common.Model
     public class Status : Entity, IStorableInCenterMemory
     {
         public string? Quantity { get; set; }
+        [Ignore]
         public string? CenterId { get; set; }
+        public string? State { get; set; }
 
         public virtual string? GetCenterId()
         {

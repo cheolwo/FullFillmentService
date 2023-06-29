@@ -87,17 +87,15 @@ namespace Common.GateWay
         protected readonly GateWayCommandBuilder commandBuilder;
         protected readonly IConfiguration _configuration;
         protected readonly GateWayCommandContextOptions _options;
-        public GateWayContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration, GateWayCommandContextOptions options)
+        public GateWayContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration)
         {
             this.commandBuilder = commandBuilder;
             _configuration = configuration;
-            _options = options;
         }
     }
     public abstract class GateWayCommandContext : GateWayContext
     {
-        protected GateWayCommandContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration, 
-            GateWayCommandContextOptions options) : base(commandBuilder, configuration, options)
+        protected GateWayCommandContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration) : base(commandBuilder, configuration)
         {
         }
 
@@ -106,10 +104,10 @@ namespace Common.GateWay
     }
     public abstract class GateWayQueryContext : GateWayContext
     {
-        protected GateWayQueryContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration, 
-            GateWayCommandContextOptions options) : base(commandBuilder, configuration, options)
+        protected GateWayQueryContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration) : base(commandBuilder, configuration)
         {
         }
+
         protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
         public abstract GateWayQueryTypeBuilder<TDto> Set<TDto>() where TDto : class;
     }

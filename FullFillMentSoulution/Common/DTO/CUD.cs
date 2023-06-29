@@ -42,6 +42,7 @@ namespace Common.DTO
         public string? Id { get; set; }
         public string? Name { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string? CenterId { get; set; }
     }
     public class CreateDTO : CudDTO
     {

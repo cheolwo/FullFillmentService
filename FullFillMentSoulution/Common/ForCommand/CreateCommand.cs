@@ -1,4 +1,3 @@
-using Common.DTO;
 using Common.GateWay;
 using MediatR;
 
@@ -14,13 +13,13 @@ namespace Common.ForCommand
     public class CudCommand<T> : IRequest where T : class
     {
         public T t  { get; set; }
-        public string? jwtToken { get; set; }
+        public string? JwtToken { get; set; }
         public ServerSubject ServerSubject { get; set; }
         public CommandOption? CommandOption { get; set; }
         public CudCommand(T t, string? jwtToken, ServerSubject serverSubject, CommandOption? commandOption)
         {
             this.t = t;
-            this.jwtToken = jwtToken;
+            JwtToken = jwtToken;
             ServerSubject = serverSubject;
             CommandOption = commandOption;
         }

@@ -26,8 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Actor\Query\" />
-    <Folder Include="QueryServer\" />
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

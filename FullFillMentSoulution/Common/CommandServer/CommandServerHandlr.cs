@@ -11,32 +11,32 @@ using Newtonsoft.Json;
 
 namespace Common.CommandServer
 {
-    /// <summary>
-    /// 1. GateWayServer 와 HostServer로 구성정보 흭득단계
-    /// 2. 흭득된 정보로 QueName을 구성단계
-    /// 1. RabbitMQ 메세지 Deque단계
-    /// 2. Deque 메세지 Command로 역직렬화단계
-    /// 3. 역질렬화 개체 Model로 매핑단계
-    /// 4. 매핑개체 Repository로 CUD단계
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class CommandServerHandlr<TDTO, TEntity> where TDTO : CudDTO where TEntity : Entity
+    public interface ICommandServerHandler<TDTO> where TDTO : CudDTO
+    {
+        Task<TDTO?> Handle(CudCommand<TDTO> cudCommand);
+    }
+    public abstract class CommandServerHandlerBase<TDTO, TEntity> : ICommandServerHandler<TDTO>
+    where TDTO : CudDTO
+    where TEntity : Entity
     {
         protected readonly GateWayCommandContext _gateContext;
+        protected readonly EntityRepository<TEntity> _commandRepository;
         protected readonly IQueryServerConfiguringServcie _queConfigurationService;
         protected readonly IMapper _mapper;
-        protected readonly EntityRepository<TEntity> _commandRepository;
         protected readonly IConfiguration _configuration;
         protected readonly IWebHostEnvironment _webHostEnvironment;
-        protected readonly IQueSelectedService _queSelectedServcie;
-        public CommandServerHandlr(GateWayCommandContext gateContext,
+        protected readonly IQueSelectedService _queSelectedService;
+
+        public CommandServerHandlerBase(
+            GateWayCommandContext gateContext,
+            EntityRepository<TEntity> commandRepository,
             IQueryServerConfiguringServcie queConfigurationService,
             IQueSelectedService queSelectedService,
             IMapper mapper,
-            EntityRepository<TEntity> commandRepository,
-            IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
+            IConfiguration configuration,
+            IWebHostEnvironment webHostEnvironment)
         {
-            _queSelectedServcie = queSelectedService;
+            _queSelectedService = queSelectedService;
             _queConfigurationService = queConfigurationService;
             _gateContext = gateContext;
             _mapper = mapper;
@@ -44,62 +44,33 @@ namespace Common.CommandServer
             _configuration = configuration;
             _webHostEnvironment = webHostEnvironment;
         }
-        protected string GetQueNameFromGateWayServer(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
+
+        public abstract Task<TDTO?> Handle(CudCommand<TDTO> cudCommand);
+
+        protected string GetQueNameFromGateWayServer()
         {
-            var gateWayServer = configuration.GetSection("GateWayServer").Value;
+            var gateWayServer = _configuration.GetSection("GateWayServer").Value;
             if (gateWayServer == null) { throw new ArgumentNullException(nameof(gateWayServer)); }
-            var queName = gateWayServer.CreateQueueName<TDTO>(webHostEnvironment.ContentRootPath);
+            var queName = gateWayServer.CreateQueueName<TDTO>(_webHostEnvironment.ContentRootPath);
             return queName;
         }
-        protected async Task<TEntity> DequeHandle(string queName)
+
+        protected async Task<CudCommand<TDTO>> Deque(string queName)
         {
             var message = await _gateContext.Set<TDTO>().Dequeue(queName);
             CudCommand<TDTO>? cudCommand = JsonConvert.DeserializeObject<CudCommand<TDTO>>(message);
-            if (cudCommand == null)
+            if (cudCommand != null)
             {
-                throw new ArgumentNullException(nameof(cudCommand));
+                return cudCommand;
             }
-
-            TDTO dto = cudCommand.t;
-            if (dto is CreateDTO createDto)
-            {
-                var entity = _mapper.Map<TEntity>(createDto);
-                if (entity != null)
-                {
-                    await _commandRepository.AddAsync(entity);
-                    await _commandRepository.SaveChangesAsync();
-                    return entity;
-                }
-            }
-            else if (dto is UpdateDTO updateDto)
-            {
-                var entity = await _commandRepository.GetAsync(updateDto.Id);
-                if (entity != null)
-                {
-                    _mapper.Map(updateDto, entity);
-                    await _commandRepository.SaveChangesAsync();
-                    return entity;
-                }
-            }
-            else if (dto is DeleteDTO deleteDto)
-            {
-                var entity = await _commandRepository.GetAsync(deleteDto.Id);
-                if (entity != null)
-                {
-                    _commandRepository.Delete(entity.Id);
-                    await _commandRepository.SaveChangesAsync();
-                    return entity;
-                }
-            }
-
-            throw new ArgumentNullException(nameof(dto));
+            throw new ArgumentNullException(nameof(cudCommand));
         }
-        protected async Task EnqueHandleResultToQueryServer(TEntity entity, ServerSubject serverSubject, string jwtToken)
+
+        protected async Task EnqueHandleResultToQueryServer(CudCommand<TDTO> command)
         {
-            ReadQuery<TEntity> query = new(entity, serverSubject, jwtToken);
-            var message = query.ToSerializedBytes();
-            var servers = _queConfigurationService.GetQueryServers(serverSubject);
-            var server = _queSelectedServcie.GetOptimalQueueForEnque<TEntity>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            var message = command.ToSerializedBytes();
+            var servers = _queConfigurationService.GetQueryServers(command.ServerSubject);
+            var server = _queSelectedService.GetOptimalQueueForEnque<TDTO>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             await _gateContext.Set<TDTO>().Enqueue(message, server);
         }
     }

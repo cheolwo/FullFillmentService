@@ -1,5 +1,6 @@
 ﻿using Common.Model;
 using Microsoft.Extensions.Caching.Memory;
+using Newtonsoft.Json;
 
 namespace Common.Cache
 {
@@ -7,133 +8,262 @@ namespace Common.Cache
     {
         string? GetCenterId();
     }
-    public class CenterMemoryModule : CenterMemoryModuleBase
+    public class EntityMemoryModule : EntityMemoryModuleBase
     {
-        public CenterMemoryModule(IMemoryCache memoryCache) : base(memoryCache)
+        public EntityMemoryModule(IMemoryCache memoryCache) : base(memoryCache)
         {
         }
-
-        public void SetCenter(Center center)
+        public void SetCenter<T>(string centerId, string userId, T center) where T : Center
         {
-            _memoryCache.Set(center.GetCenterId(), center);
+            if (center == null)
+            {
+                throw new ArgumentNullException(nameof(center));
+            }
+            string cacheKey = $"{userId}_{typeof(T).Name}_{centerId}";
+            _memoryCache.Set(cacheKey, center);
+        }
+        public void SetCenter<T>(string cacheKey, T center) where T : Center
+        {
+            _memoryCache.Set(cacheKey, center);
         }
 
-        public Center? GetCenter(string centerId)
+        public TCenter? GetCenter<TCenter>(string cacheKey) where TCenter : Center
         {
-            return _memoryCache.Get<Center>(centerId);
+            return _memoryCache.Get<TCenter>(cacheKey);
         }
 
-        public void RemoveCenter(string centerId)
+        public void RemoveCenter(string cacheKey)
         {
-            _memoryCache.Remove(centerId);
+            _memoryCache.Remove(cacheKey);
         }
 
-        public void SetCommodity(string centerId, Commodity commodity)
+        public void SetCommodity<TCommodity, TCenter>(string cacheKey, TCommodity commodity)
+            where TCommodity : Commodity
+            where TCenter : Center
         {
-            Center center = GetCenter(centerId);
+            TCenter? center = GetCenter<TCenter>(cacheKey);
 
             if (center != null)
             {
-                Commodity existingCommodity = center.Commodities.Find(c => c.Id == commodity.Id);
-                if (existingCommodity != null)
+                if (center.Commodities == null)
+                {
+                    center.Commodities = new Dictionary<string, string>();
+                }
+
+                string json = JsonConvert.SerializeObject(commodity);
+                if (center.Commodities.ContainsKey(commodity.Id))
                 {
                     // 이미 존재하는 Commodity를 대체
-                    int index = center.Commodities.IndexOf(existingCommodity);
-                    center.Commodities[index] = commodity;
+                    center.Commodities[commodity.Id] = json;
                 }
                 else
                 {
                     // 새로운 Commodity를 추가
-                    center.Commodities.Add(commodity);
+                    center.Commodities.Add(commodity.Id, json);
                 }
 
-                SetCenter(center);
+                SetCenter(cacheKey, center);
             }
         }
-
-        public Commodity? GetCommodity(string centerId, string commodityId)
+        public void SetCommodities<TCommodity, TCenter>(string cacheKey, List<TCommodity> commodities)
+            where TCommodity : Commodity
+            where TCenter : Center
         {
-            Center center = GetCenter(centerId);
+            TCenter? center = GetCenter<TCenter>(cacheKey);
 
             if (center != null)
             {
-                return center.Commodities.Find(c => c.Id == commodityId);
+                if (center.Commodities == null)
+                {
+                    center.Commodities = new Dictionary<string, string>();
+                }
+
+                foreach (var commodity in commodities)
+                {
+                    string json = JsonConvert.SerializeObject(commodity);
+                    if (center.Commodities.ContainsKey(commodity.Id))
+                    {
+                        // 이미 존재하는 Commodity를 대체
+                        center.Commodities[commodity.Id] = json;
+                    }
+                    else
+                    {
+                        // 새로운 Commodity를 추가
+                        center.Commodities.Add(commodity.Id, json);
+                    }
+                }
+
+                SetCenter(cacheKey, center);
+            }
+        }
+
+        public TCommodity? GetCommodity<TCommodity, TCenter>(string cacheKey, string commodityId)
+                                                            where TCommodity : Commodity
+                                                            where TCenter : Center
+        {
+            TCenter center = GetCenter<TCenter>(cacheKey);
+
+            if (center != null && center.Commodities != null && center.Commodities.ContainsKey(commodityId))
+            {
+                string json = center.Commodities[commodityId];
+                return JsonConvert.DeserializeObject<TCommodity>(json);
             }
 
             return null;
         }
 
-        public void RemoveCommodity(string centerId, string commodityId)
+        public void RemoveCommodity<TCenter>(string cacheKey, string commodityId)
+            where TCenter : Center
         {
-            Center center = GetCenter(centerId);
+            TCenter center = GetCenter<TCenter>(cacheKey);
 
-            if (center != null)
+            if (center != null && center.Commodities != null && center.Commodities.ContainsKey(commodityId))
             {
-                Commodity existingCommodity = center.Commodities.Find(c => c.Id == commodityId);
-                if (existingCommodity != null)
-                {
-                    center.Commodities.Remove(existingCommodity);
-                    SetCenter(center);
-                }
+                center.Commodities.Remove(commodityId);
+                SetCenter(cacheKey, center);
             }
         }
 
-        public void SetStatus(string centerId, Status status)
+        public void SetStatus<TStatus, TCenter>(string cacheKey, TStatus status)
+                                                    where TStatus : Status
+                                                    where TCenter : Center
         {
-            Center center = GetCenter(centerId);
+            TCenter center = GetCenter<TCenter>(cacheKey);
 
             if (center != null)
             {
-                Status existingStatus = center.Statuses.Find(s => s.Id == status.Id);
-                if (existingStatus != null)
+                if (center.Statuses == null)
+                {
+                    center.Statuses = new Dictionary<string, string>();
+                }
+
+                string key = status.Id + status.State;
+                string json = JsonConvert.SerializeObject(status);
+                if (center.Statuses.ContainsKey(key))
                 {
                     // 이미 존재하는 Status를 대체
-                    int index = center.Statuses.IndexOf(existingStatus);
-                    center.Statuses[index] = status;
+                    center.Statuses[key] = json;
                 }
                 else
                 {
                     // 새로운 Status를 추가
-                    center.Statuses.Add(status);
+                    center.Statuses.Add(key, json);
                 }
 
-                SetCenter(center);
+                SetCenter(cacheKey, center);
             }
         }
 
-        public Status? GetStatus(string centerId, string statusId)
+        public void SetStatuses<TStatus, TCenter>(string cacheKey, List<TStatus> statuses)
+            where TStatus : Status
+            where TCenter : Center
         {
-            Center center = GetCenter(centerId);
+            TCenter center = GetCenter<TCenter>(cacheKey);
 
             if (center != null)
             {
-                return center.Statuses.Find(s => s.Id == statusId);
-            }
-
-            return null;
-        }
-
-        public void RemoveStatus(string centerId, string statusId)
-        {
-            Center center = GetCenter(centerId);
-
-            if (center != null)
-            {
-                Status existingStatus = center.Statuses.Find(s => s.Id == statusId);
-                if (existingStatus != null)
+                if (center.Statuses == null)
                 {
-                    center.Statuses.Remove(existingStatus);
-                    SetCenter(center);
+                    center.Statuses = new Dictionary<string, string>();
                 }
+
+                foreach (var status in statuses)
+                {
+                    string key = status.Id + status.State;
+                    string json = JsonConvert.SerializeObject(status);
+                    if (center.Statuses.ContainsKey(key))
+                    {
+                        // 이미 존재하는 Status를 대체
+                        center.Statuses[key] = json;
+                    }
+                    else
+                    {
+                        // 새로운 Status를 추가
+                        center.Statuses.Add(key, json);
+                    }
+                }
+
+                SetCenter(cacheKey, center);
             }
+        }
+
+        public List<TStatus> GetStatuses<TStatus, TCenter>(string cacheKey)
+            where TStatus : Status
+            where TCenter : Center
+        {
+            TCenter center = GetCenter<TCenter>(cacheKey);
+
+            if (center != null && center.Statuses != null)
+            {
+                List<TStatus> statuses = new List<TStatus>();
+
+                foreach (var json in center.Statuses.Values)
+                {
+                    TStatus status = JsonConvert.DeserializeObject<TStatus>(json);
+                    statuses.Add(status);
+                }
+
+                return statuses;
+            }
+
+            return new List<TStatus>();
+        }
+        public List<TCommodity> GetCommodities<TCommodity, TCenter>(string cacheKey)
+                    where TCommodity : Commodity
+                        where TCenter : Center
+        {
+            TCenter center = GetCenter<TCenter>(cacheKey);
+
+            if (center != null && center.Commodities != null)
+            {
+                List<TCommodity> commodities = new List<TCommodity>();
+
+                foreach (var json in center.Commodities.Values)
+                {
+                    TCommodity commodity = JsonConvert.DeserializeObject<TCommodity>(json);
+                    if (commodity != null)
+                    {
+                        commodities.Add(commodity);
+                    }
+                }
+
+                return commodities;
+            }
+
+            return new List<TCommodity>();
+        }
+
+        public List<TStatus> GetStatuses<TStatus, TCenter>(string cacheKey, string state)
+            where TStatus : Status
+            where TCenter : Center
+        {
+            TCenter center = GetCenter<TCenter>(cacheKey);
+
+            if (center != null && center.Statuses != null)
+            {
+                List<TStatus> statuses = new List<TStatus>();
+
+                foreach (var json in center.Statuses.Values)
+                {
+                    TStatus status = JsonConvert.DeserializeObject<TStatus>(json);
+                    if (status != null && status.State == state)
+                    {
+                        statuses.Add(status);
+                    }
+                }
+
+                return statuses;
+            }
+
+            return new List<TStatus>();
         }
     }
 
-    public abstract class CenterMemoryModuleBase
+    public abstract class EntityMemoryModuleBase
     {
         protected readonly IMemoryCache _memoryCache;
 
-        public CenterMemoryModuleBase(IMemoryCache memoryCache)
+        public EntityMemoryModuleBase(IMemoryCache memoryCache)
         {
             _memoryCache = memoryCache;
         }

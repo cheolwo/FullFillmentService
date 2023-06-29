@@ -7,19 +7,15 @@ using System.Threading.Tasks;
 
 namespace 창고Common.DTO.입고상품
 {
-    public class 입고상품CudDTO : StatusCudDTO
+    public class Create입고상품DTO : CreateDTO
     {
 
     }
-    public class Create입고상품DTO : 입고상품CudDTO
+    public class Update입고상품DTO : UpdateDTO
     {
 
     }
-    public class Update입고상품DTO : 입고상품CudDTO
-    {
-
-    }
-    public class Delete입고상품DTO : 입고상품CudDTO
+    public class Delete입고상품DTO : DeleteDTO
     {
 
     }

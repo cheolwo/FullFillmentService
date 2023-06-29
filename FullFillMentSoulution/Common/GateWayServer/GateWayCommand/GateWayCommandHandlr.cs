@@ -22,7 +22,7 @@ namespace Common.GateWay.GateWayCommand
                                     QueConfigurationService queConfigurationService
                                     )
         {
-            _context = context;
+            _context = context; 
             _queConfigurationService = queConfigurationService;
             _queSelectedService = queSelectedService;
         }
