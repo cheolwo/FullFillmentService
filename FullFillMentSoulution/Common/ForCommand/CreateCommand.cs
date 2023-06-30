@@ -3,20 +3,24 @@ using MediatR;
 
 namespace Common.ForCommand
 {
-    public interface IEvent
-    {
-        string GetEnqueName();
-        DateTime GetTime();
-        void Execute(IMediator mediator);
-    }
     [Serializable]
     public class CommandOption
     {
         public string NameofCommand { get; set; }
         public List<string> Options { get; set; }
     }
+    public interface IEvent
+    {
+        string GetEnqueName();
+        DateTime GetTime();
+        void Execute(IMediator mediator);
+    }
+    public interface IEvent<T> : IEvent where T : class
+    {
 
-    public class CudCommand<T> : IRequest, IEvent where T : class
+    }
+
+    public class CudCommand<T> : IRequest, IEvent<T> where T : class
     {
         public T t  { get; set; }
         public string? JwtToken { get; set; }

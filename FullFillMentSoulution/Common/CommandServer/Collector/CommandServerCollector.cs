@@ -30,19 +30,26 @@ namespace Common.CommandServer.Collector
             _commandStorage = commandStorage;
             _configuration = configuration;
             _webHostEnvironment = webHostEnvironment;
-            var gateWayServer = _configuration.GetSection("GateWayServer").Value?? throw new ArgumentNullException("GateWaySever Configuration");
-            queueName = gateWayServer.CreateQueueName<T>(_webHostEnvironment.ContentRootPath);
+            queueName = GetQueNameFromGateWayServer();
         }
+        private string GetQueNameFromGateWayServer()
+        {
+            var gateWayServer = _configuration.GetSection("GateWayServer").Value;
+            if (gateWayServer == null) { throw new ArgumentNullException(nameof(gateWayServer)); }
+            var queName = gateWayServer.CreateQueueName<T>(_webHostEnvironment.ContentRootPath);
+            return queName;
+        }
+        protected async Task Store(IEvent @event)
+        {
+            await _commandStorage.EnqueAsync(@event);
+        }
+
         protected async Task<IEnumerable<string>> Deque(string queueName)
         {
             var commands = await _context.Set<T>().DequeueAll(queueName);
             return commands;
         }
 
-        protected async Task Store(IEvent @event)
-        {
-            await _commandStorage.EnqueAsync(@event);
-        }
     }
     public interface ICollectEvent
     {

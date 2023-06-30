@@ -26,6 +26,7 @@ namespace Common.CommandServer
         protected readonly IConfiguration _configuration;
         protected readonly IWebHostEnvironment _webHostEnvironment;
         protected readonly IQueSelectedService _queSelectedService;
+        protected string _queName;
 
         public CommandServerHandlerBase(
             GateWayCommandContext gateContext,
@@ -46,25 +47,6 @@ namespace Common.CommandServer
         }
 
         public abstract Task<TDTO?> Handle(CudCommand<TDTO> cudCommand);
-
-        protected string GetQueNameFromGateWayServer(ServerSubject serverSubject)
-        {
-            var gateWayServer = _configuration.GetSection("GateWayServer").Value;
-            if (gateWayServer == null) { throw new ArgumentNullException(nameof(gateWayServer)); }
-            var queName = gateWayServer.CreateQueueName<TDTO>(_webHostEnvironment.ContentRootPath);
-            return queName;
-        }
-
-        protected async Task<CudCommand<TDTO>> Deque(string queName)
-        {
-            var message = await _gateContext.Set<TDTO>().Dequeue(queName);
-            CudCommand<TDTO>? cudCommand = JsonConvert.DeserializeObject<CudCommand<TDTO>>(message);
-            if (cudCommand != null)
-            {
-                return cudCommand;
-            }
-            throw new ArgumentNullException(nameof(cudCommand));
-        }
 
         protected async Task EnqueHandleResultToQueryServer(CudCommand<TDTO> command)
         {
