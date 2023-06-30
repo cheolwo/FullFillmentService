@@ -1,8 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Common.CommandServer;
+using Common.GateWay;
+using Common.Model.Repository;
+using MediatR;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using 마켓Common.Command;
+using 마켓Common.DTO;
+using 마켓Common.GateWay;
+using 마켓Common.Model;
 
 namespace 마켓Common.CommandServer.Handlr
 {

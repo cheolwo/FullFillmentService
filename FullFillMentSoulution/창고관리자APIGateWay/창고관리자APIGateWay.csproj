@@ -21,4 +21,8 @@
     <ProjectReference Include="..\WarehouseCommon\창고Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Handlr\" />
+  </ItemGroup>
+
 </Project>

@@ -6,8 +6,8 @@ namespace Common.ForCommand
     public interface IEvent
     {
         string GetEnqueName();
-        Type GetEventTtype();
         DateTime GetTime();
+        void Execute(IMediator mediator);
     }
     [Serializable]
     public class CommandOption
@@ -36,14 +36,13 @@ namespace Common.ForCommand
             return ServerSubject.ToString();
         }
 
-        public Type GetEventTtype()
-        {
-            return typeof(CudCommand<T>);
-        }
-
         public DateTime GetTime()
         {
             return DateTime;
+        }
+        public void Execute(IMediator mediator)
+        {
+            mediator.Send(this);
         }
     }
     public class CreateCommand<T> : CudCommand<T>, IRequest where T : class

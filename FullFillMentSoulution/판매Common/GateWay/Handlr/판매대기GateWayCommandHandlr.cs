@@ -1,11 +1,7 @@
 ﻿using Common.GateWay;
 using Common.GateWay.GateWayCommand;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using 판매Common.Command;
 using 판매Common.DTO;
 

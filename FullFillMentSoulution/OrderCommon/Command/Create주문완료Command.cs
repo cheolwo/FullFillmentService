@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Common.ForCommand;
+using Common.GateWay;
+using MediatR;
+using 주문Common.DTO.주문완료;
 
 namespace 주문Common.Command
 {

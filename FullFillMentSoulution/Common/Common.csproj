@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Folder Include="Actor\Query\" />
+    <Folder Include="CommandServer\Collector\" />
   </ItemGroup>
 
 </Project>

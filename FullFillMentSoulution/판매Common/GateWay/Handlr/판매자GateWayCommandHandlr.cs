@@ -4,7 +4,6 @@ using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using 판매Common.Command;
 using 판매Common.DTO;
-
 namespace 판매Common.GateWay.Handlr
 {
     public class Create판매자GateWayCommandHandlr : GateWayCreateCommandHandler<Create판매자DTO>, IRequestHandler<Create판매자Command>

@@ -123,34 +123,6 @@ namespace Common.GateWay
         {
             return _commandBuilder.Set<TDto>();
         }
-        public async Task<string?> Dequeue(string queName)
-        {
-            
-            if (_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString)); }
-
-            var factory = new ConnectionFactory
-            {
-                Uri = new Uri(_connectionString)
-            };
-
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare(queue: queName, durable: true, exclusive: false, autoDelete: false, arguments: null);
-
-                BasicGetResult result = channel.BasicGet(queName, autoAck: true);
-
-                if (result != null)
-                {
-                    var body = result.Body.ToArray();
-                    var message = Encoding.UTF8.GetString(body);
-                    await Task.CompletedTask;
-                    return message;
-                }
-            }
-
-            return null;
-        }
     }
     public abstract class GateWayQueryContext 
     {

@@ -69,8 +69,8 @@ namespace Common.CommandServer
         protected async Task EnqueHandleResultToQueryServer(CudCommand<TDTO> command)
         {
             var message = command.ToSerializedBytes();
-            var servers = _queConfigurationService.GetQueryServers<TDTO>(command.ServerSubject);
-            var server = _queSelectedService.GetOptimalQueueForEnque(command, _webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            var servers = _queConfigurationService.GetQueryServers(command.ServerSubject);
+            var server = _queSelectedService.GetOptimalQueueForEnque<TDTO>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             await _gateContext.Set<TDTO>().Enqueue(message, server);
         }
     }
