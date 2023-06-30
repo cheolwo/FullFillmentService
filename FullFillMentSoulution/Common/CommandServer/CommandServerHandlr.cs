@@ -51,7 +51,7 @@ namespace Common.CommandServer
         {
             var gateWayServer = _configuration.GetSection("GateWayServer").Value;
             if (gateWayServer == null) { throw new ArgumentNullException(nameof(gateWayServer)); }
-            var queName = gateWayServer.CreateQueueName(_webHostEnvironment.ContentRootPath, serverSubject.ToString());
+            var queName = gateWayServer.CreateQueueName<TDTO>(_webHostEnvironment.ContentRootPath);
             return queName;
         }
 
@@ -69,7 +69,7 @@ namespace Common.CommandServer
         protected async Task EnqueHandleResultToQueryServer(CudCommand<TDTO> command)
         {
             var message = command.ToSerializedBytes();
-            var servers = _queConfigurationService.GetQueryServers(command.ServerSubject);
+            var servers = _queConfigurationService.GetQueryServers<TDTO>(command.ServerSubject);
             var server = _queSelectedService.GetOptimalQueueForEnque(command, _webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             await _gateContext.Set<TDTO>().Enqueue(message, server);
         }

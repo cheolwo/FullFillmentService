@@ -6,10 +6,6 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace Common.GateWay.GateWayCommand
 {
-    public interface IGateWayCommandHandlr<T> where T : class
-    {
-
-    }
     public class GateWayCommandHandler<T> : IRequestHandler<CudCommand<T>> where T : CudDTO
     {
         protected readonly IQueSelectedService _queSelectedService;
@@ -17,10 +13,12 @@ namespace Common.GateWay.GateWayCommand
         protected readonly QueConfigurationService _queConfigurationService;
         protected readonly IWebHostEnvironment _webHostEnvironment;
         public GateWayCommandHandler(IQueSelectedService queSelectedService,
+            IWebHostEnvironment webHostEnvironment,
                                     GateWayCommandContext context,
                                     QueConfigurationService queConfigurationService
                                     )
         {
+            _webHostEnvironment = webHostEnvironment;
             _context = context; 
             _queConfigurationService = queConfigurationService;
             _queSelectedService = queSelectedService;
@@ -32,8 +30,8 @@ namespace Common.GateWay.GateWayCommand
             byte[] messageBytes = request.ToSerializedBytes();
             List<Server> servers = _queConfigurationService.GetCommandServers(request.ServerSubject);
 
-            var queueName = _queSelectedService.GetOptimalQueueForEnque(
-                request,_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            var queueName = _queSelectedService.GetOptimalQueueForEnque<T>(
+                _webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             if (queueName == null)
             {
                 //_logger.LogError("No suitable queue found.");
@@ -45,25 +43,24 @@ namespace Common.GateWay.GateWayCommand
     }
     public class GateWayCreateCommandHandler<T> : GateWayCommandHandler<T> where T : CudDTO
     {
-        public GateWayCreateCommandHandler(IQueSelectedService queSelectedService,
-            GateWayCommandContext context, QueConfigurationService queConfigurationService) : base(queSelectedService, context, queConfigurationService)
+        public GateWayCreateCommandHandler(IQueSelectedService queSelectedService, IWebHostEnvironment webHostEnvironment, 
+            GateWayCommandContext context, QueConfigurationService queConfigurationService) : base(queSelectedService, webHostEnvironment, context, queConfigurationService)
         {
         }
     }
 
     public class GateWayUpdateCommandHandler<T> : GateWayCommandHandler<T> where T : CudDTO
     {
-        public GateWayUpdateCommandHandler(IQueSelectedService queSelectedService,
-            GateWayCommandContext context, QueConfigurationService queConfigurationService) : base(queSelectedService, context, queConfigurationService)
+        public GateWayUpdateCommandHandler(IQueSelectedService queSelectedService, IWebHostEnvironment webHostEnvironment,
+            GateWayCommandContext context, QueConfigurationService queConfigurationService) : base(queSelectedService, webHostEnvironment, context, queConfigurationService)
         {
         }
     }
 
     public class GateWayDeleteCommandHandler<T> : GateWayCommandHandler<T> where T : CudDTO
     {
-        public GateWayDeleteCommandHandler(IQueSelectedService queSelectedService,
-            GateWayCommandContext context,
-            QueConfigurationService queConfigurationService) : base(queSelectedService, context, queConfigurationService)
+        public GateWayDeleteCommandHandler(IQueSelectedService queSelectedService, IWebHostEnvironment webHostEnvironment, 
+            GateWayCommandContext context, QueConfigurationService queConfigurationService) : base(queSelectedService, webHostEnvironment, context, queConfigurationService)
         {
         }
     }

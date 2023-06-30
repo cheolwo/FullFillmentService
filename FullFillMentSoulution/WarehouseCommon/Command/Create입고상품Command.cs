@@ -5,46 +5,25 @@ using 창고Common.DTO.입고상품;
 
 namespace 창고Common.CreateCommand
 {
-    public class Create입고상품Command : CreateCommand<Create입고상품DTO>, IRequest<string>
+    public class Create입고상품Command : CreateCommand<Create입고상품DTO>, IRequest
     {
-        public Create입고상품Command(Create입고상품DTO dto, CommandOption option)
+        public Create입고상품Command(Create입고상품DTO t, string? jwtToken, 
+            ServerSubject serverSubject, CommandOption? commandOption) : base(t, jwtToken, serverSubject, commandOption)
         {
-            t = dto;
-            CommandOption = option;
-        }
-        public Create입고상품Command(Create입고상품DTO dto, CommandOption option, ServerSubject serverSubject)
-        {
-            t = dto;
-            CommandOption = option;
-            this.ServerSubject = serverSubject;
         }
     }
-    public class Update입고상품Command : UpdateCommand<Update입고상품DTO>, IRequest<string>
+    public class Update입고상품Command : UpdateCommand<Update입고상품DTO>, IRequest
     {
-        public Update입고상품Command(Update입고상품DTO dto, CommandOption option)
+        public Update입고상품Command(Update입고상품DTO t, string? jwtToken, 
+            ServerSubject serverSubject, CommandOption? commandOption) : base(t, jwtToken, serverSubject, commandOption)
         {
-            t = dto;
-            CommandOption = option;
-        }
-        public Update입고상품Command(Update입고상품DTO dto, CommandOption option, ServerSubject serverSubject)
-        {
-            t = dto;
-            CommandOption = option;
-            this.ServerSubject = serverSubject;
         }
     }
-    public class Delete입고상품Command : DeleteCommand<Delete입고상품DTO>, IRequest<string>
+    public class Delete입고상품Command : DeleteCommand<Delete입고상품DTO>, IRequest
     {
-        public Delete입고상품Command(Delete입고상품DTO dto, CommandOption option)
+        public Delete입고상품Command(Delete입고상품DTO t, string? jwtToken,
+            ServerSubject serverSubject, CommandOption? commandOption) : base(t, jwtToken, serverSubject, commandOption)
         {
-            t = dto;
-            CommandOption = option;
-        }
-        public Delete입고상품Command(Delete입고상품DTO dto, CommandOption option, ServerSubject serverSubject)
-        {
-            t = dto;
-            CommandOption = option;
-            this.ServerSubject = serverSubject;
         }
     }
 }

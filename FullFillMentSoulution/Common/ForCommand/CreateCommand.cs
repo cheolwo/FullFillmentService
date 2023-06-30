@@ -6,6 +6,8 @@ namespace Common.ForCommand
     public interface IEvent
     {
         string GetEnqueName();
+        Type GetEventTtype();
+        DateTime GetTime();
     }
     [Serializable]
     public class CommandOption
@@ -32,6 +34,16 @@ namespace Common.ForCommand
         public string GetEnqueName()
         {
             return ServerSubject.ToString();
+        }
+
+        public Type GetEventTtype()
+        {
+            return typeof(CudCommand<T>);
+        }
+
+        public DateTime GetTime()
+        {
+            return DateTime;
         }
     }
     public class CreateCommand<T> : CudCommand<T>, IRequest where T : class

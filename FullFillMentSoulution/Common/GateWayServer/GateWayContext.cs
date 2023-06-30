@@ -1,6 +1,8 @@
 using Common.DTO;
 using Common.Model;
 using Microsoft.Extensions.Configuration;
+using RabbitMQ.Client;
+using System.Text;
 
 namespace Common.GateWay
 {
@@ -109,15 +111,45 @@ namespace Common.GateWay
     {
         protected readonly GateWayCommandBuilder _commandBuilder;
         protected readonly IConfiguration _configuration;
+        private readonly string _connectionString;
         protected GateWayCommandContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration)
         {
             _commandBuilder = commandBuilder;
             _configuration = configuration;
+            _connectionString = _configuration.GetSection("RabbitMqConnectionString")?.Value ?? throw new ArgumentNullException(_connectionString);
         }
         protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
         public virtual GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO
         {
             return _commandBuilder.Set<TDto>();
+        }
+        public async Task<string?> Dequeue(string queName)
+        {
+            
+            if (_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString)); }
+
+            var factory = new ConnectionFactory
+            {
+                Uri = new Uri(_connectionString)
+            };
+
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
+            {
+                channel.QueueDeclare(queue: queName, durable: true, exclusive: false, autoDelete: false, arguments: null);
+
+                BasicGetResult result = channel.BasicGet(queName, autoAck: true);
+
+                if (result != null)
+                {
+                    var body = result.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    await Task.CompletedTask;
+                    return message;
+                }
+            }
+
+            return null;
         }
     }
     public abstract class GateWayQueryContext 
