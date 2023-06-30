@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace 판매Common.QueryServer.Handlr
 {
-    internal class 판매완료QueryServerHandlr
+    public class 판매완료QueryServerHandlr
     {
     }
 }
+ 

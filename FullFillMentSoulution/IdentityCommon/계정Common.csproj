@@ -9,10 +9,13 @@
   <ItemGroup>
     <Compile Remove="Command\**" />
     <Compile Remove="DTO\**" />
+    <Compile Remove="Extensions\**" />
     <EmbeddedResource Remove="Command\**" />
     <EmbeddedResource Remove="DTO\**" />
+    <EmbeddedResource Remove="Extensions\**" />
     <None Remove="Command\**" />
     <None Remove="DTO\**" />
+    <None Remove="Extensions\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,7 +38,6 @@
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
-    <Folder Include="Extensions\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

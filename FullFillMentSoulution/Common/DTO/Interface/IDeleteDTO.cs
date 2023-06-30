@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace 판매Common.CommandServer.Handlr
+namespace Common.DTO.Interface
 {
-    internal class 판매자CommandServerHandlr
+    public interface IDeleteDTO
     {
     }
 }

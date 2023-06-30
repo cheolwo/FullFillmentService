@@ -10,16 +10,19 @@ using 계정Common.Extensions;
 
 namespace Common.QueryServer
 {
-    public class QueryServerCenterHandlr<TDTO, TCenter> : QueryServerHandlr<TDTO, TCenter> where TDTO : CudDTO where TCenter : Center
+    public class QueryServerCenterHandlr<TDTO, TCenter> : QueryServerHandlr<TDTO, TCenter> 
+        where TDTO : CenterCudDTO where TCenter : Center
     {
+        private readonly IMapper _mapper;
         public QueryServerCenterHandlr(
             ICommandServerConfiguringService commandServerConfiguringService, 
             IWebHostEnvironment webHostEnvironment, 
             IQueSelectedService queSelectedService, 
             IMapper mapper, 
             EntityMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
-            : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, mapper, centerMemoryModule, gateContext)
+            : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, centerMemoryModule, gateContext)
         {
+            _mapper = mapper;
         }
         public async Task Handle(CudCommand<TDTO> cudCommand)
         {
@@ -36,16 +39,18 @@ namespace Common.QueryServer
         }
     }
     public class QueryServerCommodityHandlr<TDTO, TCommodity, TCenter> : QueryServerHandlr<TDTO, TCommodity> 
-        where TDTO : CudDTO where TCenter : Center where TCommodity : Commodity
+        where TDTO : CommodityCudDTO where TCenter : Center where TCommodity : Commodity
     {
+        private readonly IMapper _mapper;
         public QueryServerCommodityHandlr(
             ICommandServerConfiguringService commandServerConfiguringService, 
             IWebHostEnvironment webHostEnvironment, 
             IQueSelectedService queSelectedService, 
             IMapper mapper, 
             EntityMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
-            : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, mapper, centerMemoryModule, gateContext)
+            : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, centerMemoryModule, gateContext)
         {
+            _mapper = mapper;
         }
         public async Task Handle(CudCommand<TDTO> cudCommand)
         {
@@ -62,16 +67,18 @@ namespace Common.QueryServer
         }
     }
     public class QueryServerStatusHandlr<TDTO, TStatus, TCenter> : QueryServerHandlr<TDTO, TStatus>
-        where TDTO : CudDTO where TCenter : Center where TStatus : Status
+        where TDTO : StatusCudDTO where TCenter : Center where TStatus : Status
     {
+        private readonly IMapper _mapper;
         public QueryServerStatusHandlr(
             ICommandServerConfiguringService commandServerConfiguringService, 
             IWebHostEnvironment webHostEnvironment, 
             IQueSelectedService queSelectedService, 
             IMapper mapper, 
             EntityMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
-            : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, mapper, centerMemoryModule, gateContext)
+            : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, centerMemoryModule, gateContext)
         {
+            _mapper = mapper;
         }
         public async Task Handle(CudCommand<TDTO> cudCommand)
         {

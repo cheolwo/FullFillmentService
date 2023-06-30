@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Common.DTO;
+using Common.DTO.Interface;
 using Common.ForCommand;
 using Common.GateWay;
 using Common.Model;
@@ -27,7 +28,7 @@ namespace Common.CommandServer
         {
             TDTO dto = cudCommand.t;
             var entity = _mapper.Map<TCenter>(cudCommand.t);
-            if (dto is CreateDTO && entity is TCenter)
+            if (dto is ICreateDTO && entity is TCenter)
             {
                 if (entity != null)
                 {
@@ -38,9 +39,9 @@ namespace Common.CommandServer
                 }
                 return null;
             }
-            else if (dto is UpdateDTO updateDto && entity is TCenter)
+            else if (dto is IUpdateDTO updateDto && entity is TCenter)
             {
-                entity = await _commandRepository.GetAsync(updateDto.Id);
+                entity = await _commandRepository.GetAsync(dto.Id);
                 if (entity != null)
                 {
                     _mapper.Map(updateDto, entity);
@@ -51,9 +52,9 @@ namespace Common.CommandServer
                 }
                 return null;
             }
-            else if (dto is DeleteDTO deleteDto && entity is TCenter)
+            else if (dto is IDeleteDTO deleteDto && entity is TCenter)
             {
-                entity = await _commandRepository.GetAsync(deleteDto.Id);
+                entity = await _commandRepository.GetAsync(dto.Id);
                 if (entity != null)
                 {
                     _commandRepository.Delete(entity.Id);

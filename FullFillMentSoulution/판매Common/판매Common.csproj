@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="APIService\**" />
+    <Compile Remove="Event\**" />
+    <Compile Remove="Mapper\**" />
+    <EmbeddedResource Remove="APIService\**" />
+    <EmbeddedResource Remove="Event\**" />
+    <EmbeddedResource Remove="Mapper\**" />
+    <None Remove="APIService\**" />
+    <None Remove="Event\**" />
+    <None Remove="Mapper\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.7">
       <PrivateAssets>all</PrivateAssets>
@@ -18,12 +30,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\OrderCommon\주문Common.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="APIService\" />
-    <Folder Include="Event\" />
-    <Folder Include="Mapper\" />
   </ItemGroup>
 
 </Project>

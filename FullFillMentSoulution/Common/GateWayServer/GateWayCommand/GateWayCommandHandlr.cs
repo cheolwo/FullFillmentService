@@ -10,7 +10,7 @@ namespace Common.GateWay.GateWayCommand
     {
 
     }
-    public class GateWayCommandHandler<T> : IRequestHandler<CudCommand<T>> where T : class
+    public class GateWayCommandHandler<T> : IRequestHandler<CudCommand<T>> where T : CudDTO
     {
         protected readonly IQueSelectedService _queSelectedService;
         protected readonly GateWayCommandContext _context;

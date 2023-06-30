@@ -7,13 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj" />
+    <Compile Remove="APIService\**" />
+    <Compile Remove="Event\**" />
+    <Compile Remove="Mapper\**" />
+    <EmbeddedResource Remove="APIService\**" />
+    <EmbeddedResource Remove="Event\**" />
+    <EmbeddedResource Remove="Mapper\**" />
+    <None Remove="APIService\**" />
+    <None Remove="Event\**" />
+    <None Remove="Mapper\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="APIService\" />
-    <Folder Include="Event\" />
-    <Folder Include="Mapper\" />
+    <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

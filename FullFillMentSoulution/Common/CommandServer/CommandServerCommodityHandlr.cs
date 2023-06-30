@@ -6,6 +6,7 @@ using Common.Model.Repository;
 using Common.Model;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Common.DTO.Interface;
 
 namespace Common.CommandServer
 {
@@ -30,7 +31,7 @@ namespace Common.CommandServer
             TDTO dto = cudCommand.t;
             var commodity = _mapper.Map<TCommodity>(cudCommand.t);
 
-            if (dto is CreateDTO && commodity is TCommodity)
+            if (dto is ICreateDTO && commodity is TCommodity)
             {
                 if (commodity != null)
                 {
@@ -41,9 +42,9 @@ namespace Common.CommandServer
                 }
                 return null;
             }
-            else if (dto is UpdateDTO updateDto && commodity is TCommodity)
+            else if (dto is IUpdateDTO updateDto && commodity is TCommodity)
             {
-                commodity = await _commandRepository.GetAsync(updateDto.Id);
+                commodity = await _commandRepository.GetAsync(dto.Id);
                 if (commodity != null)
                 {
                     _mapper.Map(updateDto, commodity);
@@ -54,9 +55,9 @@ namespace Common.CommandServer
                 }
                 return null;
             }
-            else if (dto is DeleteDTO deleteDto && commodity is TCommodity)
+            else if (dto is IDeleteDTO deleteDto && commodity is TCommodity)
             {
-                commodity = await _commandRepository.GetAsync(deleteDto.Id);
+                commodity = await _commandRepository.GetAsync(dto.Id);
                 if (commodity != null)
                 {
                     _commandRepository.Delete(commodity.Id);

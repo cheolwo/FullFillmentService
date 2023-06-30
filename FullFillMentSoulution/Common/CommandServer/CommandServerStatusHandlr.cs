@@ -6,11 +6,7 @@ using Common.Model.Repository;
 using Common.Model;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common.DTO.Interface;
 
 namespace Common.CommandServer
 {
@@ -35,7 +31,7 @@ namespace Common.CommandServer
             TDTO dto = cudCommand.t;
             var status = _mapper.Map<TStatus>(cudCommand.t);
 
-            if (dto is CreateDTO && status is TStatus)
+            if (dto is ICreateDTO && status is TStatus)
             {
                 if (status != null)
                 {
@@ -46,9 +42,9 @@ namespace Common.CommandServer
                 }
                 return null;
             }
-            else if (dto is UpdateDTO updateDto && status is TStatus)
+            else if (dto is IUpdateDTO updateDto && status is TStatus)
             {
-                status = await _commandRepository.GetAsync(updateDto.Id);
+                status = await _commandRepository.GetAsync(dto.Id);
                 if (status != null)
                 {
                     _mapper.Map(updateDto, status);
@@ -59,9 +55,9 @@ namespace Common.CommandServer
                 }
                 return null;
             }
-            else if (dto is DeleteDTO deleteDto && status is TStatus)
+            else if (dto is IDeleteDTO && status is TStatus)
             {
-                status = await _commandRepository.GetAsync(deleteDto.Id);
+                status = await _commandRepository.GetAsync(dto.Id);
                 if (status != null)
                 {
                     _commandRepository.Delete(status.Id);

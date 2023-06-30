@@ -28,7 +28,7 @@ namespace Common.GateWay
             return queName;
         }
 
-        public async Task<string> Dequeue(string queName)
+        public async Task<string?> Dequeue(string queName)
         {
             if (_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString)); }
 

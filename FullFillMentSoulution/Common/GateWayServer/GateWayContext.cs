@@ -63,6 +63,21 @@ namespace Common.GateWay
         {
             _configurations = new Dictionary<Type, object>();
         }
+        public void ApplyConfiguration<TDto>(IGateWayQueryConfiguration<TDto> configuration) where TDto : ReadDto
+        {
+            _configurations[typeof(TDto)] = configuration;
+        }
+        public GateWayQueryTypeBuilder<TDto> Set<TDto>() where TDto : ReadDto
+        {
+            if (_configurations.TryGetValue(typeof(TDto), out var configuration))
+            {
+                return new GateWayQueryTypeBuilder<TDto>((IGateWayQueryConfiguration<TDto>)configuration);
+            }
+            else
+            {
+                return new GateWayQueryTypeBuilder<TDto>(null);
+            }
+        }
     }
     public interface IQueForGateWayServer
     {
@@ -72,8 +87,6 @@ namespace Common.GateWay
     {
         Task<string> Dequeue(string queName);
     }
-
-
     public interface IGateWayCommandConfiguration<T> where T : class
     {
         void Configure(GateWayCommandTypeBuilder<T> builder);
@@ -86,29 +99,41 @@ namespace Common.GateWay
     {
         protected readonly GateWayCommandBuilder commandBuilder;
         protected readonly IConfiguration _configuration;
-        protected readonly GateWayCommandContextOptions _options;
         public GateWayContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration)
         {
             this.commandBuilder = commandBuilder;
             _configuration = configuration;
         }
     }
-    public abstract class GateWayCommandContext : GateWayContext
+    public abstract class GateWayCommandContext 
     {
-        protected GateWayCommandContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration) : base(commandBuilder, configuration)
+        protected readonly GateWayCommandBuilder _commandBuilder;
+        protected readonly IConfiguration _configuration;
+        protected GateWayCommandContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration)
         {
+            _commandBuilder = commandBuilder;
+            _configuration = configuration;
         }
-
         protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
-        public abstract GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : class;
+        public virtual GateWayCommandTypeBuilder<TDto> Set<TDto>() where TDto : CudDTO
+        {
+            return _commandBuilder.Set<TDto>();
+        }
     }
-    public abstract class GateWayQueryContext : GateWayContext
+    public abstract class GateWayQueryContext 
     {
-        protected GateWayQueryContext(GateWayCommandBuilder commandBuilder, IConfiguration configuration) : base(commandBuilder, configuration)
+        protected readonly GateWayQueryBuilder _gateWayQueryBuilder;
+        protected readonly IConfiguration _configuration;
+        protected GateWayQueryContext(GateWayQueryBuilder gateWayQueryBuilder, IConfiguration configuration) 
         {
+            _gateWayQueryBuilder = gateWayQueryBuilder;
+            _configuration = configuration;
         }
 
-        protected abstract void OnModelCreating(GateWayCommandBuilder commandBuilder);
-        public abstract GateWayQueryTypeBuilder<TDto> Set<TDto>() where TDto : class;
+        protected abstract void OnModelCreating(GateWayQueryBuilder queryBuilder);
+        public virtual GateWayQueryTypeBuilder<TDto> Set<TDto>() where TDto : ReadDto
+        {
+            return _gateWayQueryBuilder.Set<TDto>();
+        }
     }
 }

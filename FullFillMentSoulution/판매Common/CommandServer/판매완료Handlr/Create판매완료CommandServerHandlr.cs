@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace 판매Common.CommandServer.Handlr
+namespace 판매Common.CommandServer.판매완료Handlr
 {
-    internal class 판매자상품CommandServerHandlr
+    public class Create판매완료CommandServerHandlr
     {
     }
 }
