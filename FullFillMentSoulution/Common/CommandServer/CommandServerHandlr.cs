@@ -47,11 +47,11 @@ namespace Common.CommandServer
 
         public abstract Task<TDTO?> Handle(CudCommand<TDTO> cudCommand);
 
-        protected string GetQueNameFromGateWayServer()
+        protected string GetQueNameFromGateWayServer(ServerSubject serverSubject)
         {
             var gateWayServer = _configuration.GetSection("GateWayServer").Value;
             if (gateWayServer == null) { throw new ArgumentNullException(nameof(gateWayServer)); }
-            var queName = gateWayServer.CreateQueueName<TDTO>(_webHostEnvironment.ContentRootPath);
+            var queName = gateWayServer.CreateQueueName(_webHostEnvironment.ContentRootPath, serverSubject.ToString());
             return queName;
         }
 
@@ -70,7 +70,7 @@ namespace Common.CommandServer
         {
             var message = command.ToSerializedBytes();
             var servers = _queConfigurationService.GetQueryServers(command.ServerSubject);
-            var server = _queSelectedService.GetOptimalQueueForEnque<TDTO>(_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            var server = _queSelectedService.GetOptimalQueueForEnque(command, _webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             await _gateContext.Set<TDTO>().Enqueue(message, server);
         }
     }

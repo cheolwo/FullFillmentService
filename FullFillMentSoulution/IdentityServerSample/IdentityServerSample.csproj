@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IdentityCommon\계정Common.csproj" />
+    <ProjectReference Include="..\마켓관리자APIGateWay\마켓관리자APIGateWay.csproj" />
   </ItemGroup>
 
 </Project>

@@ -10,7 +10,7 @@ using 판매Common.Model;
 
 namespace 판매Common.CommandServer.판매대기Handlr
 {
-    public class Create판매대기CommandServerHandlr : CommandServerStatusHandlr<Create판매대기DTO, 판매대기>, IJob
+    public class Create판매대기CommandServerHandlr : CommandServerStatusHandlr<Create판매대기DTO, 판매대기>
     {
         public Create판매대기CommandServerHandlr(
             GateWayCommandContext gateContext, EntityRepository<판매대기> commandRepository, 
@@ -19,11 +19,6 @@ namespace 판매Common.CommandServer.판매대기Handlr
             : base(gateContext, commandRepository, queConfigurationService,
                   queSelectedService, mapper, configuration, webHostEnvironment)
         {
-        }
-
-        public Task Execute(IJobExecutionContext context)
-        {
-            throw new NotImplementedException();
         }
     }
   

@@ -3,6 +3,10 @@ using MediatR;
 
 namespace Common.ForCommand
 {
+    public interface IEvent
+    {
+        string GetEnqueName();
+    }
     [Serializable]
     public class CommandOption
     {
@@ -10,18 +14,24 @@ namespace Common.ForCommand
         public List<string> Options { get; set; }
     }
 
-    public class CudCommand<T> : IRequest where T : class
+    public class CudCommand<T> : IRequest, IEvent where T : class
     {
         public T t  { get; set; }
         public string? JwtToken { get; set; }
         public ServerSubject ServerSubject { get; set; }
         public CommandOption? CommandOption { get; set; }
+        public DateTime DateTime { get; set; }
         public CudCommand(T t, string? jwtToken, ServerSubject serverSubject, CommandOption? commandOption)
         {
             this.t = t;
             JwtToken = jwtToken;
             ServerSubject = serverSubject;
             CommandOption = commandOption;
+        }
+
+        public string GetEnqueName()
+        {
+            return ServerSubject.ToString();
         }
     }
     public class CreateCommand<T> : CudCommand<T>, IRequest where T : class

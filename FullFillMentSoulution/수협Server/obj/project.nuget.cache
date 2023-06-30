@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "l9YDJuS1NYaygX7XHBfxdyCTieja36u+Oc+4ZRdwgMWgNCAGeSPg68stxWcw98NbEvFq4//k/rEzn+wRrZhl+Q==",
-  "success": true,
+  "dgSpecHash": "L07dZBPfYFUIj5qETqOMRl6z7HJvZw9erOInfV9vYRR/TBy0sAtwEwblF4jXefE3qzWmsEtYJsywpw54Yec6vg==",
+  "success": false,
   "projectFilePath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\수협Server\\수협Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\power\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -117,5 +117,15 @@
     "C:\\Users\\power\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\power\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: 7.0.8에서 7.0.7(으)로 다운그레이드된 패키지 Microsoft.AspNetCore.OpenApi을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n 수협Server -> IdentityServerSample -> 마켓관리자APIGateWay -> Microsoft.AspNetCore.OpenApi (>= 7.0.8) \r\n 수협Server -> Microsoft.AspNetCore.OpenApi (>= 7.0.7)",
+      "libraryId": "Microsoft.AspNetCore.OpenApi",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

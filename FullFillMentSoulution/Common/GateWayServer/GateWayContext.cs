@@ -81,11 +81,11 @@ namespace Common.GateWay
     }
     public interface IQueForGateWayServer
     {
-        Task<string> Enqueue(byte[] message, string queName);
+        Task<string?> Enqueue(byte[] message, string queName);
     }
     public interface IQueForBusinessServer
     {
-        Task<string> Dequeue(string queName);
+        Task<string?> Dequeue(string queName);
     }
     public interface IGateWayCommandConfiguration<T> where T : class
     {

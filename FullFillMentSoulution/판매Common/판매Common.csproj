@@ -32,4 +32,8 @@
     <ProjectReference Include="..\OrderCommon\주문Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Command\" />
+  </ItemGroup>
+
 </Project>

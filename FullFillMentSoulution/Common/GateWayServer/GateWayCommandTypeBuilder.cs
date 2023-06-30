@@ -8,7 +8,7 @@ namespace Common.GateWay
     public class GateWayTypeBuilder<T> where T : class
     {
         protected string? _connectionString;
-        public async Task<string> Enqueue(byte[] message, string queName)
+        public async Task<string?> Enqueue(byte[] message, string queName)
         {
             if (_connectionString == null) { throw new ArgumentNullException(nameof(_connectionString)); }
 

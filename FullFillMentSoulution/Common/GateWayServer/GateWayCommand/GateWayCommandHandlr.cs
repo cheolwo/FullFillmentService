@@ -28,11 +28,12 @@ namespace Common.GateWay.GateWayCommand
 
         public async Task Handle(CudCommand<T> request, CancellationToken cancellationToken)
         {
+            request.DateTime = DateTime.Now;
             byte[] messageBytes = request.ToSerializedBytes();
             List<Server> servers = _queConfigurationService.GetCommandServers(request.ServerSubject);
 
-            var queueName = _queSelectedService.GetOptimalQueueForEnque<T>(
-                _webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
+            var queueName = _queSelectedService.GetOptimalQueueForEnque(
+                request,_webHostEnvironment.ContentRootPath, servers, OptimalQueOptions.Min);
             if (queueName == null)
             {
                 //_logger.LogError("No suitable queue found.");

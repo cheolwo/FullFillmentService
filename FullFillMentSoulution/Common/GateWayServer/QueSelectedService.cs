@@ -1,4 +1,5 @@
 ﻿using Common.Extensions;
+using Common.ForCommand;
 using Microsoft.Extensions.Configuration;
 using Quartz.Impl.AdoJobStore.Common;
 
@@ -6,8 +7,8 @@ namespace Common.GateWay
 {
     public interface IQueSelectedService
     {
-        string GetOptimalQueueForEnque<T>(string provider, List<Server> enqueServers, OptimalQueOptions options);
-        string GetOptimalQueueForDeque<T>(string consumer, List<Server> dequeServers, OptimalQueOptions options);
+        string GetOptimalQueueForEnque(IEvent @event, string provider, List<Server> enqueServers, OptimalQueOptions options);
+        string GetOptimalQueueForDeque(IEvent @event, string consumer, List<Server> dequeServers, OptimalQueOptions options);
     }
     public enum OptimalQueOptions { Min, Max }
     public class QueSelectedService : IQueSelectedService
@@ -21,14 +22,14 @@ namespace Common.GateWay
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
-        public int SetCurrentMessageInQue<T>(Server server)
+        public int SetCurrentMessageInQue<T>(Server server, IEvent @event)
         {
             var gateWay = _configuration.GetConnectionString("GateWayServerUrl");
             if (gateWay == null)
             {
                 throw new ArgumentNullException(nameof(gateWay));
             }
-            var queName = gateWay.CreateQueueName<T>(server.Url);
+            var queName = gateWay.CreateQueueName(server.Url, @event.GetEnqueName());
             var count = _rabbitMQQueueStatusService.GetMessageCount(queName);
             var FindQueName = dicQue.Keys.FirstOrDefault(e => e.Equals(queName));
             if (FindQueName != null)
@@ -42,11 +43,11 @@ namespace Common.GateWay
             }
         }
 
-        public string GetOptimalQueueForEnque<T>(string provider, List<Server> enqueServers, OptimalQueOptions options)
+        public string GetOptimalQueueForEnque(IEvent @event, string provider, List<Server> enqueServers, OptimalQueOptions options)
         {
-            foreach (Server server in enqueServers)
+            foreach (Server server in enqueServers) 
             {
-                var queName = provider.CreateQueueName<T>(server.Url);
+                var queName = provider.CreateQueueName(server.Url, @event.GetEnqueName());
                 var count = _rabbitMQQueueStatusService.GetMessageCount(queName);
                 if (count > 0)
                 {
@@ -69,12 +70,12 @@ namespace Common.GateWay
 
             throw new ArgumentException("No suitable queue found.");
         }
-        public string GetOptimalQueueForDeque<T>(string consumer, List<Server> dequeServers, OptimalQueOptions options)
+        public string GetOptimalQueueForDeque(IEvent @event, string consumer, List<Server> dequeServers, OptimalQueOptions options)
         {
             foreach (Server server in dequeServers)
             {
                 if(server.Url == null) { continue; }
-                var queName = server.Url.CreateQueueName<T>(consumer);
+                var queName = server.Url.CreateQueueName(consumer, @event.GetEnqueName());
                 var count = _rabbitMQQueueStatusService.GetMessageCount(queName);
                 if (count > 0)
                 {

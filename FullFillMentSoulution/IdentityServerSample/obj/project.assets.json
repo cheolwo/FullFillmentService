@@ -1861,6 +1861,27 @@
         "runtime": {
           "bin/placeholder/계정Common.dll": {}
         }
+      },
+      "마켓관리자APIGateWay/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "MediatR": "12.0.1",
+          "Microsoft.AspNetCore.OpenApi": "7.0.8",
+          "RabbitMQ.Client": "6.5.0",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "계정Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/마켓관리자APIGateWay.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/마켓관리자APIGateWay.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -5099,6 +5120,11 @@
       "type": "project",
       "path": "../IdentityCommon/계정Common.csproj",
       "msbuildProject": "../IdentityCommon/계정Common.csproj"
+    },
+    "마켓관리자APIGateWay/1.0.0": {
+      "type": "project",
+      "path": "../마켓관리자APIGateWay/마켓관리자APIGateWay.csproj",
+      "msbuildProject": "../마켓관리자APIGateWay/마켓관리자APIGateWay.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5113,7 +5139,8 @@
       "Microsoft.Extensions.Identity.Core >= 7.0.7",
       "MySql.EntityFrameworkCore >= 7.0.2",
       "Swashbuckle.AspNetCore >= 6.5.0",
-      "계정Common >= 1.0.0"
+      "계정Common >= 1.0.0",
+      "마켓관리자APIGateWay >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5151,6 +5178,9 @@
           "projectReferences": {
             "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj": {
               "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\IdentityCommon\\계정Common.csproj"
+            },
+            "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓관리자APIGateWay\\마켓관리자APIGateWay.csproj": {
+              "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓관리자APIGateWay\\마켓관리자APIGateWay.csproj"
             }
           }
         }
@@ -5230,5 +5260,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: 7.0.8에서 7.0.7(으)로 다운그레이드된 패키지 Microsoft.AspNetCore.OpenApi을(를) 발견했습니다. 프로젝트에서 패키지를 직접 참조하여 다른 버전을 선택하세요. \r\n IdentityServerSample -> 마켓관리자APIGateWay -> Microsoft.AspNetCore.OpenApi (>= 7.0.8) \r\n IdentityServerSample -> Microsoft.AspNetCore.OpenApi (>= 7.0.7)",
+      "libraryId": "Microsoft.AspNetCore.OpenApi",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
