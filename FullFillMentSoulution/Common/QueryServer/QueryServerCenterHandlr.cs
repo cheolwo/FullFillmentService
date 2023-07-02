@@ -11,7 +11,7 @@ using 계정Common.Extensions;
 namespace Common.QueryServer
 {
     public class QueryServerCenterHandlr<TDTO, TCenter> : QueryServerHandlr<TDTO, TCenter> 
-        where TDTO : CenterCudDTO where TCenter : Center
+        where TDTO : ReadDto where TCenter : Center
     {
         private readonly IMapper _mapper;
         public QueryServerCenterHandlr(
@@ -39,7 +39,7 @@ namespace Common.QueryServer
         }
     }
     public class QueryServerCommodityHandlr<TDTO, TCommodity, TCenter> : QueryServerHandlr<TDTO, TCommodity> 
-        where TDTO : CommodityCudDTO where TCenter : Center where TCommodity : Commodity
+        where TDTO : ReadDto where TCenter : Center where TCommodity : Commodity
     {
         private readonly IMapper _mapper;
         public QueryServerCommodityHandlr(
@@ -67,7 +67,7 @@ namespace Common.QueryServer
         }
     }
     public class QueryServerStatusHandlr<TDTO, TStatus, TCenter> : QueryServerHandlr<TDTO, TStatus>
-        where TDTO : StatusCudDTO where TCenter : Center where TStatus : Status
+        where TDTO : ReadDto where TCenter : Center where TStatus : Status
     {
         private readonly IMapper _mapper;
         public QueryServerStatusHandlr(

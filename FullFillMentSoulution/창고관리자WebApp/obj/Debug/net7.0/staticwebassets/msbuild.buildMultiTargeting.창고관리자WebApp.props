@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\창고관리자WebApp.props" />
-</Project>

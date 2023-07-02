@@ -1,4 +1,5 @@
 ﻿using Common.Actor.Builder;
+using FluentValidation.Results;
 
 namespace FrontCommon.Actor
 {
@@ -13,7 +14,7 @@ namespace FrontCommon.Actor
 
         protected virtual void OnModelCreating(DtoCommandBuilder dtoBuilder) 
         {
-
+           
         }
         public DtoTypeCommandBuilder<TDto> Set<TDto>() where TDto : class
         {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "omAzxgr17vrSqW9W3CG6Qk6cjt/HxRFyIum18G/z/V2FIhWXALg5xKLH7m43DM4ylOPQDputp2DpT0DeQry6wQ==",
+  "dgSpecHash": "wGmAuA5hBk7XCElezNA4yl53bGJyMnHYLdDspu4T/kIUqcP3lXK6RmP3X5yHxHINjutCzEOzPkuHmzNIJvvGPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj",
   "expectedPackageFiles": [
@@ -67,7 +67,9 @@
     "C:\\Users\\user\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.forms\\5.0.0.2578\\xamarin.forms.5.0.0.2578.nupkg.sha512"
   ],
   "logs": []
 }

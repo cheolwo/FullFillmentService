@@ -1,4 +1,4 @@
-﻿using Common.App.ViewModel;
+﻿using Common.ViewModel;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.JSInterop;

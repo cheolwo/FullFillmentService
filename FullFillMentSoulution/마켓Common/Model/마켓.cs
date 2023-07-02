@@ -8,30 +8,45 @@ namespace 마켓Common.Model
 {
     public class 마켓 : Center
     {
-        [Key]
-        public string Id { get; set; }
+        public List<마켓상품> 마켓상품들 { get; set; }
+        public List<협상주문> 협상주문들 { get; set; }
+        public List<협상중> 협상중들 { get; set; }
+        public List<협상완료> 협상완료들 { get; set; }
     }
     public class 마켓상품 : Commodity
     {
-        [Key]
-        public string Id { get; set; }
         public string? UserId { get; set; }
-
+    }
+    public class 협상주문
+    {
+        public string? 주문자Id { get; set; }
+        public string? 수량 { get; set; }
+        public string? Priced { get; set; }
     }
     public class 협상대기 : Status
     {
-        [Key]
-        public string Id { get; set; }
+        public string? 판매자상품Id { get; set; }
+        public double Price { get; set; }
+        public List<협상주문>? 협상주문들 { get; set; } 
     }
     public class 협상중 : Status
     {
         [Key]
         public string Id { get; set; }
+        public double Price { get; set; }
+        public List<협상주문>? 협상주문들 { get; set; }
     }
     public class 협상완료 : Status
     {
         [Key]
         public string Id { get; set; }
+        public double Price { get; set; }
+        public List<협상주문>? 협상주문들 { get; set; }
+        public 마켓 마켓 { get; set; }
+        public 마켓상품 마켓상품 { get; set; }
+        public 협상대기 협상대기 { get; set; }
+        public 협상중 협상중 { get; set; }
+        public 협상완료 협상완료 { get; set; }
     }
     public class 마켓DbContext : DbContext
     {

@@ -46,11 +46,18 @@ namespace Common.DTO
     }
     public class CenterCudDTO : CudDTO
     {
-        
+        public string? Address { get; set; }
+        public string? ZipCode { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Email { get; set; }
     }
     public class CommodityCudDTO : CudDTO
     {
-
+        public decimal? Price { get; set; }
+        public string? Description { get; set; }
+        public int? Quantity { get; set; }
+        public string? ImageUrl { get; set; }
+        public string? CategoryId { get; set; }
     }
     public class StatusCudDTO : CudDTO
     {

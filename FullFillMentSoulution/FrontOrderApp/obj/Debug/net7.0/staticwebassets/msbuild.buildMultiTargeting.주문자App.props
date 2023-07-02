@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\주문자App.props" />
-</Project>

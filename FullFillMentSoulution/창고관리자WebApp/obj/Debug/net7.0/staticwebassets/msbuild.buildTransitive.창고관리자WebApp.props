@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\창고관리자WebApp.props" />
-</Project>

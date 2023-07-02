@@ -1,4 +1,4 @@
-﻿using Common.App.ViewService;
+﻿using Common.ViewService;
 using 판매Common.Actor;
 
 namespace 판매Common.ViewService

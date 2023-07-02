@@ -17,11 +17,20 @@ namespace Common.Actor.Builder
         {
             configuration.Configure(this);
         }
+        public DtoTypeCommandBuilder<TDto> SetServerBaseAddress(string baseAddress)
+        {
+            this.Route = baseAddress;
+            return this;
+        }
 
         public DtoTypeCommandBuilder<TDto> SetValidator(IValidator<TDto> validator)
         {
             Validator = validator;
             return this;
+        }
+        public IValidator<TDto> GetValidator()
+        {
+            return Validator;
         }
         public DtoTypeCommandBuilder<TDto> SetRoute(string route)
         {

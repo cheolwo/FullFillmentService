@@ -60,5 +60,11 @@ namespace FrontCommon.Actor
         public string Route { get; set; }
         public string BaseAddress { get; set; }
         public bool UseApiGateway { get; set; }
+        public ServerBaseRouteInfo(string baseAddress, string route)
+        {
+            BaseAddress = baseAddress;
+            Route = route;
+        }
+        public ServerBaseRouteInfo() { }
     }
 }

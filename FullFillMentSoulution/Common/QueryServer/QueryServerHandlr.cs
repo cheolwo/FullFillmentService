@@ -23,7 +23,7 @@ namespace Common.QueryServer
     /// <param name="serverSubject"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"></exception>
-    public class QueryServerHandlr<TDTO, TEntity> where TDTO : CudDTO where TEntity : Entity
+    public class QueryServerHandlr<TDTO, TEntity> where TDTO : ReadDto where TEntity : Entity
     {
         protected readonly IWebHostEnvironment _webHostEnvironment;
         protected readonly ICommandServerConfiguringService _commandServerConfiguring;
