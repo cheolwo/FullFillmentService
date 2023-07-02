@@ -13,3 +13,11 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\refint\창고Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\ref\창고Common.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.csproj.AssemblyReference.cache
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.AssemblyInfoInputs.cache
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.AssemblyInfo.cs
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.csproj.CoreCompileInputs.cache
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\refint\창고Common.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\WarehouseCommon\obj\Debug\net7.0\창고Common.pdb

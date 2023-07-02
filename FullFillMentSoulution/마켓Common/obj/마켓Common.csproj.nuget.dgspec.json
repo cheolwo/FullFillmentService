@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj": {}
+    "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj": {
+    "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\obj\\",
+        "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\power\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\power\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -130,24 +130,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj": {
+    "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj",
+        "projectUniqueName": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj",
         "projectName": "마켓Common",
-        "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\obj\\",
+        "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\마켓Common.csproj",
+        "packagesPath": "C:\\Users\\power\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\마켓Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\power\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -163,8 +163,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj"
+              "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\power\\OneDrive\\Desktop\\FullFillmentService\\FullFillMentSoulution\\Common\\Common.csproj"
               }
             }
           }
@@ -179,10 +179,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.5.2, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.7, )"
@@ -214,7 +210,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

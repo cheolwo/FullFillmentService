@@ -15,3 +15,11 @@ C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\o
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\Common.dll
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\bin\Debug\net7.0\Common.pdb
 C:\Users\user\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.csproj.CopyComplete
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.csproj.AssemblyReference.cache
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.AssemblyInfoInputs.cache
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.AssemblyInfo.cs
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.csproj.CoreCompileInputs.cache
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\refint\계정Common.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\IdentityCommon\obj\Debug\net7.0\계정Common.pdb

@@ -8,6 +8,7 @@ namespace 판매Common.Repository
     {
         Task<판매자?> GetByIdWith판매자상품(string id);
         Task<List<판매자>> GetAllWith판매자상품();
+        Task<List<판매자>> GetToListWithRelatedData();
     }
     public interface I판매자상품QueryRepository : IEntityQueryRepository<판매자상품>
     {
@@ -41,7 +42,16 @@ namespace 판매Common.Repository
             return await _dbContext.Set<판매자>()
                 .Include(e => e.판매자상품들)
                 .ToListAsync();
-        }       
+        }
+
+        public async Task<List<판매자>> GetToListWithRelatedData()
+        {
+            return await _dbContext.Set<판매자>().
+                 Include(e => e.판매자상품들)
+                .Include(e => e.판매대기들)
+                .Include(e => e.판매중들)
+                .Include(e => e.판매완료들).ToListAsync();
+        }
     }
     public class 판매자상품Repository : CommodityRepository<판매자상품>, I판매자상품QueryRepository
     {

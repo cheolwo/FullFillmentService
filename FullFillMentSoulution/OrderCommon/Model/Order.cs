@@ -1,6 +1,4 @@
 ﻿using Common.Model;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations;
 
 namespace 주문Common.Model
 {

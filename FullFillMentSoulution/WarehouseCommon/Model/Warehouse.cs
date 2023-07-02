@@ -73,6 +73,7 @@ namespace 창고Common
     }
     public class 입고상품 : Status
     {
+        public string? 계약Id { get; set; }
         public string? 창고Id { get; set; }
         public string? 창고상품Id { get; set; }
         public 창고? 창고 { get; set; }
@@ -92,6 +93,7 @@ namespace 창고Common
     }
     public class 출고상품 : Status
     {
+        public string? 주문Id { get; set; }
         public string? 창고Id { get; set; }
         public string? 창고상품Id { get; set; }
         public string? 입고상품Id { get; set; }

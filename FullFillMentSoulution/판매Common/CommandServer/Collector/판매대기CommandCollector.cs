@@ -1,6 +1,5 @@
 ﻿using Common.CommandServer.Collector;
 using Common.ForCommand;
-using Common.GateWay;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
