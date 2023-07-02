@@ -15,7 +15,7 @@ namespace 판매Common.QueryServer.Handlr
         public 판매중QueryServerHandlr(ICommandServerConfiguringService commandServerConfiguringService, 
             IWebHostEnvironment webHostEnvironment, IQueSelectedService queSelectedService, 
             IMapper mapper, 
-            EntityMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
+            CenterMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
             : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, mapper, centerMemoryModule, gateContext)
         {
         }

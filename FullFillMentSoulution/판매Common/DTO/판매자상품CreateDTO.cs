@@ -18,7 +18,4 @@ namespace 판매Common.DTO
     public class Delete판매자상품DTO : 판매자상품CudDTO, IDeleteDTO
     {
     }
-    public class Read판매자상품DTO : ReadDto
-    {
-    }
 }

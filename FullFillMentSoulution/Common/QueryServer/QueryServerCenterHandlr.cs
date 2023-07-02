@@ -19,7 +19,7 @@ namespace Common.QueryServer
             IWebHostEnvironment webHostEnvironment, 
             IQueSelectedService queSelectedService, 
             IMapper mapper, 
-            EntityMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
+            CenterMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
             : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, centerMemoryModule, gateContext)
         {
             _mapper = mapper;
@@ -47,7 +47,7 @@ namespace Common.QueryServer
             IWebHostEnvironment webHostEnvironment, 
             IQueSelectedService queSelectedService, 
             IMapper mapper, 
-            EntityMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
+            CenterMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
             : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, centerMemoryModule, gateContext)
         {
             _mapper = mapper;
@@ -75,7 +75,7 @@ namespace Common.QueryServer
             IWebHostEnvironment webHostEnvironment, 
             IQueSelectedService queSelectedService, 
             IMapper mapper, 
-            EntityMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
+            CenterMemoryModule centerMemoryModule, GateWayQueryContext gateContext) 
             : base(commandServerConfiguringService, webHostEnvironment, queSelectedService, centerMemoryModule, gateContext)
         {
             _mapper = mapper;

@@ -13,7 +13,4 @@ namespace 판매Common.DTO
     public class Delete판매중DTO : 판매중CudDTO, IDeleteDTO
     {
     }
-    public class Read판매중DTO : ReadDto
-    {
-    }
 }
