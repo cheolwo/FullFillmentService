@@ -1,0 +1,12 @@
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\마켓QueryServer.exe
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\appsettings.Development.json
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\appsettings.json
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\마켓QueryServer.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\마켓QueryServer.deps.json
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\마켓QueryServer.runtimeconfig.json
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\마켓QueryServer.pdb
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\Microsoft.OpenApi.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\마켓QueryServer\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

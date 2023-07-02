@@ -1,0 +1,113 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = 시스템관리자App
+build_property.RootNamespace = 시스템관리자App
+build_property.ProjectDir = C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\power\OneDrive\Desktop\FullFillmentService\FullFillMentSoulution\FullFillmentManager
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxEYXNoYm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxMb2dpblBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/LoginSample.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxMb2dpblNhbXBsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/RoleClaimManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxSb2xlQ2xhaW1NYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/RoleManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxSb2xlTWFuYWdlbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/UserClaimManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxVc2VyQ2xhaW1NYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/UserLoginManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxVc2VyTG9naW5NYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/UserManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxVc2VyTWFuYWdlbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/UserRoleManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxVc2VyUm9sZU1hbmFnZW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/AspNetUser/UserTokenManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNwTmV0VXNlclxVc2VyVG9rZW5NYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/수협/수산창고.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7IiY7ZiRXOyImOyCsOywveqzoC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/수협/수산창고별재고현황.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7IiY7ZiRXOyImOyCsOywveqzoOuzhOyerOqzoO2YhO2ZqS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/수협/수산협동조합.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNc7IiY7ZiRXOyImOyCsO2YkeuPmeyhsO2VqS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/power/OneDrive/Desktop/FullFillmentService/FullFillMentSoulution/FullFillmentManager/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
