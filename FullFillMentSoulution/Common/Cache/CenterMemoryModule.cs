@@ -8,9 +8,9 @@ namespace Common.Cache
     {
         string? GetCenterId();
     }
-    public class EntityMemoryModule : EntityMemoryModuleBase
+    public class CenterMemoryModule : EntityMemoryModuleBase
     {
-        public EntityMemoryModule(IMemoryCache memoryCache) : base(memoryCache)
+        public CenterMemoryModule(IMemoryCache memoryCache) : base(memoryCache)
         {
         }
         public void SetCenter<T>(string centerId, string userId, T center) where T : Center

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\수협Server.props" />
-</Project>

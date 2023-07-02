@@ -37,7 +37,7 @@ namespace Common.Model
             get => JsonConvert.DeserializeObject<List<string>>(FileUrlJson);
             set => FileUrlJson = JsonConvert.SerializeObject(value);
         }
-        public List<문의> 문의들 { get; set; }
+        //public List<문의> 문의들 { get; set; }
     }
     [NotMapped]
     public class Center : Entity, IStorableInCenterMemory

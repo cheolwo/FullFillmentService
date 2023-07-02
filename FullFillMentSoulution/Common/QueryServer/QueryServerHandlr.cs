@@ -28,12 +28,12 @@ namespace Common.QueryServer
         protected readonly IWebHostEnvironment _webHostEnvironment;
         protected readonly ICommandServerConfiguringService _commandServerConfiguring;
         protected readonly IQueSelectedService _queSelectedService;
-        protected readonly EntityMemoryModule _centerMemoryModule;
+        protected readonly CenterMemoryModule _centerMemoryModule;
         protected readonly GateWayQueryContext _gateContext;
         public QueryServerHandlr(
             ICommandServerConfiguringService commandServerConfiguringService,
             IWebHostEnvironment webHostEnvironment, IQueSelectedService queSelectedService,
-            EntityMemoryModule centerMemoryModule,
+            CenterMemoryModule centerMemoryModule,
             GateWayQueryContext gateContext)
         {
             _commandServerConfiguring = commandServerConfiguringService;
